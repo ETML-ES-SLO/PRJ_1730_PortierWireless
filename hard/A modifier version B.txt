@@ -1,0 +1,27 @@
+A modifier version A:
+
+-Trouver réf. support de piles
+
+-------------------------------------------
+A modifier version B:
+
+-mettre C200 10uF en 0805 (footprint bcp trop gros)
+
+-footprint LED LGR971 (3x : D200, 201, 202) bcp trop petit
+Mettre LEDs à meilleur rendement et angle d'émission le plus petit possible (pour light pipes)
+Ne surtout pas changer l'emplacement des LED (face avant déjà usinée)
+
+-Mettre sources de courants pour les LEDs car quand les piles deviennent plates sur le module porte (par ex 2.4V), la led allumée ne se voit bientôt plus.
+ Voir LT3080 ou LT3085 ?
+ OU plutôt CAT4002A ? (a l'air plus simple et moins cher!)
+
+-footprint U100 (réf. 2.048V LT1790) trop petit (étroit) pour montage à la main
+
+-footprint U200 (PIC32) trop petit (étroit) pour montage à la main
+
+-footprint support de pile BT100 : ajouter trou pour fixation par vis
+
+-Prévoire ID unique pour pouvoir faire cohabiter plusieurs systèmes.
+ Soit via jumpers sur pins libres du uC, soit appairage soft (utiliser IDs des modules RF).
+
+-Réduire taille du PCB à 80x80 mm au lieu de 100x100 ?

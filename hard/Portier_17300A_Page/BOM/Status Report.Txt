@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 14:02:44 On 25.01.2018
+
+Output: BOM
+Type  : BOM
+From  : Variant [[No Variations]] of Project [CircuitOUT.PrjPcb]
+   Generated File[BOM-CircuitOUT.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 14:02:47 On 25.01.2018

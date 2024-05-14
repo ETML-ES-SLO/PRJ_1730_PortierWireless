@@ -1,0 +1,10 @@
+Output: BOM_Cost_ES
+Type  : BOM
+From  : Variant [PCBA_Bell] of Project [Portier_1730.PrjPcb]
+   Generated File[//eduvaud-my.sharepoint.com/personal/juan_moreno_eduvaud_ch/Documents/Documents/Altium/Projets/1730_PortierWireless/hard/Portier_17300C_JMO/Project Outputs for Portier_1730/ETML_Mfg_Docs/BOM_Cost_ES_Variant_PCBA_Bell.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 13:17:46 On 28.02.2023

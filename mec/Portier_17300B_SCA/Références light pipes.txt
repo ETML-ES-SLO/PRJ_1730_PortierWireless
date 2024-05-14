@@ -1,0 +1,8 @@
+
+Le light pipe :
+LFC050CTP / LFC LIGHT PIPE 0.500"
+https://www.digikey.ch/en/products/detail/visual-communications-company-vcc/LFC050CTP/5156890?s=N4IgTCBcDaIDIDEDCAGArCpAVACgWgDkAREAXQF8g
+
+La rondelle caoutchouc (pas obligatoire selon datasheet – amène un meilleur soutien si vibrations par exemple) :
+RTN125 / RTAINR FOR LFC SERIES LIGHTPIPE
+https://www.digikey.ch/en/products/detail/visual-communications-company-vcc/RTN125/5156944?s=N4IgTCBcDaIEoBUByBGMBWAtEgIiAugL5A

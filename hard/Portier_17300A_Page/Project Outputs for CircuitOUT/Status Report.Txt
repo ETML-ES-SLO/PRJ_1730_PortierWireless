@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [CircuitOUT.PrjPcb]
+   Generated File[Portier-RoundHoles.TXT]
+   Generated File[Portier-SlotHoles.TXT]
+   Generated File[Portier.LDP]
+   Generated File[Portier.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 14:45:24 On 13.02.2018

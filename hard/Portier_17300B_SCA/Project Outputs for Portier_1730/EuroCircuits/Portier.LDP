@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\sercastoldi\Documents\datas_ES\Projets_SCA\1730_PortierWireless\hard\Portier_17300B\PCB\Portier.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=portier-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=portier-slotholes.txt|DrillLayers=gtl,gbl

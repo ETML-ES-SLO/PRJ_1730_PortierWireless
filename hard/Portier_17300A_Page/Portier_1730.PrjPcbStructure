@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=TopSchematic.SchDoc
+Record=SheetSymbol|SourceDocument=TopSchematic.SchDoc|Designator=Alimentation|SchDesignator=Alimentation|FileName=Power.SchDoc|SymbolType=Normal|RawFileName=Power.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=TopSchematic.SchDoc|Designator=Circuit|SchDesignator=Circuit|FileName=Portier.SchDoc|SymbolType=Normal|RawFileName=Portier.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

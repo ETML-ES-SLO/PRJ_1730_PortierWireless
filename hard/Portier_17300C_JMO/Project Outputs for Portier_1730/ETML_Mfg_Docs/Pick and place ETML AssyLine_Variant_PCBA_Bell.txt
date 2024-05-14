@@ -1,0 +1,55 @@
+Altium Designer Pick and Place Locations
+C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\Project Outputs for Portier_1730\ETML_Mfg_Docs\Pick and place ETML AssyLine_Variant_PCBA_Bell.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       28.02.23
+Time:       13:17
+Revision:   Not in VersionControl
+Variant:    PCBA_Bell
+Units used: mm
+
+Designator Comment              Layer    Footprint                         Center-X(mm) Center-Y(mm) Rotation 
+F_TL       1.5/3.0              TopLayer FID-150-300                       11.4300      93.9800      0        
+F_BR       1.5/3.0              TopLayer FID-150-300                       88.9000      6.3500       0        
+X201       61300711121          TopLayer 61300711121                       44.0690      96.2660      180      
+X202       61300711121          TopLayer 61300711121                       20.0000      3.5000       0        
+J201       62001011821          TopLayer 62001011821                       36.2440      32.0000      90       
+J200       62001011821          TopLayer 62001011821                       58.2440      32.0000      90       
+R203       1k                   TopLayer RESC2013X50X30ML20T20             43.3550      61.1000      90       
+X204       61301011121          TopLayer 61301011121                       48.6410      50.5460      180      
+R208       0R                   TopLayer RESC2013X60X35ML10T20             20.4750      24.1460      180      
+D200       "Green, 2V, 40°"     TopLayer WL-SMCW_0805_150080xx75000        25.0000      45.0000      270      
+SW202      "Tact-sw 1241.1022"  TopLayer Tact-sw_1241.1022                 12.5000      75.0000      90       
+X100       Micro_USB            TopLayer MICRO_USB                         95.7000      15.2400      90       
+U101       MAX1793              TopLayer TSOP65P640X110_HS-17N             83.1850      11.6840      180      
+C103       4.7µF                TopLayer WCAP-CSGP_0805_L2W1.25H1.25       76.2000      12.5730      270      
+C104       4.7µF                TopLayer WCAP-CSGP_0805_L2W1.25H1.25       89.9160      14.4780      270      
+C200       10µF                 TopLayer WCAP-CSGP_0805_L2W1.25H1.25       43.1800      78.2320      180      
+C201       100nF                TopLayer WCAP-CSGP_0805_L2W1.25H0.8_Reflow 43.1800      68.0720      0        
+C202       100nF                TopLayer WCAP-CSGP_0805_L2W1.25H0.8_Reflow 59.9734      82.2516      90       
+C203       100nF                TopLayer WCAP-CSGP_0805_L2W1.25H0.8_Reflow 69.3420      77.3430      180      
+D201       "Green, 2V, 40°"     TopLayer WL-SMCW_0805_150080xx75000        25.0000      60.0000      270      
+D202       "Green, 2V, 40°"     TopLayer WL-SMCW_0805_150080xx75000        25.0000      75.0000      270      
+X203       61300311121          TopLayer 61300311121                       56.1740      58.4040      180      
+Q200       IRLML2402            TopLayer INTR-IRLML2402TRPBF-3_V           28.0000      50.0000      180      
+Q201       IRLML2402            TopLayer INTR-IRLML2402TRPBF-3_V           28.0000      65.0000      180      
+Q202       IRLML2402            TopLayer INTR-IRLML2402TRPBF-3_V           28.0000      80.0000      180      
+Q203       IRLML2402            TopLayer INTR-IRLML2402TRPBF-3_V           26.1228      24.1460      180      
+R104       22k                  TopLayer RESC2013X50X30NL20T20             67.9450      71.7550      270      
+R200       750R                 TopLayer RESC2013X50X30NL20T20             25.0000      40.0000      90       
+R201       750R                 TopLayer RESC2013X50X30NL20T20             25.0000      55.0000      90       
+R202       750R                 TopLayer RESC2013X50X30NL20T20             25.0000      70.0000      270      
+R204       1k                   TopLayer RESC2013X50X30ML20T20             22.2250      19.5580      180      
+R205       10k                  TopLayer RESC2013X60X35NL10T20             3.5000       41.1792      180      
+R206       10k                  TopLayer RESC2013X60X35NL10T20             3.5000       56.1900      180      
+R207       10k                  TopLayer RESC2013X60X35NL10T20             3.5000       71.1900      180      
+R209       100k                 TopLayer RESC2013X70X40ML20T20             27.6200      28.1693      0        
+R210       10k                  TopLayer RESC2013X60X35NL10T20             61.9231      92.5470      0        
+SW200      "Tact-sw 1241.1022"  TopLayer Tact-sw_1241.1022                 12.5000      45.0000      90       
+SW201      "Tact-sw 1241.1022"  TopLayer Tact-sw_1241.1022                 12.5000      60.0000      90       
+U201       BuzzerPiezo          TopLayer BUZZER                            11.5570      24.1300      0        
+R211       1k                   TopLayer RESC2013X50X30ML20T20             56.2610      96.2660      180      
+SW203      430182043816         TopLayer WS-TASV_L6W6H4.3_4301x20438x6     68.0720      92.3290      90       
+U200       PIC32MX130F064B-I/SO TopLayer MCHP-SOIC-SO28_M                  51.9430      76.3270      180      

@@ -1,0 +1,10 @@
+Output: Copy of Bill of Materials
+Type  : BOM
+From  : Variant [1730_Circuit_Door] of BOM Document [Portier_1730.BomDoc]
+   Generated File[//eduvaud-my.sharepoint.com/personal/juan_moreno_eduvaud_ch/Documents/Documents/Altium/Projets/1730_PortierWireless/hard/Portier_17300C_JMO/Project Outputs for Portier_1730/Reports/Copy of Bill of Materials/1730_Circuit_Door.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 16:37:23 On 27.01.2023
