@@ -1,0 +1,46 @@
+Removed Pin From Net: NetName=Reset Pin=C203-2
+Removed Pin From Net: NetName=Reset Pin=R208-2
+Removed Pin From Net: NetName=Reset Pin=SW203-1
+Removed Pin From Net: NetName=GND Pin=SW203-2
+Removed Pin From Net: NetName=Reset Pin=SW203-3
+Removed Pin From Net: NetName=GND Pin=SW203-4
+Removed Member From Class: ClassName=Circuit Member=SW203
+Change component parameters: Designator = "C100"; Footprint = "CAPC2013X100X20NL20"; UniqueID = "\GMRICTUX\DWQPFOMH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "PackageCase"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100 nF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "16 V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R101"; Footprint = "RESC2013X60X35ML10T20"; UniqueID = "\GMRICTUX\BVRECPNQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "PackageCase"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "150V"; VariantName = "[No Variations]"
+Added Component: Designator=R209(RESC2013X60X35NL10T20)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "PackageCase"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "150 V"; VariantName = "[No Variations]"
+Added Component: Designator=S200(4301x21308x6_6x6x13)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4301x2xxx8x6.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Life Cycle"; Value = "200000 cycles"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operation Force"; Value = "260g"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "430152130826"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "June 2017"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "6x6x13 mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=S200-1
+Added Pin To Net: NetName=GND Pin=S200-2
+Added Pin To Net: NetName=NetC203_2 Pin=C203-2
+Added Pin To Net: NetName=NetC203_2 Pin=R208-2
+Added Pin To Net: NetName=NetC203_2 Pin=R209-1
+Added Pin To Net: NetName=NetC203_2 Pin=S200-3
+Added Pin To Net: NetName=NetC203_2 Pin=S200-4
+Added Net: Name=NetC203_2
+Added Member To Class: ClassName=Circuit Member=Component R209 1k
+Added Member To Class: ClassName=Circuit Member=Component S200 430152130826
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

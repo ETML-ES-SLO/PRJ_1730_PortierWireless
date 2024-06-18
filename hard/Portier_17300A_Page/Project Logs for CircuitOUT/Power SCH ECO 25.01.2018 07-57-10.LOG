@@ -1,0 +1,46 @@
+Removed Parameter Capacitance:1uF from Part C102
+Removed Parameter Capacitance:4.7 uF from Part C105
+Removed Parameter Capacitance:10 uF from Part C100
+Removed Parameter Case-EIA:0805 from Part C101
+Removed Parameter Case-EIA:0805 from Part C104
+Removed Parameter Case-EIA:0805 from Part R103
+Removed Parameter Case-EIA:0805 from Part R104
+Removed Parameter Case/Package:0805 from Part C102
+Removed Parameter Case/Package:0805 from Part R100
+Removed Parameter Case/Package:0805 from Part R101
+Removed Parameter Case/Package:0805 from Part R102
+Removed Parameter Case\/Package:0805 from Part C100
+Removed Parameter Case\/Package:0805 from Part C105
+Removed Parameter PackageReference:0805 from Part C100
+Removed Parameter PackageReference:0805 from Part C105
+Removed Parameter PackageReference:430152050836 from Part SW100
+Removed Parameter RoHSCompliant:true from Part C100
+Removed Parameter RoHSCompliant:True from Part C102
+Removed Parameter RoHSCompliant:true from Part C105
+Removed Parameter RoHSCompliant:true from Part R100
+Removed Parameter RoHSCompliant:true from Part R101
+Removed Parameter RoHSCompliant:true from Part R102
+Removed Parameter Tolerance:1% from Part R100
+Removed Parameter Tolerance:1% from Part R101
+Removed Parameter Tolerance:1% from Part R102
+Removed Parameter Tolerance:1% from Part R103
+Removed Parameter Tolerance:1 % from Part R104
+Removed Parameter Tolerance:10% from Part C100
+Removed Parameter Tolerance:10% from Part C102
+Removed Parameter Tolerance:10% from Part C105
+Removed Parameter Tolerance:±20% from Part C101
+Removed Parameter Tolerance:±20% from Part C104
+Removed Parameter Voltage Rating (DC):16 V from Part C100
+Removed Parameter Voltage Rating (DC):16 V from Part C105
+Removed Parameter Voltage Rating (DC):25V from Part C102
+Removed Parameter Voltage Rating (DC):150V from Part R100
+Removed Parameter Voltage Rating (DC):150V from Part R101
+Removed Parameter Voltage Rating (DC):150V from Part R102
+Added Parameter Case Code (Imperial)=0805 to Part C101
+Added Parameter Case Code (Imperial)=0805 to Part C104
+Added Parameter Case Code (Imperial)=0805 to Part R103
+Added Parameter Case Code (Imperial)=0805 to Part R104
+Added Parameter Case Code (Imperial)=430152050836 to Part SW100
+Added Parameter Value=1uF to Part C102
+Added Parameter Value=4.7 uF to Part C105
+Added Parameter Value=10 uF to Part C100

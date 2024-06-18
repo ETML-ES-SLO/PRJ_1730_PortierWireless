@@ -1,0 +1,38 @@
+Removed Parameter Case/Package:0805 from Part C102
+Removed Parameter Case Code (Imperial):0805 from Part C102
+Removed Parameter Case Code (Metric):2012 from Part C102
+Removed Parameter Dielectric:X7R from Part C102
+Removed Parameter Max Operating Temperature:125°C from Part C102
+Removed Parameter Min Operating Temperature:-55°C from Part C102
+Removed Parameter RoHS Compliant:Yes from Part C102
+Removed Parameter Series:WCAP-CSGP from Part C102
+Removed Parameter Thickness:0.053inch from Part C102
+Removed Parameter Tolerance:10% from Part C102
+Removed Parameter Voltage Rating (DC):25V from Part C102
+Removed Parameter Voltage Rating:25V from Part C102
+Change Value of Parameter Capacitance in Part C102 Old=1uF New=1µF
+Change Component Parameter Comment in C102 Old= New=1µF
+Change Component Parameter Description in C102 Old=CAP CER 1UF 25V X7R 0805 New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X7R, 1µF, 25VDC
+Change Value of Parameter Length in Part C102 Old=0.079inch New=2mm
+Change Component Parameter Library Reference in C102 Old=CMP-207839-000010-1 New=885012207078
+Change Value of Parameter Packaging in Part C102 Old=Cut Tape New=Tape and Reel
+Change Value of Parameter Width in Part C102 Old=0.049inch New=1.25mm
+Added Parameter Capacitance Tolerance=+/-10% to Part C102
+Added Parameter Case/Size Code=0805 to Part C102
+Added Parameter Category=Multilayer Ceramic Chip Capacitors to Part C102
+Added Parameter Ceramic Type=X7R to Part C102
+Added Parameter ComponentLink1Description=Website Link to Part C102
+Added Parameter ComponentLink1URL=https://www.we-online.com/redexpert/article/885012207078?ad to Part C102
+Added Parameter ComponentLink2Description=Datasheet Link to Part C102
+Added Parameter ComponentLink2URL=https://www.we-online.com/redexpert/spec/885012207078?ad to Part C102
+Added Parameter Dissipation Factor=5% to Part C102
+Added Parameter Height=1.25mm to Part C102
+Added Parameter Insulation Resistance=0.5GO to Part C102
+Added Parameter Manufacturer=Wurth Elektronik to Part C102
+Added Parameter Manufacturer Part Number=885012207078 to Part C102
+Added Parameter Match Code=WCAP-CSGP to Part C102
+Added Parameter Operating Temperature Max=125°C to Part C102
+Added Parameter Operating Temperature Min=-55°C to Part C102
+Added Parameter Rated Voltage (DC)=25V to Part C102
+Added Parameter Technical Reference=X7R0805105K025DFCT10000 to Part C102
+Replace Part C102 885012207078 in C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Power.SchDoc with 885012207078 from Altium_WCAP-CSGP (rev22f).IntLib

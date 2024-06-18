@@ -1,0 +1,5 @@
+Change Value of Parameter Value in Part D200 Old=Green low current New=Green
+Change Value of Parameter Value in Part D201 Old=Yellow low current New=Yellow
+Change Value of Parameter Value in Part D202 Old=Red low current New=Red
+Added Parameter Supplier=Distrelec to Part J200
+Added Parameter Supplier PN=142-57-070 to Part J200

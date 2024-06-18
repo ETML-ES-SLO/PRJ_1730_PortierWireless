@@ -1,0 +1,16 @@
+Change Value of Parameter Manufacturer in Part Q100 Old=Fairchild Semiconductor New=ON Semiconductor
+Change Value of Parameter Manufacturer in Part Q101 Old=International Rectifier New=Infineon Technologies
+Change Value of Parameter Manufacturer in Part Q102 Old=International Rectifier New=Infineon Technologies
+Added Parameter PackageCase=SOT-23 to Part LT100
+Added Parameter PackageCase=SOT-23 to Part Q101
+Added Parameter PackageCase=SOT-23 to Part Q102
+Added Parameter PackageCase=SSOT-3 to Part Q100
+Added Parameter PartNumber=FDN306P to Part Q100
+Added Parameter PartNumber=IRLML2402TRBF to Part Q101
+Added Parameter PartNumber=IRLML2402TRBF to Part Q102
+Added Parameter Supplier=Digi-key to Part Q100
+Added Parameter Supplier=Digi-key to Part Q101
+Added Parameter Supplier=Digi-key to Part Q102
+Added Parameter Supplier PN=FDN306PCT-ND to Part Q100
+Added Parameter Supplier PN=IRLML2402PBFCT-ND to Part Q101
+Added Parameter Supplier PN=IRLML2402PBFCT-ND to Part Q102

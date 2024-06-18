@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=R103 Old Footprint=RESC0805(2012)_N New Footprint=RESC2013X55X40NL15T20
+Change Managed Component Library Link : Designator=R103 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=C0F6FF84-C642-436E-81E5-090A44719732 New ItemGUID=B268A799-A0B7-40C7-880A-CC79C4486CCA Old RevisionGUID=365FF954-C969-470E-964A-C97924B77AA5 New RevisionGUID=4072242F-DCF2-4DB7-8656-DEEE8A34CDD5
+Change component parameters: Designator = "R103" ("R103"); Footprint = "RESC0805(2012)_N"; UniqueID = "\GMRICTUX\AUHISPNR" ("\GMRICTUX\AUHISPNR")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "TNPW080511K0BEEA"; VariantName = "[No Variations]"

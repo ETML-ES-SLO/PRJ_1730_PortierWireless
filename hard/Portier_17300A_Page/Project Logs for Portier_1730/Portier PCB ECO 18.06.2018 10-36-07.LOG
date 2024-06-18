@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=UART_TX Pin=X200-2
+Removed Pin From Net: NetName=UART_RX Pin=X200-3
+Added Pin To Net: NetName=UART_RX Pin=X200-2
+Added Pin To Net: NetName=UART_TX Pin=X200-3
+Added Member To Class: ClassName=Circuit Member=Component U200 PIC32MX130F064B-I/SO
+Added Member To Class: ClassName=Circuit Member=Component X200 Header ZB-SB

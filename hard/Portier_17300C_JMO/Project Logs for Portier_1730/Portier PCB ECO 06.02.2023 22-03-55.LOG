@@ -1,0 +1,9 @@
+Added Component: Designator=XB1(ModulesRxTx868MHz_1623)
+Add component (AddParameter): Name = "PackageCase"; Value = "XBee"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Digi-key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier min. qty"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier PN"; Value = "2x 3M156413-10-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier unit price"; Value = "2x 0.74"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2x10"; VariantName = "[No Variations]"
+Added Component: Designator=XB2(Xbee_3D)
+Added Class: Name=RF_Modules_BOM

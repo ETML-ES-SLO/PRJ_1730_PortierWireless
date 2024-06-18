@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=ME9 Old Footprint=M3x06 Screw Top New Footprint=M3x06 Screw Top H16
+Added Component: Designator=ME10(M3x06 Screw Top H16)
+Added Component: Designator=ME11(M3x06 Screw Top H16)
+Added Component: Designator=ME12(M3x06 Screw Top H16)
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME10 M3x06
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME11 M3x06
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME12 M3x06

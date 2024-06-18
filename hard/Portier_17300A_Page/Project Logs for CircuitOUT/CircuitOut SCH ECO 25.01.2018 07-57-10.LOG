@@ -1,0 +1,66 @@
+Removed Parameter Capacitance:10 uF from Part C200
+Removed Parameter Capacitance:100nF from Part C201
+Removed Parameter Case-EIA:0805 from Part C201
+Removed Parameter Case-EIA:0805 from Part C202
+Removed Parameter Case-EIA:0805 from Part C203
+Removed Parameter Case-EIA:0805 from Part R200
+Removed Parameter Case-EIA:0805 from Part R201
+Removed Parameter Case-EIA:0805 from Part R202
+Removed Parameter Case/Package:0805 from Part R203
+Removed Parameter Case/Package:0805 from Part R207
+Removed Parameter Case\Package:0603 from Part C200
+Removed Parameter PackageReference:0603 from Part C204
+Removed Parameter PackageReference:0603 from Part C205
+Removed Parameter PackageReference:0805 from Part R204
+Removed Parameter PackageReference:0805 from Part R205
+Removed Parameter PackageReference:0805 from Part R206
+Removed Parameter PackageReference:0805 from Part R208
+Removed Parameter PackageReference:1206 from Part C200
+Removed Parameter PackageReference:430152050836 from Part SW200
+Removed Parameter PackageReference:430152050836 from Part SW201
+Removed Parameter PackageReference:430152050836 from Part SW202
+Removed Parameter PackageReference:430152050836 from Part SW203
+Removed Parameter PackageReference:SSOP-SS28 from Part U200
+Removed Parameter PackageReference:TSW-103-07-X-S from Part P200
+Removed Parameter Part Number:615006143621 from Part J200
+Removed Parameter Publisher:Wurth Elektronik from Part J200
+Removed Parameter RoHSCompliant:true from Part C200
+Removed Parameter RoHSCompliant:true from Part R203
+Removed Parameter RoHSCompliant:true from Part R204
+Removed Parameter RoHSCompliant:true from Part R205
+Removed Parameter RoHSCompliant:true from Part R206
+Removed Parameter RoHSCompliant:true from Part R207
+Removed Parameter RoHSCompliant:true from Part R208
+Removed Parameter Tolerance:1 % from Part R200
+Removed Parameter Tolerance:1 % from Part R201
+Removed Parameter Tolerance:1 % from Part R202
+Removed Parameter Tolerance:1% from Part R203
+Removed Parameter Tolerance:1% from Part R207
+Removed Parameter Tolerance:5% from Part C200
+Removed Parameter Tolerance:±20% from Part C201
+Removed Parameter Tolerance:±20% from Part C202
+Removed Parameter Tolerance:±20% from Part C203
+Removed Parameter Voltage Rating (DC):50 V from Part C200
+Removed Parameter Voltage Rating (DC):150V from Part R203
+Removed Parameter Voltage Rating (DC):150V from Part R207
+Added Parameter Case Code (Imperial)=0603 to Part C204
+Added Parameter Case Code (Imperial)=0603 to Part C205
+Added Parameter Case Code (Imperial)=0805 to Part C201
+Added Parameter Case Code (Imperial)=0805 to Part C202
+Added Parameter Case Code (Imperial)=0805 to Part C203
+Added Parameter Case Code (Imperial)=0805 to Part R200
+Added Parameter Case Code (Imperial)=0805 to Part R201
+Added Parameter Case Code (Imperial)=0805 to Part R202
+Added Parameter Case Code (Imperial)=0805 to Part R204
+Added Parameter Case Code (Imperial)=0805 to Part R205
+Added Parameter Case Code (Imperial)=0805 to Part R206
+Added Parameter Case Code (Imperial)=0805 to Part R208
+Added Parameter Case Code (Imperial)=430152050836 to Part SW200
+Added Parameter Case Code (Imperial)=430152050836 to Part SW201
+Added Parameter Case Code (Imperial)=430152050836 to Part SW202
+Added Parameter Case Code (Imperial)=430152050836 to Part SW203
+Added Parameter Case Code (Imperial)=SSOP-SS28 to Part U200
+Added Parameter Case Code (Imperial)=TSW-103-07-X-S to Part P200
+Added Parameter Manufacturer=Wurth Elektronik to Part J200
+Added Parameter PartNumber=615006143621 to Part J200
+Added Parameter Value=10 uF to Part C200

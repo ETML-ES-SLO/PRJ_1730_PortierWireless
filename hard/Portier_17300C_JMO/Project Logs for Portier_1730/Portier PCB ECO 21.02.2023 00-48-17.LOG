@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetC203_2 Pin=R211-1
+Removed Pin From Net: NetName=/MCLR Pin=R211-2
+Change Component Footprint: Designator=R211 Old Footprint=RESC2013X60X35NL10T20 New Footprint=RESC2013X60X35ML10T20
+Change Managed Component Library Link : Designator=R211 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=F60048A3-D561-484D-B156-4DCD9BBF6D49 New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID=58C2A00D-8321-4E64-814A-C3FF86DDDFC4 New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change component parameters: Designator = "R211" ("R211"); Footprint = "RESC2013X60X35NL10T20"; UniqueID = "\XKRSHQMH\ICSSPGLJ" ("\XKRSHQMH\ICSSPGLJ")
+Change component parameters (AddParameter): Name = "PackageCase"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier"; Value = "Stock ES"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier min. qty"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier PN"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier unit price"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1kOhm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "150V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=/MCLR Pin=R211-1
+Added Pin To Net: NetName=NetC203_2 Pin=R211-2

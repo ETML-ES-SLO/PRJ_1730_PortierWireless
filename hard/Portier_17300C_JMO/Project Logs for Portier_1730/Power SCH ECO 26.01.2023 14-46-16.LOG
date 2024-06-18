@@ -1,0 +1,50 @@
+Removed Parameter PackageCase:0805 from Part C103
+Removed Parameter PackageCase:0805 from Part C104
+Removed Parameter PartNumber:GRM21BR61C475KA88L from Part C103
+Removed Parameter PartNumber:GRM21BR61C475KA88L from Part C104
+Removed Parameter Supplier:Stock ES from Part C103
+Removed Parameter Supplier:Stock ES from Part C104
+Removed Parameter Supplier min. qty: from Part C103
+Removed Parameter Supplier min. qty: from Part C104
+Removed Parameter Supplier PN: from Part C103
+Removed Parameter Supplier PN: from Part C104
+Removed Parameter Supplier unit price: from Part C103
+Removed Parameter Supplier unit price: from Part C104
+Removed Parameter Value:4.7 uF from Part C103
+Removed Parameter Value:4.7 uF from Part C104
+Removed Parameter Voltage Rating:16 V from Part C103
+Removed Parameter Voltage Rating:16 V from Part C104
+Change Component Parameter Comment in C104 Old= New=4.7µF
+Change Component Parameter Comment in C103 Old= New=4.7µF
+Change Component Parameter Description in C104 Old=Chip Capacitor, 4.7 uF, +/- 10%, 16 V, -55 to 85 degC, 0805 (2012 Metric), RoHS, Tape and Reel New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X7R, 4.7µF, 16VDC
+Change Component Parameter Description in C103 Old=Chip Capacitor, 4.7 uF, +/- 10%, 16 V, -55 to 85 degC, 0805 (2012 Metric), RoHS, Tape and Reel New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X7R, 4.7µF, 16VDC
+Change Component Parameter Library Reference in C104 Old=CMP-1662-00015-2 New=885012207053
+Change Component Parameter Library Reference in C103 Old=CMP-1662-00015-2 New=885012207053
+Added Parameter Capacitance Tolerance=+/-10% to Part C103
+Added Parameter Capacitance Tolerance=+/-10% to Part C104
+Added Parameter Case/Size Code=0805 to Part C103
+Added Parameter Case/Size Code=0805 to Part C104
+Added Parameter Category=Multilayer Ceramic Chip Capacitors to Part C103
+Added Parameter Category=Multilayer Ceramic Chip Capacitors to Part C104
+Added Parameter Ceramic Type=X7R to Part C103
+Added Parameter Ceramic Type=X7R to Part C104
+Added Parameter Dissipation Factor=10% to Part C103
+Added Parameter Dissipation Factor=10% to Part C104
+Added Parameter Insulation Resistance=0.02GO to Part C103
+Added Parameter Insulation Resistance=0.02GO to Part C104
+Added Parameter Manufacturer=Wurth Elektronik to Part C103
+Added Parameter Manufacturer=Wurth Elektronik to Part C104
+Added Parameter Manufacturer Part Number=885012207053 to Part C103
+Added Parameter Manufacturer Part Number=885012207053 to Part C104
+Added Parameter Match Code=WCAP-CSGP to Part C103
+Added Parameter Match Code=WCAP-CSGP to Part C104
+Added Parameter Operating Temperature Max=125°C to Part C103
+Added Parameter Operating Temperature Max=125°C to Part C104
+Added Parameter Operating Temperature Min=-55°C to Part C103
+Added Parameter Operating Temperature Min=-55°C to Part C104
+Added Parameter Rated Voltage (DC)=16V to Part C103
+Added Parameter Rated Voltage (DC)=16V to Part C104
+Added Parameter Technical Reference=X7R0805475K016DFCT10000 to Part C103
+Added Parameter Technical Reference=X7R0805475K016DFCT10000 to Part C104
+Replace Part C103 885012207053 in C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Power.SchDoc with 885012207053 from Altium_WCAP-CSGP (rev22f).IntLib
+Replace Part C104 885012207053 in C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Power.SchDoc with 885012207053 from Altium_WCAP-CSGP (rev22f).IntLib

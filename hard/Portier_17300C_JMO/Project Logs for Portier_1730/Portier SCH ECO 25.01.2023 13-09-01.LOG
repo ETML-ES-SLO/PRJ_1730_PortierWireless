@@ -1,0 +1,125 @@
+Removed Parameter Case/Package:0805 from Part C200
+Removed Parameter Case Code (Imperial):0805 from Part C200
+Removed Parameter Case Code (Imperial):0805 from Part C201
+Removed Parameter Case Code (Imperial):0805 from Part C202
+Removed Parameter Case Code (Imperial):0805 from Part C203
+Removed Parameter Case Code (Metric):2012 from Part C200
+Removed Parameter Case Code (Metric):2012 from Part C201
+Removed Parameter Case Code (Metric):2012 from Part C202
+Removed Parameter Case Code (Metric):2012 from Part C203
+Removed Parameter Construction:Flat from Part C200
+Removed Parameter Contact Plating:Tin from Part C200
+Removed Parameter DatasheetVersion:03/2015 from Part C201
+Removed Parameter DatasheetVersion:03/2015 from Part C202
+Removed Parameter DatasheetVersion:03/2015 from Part C203
+Removed Parameter Depth:1.25mm from Part C200
+Removed Parameter Dielectric:X5R from Part C200
+Removed Parameter Dielectric Material:Ceramic from Part C200
+Removed Parameter Lead Free:Lead Free from Part C200
+Removed Parameter Max Operating Temperature:85 degC from Part C201
+Removed Parameter Max Operating Temperature:85 degC from Part C202
+Removed Parameter Max Operating Temperature:85 degC from Part C203
+Removed Parameter Max Operating Temperature:85°C from Part C200
+Removed Parameter Min Operating Temperature:-55 degC from Part C201
+Removed Parameter Min Operating Temperature:-55 degC from Part C202
+Removed Parameter Min Operating Temperature:-55 degC from Part C203
+Removed Parameter Min Operating Temperature:-55°C from Part C200
+Removed Parameter Mounting Technology:Surface Mount from Part C201
+Removed Parameter Mounting Technology:Surface Mount from Part C202
+Removed Parameter Mounting Technology:Surface Mount from Part C203
+Removed Parameter Number of Pins:2 from Part C200
+Removed Parameter PackageDescription:2-Pin Surface Mount Device, Body 2 x 1.25 mm from Part C201
+Removed Parameter PackageDescription:2-Pin Surface Mount Device, Body 2 x 1.25 mm from Part C202
+Removed Parameter PackageDescription:2-Pin Surface Mount Device, Body 2 x 1.25 mm from Part C203
+Removed Parameter Package Quantity:1 from Part C200
+Removed Parameter Package Quantity:1 from Part C201
+Removed Parameter Package Quantity:1 from Part C202
+Removed Parameter Package Quantity:1 from Part C203
+Removed Parameter PackageReference:0805 from Part C201
+Removed Parameter PackageReference:0805 from Part C202
+Removed Parameter PackageReference:0805 from Part C203
+Removed Parameter Radiation Hardening:No from Part C200
+Removed Parameter REACH SVHC:No SVHC from Part C200
+Removed Parameter REACH SVHC:No SVHC from Part C201
+Removed Parameter REACH SVHC:No SVHC from Part C202
+Removed Parameter REACH SVHC:No SVHC from Part C203
+Removed Parameter Series:C from Part C200
+Removed Parameter Termination:SMD/SMT from Part C200
+Removed Parameter Thickness:0.055inch from Part C200
+Removed Parameter Tolerance:10% from Part C200
+Removed Parameter Tolerance:10% from Part C201
+Removed Parameter Tolerance:10% from Part C202
+Removed Parameter Tolerance:10% from Part C203
+Removed Parameter Voltage:16V from Part C200
+Removed Parameter Voltage Rating (DC):16V from Part C200
+Removed Parameter Voltage Rating (DC):16 V from Part C201
+Removed Parameter Voltage Rating (DC):16 V from Part C202
+Removed Parameter Voltage Rating (DC):16 V from Part C203
+Removed Parameter Voltage Rating:16V from Part C200
+Removed Parameter Voltage Rating:16 V from Part C201
+Removed Parameter Voltage Rating:16 V from Part C202
+Removed Parameter Voltage Rating:16 V from Part C203
+Change Value of Parameter Capacitance in Part C201 Old=10µF New=100nF
+Change Value of Parameter Capacitance in Part C202 Old=10µF New=100nF
+Change Value of Parameter Capacitance in Part C203 Old=10µF New=100nF
+Change Value of Parameter Capacitance in Part C200 Old=10µF New=100nF
+Change Value of Parameter Capacitance Tolerance in Part C200 Old=+/-20% New=+/-10%
+Change Value of Parameter Capacitance Tolerance in Part C203 Old=+/-20% New=+/-10%
+Change Value of Parameter Capacitance Tolerance in Part C201 Old=+/-20% New=+/-10%
+Change Value of Parameter Capacitance Tolerance in Part C202 Old=+/-20% New=+/-10%
+Change Value of Parameter Ceramic Type in Part C201 Old=X5R New=X7R
+Change Value of Parameter Ceramic Type in Part C203 Old=X5R New=X7R
+Change Value of Parameter Ceramic Type in Part C200 Old=X5R New=X7R
+Change Value of Parameter Ceramic Type in Part C202 Old=X5R New=X7R
+Change Component Parameter Comment in C203 Old= New=100nF
+Change Component Parameter Comment in C201 Old= New=100nF
+Change Component Parameter Comment in C202 Old= New=100nF
+Change Component Parameter Comment in C200 Old= New=100nF
+Change Value of Parameter ComponentLink1URL in Part C203 Old=https://www.we-online.com/redexpert/article/885012107014?ad New=https://www.we-online.com/redexpert/article/885012207098?ad
+Change Value of Parameter ComponentLink1URL in Part C200 Old=https://www.we-online.com/redexpert/article/885012107014?ad New=https://www.we-online.com/redexpert/article/885012207098?ad
+Change Value of Parameter ComponentLink1URL in Part C202 Old=https://www.we-online.com/redexpert/article/885012107014?ad New=https://www.we-online.com/redexpert/article/885012207098?ad
+Change Value of Parameter ComponentLink1URL in Part C201 Old=https://www.we-online.com/redexpert/article/885012107014?ad New=https://www.we-online.com/redexpert/article/885012207098?ad
+Change Value of Parameter ComponentLink2URL in Part C201 Old=https://www.we-online.com/redexpert/spec/885012107014?ad New=https://www.we-online.com/redexpert/spec/885012207098?ad
+Change Value of Parameter ComponentLink2URL in Part C202 Old=https://www.we-online.com/redexpert/spec/885012107014?ad New=https://www.we-online.com/redexpert/spec/885012207098?ad
+Change Value of Parameter ComponentLink2URL in Part C200 Old=https://www.we-online.com/redexpert/spec/885012107014?ad New=https://www.we-online.com/redexpert/spec/885012207098?ad
+Change Value of Parameter ComponentLink2URL in Part C203 Old=https://www.we-online.com/redexpert/spec/885012107014?ad New=https://www.we-online.com/redexpert/spec/885012207098?ad
+Change Component Parameter Description in C201 Old=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X7R, 100nF, 50VDC
+Change Component Parameter Description in C200 Old=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X7R, 100nF, 50VDC
+Change Component Parameter Description in C203 Old=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X7R, 100nF, 50VDC
+Change Component Parameter Description in C202 Old=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X7R, 100nF, 50VDC
+Change Value of Parameter Dissipation Factor in Part C202 Old=10% New=2.5%
+Change Value of Parameter Dissipation Factor in Part C203 Old=10% New=2.5%
+Change Value of Parameter Dissipation Factor in Part C201 Old=10% New=2.5%
+Change Value of Parameter Dissipation Factor in Part C200 Old=10% New=2.5%
+Change Value of Parameter Height in Part C202 Old=1.25mm New=0.8mm
+Change Value of Parameter Height in Part C201 Old=1.25mm New=0.8mm
+Change Value of Parameter Height in Part C200 Old=1.25mm New=0.8mm
+Change Value of Parameter Height in Part C203 Old=1.25mm New=0.8mm
+Change Value of Parameter Insulation Resistance in Part C200 Old=0.01GO New=5GO
+Change Value of Parameter Insulation Resistance in Part C202 Old=0.01GO New=5GO
+Change Value of Parameter Insulation Resistance in Part C203 Old=0.01GO New=5GO
+Change Value of Parameter Insulation Resistance in Part C201 Old=0.01GO New=5GO
+Change Component Parameter Library Reference in C202 Old=885012107014 New=885012207098
+Change Component Parameter Library Reference in C200 Old=885012107014 New=885012207098
+Change Component Parameter Library Reference in C201 Old=885012107014 New=885012207098
+Change Component Parameter Library Reference in C203 Old=885012107014 New=885012207098
+Change Value of Parameter Manufacturer Part Number in Part C200 Old=885012107014 New=885012207098
+Change Value of Parameter Manufacturer Part Number in Part C202 Old=885012107014 New=885012207098
+Change Value of Parameter Manufacturer Part Number in Part C203 Old=885012107014 New=885012207098
+Change Value of Parameter Manufacturer Part Number in Part C201 Old=885012107014 New=885012207098
+Change Value of Parameter Operating Temperature Max in Part C202 Old=85°C New=125°C
+Change Value of Parameter Operating Temperature Max in Part C200 Old=85°C New=125°C
+Change Value of Parameter Operating Temperature Max in Part C203 Old=85°C New=125°C
+Change Value of Parameter Operating Temperature Max in Part C201 Old=85°C New=125°C
+Change Value of Parameter Rated Voltage (DC) in Part C201 Old=16V New=50V
+Change Value of Parameter Rated Voltage (DC) in Part C202 Old=16V New=50V
+Change Value of Parameter Rated Voltage (DC) in Part C203 Old=16V New=50V
+Change Value of Parameter Rated Voltage (DC) in Part C200 Old=16V New=50V
+Change Value of Parameter Technical Reference in Part C203 Old=X5R0805106M016DFCT10000 New=X7R0805104K050DFCT10000
+Change Value of Parameter Technical Reference in Part C200 Old=X5R0805106M016DFCT10000 New=X7R0805104K050DFCT10000
+Change Value of Parameter Technical Reference in Part C202 Old=X5R0805106M016DFCT10000 New=X7R0805104K050DFCT10000
+Change Value of Parameter Technical Reference in Part C201 Old=X5R0805106M016DFCT10000 New=X7R0805104K050DFCT10000
+Replace Part C200 885012207098 in C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012207098 from Altium_WCAP-CSGP (rev22f).IntLib
+Replace Part C201 885012207098 in C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012207098 from Altium_WCAP-CSGP (rev22f).IntLib
+Replace Part C202 885012207098 in C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012207098 from Altium_WCAP-CSGP (rev22f).IntLib
+Replace Part C203 885012207098 in C:\Users\juamoreno\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012207098 from Altium_WCAP-CSGP (rev22f).IntLib

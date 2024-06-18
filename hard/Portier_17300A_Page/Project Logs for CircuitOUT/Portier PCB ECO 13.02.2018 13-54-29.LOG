@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=U101 Old Footprint=TSSOP New Footprint=TSOP65P640X110_HS-17N
+Change component parameters: Designator = "U101"; Footprint = "TSOP65P640X110_HS-17N"; UniqueID = "\GMRICTUX\SBMPGBFU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Maxim Integrated"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U101-EP

@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=VCC Pin=R200-1
+Removed Pin From Net: NetName=NetD200_2 Pin=R200-2
+Removed Pin From Net: NetName=VCC Pin=R201-1
+Removed Pin From Net: NetName=NetD201_2 Pin=R201-2
+Change Component Footprint: Designator=R200 Old Footprint=RESC0805(2012)_N New Footprint=RESC2013X50X30NL20T20
+Change Component Footprint: Designator=R201 Old Footprint=RESC0805(2012)_N New Footprint=RESC2013X50X30NL20T20
+Change Component Footprint: Designator=R202 Old Footprint=RESC0805(2012)_N New Footprint=RESC2013X50X30NL20T20
+Change Managed Component Library Link : Designator=R200 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=7F195E22-FE58-4EEF-85BA-4C86A96B4CF8 New ItemGUID=57FD3E50-86B0-43CB-A368-B797E20B6901 Old RevisionGUID=B0DE47AB-9E41-4C23-A328-A2F17CDFCB77 New RevisionGUID=9C901AD1-C48F-41D7-96DA-E024EF6D0F57
+Change Managed Component Library Link : Designator=R201 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=7F195E22-FE58-4EEF-85BA-4C86A96B4CF8 New ItemGUID=57FD3E50-86B0-43CB-A368-B797E20B6901 Old RevisionGUID=B0DE47AB-9E41-4C23-A328-A2F17CDFCB77 New RevisionGUID=9C901AD1-C48F-41D7-96DA-E024EF6D0F57
+Change Managed Component Library Link : Designator=R202 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=7F195E22-FE58-4EEF-85BA-4C86A96B4CF8 New ItemGUID=57FD3E50-86B0-43CB-A368-B797E20B6901 Old RevisionGUID=B0DE47AB-9E41-4C23-A328-A2F17CDFCB77 New RevisionGUID=9C901AD1-C48F-41D7-96DA-E024EF6D0F57
+Change component parameters: Designator = "R200" ("R200"); Footprint = "RESC0805(2012)_N"; UniqueID = "\XKRSHQMH\OMDNKHET" ("\XKRSHQMH\OMDNKHET")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW0805750KFKEA"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R201" ("R201"); Footprint = "RESC0805(2012)_N"; UniqueID = "\XKRSHQMH\ICGVBXUA" ("\XKRSHQMH\ICGVBXUA")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW0805750KFKEA"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R202" ("R202"); Footprint = "RESC0805(2012)_N"; UniqueID = "\XKRSHQMH\KNJRANEP" ("\XKRSHQMH\KNJRANEP")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW0805750KFKEA"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD200_2 Pin=R200-1
+Added Pin To Net: NetName=VCC Pin=R200-2
+Added Pin To Net: NetName=NetD201_2 Pin=R201-1
+Added Pin To Net: NetName=VCC Pin=R201-2

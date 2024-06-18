@@ -1,0 +1,11 @@
+Change Component Footprint: Designator=ME5 Old Footprint=M3X05_MF_971050365 New Footprint=M3X06_MF_971060365
+Change Component Comment : Designator=ME5 Old Comment=Spacer M3x05 M-F New Comment=Spacer M3x06 M-F
+Change component parameters: Designator = "ME5" ("ME5"); Footprint = "M3X05_MF_971050365"; UniqueID = "\DTUHUSEZ\OEMPXLFQ" ("\DTUHUSEZ\OEMPXLFQ")
+Change component parameters (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Inner Thread Length"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "971060365"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Outer Thread"; Value = "M3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Outer Thread Length"; Value = "8"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"

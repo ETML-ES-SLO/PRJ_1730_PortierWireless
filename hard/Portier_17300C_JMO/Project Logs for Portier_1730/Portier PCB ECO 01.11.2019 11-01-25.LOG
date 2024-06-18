@@ -1,0 +1,19 @@
+Removed Member From Class: ClassName=Circuit Member=R?
+Change Component Designator: OldDesignator=J? NewDesignator=X204
+Change Component Designator: OldDesignator=R203 NewDesignator=R204
+Change Component Designator: OldDesignator=R204 NewDesignator=R205
+Change Component Designator: OldDesignator=R205 NewDesignator=R206
+Change Component Designator: OldDesignator=R206 NewDesignator=R207
+Change Component Designator: OldDesignator=R207 NewDesignator=R208
+Change Component Designator: OldDesignator=R208 NewDesignator=R209
+Change Component Designator: OldDesignator=R209 NewDesignator=R210
+Change Component Designator: OldDesignator=R210 NewDesignator=R211
+Change Component Designator: OldDesignator=R? NewDesignator=R203
+Change Component Designator: OldDesignator=X202 NewDesignator=X203
+Change Net Name : Old Net Name=NetR203_1 New Net Name=NetR204_1
+Change Net Name : Old Net Name=NetR210_1 New Net Name=NetR211_1
+Added Pin To Net: NetName=NetR203_1 Pin=R203-1
+Added Pin To Net: NetName=NetR203_1 Pin=X200-5
+Added Net: Name=NetR203_1
+Added Member To Class: ClassName=Circuit Member=Component R211 1k
+Added Member To Class: ClassName=Circuit Member=Component X203 TSW-103-07-F-S

@@ -1,0 +1,21 @@
+Added Component: Designator=U100(TSSOP)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "Maxim Integrated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageCase"; Value = "16-TSSOP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "MAX1793EUE33+"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Digi-key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier PN"; Value = "MAX1793EUE33+ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC103_1 Pin=U100-2
+Added Pin To Net: NetName=NetC103_1 Pin=U100-3
+Added Pin To Net: NetName=NetC103_1 Pin=U100-4
+Added Pin To Net: NetName=NetC103_1 Pin=U100-5
+Added Pin To Net: NetName=NetC103_1 Pin=U100-7
+Added Pin To Net: NetName=GND Pin=U100-10
+Added Pin To Net: NetName=GND Pin=U100-11
+Added Pin To Net: NetName=VCC Pin=U100-12
+Added Pin To Net: NetName=VCC Pin=U100-13
+Added Pin To Net: NetName=VCC Pin=U100-14
+Added Pin To Net: NetName=VCC Pin=U100-15
+Added Member To Class: ClassName=Alimentation Member=Component U100 MAX1793
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetJ200_5 Pin=X202-1
+Removed Pin From Net: NetName=VCC Pin=X202-2
+Removed Pin From Net: NetName=GND Pin=X202-3
+Removed Pin From Net: NetName=PGED1(M) Pin=X202-4
+Removed Pin From Net: NetName=PGEC1(M) Pin=X202-5
+Removed Member From Class: ClassName=Circuit Member=X202

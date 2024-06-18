@@ -1,0 +1,6 @@
+Added Component: Designator=ME14(M3x06 Screw Height_8)
+Added Component: Designator=ME15(M3x06 Screw Height_8)
+Added Component: Designator=ME16(M3x06 Screw Height_8)
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME14 M3x06
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME15 M3x06
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME16 M3x06

@@ -1,0 +1,73 @@
+Added Component: Designator=ME1(M3x14_FF_970140365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "970140365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Component: Designator=ME2(M3x14_FF_970140365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "970140365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Component: Designator=ME3(M3x14_FF_970140365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "970140365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Component: Designator=ME4(M3x14_FF_970140365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "970140365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Component: Designator=ME5(M3x05_MF_971050365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "971050365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread Length"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Component: Designator=ME6(M3x05_MF_971050365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "971050365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread Length"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Component: Designator=ME7(M3x05_MF_971050365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "971050365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread Length"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Component: Designator=ME8(M3x05_MF_971050365)
+Add component (AddParameter): Name = "Inner Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Inner Thread Length"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "971050365"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread"; Value = "M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outer Thread Length"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wrench"; Value = "6"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME1 Spacer M3x14 F-F
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME2 Spacer M3x14 F-F
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME3 Spacer M3x14 F-F
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME4 Spacer M3x14 F-F
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME5 Spacer M3x05 M-F
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME6 Spacer M3x05 M-F
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME7 Spacer M3x05 M-F
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ME8 Spacer M3x05 M-F
+Added Room: Name=PcsMec_BOM

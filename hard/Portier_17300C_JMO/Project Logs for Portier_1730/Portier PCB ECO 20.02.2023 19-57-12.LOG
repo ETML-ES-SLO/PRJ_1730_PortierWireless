@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=NetC203_2 Pin=SW203-1
+Removed Pin From Net: NetName=GND Pin=SW203-2
+Removed Pin From Net: NetName=GND Pin=SW203-4
+Change Component Footprint: Designator=SW203 Old Footprint=4301X20508X6_6X6X5 New Footprint=WS-TASV_L6W6H4.3_4301x20438x6
+Change Component Comment : Designator=SW203 Old Comment=430152050836 New Comment=430182043816
+Change Component Designator: OldDesignator=3 NewDesignator=U201
+Added Pin To Net: NetName=NetC203_2 Pin=R211-1
+Added Pin To Net: NetName=NetC203_2 Pin=SW203-A1
+Added Pin To Net: NetName=NetC203_2 Pin=SW203-A2
+Added Pin To Net: NetName=GND Pin=SW203-B1
+Added Pin To Net: NetName=GND Pin=SW203-B2
+Added Member To Class: ClassName=Circuit Member=Component U201 BuzzerPiezo
