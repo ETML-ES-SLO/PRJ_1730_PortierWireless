@@ -1,0 +1,16 @@
+Change component parameters: Designator = "R101" ("R101"); Footprint = "RESC2013X70X40ML20T20"; UniqueID = "\GMRICTUX\COXBPOVL" ("\GMRICTUX\COXBPOVL")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "ERJ-6ENF1003V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R102" ("R102"); Footprint = "RESC2013X70X40ML20T20"; UniqueID = "\GMRICTUX\DONFINXJ" ("\GMRICTUX\DONFINXJ")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "ERJ-6ENF1003V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R103" ("R103"); Footprint = "RESC2013X55X40NL15T20"; UniqueID = "\GMRICTUX\AUHISPNR" ("\GMRICTUX\AUHISPNR")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "TNPW080511K0BEEA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "11k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R104" ("R104"); Footprint = "RESC2013X50X30NL20T20"; UniqueID = "\GMRICTUX\MFRBGYDT" ("\GMRICTUX\MFRBGYDT")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW080522K0FKEA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "11k"; VariantName = "[No Variations]"

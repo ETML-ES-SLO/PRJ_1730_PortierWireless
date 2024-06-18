@@ -1,0 +1,68 @@
+Change Component Footprint: Designator=C200 Old Footprint=CAPC3216X180X50ML20T25 New Footprint=FP-C0805C106K4PACTU-MFG
+Change Managed Component Library Link : Designator=C100 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=060F5D49-7986-4B38-BDFB-D5B6DFD6D9A7 Old RevisionGUID= New RevisionGUID=2A9EC8F4-BB71-4D71-9074-8529C1BD25F9
+Change Managed Component Library Link : Designator=C101 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=060F5D49-7986-4B38-BDFB-D5B6DFD6D9A7 Old RevisionGUID= New RevisionGUID=2A9EC8F4-BB71-4D71-9074-8529C1BD25F9
+Change Managed Component Library Link : Designator=C102 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=2214D995-1DFA-435E-AF63-5974146FB850 Old RevisionGUID= New RevisionGUID=E10631C0-6E6A-4DF2-884F-FF188FC9808A
+Change Managed Component Library Link : Designator=C103 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=787EFBC6-1EFF-46D9-B2CE-895F634BE4D2 Old RevisionGUID= New RevisionGUID=2FC3147A-E96B-42BC-B28A-4F470471664F
+Change Managed Component Library Link : Designator=C104 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=787EFBC6-1EFF-46D9-B2CE-895F634BE4D2 Old RevisionGUID= New RevisionGUID=2FC3147A-E96B-42BC-B28A-4F470471664F
+Change Managed Component Library Link : Designator=C200 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=E4CF05CF-CBCB-4DD1-973D-0F3C272B61AD Old RevisionGUID= New RevisionGUID=55FF6C66-94A6-4ACA-ADD0-8155E1CC0F33
+Change Managed Component Library Link : Designator=C201 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=060F5D49-7986-4B38-BDFB-D5B6DFD6D9A7 Old RevisionGUID= New RevisionGUID=2A9EC8F4-BB71-4D71-9074-8529C1BD25F9
+Change Managed Component Library Link : Designator=C202 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=060F5D49-7986-4B38-BDFB-D5B6DFD6D9A7 Old RevisionGUID= New RevisionGUID=2A9EC8F4-BB71-4D71-9074-8529C1BD25F9
+Change Managed Component Library Link : Designator=C203 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=060F5D49-7986-4B38-BDFB-D5B6DFD6D9A7 Old RevisionGUID= New RevisionGUID=2A9EC8F4-BB71-4D71-9074-8529C1BD25F9
+Change Managed Component Library Link : Designator=Q100 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=1A50E5D3-D591-47BE-B06F-CA1A068EA43F Old RevisionGUID= New RevisionGUID=A3115199-D9A4-4E5B-861A-6223E9172203
+Change Managed Component Library Link : Designator=Q101 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F320F704-CAC6-43A8-866A-B583EA58C1D2 Old RevisionGUID= New RevisionGUID=A39FFBAE-210A-436A-BA13-B769B7E7259D
+Change Managed Component Library Link : Designator=Q102 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F320F704-CAC6-43A8-866A-B583EA58C1D2 Old RevisionGUID= New RevisionGUID=A39FFBAE-210A-436A-BA13-B769B7E7259D
+Change Managed Component Library Link : Designator=Q200 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F320F704-CAC6-43A8-866A-B583EA58C1D2 Old RevisionGUID= New RevisionGUID=A39FFBAE-210A-436A-BA13-B769B7E7259D
+Change Managed Component Library Link : Designator=Q201 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F320F704-CAC6-43A8-866A-B583EA58C1D2 Old RevisionGUID= New RevisionGUID=A39FFBAE-210A-436A-BA13-B769B7E7259D
+Change Managed Component Library Link : Designator=Q202 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F320F704-CAC6-43A8-866A-B583EA58C1D2 Old RevisionGUID= New RevisionGUID=A39FFBAE-210A-436A-BA13-B769B7E7259D
+Change Managed Component Library Link : Designator=Q203 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F320F704-CAC6-43A8-866A-B583EA58C1D2 Old RevisionGUID= New RevisionGUID=A39FFBAE-210A-436A-BA13-B769B7E7259D
+Change Managed Component Library Link : Designator=R100 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID= New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change Managed Component Library Link : Designator=R101 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID= New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change Managed Component Library Link : Designator=R102 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID= New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change Managed Component Library Link : Designator=R103 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=C0F6FF84-C642-436E-81E5-090A44719732 Old RevisionGUID= New RevisionGUID=365FF954-C969-470E-964A-C97924B77AA5
+Change Managed Component Library Link : Designator=R104 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=94FC65FE-B3D4-4618-8E65-53E172514D7A Old RevisionGUID= New RevisionGUID=B4E33B6E-4A5E-448B-8DEB-EC292C0EB73B
+Change Managed Component Library Link : Designator=R200 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=7F195E22-FE58-4EEF-85BA-4C86A96B4CF8 Old RevisionGUID= New RevisionGUID=B0DE47AB-9E41-4C23-A328-A2F17CDFCB77
+Change Managed Component Library Link : Designator=R201 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=7F195E22-FE58-4EEF-85BA-4C86A96B4CF8 Old RevisionGUID= New RevisionGUID=B0DE47AB-9E41-4C23-A328-A2F17CDFCB77
+Change Managed Component Library Link : Designator=R202 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=7F195E22-FE58-4EEF-85BA-4C86A96B4CF8 Old RevisionGUID= New RevisionGUID=B0DE47AB-9E41-4C23-A328-A2F17CDFCB77
+Change Managed Component Library Link : Designator=R203 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID= New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change Managed Component Library Link : Designator=R204 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID= New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change Managed Component Library Link : Designator=R205 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=D2BB4EBD-434C-4A0A-87C3-92BF88F0847C Old RevisionGUID= New RevisionGUID=E93F9D83-9F5D-47E9-B6A2-6EB4829C9051
+Change Managed Component Library Link : Designator=R206 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=D2BB4EBD-434C-4A0A-87C3-92BF88F0847C Old RevisionGUID= New RevisionGUID=E93F9D83-9F5D-47E9-B6A2-6EB4829C9051
+Change Managed Component Library Link : Designator=R207 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=D2BB4EBD-434C-4A0A-87C3-92BF88F0847C Old RevisionGUID= New RevisionGUID=E93F9D83-9F5D-47E9-B6A2-6EB4829C9051
+Change Managed Component Library Link : Designator=R208 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID= New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change Managed Component Library Link : Designator=R209 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 Old RevisionGUID= New RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050
+Change Managed Component Library Link : Designator=R210 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F60048A3-D561-484D-B156-4DCD9BBF6D49 Old RevisionGUID= New RevisionGUID=58C2A00D-8321-4E64-814A-C3FF86DDDFC4
+Change Managed Component Library Link : Designator=R211 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=F60048A3-D561-484D-B156-4DCD9BBF6D49 Old RevisionGUID= New RevisionGUID=58C2A00D-8321-4E64-814A-C3FF86DDDFC4
+Change Managed Component Library Link : Designator=U200 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=537D43CF-1422-46AB-B229-4BA93FE0706F Old RevisionGUID= New RevisionGUID=1E08467F-E4DD-48A1-B1AE-276BF382E787
+Change Managed Component Library Link : Designator=X203 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=14FD4E74-BC26-4201-BA60-D0A7B6B4F358 Old RevisionGUID= New RevisionGUID=062EB39B-6F90-4033-AF56-A70B0AF4C7C1
+Change component parameters: Designator = "C200" ("C200"); Footprint = "CAPC3216X180X50ML20T25"; UniqueID = "\XKRSHQMH\EFGJDUXB" ("\XKRSHQMH\EFGJDUXB")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "10uF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Code (Imperial)"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Code (Metric)"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Construction"; Value = "Flat"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Depth"; Value = "1.25mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dielectric"; Value = "X5R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dielectric Material"; Value = "Ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dissipation Factor"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.25mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Pins"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness"; Value = "0.055inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "16V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating (DC)"; Value = "16V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Width"; Value = "0.049inch"; VariantName = "[No Variations]"
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

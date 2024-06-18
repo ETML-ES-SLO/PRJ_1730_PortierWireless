@@ -1,0 +1,34 @@
+Removed Pin From Net: NetName=NetC203_2 Pin=R209-1
+Removed Pin From Net: NetName=GND Pin=SW203-1
+Removed Pin From Net: NetName=NetC203_2 Pin=SW203-2
+Removed Member From Class: ClassName=Alimentation Member=C105
+Change Component Footprint: Designator=SW203 Old Footprint=SWITCH_SCHURTER New Footprint=4301x20508x6_6x6x5
+Change Component Comment : Designator=Q102 Old Comment=IRLML2402TRPBF New Comment=IRLML2402
+Change Component Comment : Designator=SW203 Old Comment=Poussoir New Comment=430152050836
+Change Component Designator: OldDesignator=C103 NewDesignator=X100
+Change Component Designator: OldDesignator=C104 NewDesignator=C103
+Change Component Designator: OldDesignator=C105 NewDesignator=C104
+Change Component Designator: OldDesignator=LT100 NewDesignator=U100
+Change Component Designator: OldDesignator=P200 NewDesignator=X201
+Change Component Designator: OldDesignator=P201 NewDesignator=X202
+Change Component Designator: OldDesignator=U100 NewDesignator=U101
+Change component parameters: Designator = "SW203"; Footprint = "4301x20508x6_6x6x5"; UniqueID = "\XKRSHQMH\LXDRRQLL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/4301x2xxx8x6.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Life Cycle"; Value = "200000 cycles"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operation Force"; Value = "360g"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "430152050836"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "June 2017"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size"; Value = "6x6x5 mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC203_2 Pin=SW203-1
+Added Pin To Net: NetName=GND Pin=SW203-2
+Added Pin To Net: NetName=GND Pin=SW203-4
+Change Net Name : Old Net Name=NetC103_1 New Net Name=NetC104_2
+Added Pin To Net: NetName=NetR209_1 Pin=R209-1
+Added Pin To Net: NetName=NetR209_1 Pin=SW203-3
+Added Net: Name=NetR209_1
+Added Member To Class: ClassName=Alimentation Member=Component X100 Micro_USB

@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GND Pin=C204-1
+Removed Pin From Net: NetName=OSC1 Pin=C204-2
+Removed Pin From Net: NetName=GND Pin=C205-1
+Removed Pin From Net: NetName=OSC2 Pin=C205-2
+Removed Pin From Net: NetName=OSC2 Pin=Y200-1
+Removed Pin From Net: NetName=OSC1 Pin=Y200-2
+Removed Member From Class: ClassName=Circuit Member=C204
+Removed Member From Class: ClassName=Circuit Member=C205
+Removed Member From Class: ClassName=Circuit Member=Y200
+Change Component Footprint: Designator=X200 Old Footprint=ZB-SB New Footprint=ModulesRxTx868MHz_1623
+Change Component Comment : Designator=X200 Old Comment=Header ZB-SB New Comment=ModulesRxTx868MHz_1623
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

@@ -1,0 +1,4 @@
+Change Value of Parameter Manufacturer in Part Q200 Old=International Rectifier New=Infineon Technologies
+Added Parameter Supplier=Digi-key to Part P200
+Added Parameter Supplier PN=SAM8995-ND  to Part P200
+Added Parameter Value=1x3 to Part P200

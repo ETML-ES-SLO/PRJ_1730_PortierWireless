@@ -1,0 +1,14 @@
+Added Component: Designator=X200(ZB-SB)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "PackageCase"; Value = "XBee"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2x10"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=X200-1
+Added Pin To Net: NetName=UART_TX Pin=X200-2
+Added Pin To Net: NetName=UART_RX Pin=X200-3
+Added Pin To Net: NetName=Reset(M) Pin=X200-5
+Added Pin To Net: NetName=GND Pin=X200-10
+Added Pin To Net: NetName=Connect(M) Pin=X200-13
+Added Pin To Net: NetName=LINK(M) Pin=X200-15
+Added Member To Class: ClassName=Circuit Member=Component X200 Header ZB-SB
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

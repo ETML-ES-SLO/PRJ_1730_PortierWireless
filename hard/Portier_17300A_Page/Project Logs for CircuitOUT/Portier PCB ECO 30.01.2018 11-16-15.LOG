@@ -1,0 +1,54 @@
+Removed Pin From Net: NetName=OSC1 Pin=C204-1
+Removed Pin From Net: NetName=GND Pin=C204-2
+Removed Pin From Net: NetName=OSC2 Pin=C205-1
+Removed Pin From Net: NetName=GND Pin=C205-2
+Removed Pin From Net: NetName=Reset Pin=J200-1
+Removed Pin From Net: NetName=VCC Pin=J200-2
+Removed Pin From Net: NetName=GND Pin=J200-3
+Removed Pin From Net: NetName=PGED Pin=J200-4
+Removed Pin From Net: NetName=PGEC Pin=J200-5
+Removed Member From Class: ClassName=Circuit Member=J200
+Change Component Footprint: Designator=C204 Old Footprint=CAPC1608X90X40LL10T20 New Footprint=CAPC0805(2012)145_M
+Change Component Footprint: Designator=C205 Old Footprint=CAPC1608X90X40LL10T20 New Footprint=CAPC0805(2012)145_M
+Change Component Comment : Designator=C204 Old Comment=22pF New Comment=22pF 16V
+Change Component Comment : Designator=C205 Old Comment=22pF New Comment=22pF 16V
+Change Component Designator: OldDesignator=P200 NewDesignator=P201
+Change component parameters: Designator = "C204"; Footprint = "CAPC0805(2012)145_M"; UniqueID = "\XKRSHQMH\EWMRQKKW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "PackageCase"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "22pF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C205"; Footprint = "CAPC0805(2012)145_M"; UniqueID = "\XKRSHQMH\DECLWIWD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "PackageCase"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "22pF"; VariantName = "[No Variations]"
+Added Component: Designator=P200(SMTC-TSW-107-05-X-S)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.samtec.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.samtec.com/documents/webfiles/pdf/TSW_TH.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.samtec.com/documents/webfiles/cpdf/TSW-XXX-XX-XXX-X-XX-XXX-MKT.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "F-214"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through-hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = ".025[0.64] SQ. Post Terminal Strip Assembly"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "TSW-107-05-X-S"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "DM, 8/1988"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "TSW-107-05-T-S"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range"; Value = "-55 to 105 degC"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C204-1
+Added Pin To Net: NetName=OSC1 Pin=C204-2
+Added Pin To Net: NetName=GND Pin=C205-1
+Added Pin To Net: NetName=OSC2 Pin=C205-2
+Added Pin To Net: NetName=Reset Pin=P200-1
+Added Pin To Net: NetName=VCC Pin=P200-2
+Added Pin To Net: NetName=GND Pin=P200-3
+Added Pin To Net: NetName=PGED Pin=P200-4
+Added Pin To Net: NetName=PGEC Pin=P200-5
+Added Member To Class: ClassName=Circuit Member=Component P201 TSW-103-07-F-S
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

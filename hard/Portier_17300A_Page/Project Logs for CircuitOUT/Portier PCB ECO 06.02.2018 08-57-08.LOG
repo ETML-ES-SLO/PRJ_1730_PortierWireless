@@ -1,0 +1,10 @@
+Added Component: Designator=R209(RESC2013X60X35NL10T20)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "PackageCase"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "150 V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC203_2 Pin=R209-1
+Added Pin To Net: NetName=Reset Pin=R209-2
+Added Member To Class: ClassName=Circuit Member=Component R209 1k
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

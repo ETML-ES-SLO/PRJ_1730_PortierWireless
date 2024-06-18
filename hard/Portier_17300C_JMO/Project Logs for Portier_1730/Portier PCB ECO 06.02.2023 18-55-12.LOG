@@ -1,0 +1,75 @@
+Removed Pin From Net: NetName=VCC Pin=X200-1
+Removed Pin From Net: NetName=UART_RX Pin=X200-2
+Removed Pin From Net: NetName=UART_TX Pin=X200-3
+Removed Pin From Net: NetName=CD(M) Pin=X200-4
+Removed Pin From Net: NetName=SLEEP(M) Pin=X200-9
+Removed Pin From Net: NetName=GND Pin=X200-10
+Removed Pin From Net: NetName=GPIO1(M) Pin=X200-11
+Removed Pin From Net: NetName=GPIO2(M) Pin=X200-12
+Removed Pin From Net: NetName=PGEC1(M) Pin=X200-13
+Removed Pin From Net: NetName=PGED1(M) Pin=X200-14
+Removed Pin From Net: NetName=LINK(M) Pin=X200-16
+Removed Pin From Net: NetName=Connect(M) Pin=X200-18
+Removed Member From Class: ClassName=Circuit Member=X200
+Added Component: Designator=J200(62001011821)
+Add component (AddParameter): Name = "Category"; Value = "Board-to-Board Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/62001011821?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/62001011821?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Resistance"; Value = "20mO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Socket Header"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "62001011821"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Match Code"; Value = "WR-PHD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Max"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Min"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tube"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Current"; Value = "2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Withstanding Voltage"; Value = "500V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Working Voltage"; Value = "250V"; VariantName = "[No Variations]"
+Added Component: Designator=J201(62001011821)
+Add component (AddParameter): Name = "Category"; Value = "Board-to-Board Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/62001011821?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/62001011821?ad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Resistance"; Value = "20mO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Socket Header"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "62001011821"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Match Code"; Value = "WR-PHD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Max"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Min"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tube"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Current"; Value = "2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Withstanding Voltage"; Value = "500V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Working Voltage"; Value = "250V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=J200-1
+Added Pin To Net: NetName=UART_RX Pin=J200-2
+Added Pin To Net: NetName=UART_TX Pin=J200-3
+Added Pin To Net: NetName=CD(M) Pin=J200-4
+Added Pin To Net: NetName=SLEEP(M) Pin=J200-9
+Added Pin To Net: NetName=GND Pin=J200-10
+Added Pin To Net: NetName=GPIO1(M) Pin=J201-1
+Added Pin To Net: NetName=GPIO2(M) Pin=J201-2
+Added Pin To Net: NetName=PGEC1(M) Pin=J201-3
+Added Pin To Net: NetName=PGED1(M) Pin=J201-4
+Added Pin To Net: NetName=LINK(M) Pin=J201-6
+Added Pin To Net: NetName=Connect(M) Pin=J201-8
+Added Pin To Net: NetName=NetJ200_5 Pin=J200-5
+Added Pin To Net: NetName=NetJ200_5 Pin=R203-1
+Added Pin To Net: NetName=NetJ200_5 Pin=X202-1
+Added Net: Name=NetJ200_5
+Added Member To Class: ClassName=Circuit Member=Component J200 62001011821
+Added Member To Class: ClassName=Circuit Member=Component J201 62001011821

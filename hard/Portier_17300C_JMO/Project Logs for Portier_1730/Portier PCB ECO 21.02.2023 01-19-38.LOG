@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=NetJ200_5 Pin=R203-1
+Removed Pin From Net: NetName=/MCLR(M) Pin=R203-2
+Change Component Footprint: Designator=R203 Old Footprint=RESC2013X60X35ML10T20 New Footprint=RESC2013X50X30ML20T20
+Change Component Footprint: Designator=R204 Old Footprint=RESC2013X60X35ML10T20 New Footprint=RESC2013X50X30ML20T20
+Change Component Footprint: Designator=R211 Old Footprint=RESC2013X60X35ML10T20 New Footprint=RESC2013X50X30ML20T20
+Change Managed Component Library Link : Designator=R203 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 New ItemGUID=92CC740A-06D3-43E3-A10C-B3B8112CF24E Old RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050 New RevisionGUID=0CE819D6-0B7C-4361-B742-EE40DEA8A2B9
+Change Managed Component Library Link : Designator=R204 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 New ItemGUID=92CC740A-06D3-43E3-A10C-B3B8112CF24E Old RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050 New RevisionGUID=0CE819D6-0B7C-4361-B742-EE40DEA8A2B9
+Change Managed Component Library Link : Designator=R211 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 New ItemGUID=92CC740A-06D3-43E3-A10C-B3B8112CF24E Old RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050 New RevisionGUID=0CE819D6-0B7C-4361-B742-EE40DEA8A2B9
+Change component parameters: Designator = "R203" ("R203"); Footprint = "RESC2013X60X35ML10T20"; UniqueID = "\XKRSHQMH\EPCAXFZQ" ("\XKRSHQMH\EPCAXFZQ")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW08051K00FKEA"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R204" ("R204"); Footprint = "RESC2013X60X35ML10T20"; UniqueID = "\XKRSHQMH\AMGOCXGY" ("\XKRSHQMH\AMGOCXGY")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW08051K00FKEA"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R211" ("R211"); Footprint = "RESC2013X60X35ML10T20"; UniqueID = "\XKRSHQMH\RKOVKKRK" ("\XKRSHQMH\RKOVKKRK")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW08051K00FKEA"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=/MCLR(M) Pin=R203-1
+Added Pin To Net: NetName=NetJ200_5 Pin=R203-2

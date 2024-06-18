@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=+VBAT Pin=R100-1
+Removed Pin From Net: NetName=NetQ100_1 Pin=R100-2
+Added Pin To Net: NetName=NetQ100_1 Pin=R100-1
+Added Pin To Net: NetName=+VBAT Pin=R100-2

@@ -1,0 +1,14 @@
+Added Component: Designator=U0(FID-150-300)
+Add component (AddParameter): Name = "Category"; Value = "Others"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "IsStocked"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "PN-509779"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SubCategory"; Value = "Fiducials"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1.5/3.0"; VariantName = "[No Variations]"
+Added Component: Designator=U_TL(FID-150-450)
+Add component (AddParameter): Name = "Category"; Value = "Others"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "IsStocked"; Value = "False"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "PN-677116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SubCategory"; Value = "Fiducials"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1.5/4.5"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Alimentation Member=Component U0 1.5/3.0
+Added Member To Class: ClassName=Alimentation Member=Component U_TL 1.5/4.5

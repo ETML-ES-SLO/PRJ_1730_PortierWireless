@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=GND Pin=SW200-1
+Added Pin To Net: NetName=GND Pin=SW201-1
+Added Pin To Net: NetName=GND Pin=SW202-1
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ZPNL1 Front Panel Door
+Add Class Member: Failed to add class member : Component ZPNL2 Front Panel Bell

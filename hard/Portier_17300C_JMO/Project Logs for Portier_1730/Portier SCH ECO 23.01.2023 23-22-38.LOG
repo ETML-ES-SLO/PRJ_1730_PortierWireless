@@ -1,0 +1,45 @@
+Removed Parameter Case/Package:0805 from Part C200
+Removed Parameter Case Code (Imperial):0805 from Part C200
+Removed Parameter Case Code (Metric):2012 from Part C200
+Removed Parameter Construction:Flat from Part C200
+Removed Parameter Contact Plating:Tin from Part C200
+Removed Parameter Depth:1.25mm from Part C200
+Removed Parameter Dielectric:X5R from Part C200
+Removed Parameter Dielectric Material:Ceramic from Part C200
+Removed Parameter Lead Free:Lead Free from Part C200
+Removed Parameter Max Operating Temperature:85°C from Part C200
+Removed Parameter Min Operating Temperature:-55°C from Part C200
+Removed Parameter Number of Pins:2 from Part C200
+Removed Parameter Package Quantity:1 from Part C200
+Removed Parameter Radiation Hardening:No from Part C200
+Removed Parameter REACH SVHC:No SVHC from Part C200
+Removed Parameter Series:C from Part C200
+Removed Parameter Termination:SMD/SMT from Part C200
+Removed Parameter Thickness:0.055inch from Part C200
+Removed Parameter Tolerance:10% from Part C200
+Removed Parameter Voltage:16V from Part C200
+Removed Parameter Voltage Rating (DC):16V from Part C200
+Removed Parameter Voltage Rating:16V from Part C200
+Change Value of Parameter Capacitance in Part C200 Old=10uF New=10µF
+Change Component Parameter Comment in C200 Old= New=10µF
+Change Component Parameter Description in C200 Old=CAP CER 10UF 16V X5R 0805 New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC
+Change Value of Parameter Dissipation Factor in Part C200 Old=5% New=10%
+Change Component Parameter Library Reference in C200 Old=CMP-03020-034671-1 New=885012107014
+Change Value of Parameter Width in Part C200 Old=0.049inch New=1.25mm
+Added Parameter Capacitance Tolerance=+/-20% to Part C200
+Added Parameter Case/Size Code=0805 to Part C200
+Added Parameter Category=Multilayer Ceramic Chip Capacitors to Part C200
+Added Parameter Ceramic Type=X5R to Part C200
+Added Parameter ComponentLink1Description=Website Link to Part C200
+Added Parameter ComponentLink1URL=https://www.we-online.com/redexpert/article/885012107014?ad to Part C200
+Added Parameter ComponentLink2Description=Datasheet Link to Part C200
+Added Parameter ComponentLink2URL=https://www.we-online.com/redexpert/spec/885012107014?ad to Part C200
+Added Parameter Insulation Resistance=0.01GO to Part C200
+Added Parameter Manufacturer=Wurth Elektronik to Part C200
+Added Parameter Manufacturer Part Number=885012107014 to Part C200
+Added Parameter Match Code=WCAP-CSGP to Part C200
+Added Parameter Operating Temperature Max=85°C to Part C200
+Added Parameter Operating Temperature Min=-55°C to Part C200
+Added Parameter Rated Voltage (DC)=16V to Part C200
+Added Parameter Technical Reference=X5R0805106M016DFCT10000 to Part C200
+Replace Part C200 885012107014 in G:\OneDrive_EV\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012107014 from Altium_WCAP-CSGP (rev22f).IntLib

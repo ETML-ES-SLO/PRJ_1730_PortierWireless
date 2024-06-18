@@ -1,0 +1,6 @@
+Added Component: Designator=LG1(Light Guide LFC050)
+Added Component: Designator=LG2(Light Guide LFC050)
+Added Component: Designator=LG3(Light Guide LFC050)
+Added Member To Class: ClassName=PcsMec_BOM Member=Component LG1 LFC 050 CTP
+Added Member To Class: ClassName=PcsMec_BOM Member=Component LG2 LFC 050 CTP
+Added Member To Class: ClassName=PcsMec_BOM Member=Component LG3 LFC 050 CTP

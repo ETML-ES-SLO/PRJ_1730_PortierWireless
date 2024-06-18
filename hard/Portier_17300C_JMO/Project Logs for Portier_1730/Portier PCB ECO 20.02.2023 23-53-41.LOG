@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=NetQ100_1 Pin=R100-1
+Removed Pin From Net: NetName=+VBAT Pin=R100-2
+Change Component Footprint: Designator=R100 Old Footprint=RESC2013X60X35ML10T20 New Footprint=RESC2013X50X30ML20T20
+Change Managed Component Library Link : Designator=R100 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=9BBD9324-2FD9-4648-9CB9-4BA0FDCD0C55 New ItemGUID=76339081-8909-421B-BA58-A5DBDB2CABC6 Old RevisionGUID=0D350E83-63D1-4819-BF21-6329E1110050 New RevisionGUID=410294E0-7F73-46EC-95F5-368747DD12BC
+Change component parameters: Designator = "R100" ("R100"); Footprint = "RESC2013X60X35ML10T20"; UniqueID = "\GMRICTUX\WZRLTRKN" ("\GMRICTUX\WZRLTRKN")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "CRCW0805100KJNEA"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+VBAT Pin=R100-1
+Added Pin To Net: NetName=NetQ100_1 Pin=R100-2

@@ -1,0 +1,27 @@
+Removed Parameter Manufacturer:Schurter from Part SW200
+Removed Parameter Manufacturer:Schurter from Part SW201
+Removed Parameter Manufacturer:Schurter from Part SW202
+Removed Parameter Supplier: from Part SW200
+Removed Parameter Supplier: from Part SW201
+Removed Parameter Supplier: from Part SW202
+Removed Parameter Supplier min. qty: from Part SW200
+Removed Parameter Supplier min. qty: from Part SW201
+Removed Parameter Supplier min. qty: from Part SW202
+Removed Parameter Supplier PN: from Part SW200
+Removed Parameter Supplier PN: from Part SW201
+Removed Parameter Supplier PN: from Part SW202
+Removed Parameter Supplier unit price: from Part SW200
+Removed Parameter Supplier unit price: from Part SW201
+Removed Parameter Supplier unit price: from Part SW202
+Change Component Parameter Comment in SW202 Old= New=Tact-sw 1241.1022
+Change Component Parameter Comment in SW201 Old= New=Tact-sw 1241.1022
+Change Component Parameter Comment in SW200 Old= New=Tact-sw 1241.1022
+Change Component Parameter Description in SW202 Old=Switch 12.7x12.7x17.5 New=
+Change Component Parameter Description in SW201 Old=Switch 12.7x12.7x17.5 New=
+Change Component Parameter Description in SW200 Old=Switch 12.7x12.7x17.5 New=
+Change Component Parameter Library Reference in SW202 Old=Switch_Schurter New=Tact-sw 1241.1022
+Change Component Parameter Library Reference in SW201 Old=Switch_Schurter New=Tact-sw 1241.1022
+Change Component Parameter Library Reference in SW200 Old=Switch_Schurter New=Tact-sw 1241.1022
+Replace Part SW200 Tact-sw 1241.1022 in G:\OneDrive_EV\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with Tact-sw 1241.1022 from Schurter-switches.IntLib
+Replace Part SW201 Tact-sw 1241.1022 in G:\OneDrive_EV\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with Tact-sw 1241.1022 from Schurter-switches.IntLib
+Replace Part SW202 Tact-sw 1241.1022 in G:\OneDrive_EV\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with Tact-sw 1241.1022 from Schurter-switches.IntLib

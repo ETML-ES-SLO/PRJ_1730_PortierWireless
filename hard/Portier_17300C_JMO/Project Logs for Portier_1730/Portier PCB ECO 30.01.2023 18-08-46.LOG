@@ -1,0 +1,4 @@
+Added Component: Designator=ZS4(PCBComponent_1)
+Added Component: Designator=ZS5(PCBComponent_1)
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ZS4 M3x10 - Conique - Torx
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ZS5 M3x10 - Conique - Torx

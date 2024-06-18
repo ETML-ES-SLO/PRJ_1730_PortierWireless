@@ -1,0 +1,12 @@
+Change Component Footprint: Designator=BT100 Old Footprint=BATTERYSUPPORT New Footprint=2468_3D_Keystone
+Change Component Comment : Designator=BT100 Old Comment=2 x 1.5V New Comment=2 x 1.5V AAA
+Change component parameters: Designator = "BT100" ("BT100"); Footprint = "BATTERYSUPPORT"; UniqueID = "\GMRICTUX\ABRUILTW" ("\GMRICTUX\ABRUILTW")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "2468"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "http://www.arrow.com/en/products/2468/keystone-electronics-corp"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-AE/DSA3AE00005.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "2468"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "534-2468"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/2468?qs=3CbvriavsLAoISGi3MywrQ%3D%3D"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Testing Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Testing Price/Stock"; Value = ""; VariantName = "[No Variations]"

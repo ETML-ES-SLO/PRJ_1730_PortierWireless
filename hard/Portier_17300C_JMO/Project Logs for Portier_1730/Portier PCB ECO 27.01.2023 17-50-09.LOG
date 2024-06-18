@@ -1,0 +1,31 @@
+Change Component Footprint: Designator=Q100 Old Footprint=FAIR-SSOT3L-3_V New Footprint=INF-PG-SOT23_L
+Change Component Comment : Designator=D200 Old Comment=Bright Green, 2V, 140� New Comment=Green, 2V, 40�
+Change Component Comment : Designator=Q100 Old Comment=FDN306P New Comment=BSS308PE
+Change Managed Component Library Link : Designator=Q100 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=1A50E5D3-D591-47BE-B06F-CA1A068EA43F New ItemGUID=BC1473F6-B70D-4DEC-8555-F920AC4106D1 Old RevisionGUID=A3115199-D9A4-4E5B-861A-6223E9172203 New RevisionGUID=9CC3A9C7-A641-45EA-A2DB-92DBED424E27
+Change component parameters: Designator = "Q100" ("Q100"); Footprint = "FAIR-SSOT3L-3_V"; UniqueID = "\GMRICTUX\OAJXZEKR" ("\GMRICTUX\OAJXZEKR")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.infineon.com/"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.infineon.com/dgdl/BSS308PE_Rev23_.pdf?folderId=db3a304314dca38901154a72e3951a65&fileId=db3a304330f686060131099c80400073"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.infineon.com/dgdl/SOT23-Package_Overview.pdf?folderId=db3a30431936bc4b0119532290053c66&fileId=db3a30431936bc4b0119533468123c85"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 2.03"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Green"; Value = "TRUE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Halogen-free"; Value = "TRUE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ID (max)"; Value = "-2 A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "IDpuls (max)"; Value = "-8 A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Infineon"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "3-Pin Small Outline Transistor Package, 2.9 x 1.3 mm Body, 0.95 mm Pitch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "PG-SOT23"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageVersion"; Value = "Apr-08"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packing"; Value = "Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "BSS308PE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pto t (max)"; Value = "0.5 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "QG"; Value = "-5 nC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RDS (on) (max)"; Value = "80 mOhm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RDS (on) (max) (@4.5V)"; Value = "130 mOhm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rth"; Value = "250 K/W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VDS (max)"; Value = "-30 V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VGS(th) (max)"; Value = "-1 V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VGS(th) (min)"; Value = "-2 V"; VariantName = "[No Variations]"

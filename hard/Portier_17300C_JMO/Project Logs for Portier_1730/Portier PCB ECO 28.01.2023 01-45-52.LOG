@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=SW200-1
+Removed Pin From Net: NetName=GND Pin=SW201-1
+Removed Pin From Net: NetName=GND Pin=SW202-1
+Change Component DesignItemId : Designator=SW200 Old DesignItemId=Switch_Schurter New DesignItemId=Tact-sw 1241.1022
+Change Component DesignItemId : Designator=SW201 Old DesignItemId=Switch_Schurter New DesignItemId=Tact-sw 1241.1022
+Change Component DesignItemId : Designator=SW202 Old DesignItemId=Switch_Schurter New DesignItemId=Tact-sw 1241.1022
+Change Component Footprint: Designator=SW200 Old Footprint=SWITCH_SCHURTER New Footprint=Tact-sw 1241.1022
+Change Component Footprint: Designator=SW201 Old Footprint=SWITCH_SCHURTER New Footprint=Tact-sw 1241.1022
+Change Component Footprint: Designator=SW202 Old Footprint=SWITCH_SCHURTER New Footprint=Tact-sw 1241.1022
+Change Component Comment : Designator=SW200 Old Comment=SW New Comment=Tact-sw 1241.1022
+Change Component Comment : Designator=SW201 Old Comment=SW New Comment=Tact-sw 1241.1022
+Change Component Comment : Designator=SW202 Old Comment=SW New Comment=Tact-sw 1241.1022
+Change Component Description : Designator=SW200 Old Description=Switch 12.7x12.7x17.5 New Description=
+Change Component Description : Designator=SW201 Old Description=Switch 12.7x12.7x17.5 New Description=
+Change Component Description : Designator=SW202 Old Description=Switch 12.7x12.7x17.5 New Description=
+Change Component Library : Designator=SW200 Old Library=CircuitOUT.SchLib New Library=Schurter-switches.IntLib
+Change Component Library : Designator=SW201 Old Library=CircuitOUT.SchLib New Library=Schurter-switches.IntLib
+Change Component Library : Designator=SW202 Old Library=CircuitOUT.SchLib New Library=Schurter-switches.IntLib
+Change component parameters: Designator = "SW200" ("SW200"); Footprint = "SWITCH_SCHURTER"; UniqueID = "\XKRSHQMH\FGMKITWM" ("\XKRSHQMH\FGMKITWM")
+Change component parameters: Designator = "SW201" ("SW201"); Footprint = "SWITCH_SCHURTER"; UniqueID = "\XKRSHQMH\FAKDVUBF" ("\XKRSHQMH\FAKDVUBF")
+Change component parameters: Designator = "SW202" ("SW202"); Footprint = "SWITCH_SCHURTER"; UniqueID = "\XKRSHQMH\ASPAUPLR" ("\XKRSHQMH\ASPAUPLR")

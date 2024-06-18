@@ -1,0 +1,55 @@
+Removed Pin From Net: NetName=GND Pin=S200-1
+Removed Pin From Net: NetName=GND Pin=S200-2
+Removed Pin From Net: NetName=NetC203_2 Pin=S200-3
+Removed Pin From Net: NetName=NetC203_2 Pin=S200-4
+Removed Pin From Net: NetName=+VBAT Pin=SW100-1
+Removed Pin From Net: NetName=NetC100_1 Pin=SW100-2
+Removed Pin From Net: NetName=+VBAT Pin=SW100-3
+Removed Pin From Net: NetName=NetC100_1 Pin=SW100-4
+Removed Pin From Net: NetName=SW1 Pin=SW200-1
+Removed Pin From Net: NetName=GND Pin=SW200-2
+Removed Pin From Net: NetName=SW1 Pin=SW200-3
+Removed Pin From Net: NetName=GND Pin=SW200-4
+Removed Pin From Net: NetName=SW2 Pin=SW201-1
+Removed Pin From Net: NetName=GND Pin=SW201-2
+Removed Pin From Net: NetName=SW2 Pin=SW201-3
+Removed Pin From Net: NetName=GND Pin=SW201-4
+Removed Pin From Net: NetName=SW3 Pin=SW202-1
+Removed Pin From Net: NetName=GND Pin=SW202-2
+Removed Pin From Net: NetName=SW3 Pin=SW202-3
+Removed Pin From Net: NetName=GND Pin=SW202-4
+Removed Member From Class: ClassName=Circuit Member=S200
+Change Component Footprint: Designator=SW100 Old Footprint=430152050836 New Footprint=Switch_Schurter
+Change Component Footprint: Designator=SW200 Old Footprint=430152050836 New Footprint=Switch_Schurter
+Change Component Footprint: Designator=SW201 Old Footprint=430152050836 New Footprint=Switch_Schurter
+Change Component Footprint: Designator=SW202 Old Footprint=430152050836 New Footprint=Switch_Schurter
+Change Component Comment : Designator=SW100 Old Comment=430152050836 New Comment=Poussoir
+Change Component Comment : Designator=SW200 Old Comment=430152050836 New Comment=SW
+Change Component Comment : Designator=SW201 Old Comment=430152050836 New Comment=SW
+Change Component Comment : Designator=SW202 Old Comment=430152050836 New Comment=SW
+Change component parameters: Designator = "SW100"; Footprint = "Switch_Schurter"; UniqueID = "\GMRICTUX\GAJQSHSD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Schurter"; VariantName = "[No Variations]"
+Change component parameters: Designator = "SW200"; Footprint = "Switch_Schurter"; UniqueID = "\XKRSHQMH\FGMKITWM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Schurter"; VariantName = "[No Variations]"
+Change component parameters: Designator = "SW201"; Footprint = "Switch_Schurter"; UniqueID = "\XKRSHQMH\FAKDVUBF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Schurter"; VariantName = "[No Variations]"
+Change component parameters: Designator = "SW202"; Footprint = "Switch_Schurter"; UniqueID = "\XKRSHQMH\ASPAUPLR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Schurter"; VariantName = "[No Variations]"
+Added Component: Designator=SW203(Switch_Schurter)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer"; Value = "Schurter"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC100_1 Pin=SW100-1
+Added Pin To Net: NetName=+VBAT Pin=SW100-2
+Added Pin To Net: NetName=GND Pin=SW200-1
+Added Pin To Net: NetName=SW1 Pin=SW200-2
+Added Pin To Net: NetName=GND Pin=SW201-1
+Added Pin To Net: NetName=SW2 Pin=SW201-2
+Added Pin To Net: NetName=GND Pin=SW202-1
+Added Pin To Net: NetName=SW3 Pin=SW202-2
+Added Pin To Net: NetName=GND Pin=SW203-1
+Added Pin To Net: NetName=NetC203_2 Pin=SW203-2
+Added Member To Class: ClassName=Circuit Member=Component SW203 Poussoir

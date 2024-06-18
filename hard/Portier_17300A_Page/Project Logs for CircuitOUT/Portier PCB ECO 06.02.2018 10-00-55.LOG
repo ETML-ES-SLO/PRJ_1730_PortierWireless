@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=GND Pin=SW201-4
+Added Pin To Net: NetName=GND Pin=SW202-2
+Added Pin To Net: NetName=GND Pin=SW202-4
+Added Room: Name=Alimentation
+Added Room: Name=Circuit

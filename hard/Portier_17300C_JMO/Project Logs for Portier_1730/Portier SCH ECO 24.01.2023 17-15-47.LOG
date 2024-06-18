@@ -1,0 +1,72 @@
+Removed Parameter PackageCase:0805 from Part C201
+Removed Parameter PackageCase:0805 from Part C202
+Removed Parameter PackageCase:0805 from Part C203
+Removed Parameter Supplier:Stock ES from Part C201
+Removed Parameter Supplier:Stock ES from Part C202
+Removed Parameter Supplier:Stock ES from Part C203
+Removed Parameter Supplier min. qty: from Part C201
+Removed Parameter Supplier min. qty: from Part C202
+Removed Parameter Supplier min. qty: from Part C203
+Removed Parameter Supplier PN: from Part C201
+Removed Parameter Supplier PN: from Part C202
+Removed Parameter Supplier PN: from Part C203
+Removed Parameter Supplier unit price: from Part C201
+Removed Parameter Supplier unit price: from Part C202
+Removed Parameter Supplier unit price: from Part C203
+Removed Parameter Value:100 nF from Part C201
+Removed Parameter Value:100 nF from Part C202
+Removed Parameter Value:100 nF from Part C203
+Removed Parameter Voltage Rating:16 V from Part C201
+Removed Parameter Voltage Rating:16 V from Part C202
+Removed Parameter Voltage Rating:16 V from Part C203
+Change Component Parameter Comment in C202 Old= New=10µF
+Change Component Parameter Comment in C201 Old= New=10µF
+Change Component Parameter Comment in C203 Old= New=10µF
+Change Component Parameter Description in C203 Old=Chip Capacitor, 100 nF, +/- 10%, 16 V, -55 to 85 degC, 0805 (2012 Metric), RoHS, Tape and Reel New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC
+Change Component Parameter Description in C202 Old=Chip Capacitor, 100 nF, +/- 10%, 16 V, -55 to 85 degC, 0805 (2012 Metric), RoHS, Tape and Reel New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC
+Change Component Parameter Description in C201 Old=Chip Capacitor, 100 nF, +/- 10%, 16 V, -55 to 85 degC, 0805 (2012 Metric), RoHS, Tape and Reel New=WCAP-CSGP Multilayer Ceramic Chip Capacitor, General Purpose, size 0805, X5R, 10µF, 16VDC
+Change Component Parameter Library Reference in C203 Old=CMP-1663-00007-1 New=885012107014
+Change Component Parameter Library Reference in C201 Old=CMP-1663-00007-1 New=885012107014
+Change Component Parameter Library Reference in C202 Old=CMP-1663-00007-1 New=885012107014
+Added Parameter Capacitance Tolerance=+/-20% to Part C201
+Added Parameter Capacitance Tolerance=+/-20% to Part C202
+Added Parameter Capacitance Tolerance=+/-20% to Part C203
+Added Parameter Case/Size Code=0805 to Part C201
+Added Parameter Case/Size Code=0805 to Part C202
+Added Parameter Case/Size Code=0805 to Part C203
+Added Parameter Category=Multilayer Ceramic Chip Capacitors to Part C201
+Added Parameter Category=Multilayer Ceramic Chip Capacitors to Part C202
+Added Parameter Category=Multilayer Ceramic Chip Capacitors to Part C203
+Added Parameter Ceramic Type=X5R to Part C201
+Added Parameter Ceramic Type=X5R to Part C202
+Added Parameter Ceramic Type=X5R to Part C203
+Added Parameter Dissipation Factor=10% to Part C201
+Added Parameter Dissipation Factor=10% to Part C202
+Added Parameter Dissipation Factor=10% to Part C203
+Added Parameter Insulation Resistance=0.01GO to Part C201
+Added Parameter Insulation Resistance=0.01GO to Part C202
+Added Parameter Insulation Resistance=0.01GO to Part C203
+Added Parameter Manufacturer=Wurth Elektronik to Part C201
+Added Parameter Manufacturer=Wurth Elektronik to Part C202
+Added Parameter Manufacturer=Wurth Elektronik to Part C203
+Added Parameter Manufacturer Part Number=885012107014 to Part C201
+Added Parameter Manufacturer Part Number=885012107014 to Part C202
+Added Parameter Manufacturer Part Number=885012107014 to Part C203
+Added Parameter Match Code=WCAP-CSGP to Part C201
+Added Parameter Match Code=WCAP-CSGP to Part C202
+Added Parameter Match Code=WCAP-CSGP to Part C203
+Added Parameter Operating Temperature Max=85°C to Part C201
+Added Parameter Operating Temperature Max=85°C to Part C202
+Added Parameter Operating Temperature Max=85°C to Part C203
+Added Parameter Operating Temperature Min=-55°C to Part C201
+Added Parameter Operating Temperature Min=-55°C to Part C202
+Added Parameter Operating Temperature Min=-55°C to Part C203
+Added Parameter Rated Voltage (DC)=16V to Part C201
+Added Parameter Rated Voltage (DC)=16V to Part C202
+Added Parameter Rated Voltage (DC)=16V to Part C203
+Added Parameter Technical Reference=X5R0805106M016DFCT10000 to Part C201
+Added Parameter Technical Reference=X5R0805106M016DFCT10000 to Part C202
+Added Parameter Technical Reference=X5R0805106M016DFCT10000 to Part C203
+Replace Part C201 885012107014 in G:\OneDrive_EV\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012107014 from Altium_WCAP-CSGP (rev22f).IntLib
+Replace Part C202 885012107014 in G:\OneDrive_EV\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012107014 from Altium_WCAP-CSGP (rev22f).IntLib
+Replace Part C203 885012107014 in G:\OneDrive_EV\OneDrive - Education Vaud\Documents\Altium\Projets\1730_PortierWireless\hard\Portier_17300C_JMO\SCHEMA\Portier.SchDoc with 885012107014 from Altium_WCAP-CSGP (rev22f).IntLib

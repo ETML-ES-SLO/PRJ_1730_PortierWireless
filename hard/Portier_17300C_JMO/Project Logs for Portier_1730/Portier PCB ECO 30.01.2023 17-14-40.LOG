@@ -1,0 +1,11 @@
+Added Component: Designator=ZS1(FP-9901-MFG)
+Add component (AddParameter): Name = "Head Height"; Value = "0.065inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "0.44inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Stainless Steel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Screw"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outside Diameter"; Value = "0.212inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "100"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thread Size"; Value = "#4-40"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=PcsMec_BOM Member=Component ZS1 9901

@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=R100 Old Footprint=RESC2013X50X30ML20T20 New Footprint=RESC2013X70X40ML20T20
+Change Managed Component Library Link : Designator=R100 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=76339081-8909-421B-BA58-A5DBDB2CABC6 New ItemGUID=56F3CC68-D6A5-42BD-B504-B8F09B455ED4 Old RevisionGUID=410294E0-7F73-46EC-95F5-368747DD12BC New RevisionGUID=DCBF2163-694C-40D1-8022-3E1A99F6D2A6
+Change component parameters: Designator = "R100" ("R100"); Footprint = "RESC2013X50X30ML20T20"; UniqueID = "\GMRICTUX\UYZIMXAD" ("\GMRICTUX\UYZIMXAD")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "ERJ-6ENF1003V"; VariantName = "[No Variations]"

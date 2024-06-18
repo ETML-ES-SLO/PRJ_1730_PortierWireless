@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=/MCLR(M) Pin=R203-1
+Removed Pin From Net: NetName=NetJ200_5 Pin=R203-2
+Added Pin To Net: NetName=NetJ200_5 Pin=R203-1
+Added Pin To Net: NetName=/MCLR(M) Pin=R203-2

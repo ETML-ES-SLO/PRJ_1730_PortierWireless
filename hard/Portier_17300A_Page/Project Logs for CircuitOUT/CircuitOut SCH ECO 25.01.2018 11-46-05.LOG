@@ -1,0 +1,18 @@
+Change Value of Parameter Manufacturer in Part D200 Old=TDK Corporation New=Kingbright
+Change Value of Parameter Manufacturer in Part D201 Old=TDK Corporation New=Kingbright
+Change Value of Parameter Manufacturer in Part D202 Old=TDK Corporation New=Kingbright
+Added Parameter PartNumber=APTD2012LSURCK to Part D202
+Added Parameter PartNumber=APTD2012LSYCK to Part D201
+Added Parameter PartNumber=APTD20120LZGCK to Part D200
+Added Parameter Supplier=Mouser to Part D200
+Added Parameter Supplier=Mouser to Part D201
+Added Parameter Supplier=Mouser to Part D202
+Added Parameter Supplier PN=604-APTD2012LSURCK to Part D202
+Added Parameter Supplier PN=604-APTD2012LSYCK to Part D201
+Added Parameter Supplier PN=604-APTD2012LZGCK to Part D200
+Added Parameter Value=Green low current to Part D200
+Added Parameter Value=Red low current to Part D202
+Added Parameter Value=Yellow low current to Part D201
+Added Parameter Voltage Rating=1V75 to Part D202
+Added Parameter Voltage Rating=1V85 to Part D201
+Added Parameter Voltage Rating=2V65 to Part D200

@@ -1,0 +1,6 @@
+Change Component Comment : Designator=R101 Old Comment=1k New Comment=100k
+Change Component Comment : Designator=C100 Old Comment=10uF New Comment=100nF
+Added Member To Class: ClassName=Alimentation Member=Component C104 4.7uF
+Added Member To Class: ClassName=Circuit Member=Component D200 LED_LC
+Added Member To Class: ClassName=Alimentation Member=Component SW100 Poussoir
+Added Member To Class: ClassName=Circuit Member=Component SW202 SW

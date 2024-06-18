@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=NetC203_2 Pin=SW203-1
+Removed Pin From Net: NetName=GND Pin=SW203-2
+Removed Pin From Net: NetName=NetR211_1 Pin=SW203-3
+Removed Pin From Net: NetName=GND Pin=SW203-4
+Change Component Footprint: Designator=SW203 Old Footprint=4301X20508X6_6X6X5 New Footprint=WS-TASV_L6W6H4.3_4301x20438x6
+Change Component Comment : Designator=SW203 Old Comment=430152050836 New Comment=430182043816
+Change Component Designator: OldDesignator=3 NewDesignator=U201
+Change component parameters: Designator = "SW203" ("SW203"); Footprint = "4301X20508X6_6X6X5"; UniqueID = "\XKRSHQMH\DZRJECCZ" ("\XKRSHQMH\DZRJECCZ")
+Change component parameters (AddParameter): Name = "Category"; Value = "Tact Switches"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Circuit"; Value = "SPST-NO"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Website Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/redexpert/article/430182043816?ad"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://www.we-online.com/redexpert/spec/430182043816?ad"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Material"; Value = "Stainless Steel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Silver"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "4.3mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "6mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "430182043816"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Match Code"; Value = "WS-TASV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature Max"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature Min"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operation Force"; Value = "160g"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Current"; Value = "50mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Voltage (DC)"; Value = "12V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Terminal Material"; Value = "Copper Alloy"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Terminal Plating"; Value = "Silver"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Washable"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Width"; Value = "6mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=SW203-A1
+Added Pin To Net: NetName=GND Pin=SW203-A2
+Added Pin To Net: NetName=NetR211_1 Pin=SW203-B1
+Added Pin To Net: NetName=NetR211_1 Pin=SW203-B2
