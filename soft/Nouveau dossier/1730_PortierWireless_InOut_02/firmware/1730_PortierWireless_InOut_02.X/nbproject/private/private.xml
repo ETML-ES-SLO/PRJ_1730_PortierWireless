@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/system_config/default/system_init.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/RF.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/system_config/default/system_interrupt.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/system_config/default/framework/system/devcon/src/sys_devcon.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/app.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/DoorFct.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/SerialGestion.c</file>
-            <file>file:/C:/microchip/harmony/v2_06/apps/PROJ/1730_PortierWireless_InOut_02/firmware/src/main.c</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
