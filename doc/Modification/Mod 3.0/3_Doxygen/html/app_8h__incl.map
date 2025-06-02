@@ -1,0 +1,19 @@
+<map id="C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h" name="C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="185,5,405,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="6,187,70,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,54,81,79,40,95,15,114,9,127,9,142,22,172,17,175,4,143,4,126,10,110,37,90,79,74,184,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,187,171,213"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="406,33,508,39,558,45,602,55,637,69,659,87,664,99,664,111,659,125,647,141,623,153,579,164,452,181,307,192,187,199,186,194,306,187,451,175,578,159,622,148,644,137,654,123,659,110,659,100,655,90,634,73,600,60,557,51,507,44,406,38"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="172,112,240,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="268,66,231,103,227,99,264,62"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="263,112,327,139"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="298,64,298,96,292,96,292,64"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="351,112,468,139"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="334,62,383,100,380,104,330,66"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="492,112,634,139"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="383,62,511,104,510,109,381,67"/>
+<area shape="rect" id="Node000008" href="$_mc32_debounce_8h.html" title=" " alt="" coords="24,112,147,139"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="228,67,130,108,128,103,226,62"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="80,141,57,175,52,172,75,138"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="96,138,119,172,115,175,92,141"/>
+</map>

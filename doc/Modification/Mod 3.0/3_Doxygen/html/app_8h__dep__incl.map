@@ -1,0 +1,13 @@
+<map id="C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h" name="C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="228,5,448,64"/>
+<area shape="rect" id="Node000002" href="$_management_8c.html" title=" " alt="" coords="5,219,253,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,55,164,77,142,93,125,113,114,138,111,166,114,193,121,217,116,219,109,194,106,166,109,137,120,111,139,90,161,73,212,50"/>
+<area shape="rect" id="Node000003" href="$_management_8h.html" title=" " alt="" coords="135,112,382,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="309,78,282,113,278,110,305,75"/>
+<area shape="rect" id="Node000004" href="$app_8c.html" title=" " alt="" coords="292,219,512,277"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="377,75,397,111,404,139,408,168,408,218,403,218,403,168,399,140,392,113,372,78"/>
+<area shape="rect" id="Node000005" href="$_pairing_8c.html" title=" " alt="" coords="458,112,678,171"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="416,68,506,109,504,114,414,73"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="213,182,166,220,163,216,210,178"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="312,178,365,216,361,220,308,182"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.c" name="C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="290,5,510,64"/>
+<area shape="rect" id="Node000002" href="$_r_f_8h.html" title=" " alt="" coords="60,120,109,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,63,207,85,122,114,120,115,118,111,121,110,205,80,289,58"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="133,120,179,147"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="313,67,193,114,192,115,190,110,191,110,311,62"/>
+<area shape="rect" id="Node000006" href="$_mc32_delays_8h.html" title=" " alt="" coords="204,120,309,147"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="359,67,289,113,286,109,356,62"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="333,112,467,155"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="403,64,403,97,398,97,398,64"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="492,120,556,147"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="439,62,498,108,495,113,435,67"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="580,120,722,147"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="476,62,605,112,603,116,474,67"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="746,120,806,147"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="511,52,620,76,734,109,739,111,737,116,733,115,619,82,510,58"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,203,70,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,149,54,191,50,188,75,146"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="94,203,168,229"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="94,146,119,188,114,191,89,149"/>
+</map>

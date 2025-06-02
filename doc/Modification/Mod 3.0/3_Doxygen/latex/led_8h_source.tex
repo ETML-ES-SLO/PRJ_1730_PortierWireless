@@ -1,0 +1,50 @@
+\doxysection{led.\+h}
+\hypertarget{led_8h_source}{}\label{led_8h_source}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/led.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/led.h}}
+\mbox{\hyperlink{led_8h}{Aller Ã  la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ led.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Gestion\ des\ leds\ sur\ portier\ électronique\ (1730)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ Auteur\ \ \ \ \ \ :\ \ \ SCA}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ Date\ \ \ \ \ \ \ \ :\ \ \ 15.01.2020}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Version\ \ \ \ \ :\ \ \ V1.0}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ Compilateur\ :\ \ \ XC32\ V2.15}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ Modifications\ :}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ -\/}}
+\DoxyCodeLine{00012\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ \_LED\_H\ \ \ \ }\textcolor{comment}{/*\ Guard\ against\ multiple\ inclusion\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ \_LED\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{led_8h_a3393b726762fb88eff08925c79777299a514ebe28334cfbd3189a113ab7cde845}{LED\_ID\_ENTER}}=0,}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{led_8h_a3393b726762fb88eff08925c79777299a1d385e4856fb3c72a79c098544db3757}{LED\_ID\_WAIT}},}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{led_8h_a3393b726762fb88eff08925c79777299a4364a1501a1f55f8990a333879caa061}{LED\_ID\_BUSY}},\ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \}\ \mbox{\hyperlink{led_8h_a3393b726762fb88eff08925c79777299}{LED\_IDS}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68a5a472505476f1d9c473bacb9450dd003}{LED\_MODE\_OFF}}=0,}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68a93ba1b43b2933514d8f0172d5fb9ff0a}{LED\_MODE\_ON}},}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68ab75f64ddd7144df385f5835895a1cafb}{LED\_MODE\_BLINK\_NORMAL}},}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68a2672e9c45e3851fe19580fd513777747}{LED\_MODE\_BLINK\_2X\_FAST}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68}{LED\_MODES}};\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{led_8h_af1aee968a5ceeb7915921aa6d78aca23}{Led\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{led_8h_a872055749870075db47e189ccbd99c8d}{Led\_SetMode}}(\mbox{\hyperlink{led_8h_a3393b726762fb88eff08925c79777299}{LED\_IDS}}\ led\_Id,\ \mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68}{LED\_MODES}}\ led\_Mode);}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{led_8h_aeafd9e2cc02fe833c950ca8c15f881c8}{Led\_Mgmt}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_LED\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/*\ *****************************************************************************}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ End\ of\ File}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ */}}
+
+\end{DoxyCode}

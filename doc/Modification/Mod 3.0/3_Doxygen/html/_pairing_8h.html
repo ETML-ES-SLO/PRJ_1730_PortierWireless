@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless: Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Pairing.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un système bidirectionnel basé sur un microcontrôleur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant à un visiteur d’envoyer une requête depuis l’extérieur via un bouton alimenté par piles, et à l’occupant du bureau de répondre par des signaux lumineux et sonores grâce à une unité intérieure alimentée en USB, le tout avec appairage sécurisé et gestion autonome de l’énergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_pairing_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier Pairing.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="_pairing_8h__dep__incl.png" border="0" usemap="#a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2_pairing_8hdep" loading="lazy" alt=""/></div>
+<map name="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2_pairing_8hdep" id="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2_pairing_8hdep">
+<area shape="rect" title=" " alt="" coords="276,5,496,64"/>
+<area shape="rect" href="_management_8c.html" title=" " alt="" coords="5,112,253,171"/>
+<area shape="poly" title=" " alt="" coords="303,73,200,114,199,109,301,68"/>
+<area shape="rect" href="_pairing_8c.html" title=" " alt="" coords="276,112,496,171"/>
+<area shape="poly" title=" " alt="" coords="389,80,389,112,384,112,384,80"/>
+<area shape="rect" href="app_8c.html" title=" " alt="" coords="520,112,740,171"/>
+<area shape="poly" title=" " alt="" coords="468,68,564,109,562,114,466,73"/>
+</map>
+</div>
+</div>
+<p><a href="_pairing_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3909acdfed0a9cab71108e60f6558608" id="r_a3909acdfed0a9cab71108e60f6558608"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3909acdfed0a9cab71108e60f6558608">NVM_SERIAL_BLOCK</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:aecdf6b72c8038f8169cfb9dd67e5cfba" id="r_aecdf6b72c8038f8169cfb9dd67e5cfba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecdf6b72c8038f8169cfb9dd67e5cfba">LONG_PRESS_TICKS</a>&#160;&#160;&#160;300</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a41a82ea0c8fd930e94ac47e85fe63a9f" id="r_a41a82ea0c8fd930e94ac47e85fe63a9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41a82ea0c8fd930e94ac47e85fe63a9f">LoadPairedSerialAndApply</a> (void)</td></tr>
+<tr class="memitem:a999f66920b36328dacb50c938a7489fe" id="r_a999f66920b36328dacb50c938a7489fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a999f66920b36328dacb50c938a7489fe">SavePairedSerialToFlash</a> (void)</td></tr>
+<tr class="memitem:a4506d7314d14b78da5be4337e662a27d" id="r_a4506d7314d14b78da5be4337e662a27d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4506d7314d14b78da5be4337e662a27d">GetActifSerialNbr</a> (void)</td></tr>
+<tr class="memitem:af3ec5ee15cd5d7a394e5b8ee8c358797" id="r_af3ec5ee15cd5d7a394e5b8ee8c358797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3ec5ee15cd5d7a394e5b8ee8c358797">ResetSerialList</a> (void)</td></tr>
+<tr class="memitem:a1324e704ec1000118ac29e1f3676edd0" id="r_a1324e704ec1000118ac29e1f3676edd0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1324e704ec1000118ac29e1f3676edd0">PairingManagement</a> (void)</td></tr>
+<tr class="memdesc:a1324e704ec1000118ac29e1f3676edd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère la procédure complète d'appairage côté Door ou Bell.  <br /></td></tr>
+<tr class="memitem:acdd2b67a818667a69d100766998ba78c" id="r_acdd2b67a818667a69d100766998ba78c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdd2b67a818667a69d100766998ba78c">PairingReset_DoorTask</a> (void)</td></tr>
+<tr class="memitem:a7f19ab10ec9d1026dcdc496df9c61b31" id="r_a7f19ab10ec9d1026dcdc496df9c61b31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f19ab10ec9d1026dcdc496df9c61b31">PairingReset_BellTask</a> (void)</td></tr>
+<tr class="memitem:af41ae98dc0c40546ed800bd9ac32ae69" id="r_af41ae98dc0c40546ed800bd9ac32ae69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af41ae98dc0c40546ed800bd9ac32ae69">Serial_IsPairingRunning</a> (void)</td></tr>
+<tr class="memitem:adfafc1a1fa1c61ab6ff89e7d352d2817" id="r_adfafc1a1fa1c61ab6ff89e7d352d2817"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfafc1a1fa1c61ab6ff89e7d352d2817">Serial_CheckIfFromPaired</a> (uint8_t *msg)</td></tr>
+<tr class="memdesc:adfafc1a1fa1c61ab6ff89e7d352d2817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si le message RF reçu provient du périphérique appairé.  <br /></td></tr>
+<tr class="memitem:a4739423aec413aa3c7ee30f30e608154" id="r_a4739423aec413aa3c7ee30f30e608154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4739423aec413aa3c7ee30f30e608154">RF_SendWithSerial</a> (uint8_t *payload)</td></tr>
+<tr class="memdesc:a4739423aec413aa3c7ee30f30e608154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie une trame RF avec le numéro de série, en utilisant P0 et P1.  <br /></td></tr>
+<tr class="memitem:a6c8ec47b31a7d1f8503627cc7927dfe2" id="r_a6c8ec47b31a7d1f8503627cc7927dfe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c8ec47b31a7d1f8503627cc7927dfe2">ShowPairingSuccess</a> (void)</td></tr>
+<tr class="memitem:a26a0b7fcaeb752cf3d85b15b186ae444" id="r_a26a0b7fcaeb752cf3d85b15b186ae444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26a0b7fcaeb752cf3d85b15b186ae444">TestFlashWriteRead</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a19358061a4fa8672c2124d5eb6a6337a" id="r_a19358061a4fa8672c2124d5eb6a6337a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19358061a4fa8672c2124d5eb6a6337a">swRing</a></td></tr>
+<tr class="memitem:aafadd8f2a2aa59c174b5207f21872f1f" id="r_aafadd8f2a2aa59c174b5207f21872f1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafadd8f2a2aa59c174b5207f21872f1f">swEnter</a></td></tr>
+<tr class="memitem:afdc3fbca7ca6fb08b354d67fea915b56" id="r_afdc3fbca7ca6fb08b354d67fea915b56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdc3fbca7ca6fb08b354d67fea915b56">swWait</a></td></tr>
+<tr class="memitem:a2eb3ac5dc73c685e3beefb74af0e1371" id="r_a2eb3ac5dc73c685e3beefb74af0e1371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</a></td></tr>
+<tr class="memitem:a360395ccaea62faa622a0c0c94178874" id="r_a360395ccaea62faa622a0c0c94178874"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a360395ccaea62faa622a0c0c94178874">appPairedSerial</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="aecdf6b72c8038f8169cfb9dd67e5cfba" name="aecdf6b72c8038f8169cfb9dd67e5cfba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecdf6b72c8038f8169cfb9dd67e5cfba">&#9670;&#160;</a></span>LONG_PRESS_TICKS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LONG_PRESS_TICKS&#160;&#160;&#160;300</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3909acdfed0a9cab71108e60f6558608" name="a3909acdfed0a9cab71108e60f6558608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3909acdfed0a9cab71108e60f6558608">&#9670;&#160;</a></span>NVM_SERIAL_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NVM_SERIAL_BLOCK&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a4506d7314d14b78da5be4337e662a27d" name="a4506d7314d14b78da5be4337e662a27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4506d7314d14b78da5be4337e662a27d">&#9670;&#160;</a></span>GetActifSerialNbr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t GetActifSerialNbr </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41a82ea0c8fd930e94ac47e85fe63a9f" name="a41a82ea0c8fd930e94ac47e85fe63a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a82ea0c8fd930e94ac47e85fe63a9f">&#9670;&#160;</a></span>LoadPairedSerialAndApply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadPairedSerialAndApply </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1324e704ec1000118ac29e1f3676edd0" name="a1324e704ec1000118ac29e1f3676edd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1324e704ec1000118ac29e1f3676edd0">&#9670;&#160;</a></span>PairingManagement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t PairingManagement </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gère la procédure complète d'appairage côté Door ou Bell. </p>
+<p>Cette fonction implémente la machine d'état d'appairage pour les deux rôles (Door/Bell). Elle pilote l'envoi/réception des trames, la sauvegarde du numéro de série appairé, l'affichage du succès, et la sortie de la procédure.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>Le numéro de série appairé si l'appairage est terminé, 0 sinon. </dd></dl>
+
+</div>
+</div>
+<a id="a7f19ab10ec9d1026dcdc496df9c61b31" name="a7f19ab10ec9d1026dcdc496df9c61b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f19ab10ec9d1026dcdc496df9c61b31">&#9670;&#160;</a></span>PairingReset_BellTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PairingReset_BellTask </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdd2b67a818667a69d100766998ba78c" name="acdd2b67a818667a69d100766998ba78c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd2b67a818667a69d100766998ba78c">&#9670;&#160;</a></span>PairingReset_DoorTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PairingReset_DoorTask </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3ec5ee15cd5d7a394e5b8ee8c358797" name="af3ec5ee15cd5d7a394e5b8ee8c358797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ec5ee15cd5d7a394e5b8ee8c358797">&#9670;&#160;</a></span>ResetSerialList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResetSerialList </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4739423aec413aa3c7ee30f30e608154" name="a4739423aec413aa3c7ee30f30e608154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4739423aec413aa3c7ee30f30e608154">&#9670;&#160;</a></span>RF_SendWithSerial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF_SendWithSerial </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>payload</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envoie une trame RF avec le numéro de série, en utilisant P0 et P1. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">payload</td><td>Pointeur vers la charge utile à envoyer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a999f66920b36328dacb50c938a7489fe" name="a999f66920b36328dacb50c938a7489fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999f66920b36328dacb50c938a7489fe">&#9670;&#160;</a></span>SavePairedSerialToFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SavePairedSerialToFlash </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfafc1a1fa1c61ab6ff89e7d352d2817" name="adfafc1a1fa1c61ab6ff89e7d352d2817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfafc1a1fa1c61ab6ff89e7d352d2817">&#9670;&#160;</a></span>Serial_CheckIfFromPaired()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Serial_CheckIfFromPaired </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si le message RF reçu provient du périphérique appairé. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Pointeur vers le message RF reçu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si le message provient du périphérique appairé, false sinon. </dd></dl>
+
+</div>
+</div>
+<a id="af41ae98dc0c40546ed800bd9ac32ae69" name="af41ae98dc0c40546ed800bd9ac32ae69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41ae98dc0c40546ed800bd9ac32ae69">&#9670;&#160;</a></span>Serial_IsPairingRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Serial_IsPairingRunning </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c8ec47b31a7d1f8503627cc7927dfe2" name="a6c8ec47b31a7d1f8503627cc7927dfe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c8ec47b31a7d1f8503627cc7927dfe2">&#9670;&#160;</a></span>ShowPairingSuccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowPairingSuccess </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26a0b7fcaeb752cf3d85b15b186ae444" name="a26a0b7fcaeb752cf3d85b15b186ae444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a0b7fcaeb752cf3d85b15b186ae444">&#9670;&#160;</a></span>TestFlashWriteRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestFlashWriteRead </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a360395ccaea62faa622a0c0c94178874" name="a360395ccaea62faa622a0c0c94178874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360395ccaea62faa622a0c0c94178874">&#9670;&#160;</a></span>appPairedSerial</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t appPairedSerial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2eb3ac5dc73c685e3beefb74af0e1371" name="a2eb3ac5dc73c685e3beefb74af0e1371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eb3ac5dc73c685e3beefb74af0e1371">&#9670;&#160;</a></span>swBusy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swBusy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafadd8f2a2aa59c174b5207f21872f1f" name="aafadd8f2a2aa59c174b5207f21872f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafadd8f2a2aa59c174b5207f21872f1f">&#9670;&#160;</a></span>swEnter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swEnter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19358061a4fa8672c2124d5eb6a6337a" name="a19358061a4fa8672c2124d5eb6a6337a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19358061a4fa8672c2124d5eb6a6337a">&#9670;&#160;</a></span>swRing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swRing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdc3fbca7ca6fb08b354d67fea915b56" name="afdc3fbca7ca6fb08b354d67fea915b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc3fbca7ca6fb08b354d67fea915b56">&#9670;&#160;</a></span>swWait</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swWait</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="_pairing_8h.html">Pairing.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

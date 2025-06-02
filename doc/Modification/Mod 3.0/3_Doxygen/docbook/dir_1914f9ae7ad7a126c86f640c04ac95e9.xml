@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1914f9ae7ad7a126c86f640c04ac95e9" xml:lang="fr">
+<title>Répertoire de référence de C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src</title>
+<indexterm><primary>Répertoire de référence de C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src</primary></indexterm>
+Graphe des dépendances de répertoires pour src:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_1914f9ae7ad7a126c86f640c04ac95e9_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Fichiers    </title>
+        <itemizedlist>
+            <listitem><para>fichier <link linkend="_app_8c">app.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="_app_8h">app.h</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="_led_8c">led.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="_led_8h">led.h</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="_main_8c">main.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__management_8c">Management.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__management_8h">Management.h</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__mc32_debounce_8c">Mc32Debounce.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__mc32_debounce_8h">Mc32Debounce.h</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__mc32_delays_8c">Mc32Delays.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__mc32_delays_8h">Mc32Delays.h</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__pairing_8c">Pairing.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__pairing_8h">Pairing.h</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__r_f_8c">RF.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="__r_f_8h">RF.h</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="_sound_8c">sound.c</link></para>
+</listitem>
+            <listitem><para>fichier <link linkend="_sound_8h">sound.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

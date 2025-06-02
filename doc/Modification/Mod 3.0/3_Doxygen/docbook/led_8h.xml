@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_led_8h" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/led.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/led.h</primary></indexterm>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="led_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Énumérations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link> { <link linkend="_led_8h_1a3393b726762fb88eff08925c79777299a514ebe28334cfbd3189a113ab7cde845">LED_ID_ENTER</link> =0
+, <link linkend="_led_8h_1a3393b726762fb88eff08925c79777299a1d385e4856fb3c72a79c098544db3757">LED_ID_WAIT</link>
+, <link linkend="_led_8h_1a3393b726762fb88eff08925c79777299a4364a1501a1f55f8990a333879caa061">LED_ID_BUSY</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link> { <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a5a472505476f1d9c473bacb9450dd003">LED_MODE_OFF</link> =0
+, <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a93ba1b43b2933514d8f0172d5fb9ff0a">LED_MODE_ON</link>
+, <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68ab75f64ddd7144df385f5835895a1cafb">LED_MODE_BLINK_NORMAL</link>
+, <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a2672e9c45e3851fe19580fd513777747">LED_MODE_BLINK_2X_FAST</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_led_8h_1af1aee968a5ceeb7915921aa6d78aca23">Led_Init</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8h_1a872055749870075db47e189ccbd99c8d">Led_SetMode</link> (<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link> led_Id, <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link> led_Mode)</para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8h_1aeafd9e2cc02fe833c950ca8c15f881c8">Led_Mgmt</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation du type de l&apos;énumération</title>
+<anchor xml:id="_led_8h_1a3393b726762fb88eff08925c79777299"/><section>
+    <title>LED_IDS</title>
+<indexterm><primary>LED_IDS</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_IDS</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs énumérées</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LED_ID_ENTER</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_ID_ENTER</secondary></indexterm>
+<anchor xml:id="_led_8h_1a3393b726762fb88eff08925c79777299a514ebe28334cfbd3189a113ab7cde845"/>LED_ID_ENTER</entry><entry></entry></row><row><entry><indexterm><primary>LED_ID_WAIT</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_ID_WAIT</secondary></indexterm>
+<anchor xml:id="_led_8h_1a3393b726762fb88eff08925c79777299a1d385e4856fb3c72a79c098544db3757"/>LED_ID_WAIT</entry><entry></entry></row><row><entry><indexterm><primary>LED_ID_BUSY</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_ID_BUSY</secondary></indexterm>
+<anchor xml:id="_led_8h_1a3393b726762fb88eff08925c79777299a4364a1501a1f55f8990a333879caa061"/>LED_ID_BUSY</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68"/><section>
+    <title>LED_MODES</title>
+<indexterm><primary>LED_MODES</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_MODES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs énumérées</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LED_MODE_OFF</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_MODE_OFF</secondary></indexterm>
+<anchor xml:id="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a5a472505476f1d9c473bacb9450dd003"/>LED_MODE_OFF</entry><entry></entry></row><row><entry><indexterm><primary>LED_MODE_ON</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_MODE_ON</secondary></indexterm>
+<anchor xml:id="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a93ba1b43b2933514d8f0172d5fb9ff0a"/>LED_MODE_ON</entry><entry></entry></row><row><entry><indexterm><primary>LED_MODE_BLINK_NORMAL</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_MODE_BLINK_NORMAL</secondary></indexterm>
+<anchor xml:id="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68ab75f64ddd7144df385f5835895a1cafb"/>LED_MODE_BLINK_NORMAL</entry><entry></entry></row><row><entry><indexterm><primary>LED_MODE_BLINK_2X_FAST</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>LED_MODE_BLINK_2X_FAST</secondary></indexterm>
+<anchor xml:id="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a2672e9c45e3851fe19580fd513777747"/>LED_MODE_BLINK_2X_FAST</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="_led_8h_1af1aee968a5ceeb7915921aa6d78aca23"/><section>
+    <title>Led_Init()</title>
+<indexterm><primary>Led_Init</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>Led_Init</secondary></indexterm>
+<para><computeroutput>void Led_Init (void )</computeroutput></para></section>
+<anchor xml:id="_led_8h_1aeafd9e2cc02fe833c950ca8c15f881c8"/><section>
+    <title>Led_Mgmt()</title>
+<indexterm><primary>Led_Mgmt</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>Led_Mgmt</secondary></indexterm>
+<para><computeroutput>void Led_Mgmt (void )</computeroutput></para></section>
+<anchor xml:id="_led_8h_1a872055749870075db47e189ccbd99c8d"/><section>
+    <title>Led_SetMode()</title>
+<indexterm><primary>Led_SetMode</primary><secondary>led.h</secondary></indexterm>
+<indexterm><primary>led.h</primary><secondary>Led_SetMode</secondary></indexterm>
+<para><computeroutput>void Led_SetMode (<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link> led_Id, <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link> led_Mode)</computeroutput></para></section>
+</section>
+</section>

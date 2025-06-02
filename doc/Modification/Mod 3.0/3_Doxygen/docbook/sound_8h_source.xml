@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sound_8h_source" xml:lang="fr">
+<title>sound.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/sound.h</primary></indexterm>
+Aller Ã  la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+2 <emphasis role="comment">//&#32;sound.h</emphasis>
+3 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+4 <emphasis role="comment">//&#32;Gestion&#32;mélodies&#32;sur&#32;haut-parleur&#32;portier&#32;électronique&#32;(1730)</emphasis>
+5 <emphasis role="comment">//&#32;&#32;Description&#32;:&#32;HP&#32;branché&#32;sur&#32;RB15&#32;(OC1)&#32;</emphasis>
+6 <emphasis role="comment">//</emphasis>
+7 <emphasis role="comment">//&#32;&#32;Auteur&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SCA</emphasis>
+8 <emphasis role="comment">//&#32;&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;26.11.2019</emphasis>
+9 <emphasis role="comment">//&#32;&#32;Version&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;V1.0</emphasis>
+10 <emphasis role="comment">//&#32;&#32;Compilateur&#32;:&#32;&#32;&#32;XC32&#32;V2.15</emphasis>
+11 <emphasis role="comment">//&#32;&#32;Modifications&#32;:</emphasis>
+12 <emphasis role="comment">//&#32;&#32;&#32;-</emphasis>
+13 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+14 
+15 <emphasis role="preprocessor">#ifndef&#32;_SOUND_H&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Guard&#32;against&#32;multiple&#32;inclusion&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+16 <emphasis role="preprocessor">#define&#32;_SOUND_H</emphasis>
+17 
+18 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+20 
+21 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+22 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>{
+23 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_n_o_t_e__t_1acf02911153e30b51921cf85d64e2834f">duration</link>;&#32;<emphasis role="comment">//duree&#32;de&#32;la&#32;note&#32;en&#32;ms</emphasis>
+24 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_n_o_t_e__t_1a8020b2a52fdcef042fff1bd71fe16dc5">freq</link>;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//freq&#32;de&#32;la&#32;note&#32;en&#32;Hz</emphasis>
+25 }&#32;<link linkend="_struct_n_o_t_e__t">NOTE_t</link>;
+26 
+27 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+28 
+29 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_n_o_t_e__t">NOTE_t</link>&#32;<link linkend="_sound_8c_1a606108a523194d1e3bf77903712c56c7">RING</link>[];
+30 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_n_o_t_e__t">NOTE_t</link>&#32;<link linkend="_sound_8c_1a08a79331fdb2876e4b5dc2d4a0dd49db">SUCCESS</link>[];
+31 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_n_o_t_e__t">NOTE_t</link>&#32;<link linkend="_sound_8c_1abf2230f82c8c7ad817c4fa5c3eab0581">ERROR</link>[];
+32 
+33 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+34 
+35 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_sound_8h_1afb97318712639efcb061a8772beff2b5">Sound_Init</link>(<emphasis role="keywordtype">void</emphasis>);
+36 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_sound_8h_1a01f15a7aed20855a98398cbec33dae27">Sound_Start</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_n_o_t_e__t">NOTE_t</link>*&#32;sound);
+37 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_sound_8h_1a52a8a79e98a4c19d71f2272745362ac8">Sound_IsIdle</link>(<emphasis role="keywordtype">void</emphasis>);
+38 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_sound_8h_1a3efe45f40a4f9449a6c98d402c54f126">Sound_Mgmt</link>(<emphasis role="keywordtype">void</emphasis>);
+39 
+40 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;_SOUND_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+41 
+42 <emphasis role="comment">/*&#32;*****************************************************************************</emphasis>
+43 <emphasis role="comment">&#32;End&#32;of&#32;File</emphasis>
+44 <emphasis role="comment">&#32;*/</emphasis>
+</programlisting></section>

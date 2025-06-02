@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mc32_debounce_8h_source" xml:lang="fr">
+<title>Mc32Debounce.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Debounce.h</primary></indexterm>
+Aller Ã  la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;MC32DEBOUNCE2_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;MC32DEBOUNCE2_H</emphasis>
+3 
+4 
+5 <emphasis role="comment">//&#32;Mc32Debounce.h</emphasis>
+6 
+7 <emphasis role="comment">//&#32;C.&#32;HUBER&#32;&#32;&#32;&#32;19/02/2014&#32;Portage&#32;sur&#32;PIC32MX</emphasis>
+8 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Attention&#32;int1&#32;transformé&#32;en&#32;uint8</emphasis>
+9 
+10 <emphasis role="comment">//&#32;Fonctions&#32;pour&#32;la&#32;gestion&#32;de&#32;l&apos;anti-rebond&#32;d&apos;un&#32;switch</emphasis>
+11 <emphasis role="comment">//</emphasis>
+12 <emphasis role="comment">//</emphasis>
+13 <emphasis role="comment">//&#32;Principe&#32;:&#32;Il&#32;est&#32;nécessaire&#32;d&apos;appeler&#32;cycliquement&#32;la&#32;fonction&#32;DoDebounce</emphasis>
+14 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pour&#32;chaque&#32;switch.&#32;Suggestion&#32;cycle&#32;de&#32;1&#32;ms</emphasis>
+15 <emphasis role="comment">//</emphasis>
+16 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Pour&#32;la&#32;gestion&#32;du&#32;switch,&#32;il&#32;y&#32;a&#32;3&#32;fonctions&#32;à&#32;disposition&#32;:</emphasis>
+17 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;DebounceGetInput&#32;&#32;fourni&#32;l&apos;état&#32;du&#32;switch&#32;aprés&#32;anti-rebond</emphasis>
+18 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;DebounceIsPressed&#32;&#32;&#32;&#32;true&#32;indique&#32;que&#32;l&apos;on&#32;vient&#32;de&#32;presser&#32;la&#32;touche</emphasis>
+19 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;DebounceIsReleased&#32;&#32;&#32;true&#32;indique&#32;que&#32;l&apos;on&#32;vient&#32;de&#32;relacher&#32;la&#32;touche</emphasis>
+20 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;DebounceClearPressed&#32;&#32;&#32;&#32;annule&#32;indication&#32;de&#32;pression&#32;sur&#32;la&#32;touche</emphasis>
+21 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;DebounceClearReleased&#32;&#32;&#32;annule&#32;indication&#32;de&#32;relachement&#32;de&#32;la&#32;touche</emphasis>
+22 <emphasis role="comment">//</emphasis>
+23 <emphasis role="comment">//&#32;&#32;Remarques&#32;:&#32;toute&#32;les&#32;fonctions&#32;utilisent&#32;un&#32;descripteur&#32;de&#32;touche</emphasis>
+24 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;un&#32;état&#32;0&#32;indique&#32;une&#32;touche&#32;pressée</emphasis>
+25 <emphasis role="comment">//</emphasis>
+26 <emphasis role="comment">//---------------------------------------------------------------------------</emphasis>
+27 
+28 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+29 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+30 
+31 <emphasis role="comment">//&#32;définitions&#32;des&#32;types&#32;qui&#32;seront&#32;utilisés&#32;dans&#32;cette&#32;application</emphasis>
+32 
+33 <emphasis role="comment">//&#32;Etats&#32;du&#32;système&#32;antirebond</emphasis>
+34 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+35 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033">DebounceWaitChange</link>,
+36 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b">DebounceWaitStable</link>,
+37 }&#32;<link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</link>;
+38 
+39 <emphasis role="comment">//&#32;New</emphasis>
+40 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+41 &#32;&#32;&#32;uint8_t&#32;&#32;<link linkend="_structs__bits_1a6d394f172726f9e8935c0fd99405af29">KeyPressed</link>&#32;:1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;événement&#32;touche&#32;pressée</emphasis>
+42 &#32;&#32;&#32;uint8_t&#32;&#32;<link linkend="_structs__bits_1a894fa1132ca6388e4bd6287620ed609f">KeyReleased</link>&#32;:&#32;1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;événement&#32;touche&#32;relachée</emphasis>
+43 &#32;&#32;&#32;uint8_t&#32;&#32;<link linkend="_structs__bits_1a17fedf14b5b32671ce3aed719d99b032">KeyPrevInputValue</link>&#32;:&#32;1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;valeur&#32;précédente&#32;de&#32;la&#32;touche</emphasis>
+44 &#32;&#32;&#32;uint8_t&#32;&#32;<link linkend="_structs__bits_1a988f5aa4956218e4bd75412af1149eb3">KeyValue</link>&#32;:&#32;1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;valeur&#32;finale&#32;(image)&#32;de&#32;la&#32;touche</emphasis>
+45 &#32;}&#32;<link linkend="_structs__bits">s_bits</link>;
+46 
+47 <emphasis role="comment">//&#32;structure&#32;du&#32;descripteur</emphasis>
+48 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</link>&#32;<link linkend="_struct_s___switch_descriptor_1a4d58e6579e37611a845abd90344216a3">DebounceState</link>;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;état&#32;de&#32;l&apos;antirebond</emphasis>
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_s___switch_descriptor_1ac7228601ef3f09fe2200c2538f577684">DebounceCounter</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;compteur</emphasis>
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structs__bits">s_bits</link>&#32;<link linkend="_struct_s___switch_descriptor_1a5bee94d845c2c8fde44422068f2da2b6">bits</link>;
+52 }&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>;
+53 
+55 <emphasis role="comment">//&#32;POUR&#32;CHAQUE&#32;SWITCH&#32;DONT&#32;ON&#32;VEUT&#32;EFFECTUER&#32;L&apos;ANTI-REBOND&#32;DANS&#32;L&apos;APPLICATION.</emphasis>
+56 <emphasis role="comment">//&#32;IL&#32;FAUDRA&#32;DEFINIR&#32;UNE&#32;VARIABLE&#32;DU&#32;&#32;TYPE&#32;S_SwitchDescriptor</emphasis>
+58 <emphasis role="comment">//</emphasis>
+59 <emphasis role="comment">//</emphasis>
+60 <emphasis role="comment">//&#32;DoDebounce&#32;(S_SwitchDescriptor&#32;*Descriptor,&#32;boolean&#32;InputValue)</emphasis>
+61 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Routine&#32;effectuant&#32;la&#32;gestion&#32;de&#32;l&apos;anti-rebond&#32;d&apos;un&#32;switch</emphasis>
+62 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dont&#32;l&apos;adresse&#32;de&#32;la&#32;structure&#32;est&#32;passée&#32;en&#32;paramètre.</emphasis>
+63 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;La&#32;valeur&#32;du&#32;switch&#32;lue&#32;sur&#32;le&#32;port&#32;est&#32;a&#32;passer&#32;lors&#32;de&#32;l&apos;appel</emphasis>
+64 <emphasis role="comment">//</emphasis>
+65 <emphasis role="comment">//&#32;Entrée:&#32;un&#32;pointeur&#32;sur&#32;la&#32;structure&#32;du&#32;switch</emphasis>
+66 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;la&#32;valeur&#32;du&#32;switch&#32;lue&#32;sur&#32;le&#32;port</emphasis>
+67 <emphasis role="comment">//</emphasis>
+68 <emphasis role="comment">//&#32;Sortie:&#32;la&#32;structure&#32;mise&#32;à&#32;jour</emphasis>
+69 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;le&#32;bit&#32;KeyValue&#32;qui&#32;donne&#32;la&#32;valeur&#32;du&#32;switch&#32;après&#32;anti-rebond</emphasis>
+70 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;le&#32;bit&#32;KeyPressed&#32;qui&#32;est&#32;mis&#32;à&#32;1&#32;dès&#32;que&#32;l&apos;on&#32;presse&#32;sur&#32;le&#32;switch</emphasis>
+71 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ce&#32;bit&#32;n&apos;est&#32;pas&#32;resetté&#32;par&#32;cette&#32;fonction&#32;mais&#32;doit&#32;l&apos;être&#32;par&#32;l&apos;application</emphasis>
+72 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;si&#32;elle&#32;l&apos;utilise.</emphasis>
+73 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;le&#32;bit&#32;KeyReleased&#32;qui&#32;est&#32;mis&#32;à&#32;1&#32;dès&#32;que&#32;l&apos;on&#32;relâche&#32;sur&#32;le&#32;switch</emphasis>
+74 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ce&#32;bit&#32;n&apos;est&#32;pas&#32;resetté&#32;par&#32;cette&#32;fonction&#32;mais&#32;doit&#32;l&apos;être&#32;par&#32;l&apos;application</emphasis>
+75 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;si&#32;elle&#32;l&apos;utilise</emphasis>
+76 <emphasis role="comment">//</emphasis>
+77 
+78 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__mc32_debounce_8h_1a25234bd4e5b3764544f4ebed1be6bf74">DoDebounce</link>&#32;(<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;*Descriptor,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;InputValue);
+79 
+80 
+81 <emphasis role="comment">/********************************************************************************************/</emphasis>
+82 <emphasis role="comment">//&#32;DebounceInit&#32;(S_SwitchDescriptor&#32;*pDescriptor)&#32;:</emphasis>
+83 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Routine&#32;effectuant&#32;l&apos;initialisation&#32;de&#32;la&#32;structure&#32;d&apos;un&#32;switch</emphasis>
+84 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dont&#32;l&apos;adresse&#32;de&#32;la&#32;structure&#32;est&#32;passée&#32;en&#32;paramètre.</emphasis>
+85 <emphasis role="comment">//</emphasis>
+86 <emphasis role="comment">//&#32;Entrée:&#32;un&#32;pointeur&#32;sur&#32;la&#32;structure&#32;du&#32;switch</emphasis>
+87 <emphasis role="comment">//</emphasis>
+88 
+89 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__mc32_debounce_8h_1abf3dbe0d583132babae2be20ec2cc3a8">DebounceInit</link>&#32;(<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;*pDescriptor);
+90 
+91 <emphasis role="comment">//&#32;&#32;DebounceGetInput&#32;&#32;fourni&#32;l&apos;état&#32;du&#32;switch&#32;aprés&#32;anti-rebond</emphasis>
+92 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__mc32_debounce_8h_1a6a611324e87fa2d10ac637b17271cb53">DebounceGetInput</link>&#32;(<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;*pDescriptor);
+93 
+94 <emphasis role="comment">//&#32;&#32;DebounceIsPressed&#32;&#32;&#32;&#32;true&#32;indique&#32;que&#32;l&apos;on&#32;vient&#32;de&#32;presser&#32;la&#32;touche</emphasis>
+95 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__mc32_debounce_8h_1a8c5bec15ce951e929781afe093261151">DebounceIsPressed</link>&#32;(<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;*pDescriptor);
+96 
+97 <emphasis role="comment">//&#32;&#32;DebounceIsReleased&#32;&#32;&#32;true&#32;indique&#32;que&#32;l&apos;on&#32;vient&#32;de&#32;relacher&#32;la&#32;touche</emphasis>
+98 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__mc32_debounce_8h_1af41f451eca1f7dba66b694233d549c54">DebounceIsReleased</link>&#32;(<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;*pDescriptor);
+99 
+100 <emphasis role="comment">//&#32;&#32;DebounceClearPressed&#32;&#32;&#32;&#32;annule&#32;indication&#32;de&#32;pression&#32;sur&#32;la&#32;touche</emphasis>
+101 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__mc32_debounce_8h_1ac643da410acdf6b56285e1917bb55721">DebounceClearPressed</link>&#32;&#32;(<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;*pDescriptor);
+102 
+103 <emphasis role="comment">//&#32;&#32;DebounceClearReleased&#32;&#32;&#32;annule&#32;indication&#32;de&#32;relachement&#32;de&#32;la&#32;touche</emphasis>
+104 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__mc32_debounce_8h_1aac114092f76e85fa9e6246127b5e1082">DebounceClearReleased</link>&#32;&#32;(<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;*pDescriptor);
+105 
+106 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

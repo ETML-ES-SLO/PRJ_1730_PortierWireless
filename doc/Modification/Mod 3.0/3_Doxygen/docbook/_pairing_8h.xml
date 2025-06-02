@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pairing_8h" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Pairing.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Pairing.h</primary></indexterm>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_pairing_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__pairing_8h_1a3909acdfed0a9cab71108e60f6558608">NVM_SERIAL_BLOCK</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__pairing_8h_1aecdf6b72c8038f8169cfb9dd67e5cfba">LONG_PRESS_TICKS</link>&#160;&#160;&#160;300</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__pairing_8h_1a41a82ea0c8fd930e94ac47e85fe63a9f">LoadPairedSerialAndApply</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__pairing_8h_1a999f66920b36328dacb50c938a7489fe">SavePairedSerialToFlash</link> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="__pairing_8h_1a4506d7314d14b78da5be4337e662a27d">GetActifSerialNbr</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__pairing_8h_1af3ec5ee15cd5d7a394e5b8ee8c358797">ResetSerialList</link> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="__pairing_8h_1a1324e704ec1000118ac29e1f3676edd0">PairingManagement</link> (void)</para>
+
+<para>Gère la procédure complète d&apos;appairage côté Door ou Bell. </para>
+</listitem>
+            <listitem><para>void <link linkend="__pairing_8h_1acdd2b67a818667a69d100766998ba78c">PairingReset_DoorTask</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__pairing_8h_1a7f19ab10ec9d1026dcdc496df9c61b31">PairingReset_BellTask</link> (void)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__pairing_8h_1af41ae98dc0c40546ed800bd9ac32ae69">Serial_IsPairingRunning</link> (void)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__pairing_8h_1adfafc1a1fa1c61ab6ff89e7d352d2817">Serial_CheckIfFromPaired</link> (uint8_t *msg)</para>
+
+<para>Vérifie si le message RF reçu provient du périphérique appairé. </para>
+</listitem>
+            <listitem><para>void <link linkend="__pairing_8h_1a4739423aec413aa3c7ee30f30e608154">RF_SendWithSerial</link> (uint8_t *payload)</para>
+
+<para>Envoie une trame RF avec le numéro de série, en utilisant P0 et P1. </para>
+</listitem>
+            <listitem><para>void <link linkend="__pairing_8h_1a6c8ec47b31a7d1f8503627cc7927dfe2">ShowPairingSuccess</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__pairing_8h_1a26a0b7fcaeb752cf3d85b15b186ae444">TestFlashWriteRead</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__pairing_8h_1a19358061a4fa8672c2124d5eb6a6337a">swRing</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__pairing_8h_1aafadd8f2a2aa59c174b5207f21872f1f">swEnter</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__pairing_8h_1afdc3fbca7ca6fb08b354d67fea915b56">swWait</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__pairing_8h_1a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="__pairing_8h_1a360395ccaea62faa622a0c0c94178874">appPairedSerial</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="__pairing_8h_1aecdf6b72c8038f8169cfb9dd67e5cfba"/><section>
+    <title>LONG_PRESS_TICKS</title>
+<indexterm><primary>LONG_PRESS_TICKS</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>LONG_PRESS_TICKS</secondary></indexterm>
+<para><computeroutput>#define LONG_PRESS_TICKS&#160;&#160;&#160;300</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a3909acdfed0a9cab71108e60f6558608"/><section>
+    <title>NVM_SERIAL_BLOCK</title>
+<indexterm><primary>NVM_SERIAL_BLOCK</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>NVM_SERIAL_BLOCK</secondary></indexterm>
+<para><computeroutput>#define NVM_SERIAL_BLOCK&#160;&#160;&#160;0</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__pairing_8h_1a4506d7314d14b78da5be4337e662a27d"/><section>
+    <title>GetActifSerialNbr()</title>
+<indexterm><primary>GetActifSerialNbr</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>GetActifSerialNbr</secondary></indexterm>
+<para><computeroutput>uint32_t GetActifSerialNbr (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a41a82ea0c8fd930e94ac47e85fe63a9f"/><section>
+    <title>LoadPairedSerialAndApply()</title>
+<indexterm><primary>LoadPairedSerialAndApply</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>LoadPairedSerialAndApply</secondary></indexterm>
+<para><computeroutput>void LoadPairedSerialAndApply (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a1324e704ec1000118ac29e1f3676edd0"/><section>
+    <title>PairingManagement()</title>
+<indexterm><primary>PairingManagement</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>PairingManagement</secondary></indexterm>
+<para><computeroutput>uint32_t PairingManagement (void )</computeroutput></para><para>
+
+<para>Gère la procédure complète d&apos;appairage côté Door ou Bell. </para>
+</para>
+
+<para>Cette fonction implémente la machine d&apos;état d&apos;appairage pour les deux rôles (Door/Bell). Elle pilote l&apos;envoi/réception des trames, la sauvegarde du numéro de série appairé, l&apos;affichage du succès, et la sortie de la procédure.</para>
+
+<para><formalpara><title>Renvoie</title>
+
+<para>Le numéro de série appairé si l&apos;appairage est terminé, 0 sinon. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__pairing_8h_1a7f19ab10ec9d1026dcdc496df9c61b31"/><section>
+    <title>PairingReset_BellTask()</title>
+<indexterm><primary>PairingReset_BellTask</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>PairingReset_BellTask</secondary></indexterm>
+<para><computeroutput>void PairingReset_BellTask (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1acdd2b67a818667a69d100766998ba78c"/><section>
+    <title>PairingReset_DoorTask()</title>
+<indexterm><primary>PairingReset_DoorTask</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>PairingReset_DoorTask</secondary></indexterm>
+<para><computeroutput>void PairingReset_DoorTask (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1af3ec5ee15cd5d7a394e5b8ee8c358797"/><section>
+    <title>ResetSerialList()</title>
+<indexterm><primary>ResetSerialList</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>ResetSerialList</secondary></indexterm>
+<para><computeroutput>void ResetSerialList (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a4739423aec413aa3c7ee30f30e608154"/><section>
+    <title>RF_SendWithSerial()</title>
+<indexterm><primary>RF_SendWithSerial</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>RF_SendWithSerial</secondary></indexterm>
+<para><computeroutput>void RF_SendWithSerial (uint8_t * payload)</computeroutput></para><para>
+
+<para>Envoie une trame RF avec le numéro de série, en utilisant P0 et P1. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paramètres</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>payload</entry><entry>
+<para>Pointeur vers la charge utile à envoyer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="__pairing_8h_1a999f66920b36328dacb50c938a7489fe"/><section>
+    <title>SavePairedSerialToFlash()</title>
+<indexterm><primary>SavePairedSerialToFlash</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>SavePairedSerialToFlash</secondary></indexterm>
+<para><computeroutput>void SavePairedSerialToFlash (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1adfafc1a1fa1c61ab6ff89e7d352d2817"/><section>
+    <title>Serial_CheckIfFromPaired()</title>
+<indexterm><primary>Serial_CheckIfFromPaired</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>Serial_CheckIfFromPaired</secondary></indexterm>
+<para><computeroutput>bool Serial_CheckIfFromPaired (uint8_t * msg)</computeroutput></para><para>
+
+<para>Vérifie si le message RF reçu provient du périphérique appairé. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Paramètres</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>Pointeur vers le message RF reçu. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Renvoie</title>
+
+<para>true si le message provient du périphérique appairé, false sinon. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__pairing_8h_1af41ae98dc0c40546ed800bd9ac32ae69"/><section>
+    <title>Serial_IsPairingRunning()</title>
+<indexterm><primary>Serial_IsPairingRunning</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>Serial_IsPairingRunning</secondary></indexterm>
+<para><computeroutput>bool Serial_IsPairingRunning (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a6c8ec47b31a7d1f8503627cc7927dfe2"/><section>
+    <title>ShowPairingSuccess()</title>
+<indexterm><primary>ShowPairingSuccess</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>ShowPairingSuccess</secondary></indexterm>
+<para><computeroutput>void ShowPairingSuccess (void )</computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a26a0b7fcaeb752cf3d85b15b186ae444"/><section>
+    <title>TestFlashWriteRead()</title>
+<indexterm><primary>TestFlashWriteRead</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>TestFlashWriteRead</secondary></indexterm>
+<para><computeroutput>void TestFlashWriteRead (void )</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="__pairing_8h_1a360395ccaea62faa622a0c0c94178874"/><section>
+    <title>appPairedSerial</title>
+<indexterm><primary>appPairedSerial</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>appPairedSerial</secondary></indexterm>
+<para><computeroutput>uint32_t appPairedSerial<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a2eb3ac5dc73c685e3beefb74af0e1371"/><section>
+    <title>swBusy</title>
+<indexterm><primary>swBusy</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>swBusy</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swBusy<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1aafadd8f2a2aa59c174b5207f21872f1f"/><section>
+    <title>swEnter</title>
+<indexterm><primary>swEnter</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>swEnter</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swEnter<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1a19358061a4fa8672c2124d5eb6a6337a"/><section>
+    <title>swRing</title>
+<indexterm><primary>swRing</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>swRing</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swRing<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__pairing_8h_1afdc3fbca7ca6fb08b354d67fea915b56"/><section>
+    <title>swWait</title>
+<indexterm><primary>swWait</primary><secondary>Pairing.h</secondary></indexterm>
+<indexterm><primary>Pairing.h</primary><secondary>swWait</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swWait<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+</section>
+</section>

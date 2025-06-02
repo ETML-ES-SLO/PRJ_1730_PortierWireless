@@ -1,0 +1,74 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/\+RF.h}
+\hypertarget{_r_f_8h}{}\label{_r_f_8h}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/RF.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/RF.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Graphe des dépendances par inclusion de RF.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{_r_f_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_r_f_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_r_f_8h_a5aa69b7fbc66f24c4a0a8b1e1db00407}{RF\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_r_f_8h_a3289a92773defe54bcc8de3768abd412}{RF\+\_\+\+Send\+Message}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data\+To\+Send, uint8\+\_\+t nb\+Bytes\+To\+Send)
+\item 
+bool \mbox{\hyperlink{_r_f_8h_aaa251989c2b31bdd461a5031e7f8bb26}{RF\+\_\+\+Get\+Message}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}msg)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_r_f_8h_ad40c11645c27556ca685ede5d45fee4e}{get\+Serial\+RF}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_r_f_8h_a23095f345f2010caf0f4d825a4ea79d5}{RF\+\_\+\+Get\+Last\+Sender\+Serial}} (void)
+\item 
+void \mbox{\hyperlink{_r_f_8h_a74b1a00aee1ffe8ef321da984014877d}{RF\+\_\+\+Record\+Sender\+Serial}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}msg)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_r_f_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_r_f_8h_ad40c11645c27556ca685ede5d45fee4e}\index{RF.h@{RF.h}!getSerialRF@{getSerialRF}}
+\index{getSerialRF@{getSerialRF}!RF.h@{RF.h}}
+\doxysubsubsection{\texorpdfstring{getSerialRF()}{getSerialRF()}}
+{\footnotesize\ttfamily \label{_r_f_8h_ad40c11645c27556ca685ede5d45fee4e} 
+uint32\+\_\+t get\+Serial\+RF (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8h_a23095f345f2010caf0f4d825a4ea79d5}\index{RF.h@{RF.h}!RF\_GetLastSenderSerial@{RF\_GetLastSenderSerial}}
+\index{RF\_GetLastSenderSerial@{RF\_GetLastSenderSerial}!RF.h@{RF.h}}
+\doxysubsubsection{\texorpdfstring{RF\_GetLastSenderSerial()}{RF\_GetLastSenderSerial()}}
+{\footnotesize\ttfamily \label{_r_f_8h_a23095f345f2010caf0f4d825a4ea79d5} 
+uint32\+\_\+t RF\+\_\+\+Get\+Last\+Sender\+Serial (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8h_aaa251989c2b31bdd461a5031e7f8bb26}\index{RF.h@{RF.h}!RF\_GetMessage@{RF\_GetMessage}}
+\index{RF\_GetMessage@{RF\_GetMessage}!RF.h@{RF.h}}
+\doxysubsubsection{\texorpdfstring{RF\_GetMessage()}{RF\_GetMessage()}}
+{\footnotesize\ttfamily \label{_r_f_8h_aaa251989c2b31bdd461a5031e7f8bb26} 
+bool RF\+\_\+\+Get\+Message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8h_a5aa69b7fbc66f24c4a0a8b1e1db00407}\index{RF.h@{RF.h}!RF\_Init@{RF\_Init}}
+\index{RF\_Init@{RF\_Init}!RF.h@{RF.h}}
+\doxysubsubsection{\texorpdfstring{RF\_Init()}{RF\_Init()}}
+{\footnotesize\ttfamily \label{_r_f_8h_a5aa69b7fbc66f24c4a0a8b1e1db00407} 
+void RF\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8h_a74b1a00aee1ffe8ef321da984014877d}\index{RF.h@{RF.h}!RF\_RecordSenderSerial@{RF\_RecordSenderSerial}}
+\index{RF\_RecordSenderSerial@{RF\_RecordSenderSerial}!RF.h@{RF.h}}
+\doxysubsubsection{\texorpdfstring{RF\_RecordSenderSerial()}{RF\_RecordSenderSerial()}}
+{\footnotesize\ttfamily \label{_r_f_8h_a74b1a00aee1ffe8ef321da984014877d} 
+void RF\+\_\+\+Record\+Sender\+Serial (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8h_a3289a92773defe54bcc8de3768abd412}\index{RF.h@{RF.h}!RF\_SendMessage@{RF\_SendMessage}}
+\index{RF\_SendMessage@{RF\_SendMessage}!RF.h@{RF.h}}
+\doxysubsubsection{\texorpdfstring{RF\_SendMessage()}{RF\_SendMessage()}}
+{\footnotesize\ttfamily \label{_r_f_8h_a3289a92773defe54bcc8de3768abd412} 
+void RF\+\_\+\+Send\+Message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data\+To\+Send}{, }\item[{uint8\+\_\+t}]{nb\+Bytes\+To\+Send}{}\end{DoxyParamCaption})}
+

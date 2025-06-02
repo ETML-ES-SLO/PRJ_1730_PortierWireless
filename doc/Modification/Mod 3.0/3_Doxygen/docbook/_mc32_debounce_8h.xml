@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mc32_debounce_8h" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Debounce.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Debounce.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdbool.h&gt;<?linebreak?>#include &lt;stdint.h&gt;<?linebreak?></programlisting>Graphe des dépendances par inclusion de Mc32Debounce.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_mc32_debounce_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_mc32_debounce_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structs__bits">s_bits</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Énumérations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</link> { <link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033">DebounceWaitChange</link>
+, <link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b">DebounceWaitStable</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__mc32_debounce_8h_1a25234bd4e5b3764544f4ebed1be6bf74">DoDebounce</link> (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> *Descriptor, bool InputValue)</para>
+
+<para>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! </para>
+</listitem>
+            <listitem><para>void <link linkend="__mc32_debounce_8h_1abf3dbe0d583132babae2be20ec2cc3a8">DebounceInit</link> (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> *pDescriptor)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__mc32_debounce_8h_1a6a611324e87fa2d10ac637b17271cb53">DebounceGetInput</link> (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> *pDescriptor)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__mc32_debounce_8h_1a8c5bec15ce951e929781afe093261151">DebounceIsPressed</link> (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> *pDescriptor)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__mc32_debounce_8h_1af41f451eca1f7dba66b694233d549c54">DebounceIsReleased</link> (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> *pDescriptor)</para>
+</listitem>
+            <listitem><para>void <link linkend="__mc32_debounce_8h_1ac643da410acdf6b56285e1917bb55721">DebounceClearPressed</link> (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> *pDescriptor)</para>
+</listitem>
+            <listitem><para>void <link linkend="__mc32_debounce_8h_1aac114092f76e85fa9e6246127b5e1082">DebounceClearReleased</link> (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> *pDescriptor)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation du type de l&apos;énumération</title>
+<anchor xml:id="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73"/><section>
+    <title>E_DebouceStates</title>
+<indexterm><primary>E_DebouceStates</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>E_DebouceStates</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs énumérées</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>DebounceWaitChange</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceWaitChange</secondary></indexterm>
+<anchor xml:id="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033"/>DebounceWaitChange</entry><entry></entry></row><row><entry><indexterm><primary>DebounceWaitStable</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceWaitStable</secondary></indexterm>
+<anchor xml:id="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b"/>DebounceWaitStable</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__mc32_debounce_8h_1ac643da410acdf6b56285e1917bb55721"/><section>
+    <title>DebounceClearPressed()</title>
+<indexterm><primary>DebounceClearPressed</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceClearPressed</secondary></indexterm>
+<para><computeroutput>void DebounceClearPressed (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> * pDescriptor)</computeroutput></para></section>
+<anchor xml:id="__mc32_debounce_8h_1aac114092f76e85fa9e6246127b5e1082"/><section>
+    <title>DebounceClearReleased()</title>
+<indexterm><primary>DebounceClearReleased</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceClearReleased</secondary></indexterm>
+<para><computeroutput>void DebounceClearReleased (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> * pDescriptor)</computeroutput></para></section>
+<anchor xml:id="__mc32_debounce_8h_1a6a611324e87fa2d10ac637b17271cb53"/><section>
+    <title>DebounceGetInput()</title>
+<indexterm><primary>DebounceGetInput</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceGetInput</secondary></indexterm>
+<para><computeroutput>bool DebounceGetInput (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> * pDescriptor)</computeroutput></para></section>
+<anchor xml:id="__mc32_debounce_8h_1abf3dbe0d583132babae2be20ec2cc3a8"/><section>
+    <title>DebounceInit()</title>
+<indexterm><primary>DebounceInit</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceInit</secondary></indexterm>
+<para><computeroutput>void DebounceInit (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> * pDescriptor)</computeroutput></para></section>
+<anchor xml:id="__mc32_debounce_8h_1a8c5bec15ce951e929781afe093261151"/><section>
+    <title>DebounceIsPressed()</title>
+<indexterm><primary>DebounceIsPressed</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceIsPressed</secondary></indexterm>
+<para><computeroutput>bool DebounceIsPressed (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> * pDescriptor)</computeroutput></para></section>
+<anchor xml:id="__mc32_debounce_8h_1af41f451eca1f7dba66b694233d549c54"/><section>
+    <title>DebounceIsReleased()</title>
+<indexterm><primary>DebounceIsReleased</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DebounceIsReleased</secondary></indexterm>
+<para><computeroutput>bool DebounceIsReleased (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> * pDescriptor)</computeroutput></para></section>
+<anchor xml:id="__mc32_debounce_8h_1a25234bd4e5b3764544f4ebed1be6bf74"/><section>
+    <title>DoDebounce()</title>
+<indexterm><primary>DoDebounce</primary><secondary>Mc32Debounce.h</secondary></indexterm>
+<indexterm><primary>Mc32Debounce.h</primary><secondary>DoDebounce</secondary></indexterm>
+<para><computeroutput>void DoDebounce (<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> * Descriptor, bool InputValue)</computeroutput></para><para>
+
+<para>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! </para>
+</para>
+
+<para>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! </para>
+</section>
+</section>
+</section>

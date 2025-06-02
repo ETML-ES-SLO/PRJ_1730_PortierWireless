@@ -1,0 +1,95 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/sound.h}
+\hypertarget{sound_8h}{}\label{sound_8h}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/sound.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/sound.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Graphe des dépendances par inclusion de sound.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{sound_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sound_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sound_8h_afb97318712639efcb061a8772beff2b5}{Sound\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{sound_8h_a01f15a7aed20855a98398cbec33dae27}{Sound\+\_\+\+Start}} (const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \texorpdfstring{$\ast$}{*}sound)
+\item 
+bool \mbox{\hyperlink{sound_8h_a52a8a79e98a4c19d71f2272745362ac8}{Sound\+\_\+\+Is\+Idle}} (void)
+\item 
+void \mbox{\hyperlink{sound_8h_a3efe45f40a4f9449a6c98d402c54f126}{Sound\+\_\+\+Mgmt}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \mbox{\hyperlink{sound_8h_ad4082d5f85de5f7730323df7d3dff011}{RING}} \mbox{[}$\,$\mbox{]}
+\item 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \mbox{\hyperlink{sound_8h_a65e7900340fbe3adb25692b58985e8b1}{SUCCESS}} \mbox{[}$\,$\mbox{]}
+\item 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \mbox{\hyperlink{sound_8h_a401d61ae566b710e019f2ac94e7be117}{ERROR}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{sound_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{sound_8h_afb97318712639efcb061a8772beff2b5}\index{sound.h@{sound.h}!Sound\_Init@{Sound\_Init}}
+\index{Sound\_Init@{Sound\_Init}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{Sound\_Init()}{Sound\_Init()}}
+{\footnotesize\ttfamily \label{sound_8h_afb97318712639efcb061a8772beff2b5} 
+void Sound\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{sound_8h_a52a8a79e98a4c19d71f2272745362ac8}\index{sound.h@{sound.h}!Sound\_IsIdle@{Sound\_IsIdle}}
+\index{Sound\_IsIdle@{Sound\_IsIdle}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{Sound\_IsIdle()}{Sound\_IsIdle()}}
+{\footnotesize\ttfamily \label{sound_8h_a52a8a79e98a4c19d71f2272745362ac8} 
+bool Sound\+\_\+\+Is\+Idle (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{sound_8h_a3efe45f40a4f9449a6c98d402c54f126}\index{sound.h@{sound.h}!Sound\_Mgmt@{Sound\_Mgmt}}
+\index{Sound\_Mgmt@{Sound\_Mgmt}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{Sound\_Mgmt()}{Sound\_Mgmt()}}
+{\footnotesize\ttfamily \label{sound_8h_a3efe45f40a4f9449a6c98d402c54f126} 
+void Sound\+\_\+\+Mgmt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{sound_8h_a01f15a7aed20855a98398cbec33dae27}\index{sound.h@{sound.h}!Sound\_Start@{Sound\_Start}}
+\index{Sound\_Start@{Sound\_Start}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{Sound\_Start()}{Sound\_Start()}}
+{\footnotesize\ttfamily \label{sound_8h_a01f15a7aed20855a98398cbec33dae27} 
+void Sound\+\_\+\+Start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{sound}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{sound_8h_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{sound_8h_a401d61ae566b710e019f2ac94e7be117}\index{sound.h@{sound.h}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \label{sound_8h_a401d61ae566b710e019f2ac94e7be117} 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} ERROR\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sound_8h_ad4082d5f85de5f7730323df7d3dff011}\index{sound.h@{sound.h}!RING@{RING}}
+\index{RING@{RING}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{RING}{RING}}
+{\footnotesize\ttfamily \label{sound_8h_ad4082d5f85de5f7730323df7d3dff011} 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} RING\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sound_8h_a65e7900340fbe3adb25692b58985e8b1}\index{sound.h@{sound.h}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!sound.h@{sound.h}}
+\doxysubsubsection{\texorpdfstring{SUCCESS}{SUCCESS}}
+{\footnotesize\ttfamily \label{sound_8h_a65e7900340fbe3adb25692b58985e8b1} 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} SUCCESS\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

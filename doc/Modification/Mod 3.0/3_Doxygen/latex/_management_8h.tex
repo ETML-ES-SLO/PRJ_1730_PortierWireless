@@ -1,0 +1,200 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/\+Management.h}
+\hypertarget{_management_8h}{}\label{_management_8h}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Management.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Management.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}Mc32\+Debounce.\+h"{}}\newline
+{\ttfamily \#include "{}app.\+h"{}}\newline
+Graphe des dépendances par inclusion de Management.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_management_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_management_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7}{DOOR\+\_\+\+STATES}} \{ \newline
+\mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a5e0a209e464ad82238a897ecdc11d782}{DOOR\+\_\+\+STATE\+\_\+\+INIT}} = 0
+, \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a778d54fc6c1a3216199e0209f58bc976}{DOOR\+\_\+\+STATE\+\_\+\+PRESSED}}
+, \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6eda29b5a26c3a4281e90457463f94ce}{DOOR\+\_\+\+STATE\+\_\+\+WAITING}}
+, \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a3b398ea91a396af6db4873014070353a}{DOOR\+\_\+\+STATE\+\_\+\+ANSWER}}
+, \newline
+\mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7ade4a83ffbf8c1931689f51473b1df4ba}{DOOR\+\_\+\+STATE\+\_\+\+NOANSWER}}
+, \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6a83ce34de57271504ca36f2998c4a50}{DOOR\+\_\+\+STATE\+\_\+\+SHUTDOWN}}
+ \}
+\item 
+enum \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738}{BELL\+\_\+\+STATES}} \{ \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738aaaab52d161fbccd9da2b803359014a65}{BELL\+\_\+\+STATE\+\_\+\+INIT}} = 0
+, \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738a1b6ae4981d5df3b271e33d6a54f4f8b6}{BELL\+\_\+\+STATE\+\_\+\+IDLE}}
+, \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738a781f14c405e0590c228e7c5301c5013b}{BELL\+\_\+\+STATE\+\_\+\+RING}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_management_8h_af116b7589b9df3fef08b92eb12e28a01}{Door\+\_\+\+Mgmt}} (void)
+\begin{DoxyCompactList}\small\item\em Gestion du bouton-\/poussoir de la porte avec filtre de pairing intégré. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_management_8h_aa24b1b961c8209aad164f5916742d192}{Bell\+\_\+\+Mgmt}} (void)
+\begin{DoxyCompactList}\small\item\em Gestion de la carte de sonnerie (Bell\+\_\+\+Mgmt). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_management_8h_a19358061a4fa8672c2124d5eb6a6337a}{sw\+Ring}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_management_8h_aafadd8f2a2aa59c174b5207f21872f1f}{sw\+Enter}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_management_8h_afdc3fbca7ca6fb08b354d67fea915b56}{sw\+Wait}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_management_8h_a2eb3ac5dc73c685e3beefb74af0e1371}{sw\+Busy}}
+\item 
+\mbox{\hyperlink{struct_a_p_p___d_a_t_a}{APP\+\_\+\+DATA}} \mbox{\hyperlink{_management_8h_a4f18a2543252a3f61342104a531a0f3c}{app\+Data}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{_management_8h_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{_management_8h_a0cbf3fc68a915efeaa5397b737414738}\index{Management.h@{Management.h}!BELL\_STATES@{BELL\_STATES}}
+\index{BELL\_STATES@{BELL\_STATES}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{BELL\_STATES}{BELL\_STATES}}
+{\footnotesize\ttfamily \label{_management_8h_a0cbf3fc68a915efeaa5397b737414738} 
+enum \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738}{BELL\+\_\+\+STATES}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BELL\_STATE\_INIT@{BELL\_STATE\_INIT}!Management.h@{Management.h}}\index{Management.h@{Management.h}!BELL\_STATE\_INIT@{BELL\_STATE\_INIT}}}\Hypertarget{_management_8h_a0cbf3fc68a915efeaa5397b737414738aaaab52d161fbccd9da2b803359014a65}\label{_management_8h_a0cbf3fc68a915efeaa5397b737414738aaaab52d161fbccd9da2b803359014a65} 
+BELL\+\_\+\+STATE\+\_\+\+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BELL\_STATE\_IDLE@{BELL\_STATE\_IDLE}!Management.h@{Management.h}}\index{Management.h@{Management.h}!BELL\_STATE\_IDLE@{BELL\_STATE\_IDLE}}}\Hypertarget{_management_8h_a0cbf3fc68a915efeaa5397b737414738a1b6ae4981d5df3b271e33d6a54f4f8b6}\label{_management_8h_a0cbf3fc68a915efeaa5397b737414738a1b6ae4981d5df3b271e33d6a54f4f8b6} 
+BELL\+\_\+\+STATE\+\_\+\+IDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BELL\_STATE\_RING@{BELL\_STATE\_RING}!Management.h@{Management.h}}\index{Management.h@{Management.h}!BELL\_STATE\_RING@{BELL\_STATE\_RING}}}\Hypertarget{_management_8h_a0cbf3fc68a915efeaa5397b737414738a781f14c405e0590c228e7c5301c5013b}\label{_management_8h_a0cbf3fc68a915efeaa5397b737414738a781f14c405e0590c228e7c5301c5013b} 
+BELL\+\_\+\+STATE\+\_\+\+RING&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7}\index{Management.h@{Management.h}!DOOR\_STATES@{DOOR\_STATES}}
+\index{DOOR\_STATES@{DOOR\_STATES}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{DOOR\_STATES}{DOOR\_STATES}}
+{\footnotesize\ttfamily \label{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7} 
+enum \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7}{DOOR\+\_\+\+STATES}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOOR\_STATE\_INIT@{DOOR\_STATE\_INIT}!Management.h@{Management.h}}\index{Management.h@{Management.h}!DOOR\_STATE\_INIT@{DOOR\_STATE\_INIT}}}\Hypertarget{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a5e0a209e464ad82238a897ecdc11d782}\label{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a5e0a209e464ad82238a897ecdc11d782} 
+DOOR\+\_\+\+STATE\+\_\+\+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOOR\_STATE\_PRESSED@{DOOR\_STATE\_PRESSED}!Management.h@{Management.h}}\index{Management.h@{Management.h}!DOOR\_STATE\_PRESSED@{DOOR\_STATE\_PRESSED}}}\Hypertarget{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a778d54fc6c1a3216199e0209f58bc976}\label{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a778d54fc6c1a3216199e0209f58bc976} 
+DOOR\+\_\+\+STATE\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOOR\_STATE\_WAITING@{DOOR\_STATE\_WAITING}!Management.h@{Management.h}}\index{Management.h@{Management.h}!DOOR\_STATE\_WAITING@{DOOR\_STATE\_WAITING}}}\Hypertarget{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6eda29b5a26c3a4281e90457463f94ce}\label{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6eda29b5a26c3a4281e90457463f94ce} 
+DOOR\+\_\+\+STATE\+\_\+\+WAITING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOOR\_STATE\_ANSWER@{DOOR\_STATE\_ANSWER}!Management.h@{Management.h}}\index{Management.h@{Management.h}!DOOR\_STATE\_ANSWER@{DOOR\_STATE\_ANSWER}}}\Hypertarget{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a3b398ea91a396af6db4873014070353a}\label{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a3b398ea91a396af6db4873014070353a} 
+DOOR\+\_\+\+STATE\+\_\+\+ANSWER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOOR\_STATE\_NOANSWER@{DOOR\_STATE\_NOANSWER}!Management.h@{Management.h}}\index{Management.h@{Management.h}!DOOR\_STATE\_NOANSWER@{DOOR\_STATE\_NOANSWER}}}\Hypertarget{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7ade4a83ffbf8c1931689f51473b1df4ba}\label{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7ade4a83ffbf8c1931689f51473b1df4ba} 
+DOOR\+\_\+\+STATE\+\_\+\+NOANSWER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOOR\_STATE\_SHUTDOWN@{DOOR\_STATE\_SHUTDOWN}!Management.h@{Management.h}}\index{Management.h@{Management.h}!DOOR\_STATE\_SHUTDOWN@{DOOR\_STATE\_SHUTDOWN}}}\Hypertarget{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6a83ce34de57271504ca36f2998c4a50}\label{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6a83ce34de57271504ca36f2998c4a50} 
+DOOR\+\_\+\+STATE\+\_\+\+SHUTDOWN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{_management_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_management_8h_aa24b1b961c8209aad164f5916742d192}\index{Management.h@{Management.h}!Bell\_Mgmt@{Bell\_Mgmt}}
+\index{Bell\_Mgmt@{Bell\_Mgmt}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{Bell\_Mgmt()}{Bell\_Mgmt()}}
+{\footnotesize\ttfamily \label{_management_8h_aa24b1b961c8209aad164f5916742d192} 
+void Bell\+\_\+\+Mgmt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gestion de la carte de sonnerie (Bell\+\_\+\+Mgmt). 
+
+Cette fonction gère la logique de la carte de sonnerie, y compris la réception des messages, la gestion des boutons de réponse, l\textquotesingle{}envoi des réponses, et la gestion des états associés.
+
+
+\begin{DoxyItemize}
+\item Surveille les messages RF entrants pour déclencher la sonnerie ou répondre à une demande.
+\item Gère les boutons physiques pour envoyer les réponses appropriées (entrez, attendez, occupé).
+\item Gère les délais et le clignotement des LEDs selon l\textquotesingle{}état de la batterie et les réponses.
+\item Assure la synchronisation avec d\textquotesingle{}autres cartes de sonnerie si nécessaire.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Cette fonction fait partie du module de gestion de la sonnerie (Bell\+\_\+\+Mgmt). 
+\end{DoxyNote}
+\Hypertarget{_management_8h_af116b7589b9df3fef08b92eb12e28a01}\index{Management.h@{Management.h}!Door\_Mgmt@{Door\_Mgmt}}
+\index{Door\_Mgmt@{Door\_Mgmt}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{Door\_Mgmt()}{Door\_Mgmt()}}
+{\footnotesize\ttfamily \label{_management_8h_af116b7589b9df3fef08b92eb12e28a01} 
+void Door\+\_\+\+Mgmt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gestion du bouton-\/poussoir de la porte avec filtre de pairing intégré. 
+
+Cette fonction gère la logique associée au bouton-\/poussoir situé à la porte, incluant un filtre pour le processus de jumelage (pairing).
+
+
+\begin{DoxyItemize}
+\item Surveille l\textquotesingle{}état du bouton-\/poussoir.
+\item Applique un filtre logiciel pour éviter les rebonds et les appuis involontaires.
+\item Intègre la gestion du pairing pour l\textquotesingle{}association des dispositifs sans fil.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Cette fonction fait partie du module de gestion de la porte (Door\+\_\+\+Mgmt). 
+\end{DoxyNote}
+
+
+\label{doc-var-members}
+\Hypertarget{_management_8h_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{_management_8h_a4f18a2543252a3f61342104a531a0f3c}\index{Management.h@{Management.h}!appData@{appData}}
+\index{appData@{appData}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{appData}{appData}}
+{\footnotesize\ttfamily \label{_management_8h_a4f18a2543252a3f61342104a531a0f3c} 
+\mbox{\hyperlink{struct_a_p_p___d_a_t_a}{APP\+\_\+\+DATA}} app\+Data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_management_8h_a2eb3ac5dc73c685e3beefb74af0e1371}\index{Management.h@{Management.h}!swBusy@{swBusy}}
+\index{swBusy@{swBusy}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{swBusy}{swBusy}}
+{\footnotesize\ttfamily \label{_management_8h_a2eb3ac5dc73c685e3beefb74af0e1371} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Busy\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_management_8h_aafadd8f2a2aa59c174b5207f21872f1f}\index{Management.h@{Management.h}!swEnter@{swEnter}}
+\index{swEnter@{swEnter}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{swEnter}{swEnter}}
+{\footnotesize\ttfamily \label{_management_8h_aafadd8f2a2aa59c174b5207f21872f1f} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Enter\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_management_8h_a19358061a4fa8672c2124d5eb6a6337a}\index{Management.h@{Management.h}!swRing@{swRing}}
+\index{swRing@{swRing}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{swRing}{swRing}}
+{\footnotesize\ttfamily \label{_management_8h_a19358061a4fa8672c2124d5eb6a6337a} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Ring\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_management_8h_afdc3fbca7ca6fb08b354d67fea915b56}\index{Management.h@{Management.h}!swWait@{swWait}}
+\index{swWait@{swWait}!Management.h@{Management.h}}
+\doxysubsubsection{\texorpdfstring{swWait}{swWait}}
+{\footnotesize\ttfamily \label{_management_8h_afdc3fbca7ca6fb08b354d67fea915b56} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Wait\hspace{0.3cm}{\ttfamily [extern]}}
+

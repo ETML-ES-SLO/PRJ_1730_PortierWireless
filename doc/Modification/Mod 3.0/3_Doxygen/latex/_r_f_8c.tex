@@ -1,0 +1,168 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/\+RF.c}
+\hypertarget{_r_f_8c}{}\label{_r_f_8c}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/RF.c@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/RF.c}}
+{\ttfamily \#include "{}RF.\+h"{}}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include "{}Mc32\+Delays.\+h"{}}\newline
+{\ttfamily \#include "{}peripheral/usart/plib\+\_\+usart.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}system\+\_\+definitions.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Graphe des dépendances par inclusion de RF.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_r_f_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_r_f_8c_a6e31d0ed0d32a0655e13233ddf82bf43}{MAXMSG}}~64
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_r_f_8c_a23095f345f2010caf0f4d825a4ea79d5}{RF\+\_\+\+Get\+Last\+Sender\+Serial}} (void)
+\item 
+void \mbox{\hyperlink{_r_f_8c_a74b1a00aee1ffe8ef321da984014877d}{RF\+\_\+\+Record\+Sender\+Serial}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}msg)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_r_f_8c_ad970d7f14c83abec6cbd85be3eecc52d}{Read\+Serial\+Nbr}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}serial\+Input)
+\item 
+void \mbox{\hyperlink{_r_f_8c_a5aa69b7fbc66f24c4a0a8b1e1db00407}{RF\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_r_f_8c_a3289a92773defe54bcc8de3768abd412}{RF\+\_\+\+Send\+Message}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data\+To\+Send, uint8\+\_\+t nb\+Bytes\+To\+Send)
+\item 
+bool \mbox{\hyperlink{_r_f_8c_a27835339bea244ed8efcc38a13870e0d}{is\+New\+Frame}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_r_f_8c_a54184d134e98092290edd64bd5612217}{rcvd\+Msg}})
+\item 
+bool \mbox{\hyperlink{_r_f_8c_aaa251989c2b31bdd461a5031e7f8bb26}{RF\+\_\+\+Get\+Message}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}msg)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_r_f_8c_a85199c80e4155e25d02523ebc07528ff}{get\+Serial\+RF}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_r_f_8c_ab27d7ebb8da2f345a80401793816de20}{flag\+Get\+Adress}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_r_f_8c_a033c15787d84463eb4ec13411ddfeb07}{flag\+Error\+Adress}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_r_f_8c_a7c8ebfb594c5670994abda30402864b5}{nbr\+Serial\+RF}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_r_f_8c_a54184d134e98092290edd64bd5612217}{rcvd\+Msg}} \mbox{[}64\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_r_f_8c_a00a705508c3fd2f5adb40958d14bebe6}{rcdv\+Char\+Cntr}} = 0
+\item 
+bool \mbox{\hyperlink{_r_f_8c_aa133dbe80ba7c7dfa6ab4cbf9d940266}{flag\+Get\+Msg\+Uart}} = false
+\item 
+DRV\+\_\+\+HANDLE \mbox{\hyperlink{_r_f_8c_a785dea3a2a197b7e4e86a09f652430ff}{handle\+USART}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_r_f_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{_r_f_8c_a6e31d0ed0d32a0655e13233ddf82bf43}\index{RF.c@{RF.c}!MAXMSG@{MAXMSG}}
+\index{MAXMSG@{MAXMSG}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{MAXMSG}{MAXMSG}}
+{\footnotesize\ttfamily \label{_r_f_8c_a6e31d0ed0d32a0655e13233ddf82bf43} 
+\#define MAXMSG~64}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_r_f_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_r_f_8c_a85199c80e4155e25d02523ebc07528ff}\index{RF.c@{RF.c}!getSerialRF@{getSerialRF}}
+\index{getSerialRF@{getSerialRF}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{getSerialRF()}{getSerialRF()}}
+{\footnotesize\ttfamily \label{_r_f_8c_a85199c80e4155e25d02523ebc07528ff} 
+uint32\+\_\+t get\+Serial\+RF (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8c_a27835339bea244ed8efcc38a13870e0d}\index{RF.c@{RF.c}!isNewFrame@{isNewFrame}}
+\index{isNewFrame@{isNewFrame}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{isNewFrame()}{isNewFrame()}}
+{\footnotesize\ttfamily \label{_r_f_8c_a27835339bea244ed8efcc38a13870e0d} 
+bool is\+New\+Frame (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rcvd\+Msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8c_ad970d7f14c83abec6cbd85be3eecc52d}\index{RF.c@{RF.c}!ReadSerialNbr@{ReadSerialNbr}}
+\index{ReadSerialNbr@{ReadSerialNbr}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{ReadSerialNbr()}{ReadSerialNbr()}}
+{\footnotesize\ttfamily \label{_r_f_8c_ad970d7f14c83abec6cbd85be3eecc52d} 
+uint8\+\_\+t Read\+Serial\+Nbr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{serial\+Input}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8c_a23095f345f2010caf0f4d825a4ea79d5}\index{RF.c@{RF.c}!RF\_GetLastSenderSerial@{RF\_GetLastSenderSerial}}
+\index{RF\_GetLastSenderSerial@{RF\_GetLastSenderSerial}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{RF\_GetLastSenderSerial()}{RF\_GetLastSenderSerial()}}
+{\footnotesize\ttfamily \label{_r_f_8c_a23095f345f2010caf0f4d825a4ea79d5} 
+uint32\+\_\+t RF\+\_\+\+Get\+Last\+Sender\+Serial (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8c_aaa251989c2b31bdd461a5031e7f8bb26}\index{RF.c@{RF.c}!RF\_GetMessage@{RF\_GetMessage}}
+\index{RF\_GetMessage@{RF\_GetMessage}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{RF\_GetMessage()}{RF\_GetMessage()}}
+{\footnotesize\ttfamily \label{_r_f_8c_aaa251989c2b31bdd461a5031e7f8bb26} 
+bool RF\+\_\+\+Get\+Message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8c_a5aa69b7fbc66f24c4a0a8b1e1db00407}\index{RF.c@{RF.c}!RF\_Init@{RF\_Init}}
+\index{RF\_Init@{RF\_Init}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{RF\_Init()}{RF\_Init()}}
+{\footnotesize\ttfamily \label{_r_f_8c_a5aa69b7fbc66f24c4a0a8b1e1db00407} 
+void RF\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8c_a74b1a00aee1ffe8ef321da984014877d}\index{RF.c@{RF.c}!RF\_RecordSenderSerial@{RF\_RecordSenderSerial}}
+\index{RF\_RecordSenderSerial@{RF\_RecordSenderSerial}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{RF\_RecordSenderSerial()}{RF\_RecordSenderSerial()}}
+{\footnotesize\ttfamily \label{_r_f_8c_a74b1a00aee1ffe8ef321da984014877d} 
+void RF\+\_\+\+Record\+Sender\+Serial (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_r_f_8c_a3289a92773defe54bcc8de3768abd412}\index{RF.c@{RF.c}!RF\_SendMessage@{RF\_SendMessage}}
+\index{RF\_SendMessage@{RF\_SendMessage}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{RF\_SendMessage()}{RF\_SendMessage()}}
+{\footnotesize\ttfamily \label{_r_f_8c_a3289a92773defe54bcc8de3768abd412} 
+void RF\+\_\+\+Send\+Message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data\+To\+Send}{, }\item[{uint8\+\_\+t}]{nb\+Bytes\+To\+Send}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{_r_f_8c_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{_r_f_8c_a033c15787d84463eb4ec13411ddfeb07}\index{RF.c@{RF.c}!flagErrorAdress@{flagErrorAdress}}
+\index{flagErrorAdress@{flagErrorAdress}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{flagErrorAdress}{flagErrorAdress}}
+{\footnotesize\ttfamily \label{_r_f_8c_a033c15787d84463eb4ec13411ddfeb07} 
+uint8\+\_\+t flag\+Error\+Adress = 0}
+
+\Hypertarget{_r_f_8c_ab27d7ebb8da2f345a80401793816de20}\index{RF.c@{RF.c}!flagGetAdress@{flagGetAdress}}
+\index{flagGetAdress@{flagGetAdress}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{flagGetAdress}{flagGetAdress}}
+{\footnotesize\ttfamily \label{_r_f_8c_ab27d7ebb8da2f345a80401793816de20} 
+uint8\+\_\+t flag\+Get\+Adress = 0}
+
+\Hypertarget{_r_f_8c_aa133dbe80ba7c7dfa6ab4cbf9d940266}\index{RF.c@{RF.c}!flagGetMsgUart@{flagGetMsgUart}}
+\index{flagGetMsgUart@{flagGetMsgUart}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{flagGetMsgUart}{flagGetMsgUart}}
+{\footnotesize\ttfamily \label{_r_f_8c_aa133dbe80ba7c7dfa6ab4cbf9d940266} 
+bool flag\+Get\+Msg\+Uart = false}
+
+\Hypertarget{_r_f_8c_a785dea3a2a197b7e4e86a09f652430ff}\index{RF.c@{RF.c}!handleUSART@{handleUSART}}
+\index{handleUSART@{handleUSART}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{handleUSART}{handleUSART}}
+{\footnotesize\ttfamily \label{_r_f_8c_a785dea3a2a197b7e4e86a09f652430ff} 
+DRV\+\_\+\+HANDLE handle\+USART}
+
+\Hypertarget{_r_f_8c_a7c8ebfb594c5670994abda30402864b5}\index{RF.c@{RF.c}!nbrSerialRF@{nbrSerialRF}}
+\index{nbrSerialRF@{nbrSerialRF}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{nbrSerialRF}{nbrSerialRF}}
+{\footnotesize\ttfamily \label{_r_f_8c_a7c8ebfb594c5670994abda30402864b5} 
+uint32\+\_\+t nbr\+Serial\+RF = 0}
+
+\Hypertarget{_r_f_8c_a00a705508c3fd2f5adb40958d14bebe6}\index{RF.c@{RF.c}!rcdvCharCntr@{rcdvCharCntr}}
+\index{rcdvCharCntr@{rcdvCharCntr}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{rcdvCharCntr}{rcdvCharCntr}}
+{\footnotesize\ttfamily \label{_r_f_8c_a00a705508c3fd2f5adb40958d14bebe6} 
+uint8\+\_\+t rcdv\+Char\+Cntr = 0}
+
+\Hypertarget{_r_f_8c_a54184d134e98092290edd64bd5612217}\index{RF.c@{RF.c}!rcvdMsg@{rcvdMsg}}
+\index{rcvdMsg@{rcvdMsg}!RF.c@{RF.c}}
+\doxysubsubsection{\texorpdfstring{rcvdMsg}{rcvdMsg}}
+{\footnotesize\ttfamily \label{_r_f_8c_a54184d134e98092290edd64bd5612217} 
+uint8\+\_\+t rcvd\+Msg\mbox{[}64\mbox{]}}
+

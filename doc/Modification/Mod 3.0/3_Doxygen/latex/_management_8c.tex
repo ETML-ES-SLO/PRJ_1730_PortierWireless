@@ -1,0 +1,105 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/\+Management.c}
+\hypertarget{_management_8c}{}\label{_management_8c}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Management.c@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Management.c}}
+{\ttfamily \#include "{}Management.\+h"{}}\newline
+{\ttfamily \#include "{}app.\+h"{}}\newline
+{\ttfamily \#include "{}led.\+h"{}}\newline
+{\ttfamily \#include "{}sound.\+h"{}}\newline
+{\ttfamily \#include "{}Pairing.\+h"{}}\newline
+{\ttfamily \#include "{}RF.\+h"{}}\newline
+{\ttfamily \#include "{}peripheral/reset/plib\+\_\+reset.\+h"{}}\newline
+Graphe des dépendances par inclusion de Management.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_management_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_management_8c_addca570f13752276e60239b692c6db49}{DOOR\+\_\+\+TIMEOUT}}~3100
+\item 
+\#define \mbox{\hyperlink{_management_8c_a6229736f98865bc2ad4f894614db07fd}{BELL\+\_\+\+TIMEOUT}}~3000
+\item 
+\#define \mbox{\hyperlink{_management_8c_a4c58a3e7beca7e5968bf47897a5eebd2}{ANSWER\+\_\+\+NR\+\_\+\+MAX}}~50
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_management_8c_af116b7589b9df3fef08b92eb12e28a01}{Door\+\_\+\+Mgmt}} (void)
+\begin{DoxyCompactList}\small\item\em Gestion du bouton-\/poussoir de la porte avec filtre de pairing intégré. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_management_8c_aa24b1b961c8209aad164f5916742d192}{Bell\+\_\+\+Mgmt}} (void)
+\begin{DoxyCompactList}\small\item\em Gestion de la carte de sonnerie (Bell\+\_\+\+Mgmt). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_management_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{_management_8c_a4c58a3e7beca7e5968bf47897a5eebd2}\index{Management.c@{Management.c}!ANSWER\_NR\_MAX@{ANSWER\_NR\_MAX}}
+\index{ANSWER\_NR\_MAX@{ANSWER\_NR\_MAX}!Management.c@{Management.c}}
+\doxysubsubsection{\texorpdfstring{ANSWER\_NR\_MAX}{ANSWER\_NR\_MAX}}
+{\footnotesize\ttfamily \label{_management_8c_a4c58a3e7beca7e5968bf47897a5eebd2} 
+\#define ANSWER\+\_\+\+NR\+\_\+\+MAX~50}
+
+\Hypertarget{_management_8c_a6229736f98865bc2ad4f894614db07fd}\index{Management.c@{Management.c}!BELL\_TIMEOUT@{BELL\_TIMEOUT}}
+\index{BELL\_TIMEOUT@{BELL\_TIMEOUT}!Management.c@{Management.c}}
+\doxysubsubsection{\texorpdfstring{BELL\_TIMEOUT}{BELL\_TIMEOUT}}
+{\footnotesize\ttfamily \label{_management_8c_a6229736f98865bc2ad4f894614db07fd} 
+\#define BELL\+\_\+\+TIMEOUT~3000}
+
+\Hypertarget{_management_8c_addca570f13752276e60239b692c6db49}\index{Management.c@{Management.c}!DOOR\_TIMEOUT@{DOOR\_TIMEOUT}}
+\index{DOOR\_TIMEOUT@{DOOR\_TIMEOUT}!Management.c@{Management.c}}
+\doxysubsubsection{\texorpdfstring{DOOR\_TIMEOUT}{DOOR\_TIMEOUT}}
+{\footnotesize\ttfamily \label{_management_8c_addca570f13752276e60239b692c6db49} 
+\#define DOOR\+\_\+\+TIMEOUT~3100}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_management_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_management_8c_aa24b1b961c8209aad164f5916742d192}\index{Management.c@{Management.c}!Bell\_Mgmt@{Bell\_Mgmt}}
+\index{Bell\_Mgmt@{Bell\_Mgmt}!Management.c@{Management.c}}
+\doxysubsubsection{\texorpdfstring{Bell\_Mgmt()}{Bell\_Mgmt()}}
+{\footnotesize\ttfamily \label{_management_8c_aa24b1b961c8209aad164f5916742d192} 
+void Bell\+\_\+\+Mgmt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gestion de la carte de sonnerie (Bell\+\_\+\+Mgmt). 
+
+Cette fonction gère la logique de la carte de sonnerie, y compris la réception des messages, la gestion des boutons de réponse, l\textquotesingle{}envoi des réponses, et la gestion des états associés.
+
+
+\begin{DoxyItemize}
+\item Surveille les messages RF entrants pour déclencher la sonnerie ou répondre à une demande.
+\item Gère les boutons physiques pour envoyer les réponses appropriées (entrez, attendez, occupé).
+\item Gère les délais et le clignotement des LEDs selon l\textquotesingle{}état de la batterie et les réponses.
+\item Assure la synchronisation avec d\textquotesingle{}autres cartes de sonnerie si nécessaire.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Cette fonction fait partie du module de gestion de la sonnerie (Bell\+\_\+\+Mgmt). 
+\end{DoxyNote}
+\Hypertarget{_management_8c_af116b7589b9df3fef08b92eb12e28a01}\index{Management.c@{Management.c}!Door\_Mgmt@{Door\_Mgmt}}
+\index{Door\_Mgmt@{Door\_Mgmt}!Management.c@{Management.c}}
+\doxysubsubsection{\texorpdfstring{Door\_Mgmt()}{Door\_Mgmt()}}
+{\footnotesize\ttfamily \label{_management_8c_af116b7589b9df3fef08b92eb12e28a01} 
+void Door\+\_\+\+Mgmt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gestion du bouton-\/poussoir de la porte avec filtre de pairing intégré. 
+
+Cette fonction gère la logique associée au bouton-\/poussoir situé à la porte, incluant un filtre pour le processus de jumelage (pairing).
+
+
+\begin{DoxyItemize}
+\item Surveille l\textquotesingle{}état du bouton-\/poussoir.
+\item Applique un filtre logiciel pour éviter les rebonds et les appuis involontaires.
+\item Intègre la gestion du pairing pour l\textquotesingle{}association des dispositifs sans fil.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Cette fonction fait partie du module de gestion de la porte (Door\+\_\+\+Mgmt). 
+\end{DoxyNote}

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__management_8h_source" xml:lang="fr">
+<title>Management.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Management.h</primary></indexterm>
+Aller à la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+2 <emphasis role="comment">//&#32;DoorBellMgmt.h</emphasis>
+3 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+4 <emphasis role="comment">//&#32;Header&#32;pour&#32;gestion&#32;Door&#32;et&#32;Bell&#32;du&#32;système&#32;PortierWireless</emphasis>
+5 <emphasis role="comment">//</emphasis>
+6 <emphasis role="comment">//&#32;Auteurs&#32;&#32;&#32;&#32;&#32;:&#32;Projet&#32;ETML&#32;/&#32;adaptation&#32;LMS</emphasis>
+7 <emphasis role="comment">//&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;2025</emphasis>
+8 <emphasis role="comment">//&#32;Version&#32;&#32;&#32;&#32;&#32;:&#32;V3.0</emphasis>
+9 <emphasis role="comment">//&#32;Compilateur&#32;:&#32;XC32</emphasis>
+10 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+11 
+12 <emphasis role="preprocessor">#ifndef&#32;DOORBELLMGMT_H</emphasis>
+13 <emphasis role="preprocessor">#define&#32;DOORBELLMGMT_H</emphasis>
+14 
+15 <emphasis role="comment">//----------------------</emphasis>
+16 <emphasis role="comment">//&#32;Inclusions</emphasis>
+17 <emphasis role="comment">//----------------------</emphasis>
+18 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Types&#32;entiers&#32;standard</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Types&#32;booléens&#32;standard</emphasis>
+20 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__mc32_debounce_8h">Mc32Debounce.h</link>&quot;</emphasis>&#32;&#32;&#32;<emphasis role="comment">//&#32;Gestion&#32;anti-rebond&#32;des&#32;boutons</emphasis>
+21 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_app_8h">app.h</link>&quot;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Définition&#32;de&#32;APP_DATA</emphasis>
+22 
+23 <emphasis role="comment">//----------------------</emphasis>
+24 <emphasis role="comment">//&#32;Définitions&#32;d&apos;états</emphasis>
+25 <emphasis role="comment">//----------------------</emphasis>
+26 
+27 <emphasis role="comment">//&#32;États&#32;internes&#32;pour&#32;la&#32;gestion&#32;de&#32;la&#32;porte&#32;(Door)</emphasis>
+28 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+29 {
+30 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a5e0a209e464ad82238a897ecdc11d782">DOOR_STATE_INIT</link>&#32;=&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialisation</emphasis>
+31 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a778d54fc6c1a3216199e0209f58bc976">DOOR_STATE_PRESSED</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bouton&#32;pressé</emphasis>
+32 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a6eda29b5a26c3a4281e90457463f94ce">DOOR_STATE_WAITING</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;En&#32;attente&#32;de&#32;réponse</emphasis>
+33 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a3b398ea91a396af6db4873014070353a">DOOR_STATE_ANSWER</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Réponse&#32;reçue</emphasis>
+34 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7ade4a83ffbf8c1931689f51473b1df4ba">DOOR_STATE_NOANSWER</link>,&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Pas&#32;de&#32;réponse</emphasis>
+35 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a6a83ce34de57271504ca36f2998c4a50">DOOR_STATE_SHUTDOWN</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Arrêt&#32;du&#32;système</emphasis>
+36 }&#32;<link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7">DOOR_STATES</link>;
+37 
+38 <emphasis role="comment">//&#32;États&#32;internes&#32;pour&#32;la&#32;gestion&#32;de&#32;la&#32;sonnette&#32;(Bell)</emphasis>
+39 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+40 {
+41 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738aaaab52d161fbccd9da2b803359014a65">BELL_STATE_INIT</link>&#32;=&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialisation</emphasis>
+42 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738a1b6ae4981d5df3b271e33d6a54f4f8b6">BELL_STATE_IDLE</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Attente&#32;(repos)</emphasis>
+43 &#32;&#32;&#32;&#32;<link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738a781f14c405e0590c228e7c5301c5013b">BELL_STATE_RING</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Sonnerie&#32;active</emphasis>
+44 }&#32;<link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738">BELL_STATES</link>;
+45 
+46 <emphasis role="comment">//----------------------</emphasis>
+47 <emphasis role="comment">//&#32;Prototypes&#32;de&#32;fonctions</emphasis>
+48 <emphasis role="comment">//----------------------</emphasis>
+49 
+50 <emphasis role="comment">//&#32;Gestion&#32;de&#32;la&#32;porte</emphasis>
+51 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__management_8h_1af116b7589b9df3fef08b92eb12e28a01">Door_Mgmt</link>(<emphasis role="keywordtype">void</emphasis>);
+52 
+53 <emphasis role="comment">//&#32;Gestion&#32;de&#32;la&#32;sonnette</emphasis>
+54 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__management_8h_1aa24b1b961c8209aad164f5916742d192">Bell_Mgmt</link>(<emphasis role="keywordtype">void</emphasis>);
+55 
+56 <emphasis role="comment">//----------------------</emphasis>
+57 <emphasis role="comment">//&#32;Variables&#32;externes</emphasis>
+58 <emphasis role="comment">//----------------------</emphasis>
+59 
+60 <emphasis role="comment">//&#32;Descripteurs&#32;pour&#32;l&apos;anti-rebond&#32;des&#32;boutons</emphasis>
+61 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1a19358061a4fa8672c2124d5eb6a6337a">swRing</link>;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bouton&#32;de&#32;sonnerie</emphasis>
+62 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1aafadd8f2a2aa59c174b5207f21872f1f">swEnter</link>;&#32;&#32;<emphasis role="comment">//&#32;Bouton&#32;d&apos;entrée</emphasis>
+63 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1afdc3fbca7ca6fb08b354d67fea915b56">swWait</link>;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bouton&#32;d&apos;attente</emphasis>
+64 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</link>;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bouton&#32;d&apos;occupation</emphasis>
+65 
+66 <emphasis role="comment">//&#32;Données&#32;globales&#32;de&#32;l&apos;application</emphasis>
+67 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link>&#32;<link linkend="_app_8c_1a4f18a2543252a3f61342104a531a0f3c">appData</link>;
+68 
+69 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;DOORBELLMGMT_H</emphasis>
+</programlisting></section>

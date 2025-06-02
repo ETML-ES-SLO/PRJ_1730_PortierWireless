@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__management_8c" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Management.c</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Management.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;Management.h&quot;<?linebreak?>#include &quot;app.h&quot;<?linebreak?>#include &quot;led.h&quot;<?linebreak?>#include &quot;sound.h&quot;<?linebreak?>#include &quot;Pairing.h&quot;<?linebreak?>#include &quot;RF.h&quot;<?linebreak?>#include &quot;peripheral/reset/plib_reset.h&quot;<?linebreak?></programlisting>Graphe des dépendances par inclusion de Management.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_management_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__management_8c_1addca570f13752276e60239b692c6db49">DOOR_TIMEOUT</link>&#160;&#160;&#160;3100</para>
+</listitem>
+            <listitem><para>#define <link linkend="__management_8c_1a6229736f98865bc2ad4f894614db07fd">BELL_TIMEOUT</link>&#160;&#160;&#160;3000</para>
+</listitem>
+            <listitem><para>#define <link linkend="__management_8c_1a4c58a3e7beca7e5968bf47897a5eebd2">ANSWER_NR_MAX</link>&#160;&#160;&#160;50</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__management_8c_1af116b7589b9df3fef08b92eb12e28a01">Door_Mgmt</link> (void)</para>
+
+<para>Gestion du bouton-poussoir de la porte avec filtre de pairing intégré. </para>
+</listitem>
+            <listitem><para>void <link linkend="__management_8c_1aa24b1b961c8209aad164f5916742d192">Bell_Mgmt</link> (void)</para>
+
+<para>Gestion de la carte de sonnerie (Bell_Mgmt). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="__management_8c_1a4c58a3e7beca7e5968bf47897a5eebd2"/><section>
+    <title>ANSWER_NR_MAX</title>
+<indexterm><primary>ANSWER_NR_MAX</primary><secondary>Management.c</secondary></indexterm>
+<indexterm><primary>Management.c</primary><secondary>ANSWER_NR_MAX</secondary></indexterm>
+<para><computeroutput>#define ANSWER_NR_MAX&#160;&#160;&#160;50</computeroutput></para></section>
+<anchor xml:id="__management_8c_1a6229736f98865bc2ad4f894614db07fd"/><section>
+    <title>BELL_TIMEOUT</title>
+<indexterm><primary>BELL_TIMEOUT</primary><secondary>Management.c</secondary></indexterm>
+<indexterm><primary>Management.c</primary><secondary>BELL_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define BELL_TIMEOUT&#160;&#160;&#160;3000</computeroutput></para></section>
+<anchor xml:id="__management_8c_1addca570f13752276e60239b692c6db49"/><section>
+    <title>DOOR_TIMEOUT</title>
+<indexterm><primary>DOOR_TIMEOUT</primary><secondary>Management.c</secondary></indexterm>
+<indexterm><primary>Management.c</primary><secondary>DOOR_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define DOOR_TIMEOUT&#160;&#160;&#160;3100</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__management_8c_1aa24b1b961c8209aad164f5916742d192"/><section>
+    <title>Bell_Mgmt()</title>
+<indexterm><primary>Bell_Mgmt</primary><secondary>Management.c</secondary></indexterm>
+<indexterm><primary>Management.c</primary><secondary>Bell_Mgmt</secondary></indexterm>
+<para><computeroutput>void Bell_Mgmt (void )</computeroutput></para><para>
+
+<para>Gestion de la carte de sonnerie (Bell_Mgmt). </para>
+</para>
+
+<para>Cette fonction gère la logique de la carte de sonnerie, y compris la réception des messages, la gestion des boutons de réponse, l&apos;envoi des réponses, et la gestion des états associés.</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Surveille les messages RF entrants pour déclencher la sonnerie ou répondre à une demande.</para>
+</listitem><listitem>
+<para>Gère les boutons physiques pour envoyer les réponses appropriées (entrez, attendez, occupé).</para>
+</listitem><listitem>
+<para>Gère les délais et le clignotement des LEDs selon l&apos;état de la batterie et les réponses.</para>
+</listitem><listitem>
+<para>Assure la synchronisation avec d&apos;autres cartes de sonnerie si nécessaire.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Cette fonction fait partie du module de gestion de la sonnerie (Bell_Mgmt). </para>
+</note>
+</para>
+</section>
+<anchor xml:id="__management_8c_1af116b7589b9df3fef08b92eb12e28a01"/><section>
+    <title>Door_Mgmt()</title>
+<indexterm><primary>Door_Mgmt</primary><secondary>Management.c</secondary></indexterm>
+<indexterm><primary>Management.c</primary><secondary>Door_Mgmt</secondary></indexterm>
+<para><computeroutput>void Door_Mgmt (void )</computeroutput></para><para>
+
+<para>Gestion du bouton-poussoir de la porte avec filtre de pairing intégré. </para>
+</para>
+
+<para>Cette fonction gère la logique associée au bouton-poussoir situé à la porte, incluant un filtre pour le processus de jumelage (pairing).</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Surveille l&apos;état du bouton-poussoir.</para>
+</listitem><listitem>
+<para>Applique un filtre logiciel pour éviter les rebonds et les appuis involontaires.</para>
+</listitem><listitem>
+<para>Intègre la gestion du pairing pour l&apos;association des dispositifs sans fil.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Cette fonction fait partie du module de gestion de la porte (Door_Mgmt). </para>
+</note>
+</para>
+</section>
+</section>
+</section>

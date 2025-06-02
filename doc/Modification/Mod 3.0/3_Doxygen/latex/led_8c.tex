@@ -1,0 +1,152 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/led.c}
+\hypertarget{led_8c}{}\label{led_8c}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/led.c@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/led.c}}
+{\ttfamily \#include "{}led.\+h"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Graphe des dépendances par inclusion de led.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{led_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{led_8c_a3641b8d2bb3a9ab7cf0ec3763c3d9be7}{NUMBER\+\_\+\+OF\+\_\+\+LEDS}}~3
+\item 
+\#define \mbox{\hyperlink{led_8c_afba7dc80bfaebd77c54bf83499fb3339}{LED\+\_\+\+ON}}(led\+\_\+\+Id)
+\item 
+\#define \mbox{\hyperlink{led_8c_a9815ae3bf5da5267ebc9a65c88658e49}{LED\+\_\+\+OFF}}(led\+\_\+\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3}{LED\+\_\+\+STATES}} \{ \mbox{\hyperlink{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4}{LED\+\_\+\+STATE\+\_\+\+INIT}} =0
+, \mbox{\hyperlink{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536}{LED\+\_\+\+STATE\+\_\+\+IDLE}}
+, \mbox{\hyperlink{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8}{LED\+\_\+\+STATE\+\_\+\+ACTIVE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_8c_af1aee968a5ceeb7915921aa6d78aca23}{Led\+\_\+\+Init}} (void)
+\item 
+bool \mbox{\hyperlink{led_8c_a607253bf00dfaedea959638c19a569db}{Led\+\_\+\+Check\+Blink}} ()
+\item 
+void \mbox{\hyperlink{led_8c_a872055749870075db47e189ccbd99c8d}{Led\+\_\+\+Set\+Mode}} (\mbox{\hyperlink{led_8h_a3393b726762fb88eff08925c79777299}{LED\+\_\+\+IDS}} led\+\_\+\+Id, \mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68}{LED\+\_\+\+MODES}} led\+\_\+\+Mode)
+\item 
+void \mbox{\hyperlink{led_8c_aeafd9e2cc02fe833c950ca8c15f881c8}{Led\+\_\+\+Mgmt}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3}{LED\+\_\+\+STATES}} \mbox{\hyperlink{led_8c_a3046d1ad083ffc50610e0721cde971dd}{led\+State}}
+\item 
+\mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68}{LED\+\_\+\+MODES}} \mbox{\hyperlink{led_8c_a729aad414e72b412b98aed5b283db6a3}{led\+Modes}} \mbox{[}\mbox{\hyperlink{led_8c_a3641b8d2bb3a9ab7cf0ec3763c3d9be7}{NUMBER\+\_\+\+OF\+\_\+\+LEDS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{led_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{led_8c_a9815ae3bf5da5267ebc9a65c88658e49}\index{led.c@{led.c}!LED\_OFF@{LED\_OFF}}
+\index{LED\_OFF@{LED\_OFF}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{LED\_OFF}{LED\_OFF}}
+{\footnotesize\ttfamily \label{led_8c_a9815ae3bf5da5267ebc9a65c88658e49} 
+\#define LED\+\_\+\+OFF(\begin{DoxyParamCaption}\item[{}]{led\+\_\+\+Id}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{LATBCLR\ =\ 1<<(led\_Id+4);\}}
+
+\end{DoxyCode}
+\Hypertarget{led_8c_afba7dc80bfaebd77c54bf83499fb3339}\index{led.c@{led.c}!LED\_ON@{LED\_ON}}
+\index{LED\_ON@{LED\_ON}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{LED\_ON}{LED\_ON}}
+{\footnotesize\ttfamily \label{led_8c_afba7dc80bfaebd77c54bf83499fb3339} 
+\#define LED\+\_\+\+ON(\begin{DoxyParamCaption}\item[{}]{led\+\_\+\+Id}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{LATBSET\ =\ 1<<(led\_Id+4);\}}
+
+\end{DoxyCode}
+\Hypertarget{led_8c_a3641b8d2bb3a9ab7cf0ec3763c3d9be7}\index{led.c@{led.c}!NUMBER\_OF\_LEDS@{NUMBER\_OF\_LEDS}}
+\index{NUMBER\_OF\_LEDS@{NUMBER\_OF\_LEDS}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_LEDS}{NUMBER\_OF\_LEDS}}
+{\footnotesize\ttfamily \label{led_8c_a3641b8d2bb3a9ab7cf0ec3763c3d9be7} 
+\#define NUMBER\+\_\+\+OF\+\_\+\+LEDS~3}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{led_8c_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3}\index{led.c@{led.c}!LED\_STATES@{LED\_STATES}}
+\index{LED\_STATES@{LED\_STATES}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{LED\_STATES}{LED\_STATES}}
+{\footnotesize\ttfamily \label{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3} 
+enum \mbox{\hyperlink{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3}{LED\+\_\+\+STATES}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_STATE\_INIT@{LED\_STATE\_INIT}!led.c@{led.c}}\index{led.c@{led.c}!LED\_STATE\_INIT@{LED\_STATE\_INIT}}}\Hypertarget{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4}\label{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4} 
+LED\+\_\+\+STATE\+\_\+\+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_STATE\_IDLE@{LED\_STATE\_IDLE}!led.c@{led.c}}\index{led.c@{led.c}!LED\_STATE\_IDLE@{LED\_STATE\_IDLE}}}\Hypertarget{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536}\label{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536} 
+LED\+\_\+\+STATE\+\_\+\+IDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LED\_STATE\_ACTIVE@{LED\_STATE\_ACTIVE}!led.c@{led.c}}\index{led.c@{led.c}!LED\_STATE\_ACTIVE@{LED\_STATE\_ACTIVE}}}\Hypertarget{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8}\label{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8} 
+LED\+\_\+\+STATE\+\_\+\+ACTIVE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{led_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{led_8c_a607253bf00dfaedea959638c19a569db}\index{led.c@{led.c}!Led\_CheckBlink@{Led\_CheckBlink}}
+\index{Led\_CheckBlink@{Led\_CheckBlink}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{Led\_CheckBlink()}{Led\_CheckBlink()}}
+{\footnotesize\ttfamily \label{led_8c_a607253bf00dfaedea959638c19a569db} 
+bool Led\+\_\+\+Check\+Blink (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{led_8c_af1aee968a5ceeb7915921aa6d78aca23}\index{led.c@{led.c}!Led\_Init@{Led\_Init}}
+\index{Led\_Init@{Led\_Init}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{Led\_Init()}{Led\_Init()}}
+{\footnotesize\ttfamily \label{led_8c_af1aee968a5ceeb7915921aa6d78aca23} 
+void Led\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{led_8c_aeafd9e2cc02fe833c950ca8c15f881c8}\index{led.c@{led.c}!Led\_Mgmt@{Led\_Mgmt}}
+\index{Led\_Mgmt@{Led\_Mgmt}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{Led\_Mgmt()}{Led\_Mgmt()}}
+{\footnotesize\ttfamily \label{led_8c_aeafd9e2cc02fe833c950ca8c15f881c8} 
+void Led\+\_\+\+Mgmt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{led_8c_a872055749870075db47e189ccbd99c8d}\index{led.c@{led.c}!Led\_SetMode@{Led\_SetMode}}
+\index{Led\_SetMode@{Led\_SetMode}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{Led\_SetMode()}{Led\_SetMode()}}
+{\footnotesize\ttfamily \label{led_8c_a872055749870075db47e189ccbd99c8d} 
+void Led\+\_\+\+Set\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{led_8h_a3393b726762fb88eff08925c79777299}{LED\+\_\+\+IDS}}}]{led\+\_\+\+Id}{, }\item[{\mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68}{LED\+\_\+\+MODES}}}]{led\+\_\+\+Mode}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{led_8c_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{led_8c_a729aad414e72b412b98aed5b283db6a3}\index{led.c@{led.c}!ledModes@{ledModes}}
+\index{ledModes@{ledModes}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{ledModes}{ledModes}}
+{\footnotesize\ttfamily \label{led_8c_a729aad414e72b412b98aed5b283db6a3} 
+\mbox{\hyperlink{led_8h_abc050ab2cd8f7833db1fe743e099ed68}{LED\+\_\+\+MODES}} led\+Modes\mbox{[}\mbox{\hyperlink{led_8c_a3641b8d2bb3a9ab7cf0ec3763c3d9be7}{NUMBER\+\_\+\+OF\+\_\+\+LEDS}}\mbox{]}}
+
+\Hypertarget{led_8c_a3046d1ad083ffc50610e0721cde971dd}\index{led.c@{led.c}!ledState@{ledState}}
+\index{ledState@{ledState}!led.c@{led.c}}
+\doxysubsubsection{\texorpdfstring{ledState}{ledState}}
+{\footnotesize\ttfamily \label{led_8c_a3046d1ad083ffc50610e0721cde971dd} 
+\mbox{\hyperlink{led_8c_ad2bf14153ae4f2eb3be1ca9d90eb2ff3}{LED\+\_\+\+STATES}} led\+State}
+

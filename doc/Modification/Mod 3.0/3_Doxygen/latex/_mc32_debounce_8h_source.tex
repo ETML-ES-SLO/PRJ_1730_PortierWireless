@@ -1,0 +1,110 @@
+\doxysection{Mc32\+Debounce.\+h}
+\hypertarget{_mc32_debounce_8h_source}{}\label{_mc32_debounce_8h_source}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Debounce.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Debounce.h}}
+\mbox{\hyperlink{_mc32_debounce_8h}{Aller Ã  la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MC32DEBOUNCE2\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MC32DEBOUNCE2\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Mc32Debounce.h}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ C.\ HUBER\ \ \ \ 19/02/2014\ Portage\ sur\ PIC32MX}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Attention\ int1\ transformé en\ uint8}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Fonctions\ pour\ la\ gestion\ de\ l'anti-\/rebond\ d'un\ switch}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Principe\ :\ Il\ est\ nécessaire\ d'appeler\ cycliquement\ la\ fonction\ DoDebounce}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ pour\ chaque\ switch.\ Suggestion\ cycle\ de\ 1\ ms}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ Pour\ la\ gestion\ du\ switch,\ il\ y\ a\ 3\ fonctions\ à disposition\ :}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ \ \ \ \ DebounceGetInput\ \ fourni\ l'état\ du\ switch\ aprés anti-\/rebond}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ \ \ \ \ DebounceIsPressed\ \ \ \ true\ indique\ que\ l'on\ vient\ de\ presser\ la\ touche}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ \ \ \ \ DebounceIsReleased\ \ \ true\ indique\ que\ l'on\ vient\ de\ relacher\ la\ touche}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ \ \ \ \ DebounceClearPressed\ \ \ \ annule\ indication\ de\ pression\ sur\ la\ touche}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ \ \ \ \ DebounceClearReleased\ \ \ annule\ indication\ de\ relachement\ de\ la\ touche}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ Remarques\ :\ toute\ les\ fonctions\ utilisent\ un\ descripteur\ de\ touche}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ un\ état\ 0\ indique\ une\ touche\ pressée}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ définitions\ des\ types\ qui\ seront\ utilisés dans\ cette\ application}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ Etats\ du\ système\ antirebond}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \mbox{\hyperlink{_mc32_debounce_8h_a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033}{DebounceWaitChange}},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \mbox{\hyperlink{_mc32_debounce_8h_a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b}{DebounceWaitStable}},}
+\DoxyCodeLine{00037\ \}\ \mbox{\hyperlink{_mc32_debounce_8h_a51afc992bd0d9e88fdd88f9aea8f8d73}{E\_DebouceStates}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ New}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00041\ \ \ \ uint8\_t\ \ \mbox{\hyperlink{structs__bits_a6d394f172726f9e8935c0fd99405af29}{KeyPressed}}\ :1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ événement\ touche\ pressée}}
+\DoxyCodeLine{00042\ \ \ \ uint8\_t\ \ \mbox{\hyperlink{structs__bits_a894fa1132ca6388e4bd6287620ed609f}{KeyReleased}}\ :\ 1;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ événement\ touche\ relachée}}
+\DoxyCodeLine{00043\ \ \ \ uint8\_t\ \ \mbox{\hyperlink{structs__bits_a17fedf14b5b32671ce3aed719d99b032}{KeyPrevInputValue}}\ :\ 1;\ \ \ \ \ \ \ \textcolor{comment}{//\ valeur\ précédente\ de\ la\ touche}}
+\DoxyCodeLine{00044\ \ \ \ uint8\_t\ \ \mbox{\hyperlink{structs__bits_a988f5aa4956218e4bd75412af1149eb3}{KeyValue}}\ :\ 1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ valeur\ finale\ (image)\ de\ la\ touche}}
+\DoxyCodeLine{00045\ \ \}\ \mbox{\hyperlink{structs__bits}{s\_bits}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ structure\ du\ descripteur}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_mc32_debounce_8h_a51afc992bd0d9e88fdd88f9aea8f8d73}{E\_DebouceStates}}\ \mbox{\hyperlink{struct_s___switch_descriptor_a4d58e6579e37611a845abd90344216a3}{DebounceState}};\ \ \ \ \textcolor{comment}{//\ état\ de\ l'antirebond}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \ \ \ \ \mbox{\hyperlink{struct_s___switch_descriptor_ac7228601ef3f09fe2200c2538f577684}{DebounceCounter}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ compteur}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structs__bits}{s\_bits}}\ \mbox{\hyperlink{struct_s___switch_descriptor_a5bee94d845c2c8fde44422068f2da2b6}{bits}};}
+\DoxyCodeLine{00052\ \}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ POUR\ CHAQUE\ SWITCH\ DONT\ ON\ VEUT\ EFFECTUER\ L'ANTI-\/REBOND\ DANS\ L'APPLICATION.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ IL\ FAUDRA\ DEFINIR\ UNE\ VARIABLE\ DU\ \ TYPE\ S\_SwitchDescriptor}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//}}
+\DoxyCodeLine{00059\ \textcolor{comment}{//}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ DoDebounce\ (S\_SwitchDescriptor\ *Descriptor,\ boolean\ InputValue)}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Routine\ effectuant\ la\ gestion\ de\ l'anti-\/rebond\ d'un\ switch}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ dont\ l'adresse\ de\ la\ structure\ est\ passée en\ paramètre.}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ La\ valeur\ du\ switch\ lue\ sur\ le\ port\ est\ a\ passer\ lors\ de\ l'appel}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ Entrée:\ un\ pointeur\ sur\ la\ structure\ du\ switch}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ la\ valeur\ du\ switch\ lue\ sur\ le\ port}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//\ Sortie:\ la\ structure\ mise\ à jour}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ le\ bit\ KeyValue\ qui\ donne\ la\ valeur\ du\ switch\ après anti-\/rebond}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ le\ bit\ KeyPressed\ qui\ est\ mis\ à 1\ dès que\ l'on\ presse\ sur\ le\ switch}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ ce\ bit\ n'est\ pas\ resetté par\ cette\ fonction\ mais\ doit\ l'être\ par\ l'application}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ si\ elle\ l'utilise.}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ le\ bit\ KeyReleased\ qui\ est\ mis\ à 1\ dès que\ l'on\ relâche\ sur\ le\ switch}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ ce\ bit\ n'est\ pas\ resetté par\ cette\ fonction\ mais\ doit\ l'être\ par\ l'application}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ si\ elle\ l'utilise}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mc32_debounce_8h_a25234bd4e5b3764544f4ebed1be6bf74}{DoDebounce}}\ (\mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ *Descriptor,\ \textcolor{keywordtype}{bool}\ InputValue);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{comment}{/********************************************************************************************/}}
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ DebounceInit\ (S\_SwitchDescriptor\ *pDescriptor)\ :}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ Routine\ effectuant\ l'initialisation\ de\ la\ structure\ d'un\ switch}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ dont\ l'adresse\ de\ la\ structure\ est\ passée en\ paramètre.}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ Entrée:\ un\ pointeur\ sur\ la\ structure\ du\ switch}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mc32_debounce_8h_abf3dbe0d583132babae2be20ec2cc3a8}{DebounceInit}}\ (\mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ \ DebounceGetInput\ \ fourni\ l'état\ du\ switch\ aprés anti-\/rebond}}
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_mc32_debounce_8h_a6a611324e87fa2d10ac637b17271cb53}{DebounceGetInput}}\ (\mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ \ DebounceIsPressed\ \ \ \ true\ indique\ que\ l'on\ vient\ de\ presser\ la\ touche}}
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_mc32_debounce_8h_a8c5bec15ce951e929781afe093261151}{DebounceIsPressed}}\ (\mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ \ DebounceIsReleased\ \ \ true\ indique\ que\ l'on\ vient\ de\ relacher\ la\ touche}}
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_mc32_debounce_8h_af41f451eca1f7dba66b694233d549c54}{DebounceIsReleased}}\ (\mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ \ DebounceClearPressed\ \ \ \ annule\ indication\ de\ pression\ sur\ la\ touche}}
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mc32_debounce_8h_ac643da410acdf6b56285e1917bb55721}{DebounceClearPressed}}\ \ (\mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{comment}{//\ \ DebounceClearReleased\ \ \ annule\ indication\ de\ relachement\ de\ la\ touche}}
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mc32_debounce_8h_aac114092f76e85fa9e6246127b5e1082}{DebounceClearReleased}}\ \ (\mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

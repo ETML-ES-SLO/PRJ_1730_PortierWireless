@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_app_8h" xml:lang="fr">
+<title>RÃ©fÃ©rence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stdbool.h&gt;<?linebreak?>#include &lt;stddef.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &quot;system_config.h&quot;<?linebreak?>#include &quot;system_definitions.h&quot;<?linebreak?>#include &quot;Mc32Debounce.h&quot;<?linebreak?></programlisting>Graphe des dÃ©pendances par inclusion de app.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="app_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="app_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_app_8h_1a6e6123365d9c53fa6c846def98dd72b9">LOWBAT_THRESHOLD</link>&#160;&#160;&#160;2400</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Ã‰numÃ©rations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link> { <link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871aee72936f6dda86ada3946d7c937a2297">APP_STATE_INIT</link> = 0
+, <link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871a4a2d007c2bbd7b136d1a6c587e536c89">APP_STATE_WAIT</link>
+, <link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871a92f04718da45a34c069d899c657d1ac5">APP_STATE_SERVICE_TASKS</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_app_8h_1a59b305aa4f4287d45cbe428f533f84b2">APP_Initialize</link> (void)</para>
+
+<para>Initialise l&apos;application. </para>
+</listitem>
+            <listitem><para>void <link linkend="_app_8h_1a859aee46b660cfee47cfd45ce08f6862">APP_Tasks</link> (void)</para>
+
+<para>Tâche principale de l&apos;application. </para>
+</listitem>
+            <listitem><para>void <link linkend="_app_8h_1acc9cde7d11cdebdf90dc9f45323376d7">APP_UpdateState</link> (<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link> newState)</para>
+
+<para>Met à jour l&apos;état de l&apos;application. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_app_8h_1a2eddd01dc88b9cfb845ab578cd7510b4">APP_GetIsDoor</link> (void)</para>
+
+<para>Vérifie si l&apos;entité courante est une porte. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8h_1a19358061a4fa8672c2124d5eb6a6337a">swRing</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8h_1aafadd8f2a2aa59c174b5207f21872f1f">swEnter</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8h_1afdc3fbca7ca6fb08b354d67fea915b56">swWait</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8h_1a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="_app_8h_1a6e6123365d9c53fa6c846def98dd72b9"/><section>
+    <title>LOWBAT_THRESHOLD</title>
+<indexterm><primary>LOWBAT_THRESHOLD</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>LOWBAT_THRESHOLD</secondary></indexterm>
+<para><computeroutput>#define LOWBAT_THRESHOLD&#160;&#160;&#160;2400</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation du type de l&apos;Ã©numÃ©ration</title>
+<anchor xml:id="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871"/><section>
+    <title>APP_STATES</title>
+<indexterm><primary>APP_STATES</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_STATES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs Ã©numÃ©rÃ©es</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>APP_STATE_INIT</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_STATE_INIT</secondary></indexterm>
+<anchor xml:id="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871aee72936f6dda86ada3946d7c937a2297"/>APP_STATE_INIT</entry><entry></entry></row><row><entry><indexterm><primary>APP_STATE_WAIT</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_STATE_WAIT</secondary></indexterm>
+<anchor xml:id="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871a4a2d007c2bbd7b136d1a6c587e536c89"/>APP_STATE_WAIT</entry><entry></entry></row><row><entry><indexterm><primary>APP_STATE_SERVICE_TASKS</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_STATE_SERVICE_TASKS</secondary></indexterm>
+<anchor xml:id="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871a92f04718da45a34c069d899c657d1ac5"/>APP_STATE_SERVICE_TASKS</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="_app_8h_1a2eddd01dc88b9cfb845ab578cd7510b4"/><section>
+    <title>APP_GetIsDoor()</title>
+<indexterm><primary>APP_GetIsDoor</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_GetIsDoor</secondary></indexterm>
+<para><computeroutput>bool APP_GetIsDoor (void )</computeroutput></para><para>
+
+<para>Vérifie si l&apos;entité courante est une porte. </para>
+</para>
+
+<para><formalpara><title>Renvoie</title>
+
+<para>true si l&apos;entité est une porte, false sinon.</para>
+</formalpara>
+Cette fonction retourne la valeur du champ isDoor de la structure appData. </para>
+</section>
+<anchor xml:id="_app_8h_1a59b305aa4f4287d45cbe428f533f84b2"/><section>
+    <title>APP_Initialize()</title>
+<indexterm><primary>APP_Initialize</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_Initialize</secondary></indexterm>
+<para><computeroutput>void APP_Initialize (void )</computeroutput></para><para>
+
+<para>Initialise l&apos;application. </para>
+</para>
+
+<para>Cette fonction configure l&apos;état initial de l&apos;application, initialise les broches matérielles, la logique d&apos;antirebond pour les boutons, ainsi que les périphériques tels que les LEDs, le module sonore et la RF.</para>
+
+<para><formalpara><title>Renvoie</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_app_8h_1a859aee46b660cfee47cfd45ce08f6862"/><section>
+    <title>APP_Tasks()</title>
+<indexterm><primary>APP_Tasks</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_Tasks</secondary></indexterm>
+<para><computeroutput>void APP_Tasks (void )</computeroutput></para><para>
+
+<para>Tâche principale de l&apos;application. </para>
+</para>
+
+<para>Cette fonction gère la machine à états principale de l&apos;application. Elle est appelée de manière répétée dans la boucle principale du programme.</para>
+
+<para><formalpara><title>Remarques</title>
+
+<para>Voir le prototype dans <link linkend="_app_8h">app.h</link>. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_app_8h_1acc9cde7d11cdebdf90dc9f45323376d7"/><section>
+    <title>APP_UpdateState()</title>
+<indexterm><primary>APP_UpdateState</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>APP_UpdateState</secondary></indexterm>
+<para><computeroutput>void APP_UpdateState (<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link> newState)</computeroutput></para><para>
+
+<para>Met à jour l&apos;état de l&apos;application. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+ParamÃ¨tres</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newState</entry><entry>
+<para>Le nouvel état à appliquer à l&apos;application.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Cette fonction assigne la valeur de newState à la variable d&apos;état de l&apos;application. </para>
+</section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="_app_8h_1a2eb3ac5dc73c685e3beefb74af0e1371"/><section>
+    <title>swBusy</title>
+<indexterm><primary>swBusy</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>swBusy</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swBusy<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_app_8h_1aafadd8f2a2aa59c174b5207f21872f1f"/><section>
+    <title>swEnter</title>
+<indexterm><primary>swEnter</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>swEnter</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swEnter<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_app_8h_1a19358061a4fa8672c2124d5eb6a6337a"/><section>
+    <title>swRing</title>
+<indexterm><primary>swRing</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>swRing</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swRing<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_app_8h_1afdc3fbca7ca6fb08b354d67fea915b56"/><section>
+    <title>swWait</title>
+<indexterm><primary>swWait</primary><secondary>app.h</secondary></indexterm>
+<indexterm><primary>app.h</primary><secondary>swWait</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swWait<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+</section>
+</section>

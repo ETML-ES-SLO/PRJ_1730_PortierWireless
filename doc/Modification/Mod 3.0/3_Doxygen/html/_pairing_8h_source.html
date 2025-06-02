@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless:  Fichier source de C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Pairing.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un système bidirectionnel basé sur un microcontrôleur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant à un visiteur d’envoyer une requête depuis l’extérieur via un bouton alimenté par piles, et à l’occupant du bureau de répondre par des signaux lumineux et sonores grâce à une unité intérieure alimentée en USB, le tout avec appairage sécurisé et gestion autonome de l’énergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_pairing_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Pairing.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_pairing_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Pairing.c</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Gestion de l&#39;appairage Door / Bell</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * - Envoi automatique des trames P0 / P1 / A0 / A1 (non bloquant)</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * - Reset d&#39;appairage par appui long (Door : swRing, Bell : trois boutons)</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * - Sauvegarde / lecture du numéro appairé en Flash (Harmony NVM)</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * MCU      : PIC32MX130F064B</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * Outils   : XC32 v2.50, Harmony v2_06</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * Auteurs  : Projet PortierWireless LMS</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * ---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">#ifndef PAIRING_H // Protection contre l&#39;inclusion multiple du fichier d&#39;en-tête</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">#define PAIRING_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"></span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">#include &lt;stdint.h&gt; // Inclusion des définitions de types entiers standard</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">#include &lt;stdbool.h&gt; // Inclusion du type booléen standard</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/* === Constantes  === */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_pairing_8h.html#a3909acdfed0a9cab71108e60f6558608">   19</a></span><span class="preprocessor">#define NVM_SERIAL_BLOCK     0 </span><span class="comment">// Bloc mémoire NVM utilisé pour le numéro de série</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_pairing_8h.html#aecdf6b72c8038f8169cfb9dd67e5cfba">   20</a></span><span class="preprocessor">#define LONG_PRESS_TICKS     300 </span><span class="comment">// Nombre de ticks pour un appui long</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/* === Déclarations externes === */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#a19358061a4fa8672c2124d5eb6a6337a">swRing</a>;         <span class="comment">// Descripteur du bouton Ring</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#aafadd8f2a2aa59c174b5207f21872f1f">swEnter</a>;        <span class="comment">// Descripteur du bouton Enter</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#afdc3fbca7ca6fb08b354d67fea915b56">swWait</a>;         <span class="comment">// Descripteur du bouton Wait</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</a>;         <span class="comment">// Descripteur du bouton Busy</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">extern</span> uint32_t <a class="code hl_variable" href="app_8c.html#a360395ccaea62faa622a0c0c94178874">appPairedSerial</a>;          <span class="comment">// Numéro de série appairé courant</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/* === Fonctions publiques === */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/* Accès au numéro de série appairé */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span>     <a class="code hl_function" href="_pairing_8h.html#a41a82ea0c8fd930e94ac47e85fe63a9f">LoadPairedSerialAndApply</a>(<span class="keywordtype">void</span>);   <span class="comment">// Charge le numéro appairé depuis la Flash et l&#39;applique en RAM</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span>     <a class="code hl_function" href="_pairing_8h.html#a999f66920b36328dacb50c938a7489fe">SavePairedSerialToFlash</a>(<span class="keywordtype">void</span>);    <span class="comment">// Sauvegarde le numéro appairé courant en mémoire non-volatile</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>uint32_t <a class="code hl_function" href="_pairing_8h.html#a4506d7314d14b78da5be4337e662a27d">GetActifSerialNbr</a>(<span class="keywordtype">void</span>);          <span class="comment">// Retourne le numéro de série appairé actif</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span>     <a class="code hl_function" href="_pairing_8h.html#af3ec5ee15cd5d7a394e5b8ee8c358797">ResetSerialList</a>(<span class="keywordtype">void</span>);            <span class="comment">// Réinitialise la liste des numéros appairés</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">/* Automate d&#39;appairage complet */</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>uint32_t <a class="code hl_function" href="_pairing_8h.html#a1324e704ec1000118ac29e1f3676edd0">PairingManagement</a>(<span class="keywordtype">void</span>);          <span class="comment">// Gère l&#39;automate d&#39;appairage, retourne le numéro appairé (0 si non appairé)</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">/* Reset d&#39;appairage (appui long) */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="_pairing_8h.html#acdd2b67a818667a69d100766998ba78c">PairingReset_DoorTask</a>(<span class="keywordtype">void</span>);          <span class="comment">// Gestion du reset d&#39;appairage côté Door</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="_pairing_8h.html#a7f19ab10ec9d1026dcdc496df9c61b31">PairingReset_BellTask</a>(<span class="keywordtype">void</span>);          <span class="comment">// Gestion du reset d&#39;appairage côté Bell</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/* Statut global du pairing */</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_pairing_8h.html#af41ae98dc0c40546ed800bd9ac32ae69">Serial_IsPairingRunning</a>(<span class="keywordtype">void</span>);        <span class="comment">// Retourne true si l&#39;appairage est en cours</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">/* Filtrage &amp; envoi de trames RF */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_pairing_8h.html#adfafc1a1fa1c61ab6ff89e7d352d2817">Serial_CheckIfFromPaired</a>(uint8_t *msg); <span class="comment">// Vérifie si la trame reçue provient du numéro appairé</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="_pairing_8h.html#a4739423aec413aa3c7ee30f30e608154">RF_SendWithSerial</a>(uint8_t *payload);    <span class="comment">// Envoie une trame RF avec le numéro de série appairé</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/* Visuel / sonore */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="_pairing_8h.html#a6c8ec47b31a7d1f8503627cc7927dfe2">ShowPairingSuccess</a>(<span class="keywordtype">void</span>);             <span class="comment">// Indique le succès de l&#39;appairage (bip + LED verte)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/* Tests Flash (optionnel) */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_pairing_8h.html#a26a0b7fcaeb752cf3d85b15b186ae444">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_pairing_8h.html#a26a0b7fcaeb752cf3d85b15b186ae444">TestFlashWriteRead</a>(<span class="keywordtype">void</span>);             <span class="comment">// Teste l&#39;écriture/lecture du numéro appairé en Flash</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/* === Fonctions internes (statics, à usage privé) === */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">static</span> <span class="keywordtype">void</span> SaveSerialHarmony(uint32_t serial);      <span class="comment">// Sauvegarde un numéro de série en Flash (interne)</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">static</span> uint32_t LoadSerialHarmony(<span class="keywordtype">void</span>);             <span class="comment">// Charge un numéro de série depuis la Flash (interne)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">static</span> <span class="keywordtype">void</span> PairingReset_DoReset(<span class="keywordtype">void</span>);              <span class="comment">// Effectue le reset d&#39;appairage (interne)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">static</span> <span class="keywordtype">void</span> RF_SendP0(<span class="keywordtype">void</span>);                         <span class="comment">// Envoie une trame P0 (interne)</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">static</span> <span class="keywordtype">void</span> RF_SendP1(<span class="keywordtype">void</span>);                         <span class="comment">// Envoie une trame P1 (interne)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">static</span> <span class="keywordtype">void</span> RF_SendA0(uint32_t serial);              <span class="comment">// Envoie une trame A0 avec numéro de série (interne)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">static</span> <span class="keywordtype">void</span> RF_SendA1(uint32_t serial);              <span class="comment">// Envoie une trame A1 avec numéro de série (interne)</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">static</span> <span class="keywordtype">void</span> HandlePairingMessage(uint8_t* msg);      <span class="comment">// Traite un message d&#39;appairage (interne)</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">/* PAIRING_H */</span><span class="preprocessor"> </span><span class="comment">// Fin de la protection contre l&#39;inclusion multiple</span></div>
+<div class="ttc" id="a_pairing_8h_html_a1324e704ec1000118ac29e1f3676edd0"><div class="ttname"><a href="_pairing_8h.html#a1324e704ec1000118ac29e1f3676edd0">PairingManagement</a></div><div class="ttdeci">uint32_t PairingManagement(void)</div><div class="ttdoc">Gère la procédure complète d&#39;appairage côté Door ou Bell.</div><div class="ttdef"><b>Definition</b> Pairing.c:406</div></div>
+<div class="ttc" id="a_pairing_8h_html_a26a0b7fcaeb752cf3d85b15b186ae444"><div class="ttname"><a href="_pairing_8h.html#a26a0b7fcaeb752cf3d85b15b186ae444">TestFlashWriteRead</a></div><div class="ttdeci">void TestFlashWriteRead(void)</div></div>
+<div class="ttc" id="a_pairing_8h_html_a41a82ea0c8fd930e94ac47e85fe63a9f"><div class="ttname"><a href="_pairing_8h.html#a41a82ea0c8fd930e94ac47e85fe63a9f">LoadPairedSerialAndApply</a></div><div class="ttdeci">void LoadPairedSerialAndApply(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:149</div></div>
+<div class="ttc" id="a_pairing_8h_html_a4506d7314d14b78da5be4337e662a27d"><div class="ttname"><a href="_pairing_8h.html#a4506d7314d14b78da5be4337e662a27d">GetActifSerialNbr</a></div><div class="ttdeci">uint32_t GetActifSerialNbr(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:165</div></div>
+<div class="ttc" id="a_pairing_8h_html_a4739423aec413aa3c7ee30f30e608154"><div class="ttname"><a href="_pairing_8h.html#a4739423aec413aa3c7ee30f30e608154">RF_SendWithSerial</a></div><div class="ttdeci">void RF_SendWithSerial(uint8_t *payload)</div><div class="ttdoc">Envoie une trame RF avec le numéro de série, en utilisant P0 et P1.</div><div class="ttdef"><b>Definition</b> Pairing.c:290</div></div>
+<div class="ttc" id="a_pairing_8h_html_a6c8ec47b31a7d1f8503627cc7927dfe2"><div class="ttname"><a href="_pairing_8h.html#a6c8ec47b31a7d1f8503627cc7927dfe2">ShowPairingSuccess</a></div><div class="ttdeci">void ShowPairingSuccess(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:186</div></div>
+<div class="ttc" id="a_pairing_8h_html_a7f19ab10ec9d1026dcdc496df9c61b31"><div class="ttname"><a href="_pairing_8h.html#a7f19ab10ec9d1026dcdc496df9c61b31">PairingReset_BellTask</a></div><div class="ttdeci">void PairingReset_BellTask(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:263</div></div>
+<div class="ttc" id="a_pairing_8h_html_a999f66920b36328dacb50c938a7489fe"><div class="ttname"><a href="_pairing_8h.html#a999f66920b36328dacb50c938a7489fe">SavePairedSerialToFlash</a></div><div class="ttdeci">void SavePairedSerialToFlash(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:141</div></div>
+<div class="ttc" id="a_pairing_8h_html_acdd2b67a818667a69d100766998ba78c"><div class="ttname"><a href="_pairing_8h.html#acdd2b67a818667a69d100766998ba78c">PairingReset_DoorTask</a></div><div class="ttdeci">void PairingReset_DoorTask(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:244</div></div>
+<div class="ttc" id="a_pairing_8h_html_adfafc1a1fa1c61ab6ff89e7d352d2817"><div class="ttname"><a href="_pairing_8h.html#adfafc1a1fa1c61ab6ff89e7d352d2817">Serial_CheckIfFromPaired</a></div><div class="ttdeci">bool Serial_CheckIfFromPaired(uint8_t *msg)</div><div class="ttdoc">Vérifie si le message RF reçu provient du périphérique appairé.</div><div class="ttdef"><b>Definition</b> Pairing.c:345</div></div>
+<div class="ttc" id="a_pairing_8h_html_af3ec5ee15cd5d7a394e5b8ee8c358797"><div class="ttname"><a href="_pairing_8h.html#af3ec5ee15cd5d7a394e5b8ee8c358797">ResetSerialList</a></div><div class="ttdeci">void ResetSerialList(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:173</div></div>
+<div class="ttc" id="a_pairing_8h_html_af41ae98dc0c40546ed800bd9ac32ae69"><div class="ttname"><a href="_pairing_8h.html#af41ae98dc0c40546ed800bd9ac32ae69">Serial_IsPairingRunning</a></div><div class="ttdeci">bool Serial_IsPairingRunning(void)</div><div class="ttdef"><b>Definition</b> Pairing.c:86</div></div>
+<div class="ttc" id="aapp_8c_html_a19358061a4fa8672c2124d5eb6a6337a"><div class="ttname"><a href="app_8c.html#a19358061a4fa8672c2124d5eb6a6337a">swRing</a></div><div class="ttdeci">S_SwitchDescriptor swRing</div><div class="ttdef"><b>Definition</b> app.c:86</div></div>
+<div class="ttc" id="aapp_8c_html_a2eb3ac5dc73c685e3beefb74af0e1371"><div class="ttname"><a href="app_8c.html#a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</a></div><div class="ttdeci">S_SwitchDescriptor swBusy</div><div class="ttdef"><b>Definition</b> app.c:83</div></div>
+<div class="ttc" id="aapp_8c_html_a360395ccaea62faa622a0c0c94178874"><div class="ttname"><a href="app_8c.html#a360395ccaea62faa622a0c0c94178874">appPairedSerial</a></div><div class="ttdeci">uint32_t appPairedSerial</div><div class="ttdef"><b>Definition</b> app.c:92</div></div>
+<div class="ttc" id="aapp_8c_html_aafadd8f2a2aa59c174b5207f21872f1f"><div class="ttname"><a href="app_8c.html#aafadd8f2a2aa59c174b5207f21872f1f">swEnter</a></div><div class="ttdeci">S_SwitchDescriptor swEnter</div><div class="ttdef"><b>Definition</b> app.c:80</div></div>
+<div class="ttc" id="aapp_8c_html_afdc3fbca7ca6fb08b354d67fea915b56"><div class="ttname"><a href="app_8c.html#afdc3fbca7ca6fb08b354d67fea915b56">swWait</a></div><div class="ttdeci">S_SwitchDescriptor swWait</div><div class="ttdef"><b>Definition</b> app.c:89</div></div>
+<div class="ttc" id="astruct_s___switch_descriptor_html"><div class="ttname"><a href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a></div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="_pairing_8h.html">Pairing.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

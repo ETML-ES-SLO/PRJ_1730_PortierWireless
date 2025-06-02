@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_f_8c" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.c</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;RF.h&quot;<?linebreak?>#include &lt;xc.h&gt;<?linebreak?>#include &quot;Mc32Delays.h&quot;<?linebreak?>#include &quot;peripheral/usart/plib_usart.h&quot;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &quot;system_definitions.h&quot;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?></programlisting>Graphe des dépendances par inclusion de RF.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_r_f_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__r_f_8c_1a6e31d0ed0d32a0655e13233ddf82bf43">MAXMSG</link>&#160;&#160;&#160;64</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="__r_f_8c_1a23095f345f2010caf0f4d825a4ea79d5">RF_GetLastSenderSerial</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__r_f_8c_1a74b1a00aee1ffe8ef321da984014877d">RF_RecordSenderSerial</link> (uint8_t *msg)</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__r_f_8c_1ad970d7f14c83abec6cbd85be3eecc52d">ReadSerialNbr</link> (uint32_t *serialInput)</para>
+</listitem>
+            <listitem><para>void <link linkend="__r_f_8c_1a5aa69b7fbc66f24c4a0a8b1e1db00407">RF_Init</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__r_f_8c_1a3289a92773defe54bcc8de3768abd412">RF_SendMessage</link> (uint8_t *dataToSend, uint8_t nbBytesToSend)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__r_f_8c_1a27835339bea244ed8efcc38a13870e0d">isNewFrame</link> (uint8_t *<link linkend="__r_f_8c_1a54184d134e98092290edd64bd5612217">rcvdMsg</link>)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__r_f_8c_1aaa251989c2b31bdd461a5031e7f8bb26">RF_GetMessage</link> (uint8_t *msg)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="__r_f_8c_1a85199c80e4155e25d02523ebc07528ff">getSerialRF</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="__r_f_8c_1ab27d7ebb8da2f345a80401793816de20">flagGetAdress</link> = 0</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__r_f_8c_1a033c15787d84463eb4ec13411ddfeb07">flagErrorAdress</link> = 0</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="__r_f_8c_1a7c8ebfb594c5670994abda30402864b5">nbrSerialRF</link> = 0</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__r_f_8c_1a54184d134e98092290edd64bd5612217">rcvdMsg</link> [64]</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__r_f_8c_1a00a705508c3fd2f5adb40958d14bebe6">rcdvCharCntr</link> = 0</para>
+</listitem>
+            <listitem><para>bool <link linkend="__r_f_8c_1aa133dbe80ba7c7dfa6ab4cbf9d940266">flagGetMsgUart</link> = false</para>
+</listitem>
+            <listitem><para>DRV_HANDLE <link linkend="__r_f_8c_1a785dea3a2a197b7e4e86a09f652430ff">handleUSART</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="__r_f_8c_1a6e31d0ed0d32a0655e13233ddf82bf43"/><section>
+    <title>MAXMSG</title>
+<indexterm><primary>MAXMSG</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>MAXMSG</secondary></indexterm>
+<para><computeroutput>#define MAXMSG&#160;&#160;&#160;64</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__r_f_8c_1a85199c80e4155e25d02523ebc07528ff"/><section>
+    <title>getSerialRF()</title>
+<indexterm><primary>getSerialRF</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>getSerialRF</secondary></indexterm>
+<para><computeroutput>uint32_t getSerialRF (void )</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a27835339bea244ed8efcc38a13870e0d"/><section>
+    <title>isNewFrame()</title>
+<indexterm><primary>isNewFrame</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>isNewFrame</secondary></indexterm>
+<para><computeroutput>bool isNewFrame (uint8_t * rcvdMsg)</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1ad970d7f14c83abec6cbd85be3eecc52d"/><section>
+    <title>ReadSerialNbr()</title>
+<indexterm><primary>ReadSerialNbr</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>ReadSerialNbr</secondary></indexterm>
+<para><computeroutput>uint8_t ReadSerialNbr (uint32_t * serialInput)</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a23095f345f2010caf0f4d825a4ea79d5"/><section>
+    <title>RF_GetLastSenderSerial()</title>
+<indexterm><primary>RF_GetLastSenderSerial</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>RF_GetLastSenderSerial</secondary></indexterm>
+<para><computeroutput>uint32_t RF_GetLastSenderSerial (void )</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1aaa251989c2b31bdd461a5031e7f8bb26"/><section>
+    <title>RF_GetMessage()</title>
+<indexterm><primary>RF_GetMessage</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>RF_GetMessage</secondary></indexterm>
+<para><computeroutput>bool RF_GetMessage (uint8_t * msg)</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a5aa69b7fbc66f24c4a0a8b1e1db00407"/><section>
+    <title>RF_Init()</title>
+<indexterm><primary>RF_Init</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>RF_Init</secondary></indexterm>
+<para><computeroutput>void RF_Init (void )</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a74b1a00aee1ffe8ef321da984014877d"/><section>
+    <title>RF_RecordSenderSerial()</title>
+<indexterm><primary>RF_RecordSenderSerial</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>RF_RecordSenderSerial</secondary></indexterm>
+<para><computeroutput>void RF_RecordSenderSerial (uint8_t * msg)</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a3289a92773defe54bcc8de3768abd412"/><section>
+    <title>RF_SendMessage()</title>
+<indexterm><primary>RF_SendMessage</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>RF_SendMessage</secondary></indexterm>
+<para><computeroutput>void RF_SendMessage (uint8_t * dataToSend, uint8_t nbBytesToSend)</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="__r_f_8c_1a033c15787d84463eb4ec13411ddfeb07"/><section>
+    <title>flagErrorAdress</title>
+<indexterm><primary>flagErrorAdress</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>flagErrorAdress</secondary></indexterm>
+<para><computeroutput>uint8_t flagErrorAdress = 0</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1ab27d7ebb8da2f345a80401793816de20"/><section>
+    <title>flagGetAdress</title>
+<indexterm><primary>flagGetAdress</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>flagGetAdress</secondary></indexterm>
+<para><computeroutput>uint8_t flagGetAdress = 0</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1aa133dbe80ba7c7dfa6ab4cbf9d940266"/><section>
+    <title>flagGetMsgUart</title>
+<indexterm><primary>flagGetMsgUart</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>flagGetMsgUart</secondary></indexterm>
+<para><computeroutput>bool flagGetMsgUart = false</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a785dea3a2a197b7e4e86a09f652430ff"/><section>
+    <title>handleUSART</title>
+<indexterm><primary>handleUSART</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>handleUSART</secondary></indexterm>
+<para><computeroutput>DRV_HANDLE handleUSART</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a7c8ebfb594c5670994abda30402864b5"/><section>
+    <title>nbrSerialRF</title>
+<indexterm><primary>nbrSerialRF</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>nbrSerialRF</secondary></indexterm>
+<para><computeroutput>uint32_t nbrSerialRF = 0</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a00a705508c3fd2f5adb40958d14bebe6"/><section>
+    <title>rcdvCharCntr</title>
+<indexterm><primary>rcdvCharCntr</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>rcdvCharCntr</secondary></indexterm>
+<para><computeroutput>uint8_t rcdvCharCntr = 0</computeroutput></para></section>
+<anchor xml:id="__r_f_8c_1a54184d134e98092290edd64bd5612217"/><section>
+    <title>rcvdMsg</title>
+<indexterm><primary>rcvdMsg</primary><secondary>RF.c</secondary></indexterm>
+<indexterm><primary>RF.c</primary><secondary>rcvdMsg</secondary></indexterm>
+<para><computeroutput>uint8_t rcvdMsg[64]</computeroutput></para></section>
+</section>
+</section>

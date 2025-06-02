@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sound_8h" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/sound.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/sound.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stdbool.h&gt;<?linebreak?></programlisting>Graphe des dépendances par inclusion de sound.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sound_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sound_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_n_o_t_e__t">NOTE_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_sound_8h_1afb97318712639efcb061a8772beff2b5">Sound_Init</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_sound_8h_1a01f15a7aed20855a98398cbec33dae27">Sound_Start</link> (const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> *sound)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_sound_8h_1a52a8a79e98a4c19d71f2272745362ac8">Sound_IsIdle</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_sound_8h_1a3efe45f40a4f9449a6c98d402c54f126">Sound_Mgmt</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> <link linkend="_sound_8h_1ad4082d5f85de5f7730323df7d3dff011">RING</link> []</para>
+</listitem>
+            <listitem><para>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> <link linkend="_sound_8h_1a65e7900340fbe3adb25692b58985e8b1">SUCCESS</link> []</para>
+</listitem>
+            <listitem><para>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> <link linkend="_sound_8h_1a401d61ae566b710e019f2ac94e7be117">ERROR</link> []</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="_sound_8h_1afb97318712639efcb061a8772beff2b5"/><section>
+    <title>Sound_Init()</title>
+<indexterm><primary>Sound_Init</primary><secondary>sound.h</secondary></indexterm>
+<indexterm><primary>sound.h</primary><secondary>Sound_Init</secondary></indexterm>
+<para><computeroutput>void Sound_Init (void )</computeroutput></para></section>
+<anchor xml:id="_sound_8h_1a52a8a79e98a4c19d71f2272745362ac8"/><section>
+    <title>Sound_IsIdle()</title>
+<indexterm><primary>Sound_IsIdle</primary><secondary>sound.h</secondary></indexterm>
+<indexterm><primary>sound.h</primary><secondary>Sound_IsIdle</secondary></indexterm>
+<para><computeroutput>bool Sound_IsIdle (void )</computeroutput></para></section>
+<anchor xml:id="_sound_8h_1a3efe45f40a4f9449a6c98d402c54f126"/><section>
+    <title>Sound_Mgmt()</title>
+<indexterm><primary>Sound_Mgmt</primary><secondary>sound.h</secondary></indexterm>
+<indexterm><primary>sound.h</primary><secondary>Sound_Mgmt</secondary></indexterm>
+<para><computeroutput>void Sound_Mgmt (void )</computeroutput></para></section>
+<anchor xml:id="_sound_8h_1a01f15a7aed20855a98398cbec33dae27"/><section>
+    <title>Sound_Start()</title>
+<indexterm><primary>Sound_Start</primary><secondary>sound.h</secondary></indexterm>
+<indexterm><primary>sound.h</primary><secondary>Sound_Start</secondary></indexterm>
+<para><computeroutput>void Sound_Start (const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> * sound)</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="_sound_8h_1a401d61ae566b710e019f2ac94e7be117"/><section>
+    <title>ERROR</title>
+<indexterm><primary>ERROR</primary><secondary>sound.h</secondary></indexterm>
+<indexterm><primary>sound.h</primary><secondary>ERROR</secondary></indexterm>
+<para><computeroutput>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> ERROR[]<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_sound_8h_1ad4082d5f85de5f7730323df7d3dff011"/><section>
+    <title>RING</title>
+<indexterm><primary>RING</primary><secondary>sound.h</secondary></indexterm>
+<indexterm><primary>sound.h</primary><secondary>RING</secondary></indexterm>
+<para><computeroutput>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> RING[]<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_sound_8h_1a65e7900340fbe3adb25692b58985e8b1"/><section>
+    <title>SUCCESS</title>
+<indexterm><primary>SUCCESS</primary><secondary>sound.h</secondary></indexterm>
+<indexterm><primary>sound.h</primary><secondary>SUCCESS</secondary></indexterm>
+<para><computeroutput>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> SUCCESS[]<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+</section>
+</section>

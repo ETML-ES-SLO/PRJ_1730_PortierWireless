@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_a_p_p___d_a_t_a" xml:lang="fr">
+<title>Référence de la structure APP_DATA</title>
+<indexterm><primary>APP_DATA</primary></indexterm>
+<para>
+<computeroutput>#include &lt;app.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Attributs publics    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link> <link linkend="_struct_a_p_p___d_a_t_a_1abbc3c9d5e3194848346e986069b88f44">state</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_a_p_p___d_a_t_a_1a94a5120b269e0c87b27dfc08f6f605f1">isDoor</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_a_p_p___d_a_t_a_1ae27cb41b32b95348d22f6815b7360b15">batVoltage</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_a_p_p___d_a_t_a_1a4da832e05e9b553c5b9bb0393b093e91">isLowBat</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des données membres</title>
+<anchor xml:id="_struct_a_p_p___d_a_t_a_1ae27cb41b32b95348d22f6815b7360b15"/><section>
+    <title>batVoltage</title>
+<indexterm><primary>batVoltage</primary><secondary>APP_DATA</secondary></indexterm>
+<indexterm><primary>APP_DATA</primary><secondary>batVoltage</secondary></indexterm>
+<para><computeroutput>uint16_t APP_DATA::batVoltage</computeroutput></para></section>
+<anchor xml:id="_struct_a_p_p___d_a_t_a_1a94a5120b269e0c87b27dfc08f6f605f1"/><section>
+    <title>isDoor</title>
+<indexterm><primary>isDoor</primary><secondary>APP_DATA</secondary></indexterm>
+<indexterm><primary>APP_DATA</primary><secondary>isDoor</secondary></indexterm>
+<para><computeroutput>bool APP_DATA::isDoor</computeroutput></para></section>
+<anchor xml:id="_struct_a_p_p___d_a_t_a_1a4da832e05e9b553c5b9bb0393b093e91"/><section>
+    <title>isLowBat</title>
+<indexterm><primary>isLowBat</primary><secondary>APP_DATA</secondary></indexterm>
+<indexterm><primary>APP_DATA</primary><secondary>isLowBat</secondary></indexterm>
+<para><computeroutput>bool APP_DATA::isLowBat</computeroutput></para></section>
+<anchor xml:id="_struct_a_p_p___d_a_t_a_1abbc3c9d5e3194848346e986069b88f44"/><section>
+    <title>state</title>
+<indexterm><primary>state</primary><secondary>APP_DATA</secondary></indexterm>
+<indexterm><primary>APP_DATA</primary><secondary>state</secondary></indexterm>
+<para><computeroutput><link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link> APP_DATA::state</computeroutput></para></section>
+<para>
+La documentation de cette structure a été générée à partir du fichier suivant :</para>
+C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/<link linkend="_app_8h">app.h</link></section>
+</section>

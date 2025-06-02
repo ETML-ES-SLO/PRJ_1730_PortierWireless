@@ -1,0 +1,68 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/\+Mc32\+Delays.c}
+\hypertarget{_mc32_delays_8c}{}\label{_mc32_delays_8c}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Delays.c@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Delays.c}}
+{\ttfamily \#include "{}Mc32\+Delays.\+h"{}}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Graphe des dépendances par inclusion de Mc32\+Delays.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{_mc32_delays_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_mc32_delays_8c_a7d5ce7b79462bbfb630ee53075540b65}{SYS\+\_\+\+FREQ}}~(10000000L)
+\item 
+\#define \mbox{\hyperlink{_mc32_delays_8c_aad7e9b5288ef8996ad1a433d573faa97}{TICK\+\_\+\+CT\+\_\+\+MS}}~(\mbox{\hyperlink{_mc32_delays_8c_a7d5ce7b79462bbfb630ee53075540b65}{SYS\+\_\+\+FREQ}} / 2000L)
+\item 
+\#define \mbox{\hyperlink{_mc32_delays_8c_a5aefed65da1165727f9e452f53f46bd4}{TICK\+\_\+\+CT\+\_\+\+US}}~(\mbox{\hyperlink{_mc32_delays_8c_a7d5ce7b79462bbfb630ee53075540b65}{SYS\+\_\+\+FREQ}} / 2000000L)
+\item 
+\#define \mbox{\hyperlink{_mc32_delays_8c_aa1a52d499f7345add9f2ca23dfa5078b}{TICK\+\_\+\+OVERHEAD}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_mc32_delays_8c_a5f24437989f804360afe905f635898c6}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((optimize("{}-\/O0"{})))
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_mc32_delays_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{_mc32_delays_8c_a7d5ce7b79462bbfb630ee53075540b65}\index{Mc32Delays.c@{Mc32Delays.c}!SYS\_FREQ@{SYS\_FREQ}}
+\index{SYS\_FREQ@{SYS\_FREQ}!Mc32Delays.c@{Mc32Delays.c}}
+\doxysubsubsection{\texorpdfstring{SYS\_FREQ}{SYS\_FREQ}}
+{\footnotesize\ttfamily \label{_mc32_delays_8c_a7d5ce7b79462bbfb630ee53075540b65} 
+\#define SYS\+\_\+\+FREQ~(10000000L)}
+
+\Hypertarget{_mc32_delays_8c_aad7e9b5288ef8996ad1a433d573faa97}\index{Mc32Delays.c@{Mc32Delays.c}!TICK\_CT\_MS@{TICK\_CT\_MS}}
+\index{TICK\_CT\_MS@{TICK\_CT\_MS}!Mc32Delays.c@{Mc32Delays.c}}
+\doxysubsubsection{\texorpdfstring{TICK\_CT\_MS}{TICK\_CT\_MS}}
+{\footnotesize\ttfamily \label{_mc32_delays_8c_aad7e9b5288ef8996ad1a433d573faa97} 
+\#define TICK\+\_\+\+CT\+\_\+\+MS~(\mbox{\hyperlink{_mc32_delays_8c_a7d5ce7b79462bbfb630ee53075540b65}{SYS\+\_\+\+FREQ}} / 2000L)}
+
+\Hypertarget{_mc32_delays_8c_a5aefed65da1165727f9e452f53f46bd4}\index{Mc32Delays.c@{Mc32Delays.c}!TICK\_CT\_US@{TICK\_CT\_US}}
+\index{TICK\_CT\_US@{TICK\_CT\_US}!Mc32Delays.c@{Mc32Delays.c}}
+\doxysubsubsection{\texorpdfstring{TICK\_CT\_US}{TICK\_CT\_US}}
+{\footnotesize\ttfamily \label{_mc32_delays_8c_a5aefed65da1165727f9e452f53f46bd4} 
+\#define TICK\+\_\+\+CT\+\_\+\+US~(\mbox{\hyperlink{_mc32_delays_8c_a7d5ce7b79462bbfb630ee53075540b65}{SYS\+\_\+\+FREQ}} / 2000000L)}
+
+\Hypertarget{_mc32_delays_8c_aa1a52d499f7345add9f2ca23dfa5078b}\index{Mc32Delays.c@{Mc32Delays.c}!TICK\_OVERHEAD@{TICK\_OVERHEAD}}
+\index{TICK\_OVERHEAD@{TICK\_OVERHEAD}!Mc32Delays.c@{Mc32Delays.c}}
+\doxysubsubsection{\texorpdfstring{TICK\_OVERHEAD}{TICK\_OVERHEAD}}
+{\footnotesize\ttfamily \label{_mc32_delays_8c_aa1a52d499f7345add9f2ca23dfa5078b} 
+\#define TICK\+\_\+\+OVERHEAD~0}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_mc32_delays_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_mc32_delays_8c_a5f24437989f804360afe905f635898c6}\index{Mc32Delays.c@{Mc32Delays.c}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!Mc32Delays.c@{Mc32Delays.c}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily \label{_mc32_delays_8c_a5f24437989f804360afe905f635898c6} 
+void \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(optimize("{}-\/O0"{}))}]{}{}\end{DoxyParamCaption})}
+

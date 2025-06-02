@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="fr">
+<title>Liste des classes</title>
+Liste des classes, structures, unions et interfaces avec une brève description :<link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link><link linkend="_struct_n_o_t_e__t">NOTE_t</link><link linkend="_structs__bits">s_bits</link><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link></section>

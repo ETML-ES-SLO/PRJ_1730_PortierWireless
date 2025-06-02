@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structs__bits" xml:lang="fr">
+<title>Référence de la structure s_bits</title>
+<indexterm><primary>s_bits</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Mc32Debounce.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Attributs publics    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_structs__bits_1a6d394f172726f9e8935c0fd99405af29">KeyPressed</link>:1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structs__bits_1a894fa1132ca6388e4bd6287620ed609f">KeyReleased</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structs__bits_1a17fedf14b5b32671ce3aed719d99b032">KeyPrevInputValue</link>: 1</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structs__bits_1a988f5aa4956218e4bd75412af1149eb3">KeyValue</link>: 1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des données membres</title>
+<anchor xml:id="_structs__bits_1a6d394f172726f9e8935c0fd99405af29"/><section>
+    <title>KeyPressed</title>
+<indexterm><primary>KeyPressed</primary><secondary>s_bits</secondary></indexterm>
+<indexterm><primary>s_bits</primary><secondary>KeyPressed</secondary></indexterm>
+<para><computeroutput>uint8_t s_bits::KeyPressed</computeroutput></para></section>
+<anchor xml:id="_structs__bits_1a17fedf14b5b32671ce3aed719d99b032"/><section>
+    <title>KeyPrevInputValue</title>
+<indexterm><primary>KeyPrevInputValue</primary><secondary>s_bits</secondary></indexterm>
+<indexterm><primary>s_bits</primary><secondary>KeyPrevInputValue</secondary></indexterm>
+<para><computeroutput>uint8_t s_bits::KeyPrevInputValue</computeroutput></para></section>
+<anchor xml:id="_structs__bits_1a894fa1132ca6388e4bd6287620ed609f"/><section>
+    <title>KeyReleased</title>
+<indexterm><primary>KeyReleased</primary><secondary>s_bits</secondary></indexterm>
+<indexterm><primary>s_bits</primary><secondary>KeyReleased</secondary></indexterm>
+<para><computeroutput>uint8_t s_bits::KeyReleased</computeroutput></para></section>
+<anchor xml:id="_structs__bits_1a988f5aa4956218e4bd75412af1149eb3"/><section>
+    <title>KeyValue</title>
+<indexterm><primary>KeyValue</primary><secondary>s_bits</secondary></indexterm>
+<indexterm><primary>s_bits</primary><secondary>KeyValue</secondary></indexterm>
+<para><computeroutput>uint8_t s_bits::KeyValue</computeroutput></para></section>
+<para>
+La documentation de cette structure a été générée à partir du fichier suivant :</para>
+C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/<link linkend="__mc32_debounce_8h">Mc32Debounce.h</link></section>
+</section>

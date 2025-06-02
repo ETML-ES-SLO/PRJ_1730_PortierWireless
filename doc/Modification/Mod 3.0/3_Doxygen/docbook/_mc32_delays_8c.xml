@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mc32_delays_8c" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Delays.c</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Delays.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;Mc32Delays.h&quot;<?linebreak?>#include &lt;xc.h&gt;<?linebreak?>#include &lt;stdint.h&gt;<?linebreak?></programlisting>Graphe des dépendances par inclusion de Mc32Delays.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_mc32_delays_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__mc32_delays_8c_1a7d5ce7b79462bbfb630ee53075540b65">SYS_FREQ</link>&#160;&#160;&#160;(10000000L)</para>
+</listitem>
+            <listitem><para>#define <link linkend="__mc32_delays_8c_1aad7e9b5288ef8996ad1a433d573faa97">TICK_CT_MS</link>&#160;&#160;&#160;(<link linkend="__mc32_delays_8c_1a7d5ce7b79462bbfb630ee53075540b65">SYS_FREQ</link> / 2000L)</para>
+</listitem>
+            <listitem><para>#define <link linkend="__mc32_delays_8c_1a5aefed65da1165727f9e452f53f46bd4">TICK_CT_US</link>&#160;&#160;&#160;(<link linkend="__mc32_delays_8c_1a7d5ce7b79462bbfb630ee53075540b65">SYS_FREQ</link> / 2000000L)</para>
+</listitem>
+            <listitem><para>#define <link linkend="__mc32_delays_8c_1aa1a52d499f7345add9f2ca23dfa5078b">TICK_OVERHEAD</link>&#160;&#160;&#160;0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__mc32_delays_8c_1a5f24437989f804360afe905f635898c6">__attribute__</link> ((optimize(&quot;-O0&quot;)))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="__mc32_delays_8c_1a7d5ce7b79462bbfb630ee53075540b65"/><section>
+    <title>SYS_FREQ</title>
+<indexterm><primary>SYS_FREQ</primary><secondary>Mc32Delays.c</secondary></indexterm>
+<indexterm><primary>Mc32Delays.c</primary><secondary>SYS_FREQ</secondary></indexterm>
+<para><computeroutput>#define SYS_FREQ&#160;&#160;&#160;(10000000L)</computeroutput></para></section>
+<anchor xml:id="__mc32_delays_8c_1aad7e9b5288ef8996ad1a433d573faa97"/><section>
+    <title>TICK_CT_MS</title>
+<indexterm><primary>TICK_CT_MS</primary><secondary>Mc32Delays.c</secondary></indexterm>
+<indexterm><primary>Mc32Delays.c</primary><secondary>TICK_CT_MS</secondary></indexterm>
+<para><computeroutput>#define TICK_CT_MS&#160;&#160;&#160;(<link linkend="__mc32_delays_8c_1a7d5ce7b79462bbfb630ee53075540b65">SYS_FREQ</link> / 2000L)</computeroutput></para></section>
+<anchor xml:id="__mc32_delays_8c_1a5aefed65da1165727f9e452f53f46bd4"/><section>
+    <title>TICK_CT_US</title>
+<indexterm><primary>TICK_CT_US</primary><secondary>Mc32Delays.c</secondary></indexterm>
+<indexterm><primary>Mc32Delays.c</primary><secondary>TICK_CT_US</secondary></indexterm>
+<para><computeroutput>#define TICK_CT_US&#160;&#160;&#160;(<link linkend="__mc32_delays_8c_1a7d5ce7b79462bbfb630ee53075540b65">SYS_FREQ</link> / 2000000L)</computeroutput></para></section>
+<anchor xml:id="__mc32_delays_8c_1aa1a52d499f7345add9f2ca23dfa5078b"/><section>
+    <title>TICK_OVERHEAD</title>
+<indexterm><primary>TICK_OVERHEAD</primary><secondary>Mc32Delays.c</secondary></indexterm>
+<indexterm><primary>Mc32Delays.c</primary><secondary>TICK_OVERHEAD</secondary></indexterm>
+<para><computeroutput>#define TICK_OVERHEAD&#160;&#160;&#160;0</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__mc32_delays_8c_1a5f24437989f804360afe905f635898c6"/><section>
+    <title>__attribute__()</title>
+<indexterm><primary>__attribute__</primary><secondary>Mc32Delays.c</secondary></indexterm>
+<indexterm><primary>Mc32Delays.c</primary><secondary>__attribute__</secondary></indexterm>
+<para><computeroutput>void __attribute__ ((optimize(&quot;-O0&quot;)) )</computeroutput></para></section>
+</section>
+</section>

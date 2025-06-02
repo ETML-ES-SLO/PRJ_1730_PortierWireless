@@ -1,0 +1,196 @@
+\doxysection{RÃ©fÃ©rence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/app.c}
+\hypertarget{app_8c}{}\label{app_8c}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/app.c@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/app.c}}
+{\ttfamily \#include "{}app.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}peripheral/adc/plib\+\_\+adc.\+h"{}}\newline
+{\ttfamily \#include "{}peripheral/reset/plib\+\_\+reset.\+h"{}}\newline
+{\ttfamily \#include "{}sound.\+h"{}}\newline
+{\ttfamily \#include "{}RF.\+h"{}}\newline
+{\ttfamily \#include "{}led.\+h"{}}\newline
+{\ttfamily \#include "{}Pairing.\+h"{}}\newline
+{\ttfamily \#include "{}management.\+h"{}}\newline
+Graphe des dÃ©pendances par inclusion de app.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{app_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{app_8c_a7e7c8f4feb14c804000b17e76f7004ec}{Read\+Bat\+Voltage}} (void)
+\begin{DoxyCompactList}\small\item\em Lit la tension mesurée sur l\textquotesingle{}entrée analogique AN1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_aa9a79a5cd86df87ce4b73993a082ffd0}{Set\+Door}} (void)
+\begin{DoxyCompactList}\small\item\em Détermine si le CPU est à la porte (Door) ou à la sonnette intérieure (Bell). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_acc9cde7d11cdebdf90dc9f45323376d7}{APP\+\_\+\+Update\+State}} (\mbox{\hyperlink{app_8h_ac23e091bbd221d57ef9aa15bf099b871}{APP\+\_\+\+STATES}} new\+State)
+\begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}état de l\textquotesingle{}application. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{app_8c_a2eddd01dc88b9cfb845ab578cd7510b4}{APP\+\_\+\+Get\+Is\+Door}} (void)
+\begin{DoxyCompactList}\small\item\em Vérifie si l\textquotesingle{}entité courante est une porte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_a59b305aa4f4287d45cbe428f533f84b2}{APP\+\_\+\+Initialize}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_a859aee46b660cfee47cfd45ce08f6862}{APP\+\_\+\+Tasks}} (void)
+\begin{DoxyCompactList}\small\item\em Tâche principale de l\textquotesingle{}application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_a_p_p___d_a_t_a}{APP\+\_\+\+DATA}} \mbox{\hyperlink{app_8c_a4f18a2543252a3f61342104a531a0f3c}{app\+Data}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{app_8c_aafadd8f2a2aa59c174b5207f21872f1f}{sw\+Enter}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{app_8c_a2eb3ac5dc73c685e3beefb74af0e1371}{sw\+Busy}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{app_8c_a19358061a4fa8672c2124d5eb6a6337a}{sw\+Ring}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{app_8c_afdc3fbca7ca6fb08b354d67fea915b56}{sw\+Wait}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{app_8c_a360395ccaea62faa622a0c0c94178874}{app\+Paired\+Serial}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{app_8c_abe3db00054c4c928950612bc69f91b5f}{my\+Serial}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{app_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{app_8c_a2eddd01dc88b9cfb845ab578cd7510b4}\index{app.c@{app.c}!APP\_GetIsDoor@{APP\_GetIsDoor}}
+\index{APP\_GetIsDoor@{APP\_GetIsDoor}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{APP\_GetIsDoor()}{APP\_GetIsDoor()}}
+{\footnotesize\ttfamily \label{app_8c_a2eddd01dc88b9cfb845ab578cd7510b4} 
+bool APP\+\_\+\+Get\+Is\+Door (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si l\textquotesingle{}entité courante est une porte. 
+
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}entité est une porte, false sinon.
+\end{DoxyReturn}
+Cette fonction retourne la valeur du champ is\+Door de la structure app\+Data. \Hypertarget{app_8c_a59b305aa4f4287d45cbe428f533f84b2}\index{app.c@{app.c}!APP\_Initialize@{APP\_Initialize}}
+\index{APP\_Initialize@{APP\_Initialize}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{APP\_Initialize()}{APP\_Initialize()}}
+{\footnotesize\ttfamily \label{app_8c_a59b305aa4f4287d45cbe428f533f84b2} 
+void APP\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initialise l\textquotesingle{}application. 
+
+Cette fonction configure l\textquotesingle{}état initial de l\textquotesingle{}application, initialise les broches matérielles, la logique d\textquotesingle{}antirebond pour les boutons, ainsi que les périphériques tels que les LEDs, le module sonore et la RF.
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\Hypertarget{app_8c_a859aee46b660cfee47cfd45ce08f6862}\index{app.c@{app.c}!APP\_Tasks@{APP\_Tasks}}
+\index{APP\_Tasks@{APP\_Tasks}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{APP\_Tasks()}{APP\_Tasks()}}
+{\footnotesize\ttfamily \label{app_8c_a859aee46b660cfee47cfd45ce08f6862} 
+void APP\+\_\+\+Tasks (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Tâche principale de l\textquotesingle{}application. 
+
+Cette fonction gère la machine à états principale de l\textquotesingle{}application. Elle est appelée de manière répétée dans la boucle principale du programme.
+
+\begin{DoxyRemark}{Remarques}
+Voir le prototype dans \doxylink{app_8h}{app.\+h}. 
+\end{DoxyRemark}
+\Hypertarget{app_8c_acc9cde7d11cdebdf90dc9f45323376d7}\index{app.c@{app.c}!APP\_UpdateState@{APP\_UpdateState}}
+\index{APP\_UpdateState@{APP\_UpdateState}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{APP\_UpdateState()}{APP\_UpdateState()}}
+{\footnotesize\ttfamily \label{app_8c_acc9cde7d11cdebdf90dc9f45323376d7} 
+void APP\+\_\+\+Update\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{app_8h_ac23e091bbd221d57ef9aa15bf099b871}{APP\+\_\+\+STATES}}}]{new\+State}{}\end{DoxyParamCaption})}
+
+
+
+Met à jour l\textquotesingle{}état de l\textquotesingle{}application. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em new\+State} & Le nouvel état à appliquer à l\textquotesingle{}application.\\
+\hline
+\end{DoxyParams}
+Cette fonction assigne la valeur de new\+State à la variable d\textquotesingle{}état de l\textquotesingle{}application. \Hypertarget{app_8c_a7e7c8f4feb14c804000b17e76f7004ec}\index{app.c@{app.c}!ReadBatVoltage@{ReadBatVoltage}}
+\index{ReadBatVoltage@{ReadBatVoltage}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{ReadBatVoltage()}{ReadBatVoltage()}}
+{\footnotesize\ttfamily \label{app_8c_a7e7c8f4feb14c804000b17e76f7004ec} 
+uint16\+\_\+t Read\+Bat\+Voltage (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Lit la tension mesurée sur l\textquotesingle{}entrée analogique AN1. 
+
+Cette fonction lit la valeur convertie par l\textquotesingle{}ADC sur AN1.
+\begin{DoxyItemize}
+\item Si le montage est un bouton à la porte, elle retourne la tension de la pile (diviseur résistif 2/3).
+\item Si c\textquotesingle{}est une sonnerie distante, elle retourne 0 (pull-\/down).
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Renvoie}
+uint16\+\_\+t Valeur brute ADC mesurée sur AN1. 
+\end{DoxyReturn}
+\Hypertarget{app_8c_aa9a79a5cd86df87ce4b73993a082ffd0}\index{app.c@{app.c}!SetDoor@{SetDoor}}
+\index{SetDoor@{SetDoor}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{SetDoor()}{SetDoor()}}
+{\footnotesize\ttfamily \label{app_8c_aa9a79a5cd86df87ce4b73993a082ffd0} 
+void Set\+Door (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Détermine si le CPU est à la porte (Door) ou à la sonnette intérieure (Bell). 
+
+Cette fonction met à jour le champ app\+Data.\+is\+Door selon la position du CPU. Si le CPU est à la porte (is\+Door), elle lit la tension de la pile, met à jour app\+Data.\+bat\+Voltage (tension pile en mV) et app\+Data.\+is\+Low\+Bat (indication de batterie faible).
+
+\begin{DoxyNote}{Note}
+Utilise l\textquotesingle{}ADC pour effectuer les mesures nécessaires. 
+
+Désactive l\textquotesingle{}ADC à la fin pour économiser la batterie. 
+\end{DoxyNote}
+
+
+\label{doc-var-members}
+\Hypertarget{app_8c_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{app_8c_a4f18a2543252a3f61342104a531a0f3c}\index{app.c@{app.c}!appData@{appData}}
+\index{appData@{appData}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{appData}{appData}}
+{\footnotesize\ttfamily \label{app_8c_a4f18a2543252a3f61342104a531a0f3c} 
+\mbox{\hyperlink{struct_a_p_p___d_a_t_a}{APP\+\_\+\+DATA}} app\+Data}
+
+\Hypertarget{app_8c_a360395ccaea62faa622a0c0c94178874}\index{app.c@{app.c}!appPairedSerial@{appPairedSerial}}
+\index{appPairedSerial@{appPairedSerial}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{appPairedSerial}{appPairedSerial}}
+{\footnotesize\ttfamily \label{app_8c_a360395ccaea62faa622a0c0c94178874} 
+uint32\+\_\+t app\+Paired\+Serial = 0}
+
+\Hypertarget{app_8c_abe3db00054c4c928950612bc69f91b5f}\index{app.c@{app.c}!mySerial@{mySerial}}
+\index{mySerial@{mySerial}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{mySerial}{mySerial}}
+{\footnotesize\ttfamily \label{app_8c_abe3db00054c4c928950612bc69f91b5f} 
+uint32\+\_\+t my\+Serial\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{app_8c_a2eb3ac5dc73c685e3beefb74af0e1371}\index{app.c@{app.c}!swBusy@{swBusy}}
+\index{swBusy@{swBusy}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{swBusy}{swBusy}}
+{\footnotesize\ttfamily \label{app_8c_a2eb3ac5dc73c685e3beefb74af0e1371} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Busy}
+
+\Hypertarget{app_8c_aafadd8f2a2aa59c174b5207f21872f1f}\index{app.c@{app.c}!swEnter@{swEnter}}
+\index{swEnter@{swEnter}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{swEnter}{swEnter}}
+{\footnotesize\ttfamily \label{app_8c_aafadd8f2a2aa59c174b5207f21872f1f} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Enter}
+
+\Hypertarget{app_8c_a19358061a4fa8672c2124d5eb6a6337a}\index{app.c@{app.c}!swRing@{swRing}}
+\index{swRing@{swRing}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{swRing}{swRing}}
+{\footnotesize\ttfamily \label{app_8c_a19358061a4fa8672c2124d5eb6a6337a} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Ring}
+
+\Hypertarget{app_8c_afdc3fbca7ca6fb08b354d67fea915b56}\index{app.c@{app.c}!swWait@{swWait}}
+\index{swWait@{swWait}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{swWait}{swWait}}
+{\footnotesize\ttfamily \label{app_8c_afdc3fbca7ca6fb08b354d67fea915b56} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Wait}
+

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_app_8h_source" xml:lang="fr">
+<title>app.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h</primary></indexterm>
+Aller à la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*******************************************************************************</emphasis>
+2 <emphasis role="comment">&#32;&#32;MPLAB&#32;Harmony&#32;Application&#32;Header&#32;File</emphasis>
+3 <emphasis role="comment"></emphasis>
+4 <emphasis role="comment">&#32;&#32;Company:</emphasis>
+5 <emphasis role="comment">&#32;&#32;&#32;&#32;Microchip&#32;Technology&#32;Inc.</emphasis>
+6 <emphasis role="comment"></emphasis>
+7 <emphasis role="comment">&#32;&#32;File&#32;Name:</emphasis>
+8 <emphasis role="comment">&#32;&#32;&#32;&#32;app.h</emphasis>
+9 <emphasis role="comment"></emphasis>
+10 <emphasis role="comment">&#32;&#32;Summary:</emphasis>
+11 <emphasis role="comment">&#32;&#32;&#32;&#32;This&#32;header&#32;file&#32;provides&#32;prototypes&#32;and&#32;definitions&#32;for&#32;the&#32;application.</emphasis>
+12 <emphasis role="comment"></emphasis>
+13 <emphasis role="comment">&#32;&#32;Description:</emphasis>
+14 <emphasis role="comment">&#32;&#32;&#32;&#32;This&#32;header&#32;file&#32;provides&#32;function&#32;prototypes&#32;and&#32;data&#32;type&#32;definitions&#32;for</emphasis>
+15 <emphasis role="comment">&#32;&#32;&#32;&#32;the&#32;application.&#32;&#32;Some&#32;of&#32;these&#32;are&#32;required&#32;by&#32;the&#32;system&#32;(such&#32;as&#32;the</emphasis>
+16 <emphasis role="comment">&#32;&#32;&#32;&#32;&quot;APP_Initialize&quot;&#32;and&#32;&quot;APP_Tasks&quot;&#32;prototypes)&#32;and&#32;some&#32;of&#32;them&#32;are&#32;only&#32;used</emphasis>
+17 <emphasis role="comment">&#32;&#32;&#32;&#32;internally&#32;by&#32;the&#32;application&#32;(such&#32;as&#32;the&#32;&quot;APP_STATES&quot;&#32;definition).&#32;&#32;Both</emphasis>
+18 <emphasis role="comment">&#32;&#32;&#32;&#32;are&#32;defined&#32;here&#32;for&#32;convenience.</emphasis>
+19 <emphasis role="comment">*******************************************************************************/</emphasis>
+20 
+21 <emphasis role="comment">//DOM-IGNORE-BEGIN</emphasis>
+22 <emphasis role="comment">/*******************************************************************************</emphasis>
+23 <emphasis role="comment">Copyright&#32;(c)&#32;2013-2014&#32;released&#32;Microchip&#32;Technology&#32;Inc.&#32;&#32;All&#32;rights&#32;reserved.</emphasis>
+24 <emphasis role="comment"></emphasis>
+25 <emphasis role="comment">Microchip&#32;licenses&#32;to&#32;you&#32;the&#32;right&#32;to&#32;use,&#32;modify,&#32;copy&#32;and&#32;distribute</emphasis>
+26 <emphasis role="comment">Software&#32;only&#32;when&#32;embedded&#32;on&#32;a&#32;Microchip&#32;microcontroller&#32;or&#32;digital&#32;signal</emphasis>
+27 <emphasis role="comment">controller&#32;that&#32;is&#32;integrated&#32;into&#32;your&#32;product&#32;or&#32;third&#32;party&#32;product</emphasis>
+28 <emphasis role="comment">(pursuant&#32;to&#32;the&#32;sublicense&#32;terms&#32;in&#32;the&#32;accompanying&#32;license&#32;agreement).</emphasis>
+29 <emphasis role="comment"></emphasis>
+30 <emphasis role="comment">You&#32;should&#32;refer&#32;to&#32;the&#32;license&#32;agreement&#32;accompanying&#32;this&#32;Software&#32;for</emphasis>
+31 <emphasis role="comment">additional&#32;information&#32;regarding&#32;your&#32;rights&#32;and&#32;obligations.</emphasis>
+32 <emphasis role="comment"></emphasis>
+33 <emphasis role="comment">SOFTWARE&#32;AND&#32;DOCUMENTATION&#32;ARE&#32;PROVIDED&#32;&quot;AS&#32;IS&quot;&#32;WITHOUT&#32;WARRANTY&#32;OF&#32;ANY&#32;KIND,</emphasis>
+34 <emphasis role="comment">EITHER&#32;EXPRESS&#32;OR&#32;IMPLIED,&#32;INCLUDING&#32;WITHOUT&#32;LIMITATION,&#32;ANY&#32;WARRANTY&#32;OF</emphasis>
+35 <emphasis role="comment">MERCHANTABILITY,&#32;TITLE,&#32;NON-INFRINGEMENT&#32;AND&#32;FITNESS&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE.</emphasis>
+36 <emphasis role="comment">IN&#32;NO&#32;EVENT&#32;SHALL&#32;MICROCHIP&#32;OR&#32;ITS&#32;LICENSORS&#32;BE&#32;LIABLE&#32;OR&#32;OBLIGATED&#32;UNDER</emphasis>
+37 <emphasis role="comment">CONTRACT,&#32;NEGLIGENCE,&#32;STRICT&#32;LIABILITY,&#32;CONTRIBUTION,&#32;BREACH&#32;OF&#32;WARRANTY,&#32;OR</emphasis>
+38 <emphasis role="comment">OTHER&#32;LEGAL&#32;EQUITABLE&#32;THEORY&#32;ANY&#32;DIRECT&#32;OR&#32;INDIRECT&#32;DAMAGES&#32;OR&#32;EXPENSES</emphasis>
+39 <emphasis role="comment">INCLUDING&#32;BUT&#32;NOT&#32;LIMITED&#32;TO&#32;ANY&#32;INCIDENTAL,&#32;SPECIAL,&#32;INDIRECT,&#32;PUNITIVE&#32;OR</emphasis>
+40 <emphasis role="comment">CONSEQUENTIAL&#32;DAMAGES,&#32;LOST&#32;PROFITS&#32;OR&#32;LOST&#32;DATA,&#32;COST&#32;OF&#32;PROCUREMENT&#32;OF</emphasis>
+41 <emphasis role="comment">SUBSTITUTE&#32;GOODS,&#32;TECHNOLOGY,&#32;SERVICES,&#32;OR&#32;ANY&#32;CLAIMS&#32;BY&#32;THIRD&#32;PARTIES</emphasis>
+42 <emphasis role="comment">(INCLUDING&#32;BUT&#32;NOT&#32;LIMITED&#32;TO&#32;ANY&#32;DEFENSE&#32;THEREOF),&#32;OR&#32;OTHER&#32;SIMILAR&#32;COSTS.</emphasis>
+43 <emphasis role="comment">&#32;*******************************************************************************/</emphasis>
+44 <emphasis role="comment">//DOM-IGNORE-END</emphasis>
+45 
+46 <emphasis role="preprocessor">#ifndef&#32;_APP_H</emphasis>
+47 <emphasis role="preprocessor">#define&#32;_APP_H</emphasis>
+48 
+49 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+50 <emphasis role="comment">//&#32;Section&#32;:&#32;Fichiers&#32;inclus</emphasis>
+51 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+52 
+53 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Types&#32;entiers&#32;standards</emphasis>
+54 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Type&#32;booléen</emphasis>
+55 <emphasis role="preprocessor">#include&#32;&lt;stddef.h&gt;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Définitions&#32;de&#32;taille</emphasis>
+56 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Fonctions&#32;utilitaires&#32;générales</emphasis>
+57 <emphasis role="preprocessor">#include&#32;&quot;system_config.h&quot;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Configuration&#32;système</emphasis>
+58 <emphasis role="preprocessor">#include&#32;&quot;system_definitions.h&quot;</emphasis>&#32;<emphasis role="comment">//&#32;Définitions&#32;système</emphasis>
+59 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__mc32_debounce_8h">Mc32Debounce.h</link>&quot;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Gestion&#32;anti-rebond&#32;pour&#32;boutons</emphasis>
+60 
+61 <emphasis role="comment">//&#32;DOM-IGNORE-BEGIN</emphasis>
+62 <emphasis role="preprocessor">#ifdef&#32;__cplusplus&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">//&#32;Pour&#32;compatibilité&#32;C++</emphasis>
+63 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+64 <emphasis role="preprocessor">#endif</emphasis>
+65 <emphasis role="comment">//&#32;DOM-IGNORE-END</emphasis>
+66 
+67 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+68 <emphasis role="comment">//&#32;Section&#32;:&#32;Définitions&#32;de&#32;types</emphasis>
+69 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+70 
+71 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+72 <emphasis role="comment">//&#32;Enumération&#32;des&#32;états&#32;de&#32;l&apos;application</emphasis>
+73 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+74 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+75 {
+76 &#32;&#32;<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871aee72936f6dda86ada3946d7c937a2297">APP_STATE_INIT</link>&#32;=&#32;0,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;État&#32;initial&#32;de&#32;l&apos;application</emphasis>
+77 &#32;&#32;<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871a4a2d007c2bbd7b136d1a6c587e536c89">APP_STATE_WAIT</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Attente&#32;d&apos;un&#32;événement</emphasis>
+78 &#32;&#32;<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871a92f04718da45a34c069d899c657d1ac5">APP_STATE_SERVICE_TASKS</link>&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Exécution&#32;des&#32;tâches&#32;de&#32;service</emphasis>
+79 }&#32;<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link>;
+80 
+81 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+82 <emphasis role="comment">//&#32;Structure&#32;des&#32;données&#32;de&#32;l&apos;application</emphasis>
+83 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+84 <emphasis role="preprocessor">#define&#32;LOWBAT_THRESHOLD&#32;2400&#32;&#32;&#32;</emphasis><emphasis role="comment">//&#32;Seuil&#32;de&#32;batterie&#32;faible&#32;(2.4V)</emphasis>
+85 
+86 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+87 {
+88 &#32;&#32;<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link>&#32;<link linkend="_struct_a_p_p___d_a_t_a_1abbc3c9d5e3194848346e986069b88f44">state</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;État&#32;courant&#32;de&#32;l&apos;application</emphasis>
+89 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_a_p_p___d_a_t_a_1a94a5120b269e0c87b27dfc08f6f605f1">isDoor</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Indique&#32;si&#32;la&#32;porte&#32;est&#32;détectée</emphasis>
+90 &#32;&#32;uint16_t&#32;<link linkend="_struct_a_p_p___d_a_t_a_1ae27cb41b32b95348d22f6815b7360b15">batVoltage</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Tension&#32;de&#32;la&#32;batterie</emphasis>
+91 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_a_p_p___d_a_t_a_1a4da832e05e9b553c5b9bb0393b093e91">isLowBat</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Indique&#32;si&#32;la&#32;batterie&#32;est&#32;faible</emphasis>
+92 }&#32;<link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link>;
+93 
+94 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+95 <emphasis role="comment">//&#32;Déclarations&#32;externes&#32;des&#32;descripteurs&#32;de&#32;boutons</emphasis>
+96 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+97 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1a19358061a4fa8672c2124d5eb6a6337a">swRing</link>;&#32;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;de&#32;sonnette</emphasis>
+98 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1aafadd8f2a2aa59c174b5207f21872f1f">swEnter</link>;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;d&apos;entrée</emphasis>
+99 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1afdc3fbca7ca6fb08b354d67fea915b56">swWait</link>;&#32;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;d&apos;attente</emphasis>
+100 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</link>;&#32;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;d&apos;occupation</emphasis>
+101 
+102 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+103 <emphasis role="comment">//&#32;Section&#32;:&#32;Prototypes&#32;des&#32;fonctions&#32;de&#32;l&apos;application</emphasis>
+104 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+105 
+106 <emphasis role="comment">/*******************************************************************************</emphasis>
+107 <emphasis role="comment">&#32;&#32;Fonction&#32;:&#32;void&#32;APP_Initialize(void)</emphasis>
+108 <emphasis role="comment">&#32;&#32;Initialise&#32;l&apos;application&#32;Harmony,&#32;place&#32;dans&#32;l&apos;état&#32;initial.</emphasis>
+109 <emphasis role="comment">*******************************************************************************/</emphasis>
+110 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_app_8h_1a59b305aa4f4287d45cbe428f533f84b2">APP_Initialize</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialise&#32;l&apos;application</emphasis>
+111 
+112 <emphasis role="comment">/*******************************************************************************</emphasis>
+113 <emphasis role="comment">&#32;&#32;Fonction&#32;:&#32;void&#32;APP_Tasks(void)</emphasis>
+114 <emphasis role="comment">&#32;&#32;Machine&#32;à&#32;états&#32;principale&#32;de&#32;l&apos;application&#32;Harmony.</emphasis>
+115 <emphasis role="comment">*******************************************************************************/</emphasis>
+116 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_app_8h_1a859aee46b660cfee47cfd45ce08f6862">APP_Tasks</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Exécute&#32;les&#32;tâches&#32;de&#32;l&apos;application</emphasis>
+117 
+118 <emphasis role="comment">/*******************************************************************************</emphasis>
+119 <emphasis role="comment">&#32;&#32;Fonction&#32;:&#32;void&#32;APP_UpdateState(APP_STATES&#32;newState)</emphasis>
+120 <emphasis role="comment">&#32;&#32;Met&#32;à&#32;jour&#32;l&apos;état&#32;de&#32;l&apos;application.</emphasis>
+121 <emphasis role="comment">*******************************************************************************/</emphasis>
+122 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_app_8h_1acc9cde7d11cdebdf90dc9f45323376d7">APP_UpdateState</link>(<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link>&#32;newState);&#32;<emphasis role="comment">//&#32;Met&#32;à&#32;jour&#32;l&apos;état</emphasis>
+123 
+124 <emphasis role="comment">/*******************************************************************************</emphasis>
+125 <emphasis role="comment">&#32;&#32;Fonction&#32;:&#32;bool&#32;APP_GetIsDoor(void)</emphasis>
+126 <emphasis role="comment">&#32;&#32;Retourne&#32;l&apos;état&#32;de&#32;détection&#32;de&#32;la&#32;porte.</emphasis>
+127 <emphasis role="comment">*******************************************************************************/</emphasis>
+128 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_app_8h_1a2eddd01dc88b9cfb845ab578cd7510b4">APP_GetIsDoor</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Retourne&#32;si&#32;la&#32;porte&#32;est&#32;détectée</emphasis>
+129 
+130 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+131 <emphasis role="comment">//&#32;Fin&#32;des&#32;définitions&#32;externes&#32;et&#32;compatibilité&#32;C++</emphasis>
+132 <emphasis role="comment">//&#32;*****************************************************************************</emphasis>
+133 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+134 }
+135 <emphasis role="preprocessor">#endif</emphasis>
+136 
+137 <emphasis role="comment">/*******************************************************************************</emphasis>
+138 <emphasis role="comment">&#32;&#32;Fin&#32;du&#32;fichier</emphasis>
+139 <emphasis role="comment">*******************************************************************************/</emphasis>
+</programlisting></section>
