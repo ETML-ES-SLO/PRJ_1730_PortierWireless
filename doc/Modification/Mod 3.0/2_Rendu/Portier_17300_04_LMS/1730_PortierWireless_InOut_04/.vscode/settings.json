@@ -1,0 +1,11 @@
+{
+    "mplab.clangd.arguments": [
+        "--compile-commands-dir=${workspaceRoot}\\_build\\1730_PortierWireless_InOut_02\\default"
+    ],
+    "mplab.clangd.path": "",
+    "files.associations": {
+        "management.h": "c",
+        "pairing.h": "c",
+        "app.h": "c"
+    }
+}
