@@ -1,0 +1,94 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/\+Mc32\+Debounce.c}
+\hypertarget{_mc32_debounce_8c}{}\label{_mc32_debounce_8c}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Debounce.c@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Debounce.c}}
+{\ttfamily \#include "{}Mc32\+Debounce.\+h"{}}\newline
+Graphe des dépendances par inclusion de Mc32\+Debounce.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{_mc32_debounce_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_mc32_debounce_8c_a25234bd4e5b3764544f4ebed1be6bf74}{Do\+Debounce}} (\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}Descriptor, bool Input\+Value)
+\begin{DoxyCompactList}\small\item\em !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_mc32_debounce_8c_abf3dbe0d583132babae2be20ec2cc3a8}{Debounce\+Init}} (\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}p\+Descriptor)
+\item 
+bool \mbox{\hyperlink{_mc32_debounce_8c_a6a611324e87fa2d10ac637b17271cb53}{Debounce\+Get\+Input}} (\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}p\+Descriptor)
+\item 
+bool \mbox{\hyperlink{_mc32_debounce_8c_a8c5bec15ce951e929781afe093261151}{Debounce\+Is\+Pressed}} (\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}p\+Descriptor)
+\item 
+bool \mbox{\hyperlink{_mc32_debounce_8c_af41f451eca1f7dba66b694233d549c54}{Debounce\+Is\+Released}} (\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}p\+Descriptor)
+\item 
+void \mbox{\hyperlink{_mc32_debounce_8c_ac643da410acdf6b56285e1917bb55721}{Debounce\+Clear\+Pressed}} (\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}p\+Descriptor)
+\item 
+void \mbox{\hyperlink{_mc32_debounce_8c_aac114092f76e85fa9e6246127b5e1082}{Debounce\+Clear\+Released}} (\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}p\+Descriptor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{_mc32_debounce_8c_a8949fbaffebeb7d3b10c844ef40ccebc}{Max\+Debounce\+Count}} = 5
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_mc32_debounce_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_mc32_debounce_8c_ac643da410acdf6b56285e1917bb55721}\index{Mc32Debounce.c@{Mc32Debounce.c}!DebounceClearPressed@{DebounceClearPressed}}
+\index{DebounceClearPressed@{DebounceClearPressed}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{DebounceClearPressed()}{DebounceClearPressed()}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_ac643da410acdf6b56285e1917bb55721} 
+void Debounce\+Clear\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{p\+Descriptor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_mc32_debounce_8c_aac114092f76e85fa9e6246127b5e1082}\index{Mc32Debounce.c@{Mc32Debounce.c}!DebounceClearReleased@{DebounceClearReleased}}
+\index{DebounceClearReleased@{DebounceClearReleased}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{DebounceClearReleased()}{DebounceClearReleased()}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_aac114092f76e85fa9e6246127b5e1082} 
+void Debounce\+Clear\+Released (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{p\+Descriptor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_mc32_debounce_8c_a6a611324e87fa2d10ac637b17271cb53}\index{Mc32Debounce.c@{Mc32Debounce.c}!DebounceGetInput@{DebounceGetInput}}
+\index{DebounceGetInput@{DebounceGetInput}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{DebounceGetInput()}{DebounceGetInput()}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_a6a611324e87fa2d10ac637b17271cb53} 
+bool Debounce\+Get\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{p\+Descriptor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_mc32_debounce_8c_abf3dbe0d583132babae2be20ec2cc3a8}\index{Mc32Debounce.c@{Mc32Debounce.c}!DebounceInit@{DebounceInit}}
+\index{DebounceInit@{DebounceInit}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{DebounceInit()}{DebounceInit()}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_abf3dbe0d583132babae2be20ec2cc3a8} 
+void Debounce\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{p\+Descriptor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_mc32_debounce_8c_a8c5bec15ce951e929781afe093261151}\index{Mc32Debounce.c@{Mc32Debounce.c}!DebounceIsPressed@{DebounceIsPressed}}
+\index{DebounceIsPressed@{DebounceIsPressed}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{DebounceIsPressed()}{DebounceIsPressed()}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_a8c5bec15ce951e929781afe093261151} 
+bool Debounce\+Is\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{p\+Descriptor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_mc32_debounce_8c_af41f451eca1f7dba66b694233d549c54}\index{Mc32Debounce.c@{Mc32Debounce.c}!DebounceIsReleased@{DebounceIsReleased}}
+\index{DebounceIsReleased@{DebounceIsReleased}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{DebounceIsReleased()}{DebounceIsReleased()}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_af41f451eca1f7dba66b694233d549c54} 
+bool Debounce\+Is\+Released (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{p\+Descriptor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_mc32_debounce_8c_a25234bd4e5b3764544f4ebed1be6bf74}\index{Mc32Debounce.c@{Mc32Debounce.c}!DoDebounce@{DoDebounce}}
+\index{DoDebounce@{DoDebounce}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{DoDebounce()}{DoDebounce()}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_a25234bd4e5b3764544f4ebed1be6bf74} 
+void Do\+Debounce (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \texorpdfstring{$\ast$}{*}}]{Descriptor}{, }\item[{bool}]{Input\+Value}{}\end{DoxyParamCaption})}
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+
+\label{doc-var-members}
+\Hypertarget{_mc32_debounce_8c_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{_mc32_debounce_8c_a8949fbaffebeb7d3b10c844ef40ccebc}\index{Mc32Debounce.c@{Mc32Debounce.c}!MaxDebounceCount@{MaxDebounceCount}}
+\index{MaxDebounceCount@{MaxDebounceCount}!Mc32Debounce.c@{Mc32Debounce.c}}
+\doxysubsubsection{\texorpdfstring{MaxDebounceCount}{MaxDebounceCount}}
+{\footnotesize\ttfamily \label{_mc32_debounce_8c_a8949fbaffebeb7d3b10c844ef40ccebc} 
+const uint8\+\_\+t Max\+Debounce\+Count = 5}
+

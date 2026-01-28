@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_s___switch_descriptor" xml:lang="fr">
+<title>Référence de la structure S_SwitchDescriptor</title>
+<indexterm><primary>S_SwitchDescriptor</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Mc32Debounce.h&gt;</computeroutput>
+</para>
+Graphe de collaboration de S_SwitchDescriptor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_s___switch_descriptor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Attributs publics    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</link> <link linkend="_struct_s___switch_descriptor_1a4d58e6579e37611a845abd90344216a3">DebounceState</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_s___switch_descriptor_1ac7228601ef3f09fe2200c2538f577684">DebounceCounter</link></para>
+</listitem>
+            <listitem><para><link linkend="_structs__bits">s_bits</link> <link linkend="_struct_s___switch_descriptor_1a5bee94d845c2c8fde44422068f2da2b6">bits</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des données membres</title>
+<anchor xml:id="_struct_s___switch_descriptor_1a5bee94d845c2c8fde44422068f2da2b6"/><section>
+    <title>bits</title>
+<indexterm><primary>bits</primary><secondary>S_SwitchDescriptor</secondary></indexterm>
+<indexterm><primary>S_SwitchDescriptor</primary><secondary>bits</secondary></indexterm>
+<para><computeroutput><link linkend="_structs__bits">s_bits</link> S_SwitchDescriptor::bits</computeroutput></para></section>
+<anchor xml:id="_struct_s___switch_descriptor_1ac7228601ef3f09fe2200c2538f577684"/><section>
+    <title>DebounceCounter</title>
+<indexterm><primary>DebounceCounter</primary><secondary>S_SwitchDescriptor</secondary></indexterm>
+<indexterm><primary>S_SwitchDescriptor</primary><secondary>DebounceCounter</secondary></indexterm>
+<para><computeroutput>uint8_t S_SwitchDescriptor::DebounceCounter</computeroutput></para></section>
+<anchor xml:id="_struct_s___switch_descriptor_1a4d58e6579e37611a845abd90344216a3"/><section>
+    <title>DebounceState</title>
+<indexterm><primary>DebounceState</primary><secondary>S_SwitchDescriptor</secondary></indexterm>
+<indexterm><primary>S_SwitchDescriptor</primary><secondary>DebounceState</secondary></indexterm>
+<para><computeroutput><link linkend="__mc32_debounce_8h_1a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</link> S_SwitchDescriptor::DebounceState</computeroutput></para></section>
+<para>
+La documentation de cette structure a été générée à partir du fichier suivant :</para>
+C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/<link linkend="__mc32_debounce_8h">Mc32Debounce.h</link></section>
+</section>

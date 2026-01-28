@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless:  Fichier source de C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Debounce.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un systÃ¨me bidirectionnel basÃ© sur un microcontrÃ´leur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant Ã  un visiteur dâ€™envoyer une requÃªte depuis lâ€™extÃ©rieur via un bouton alimentÃ© par piles, et Ã  lâ€™occupant du bureau de rÃ©pondre par des signaux lumineux et sonores grÃ¢ce Ã  une unitÃ© intÃ©rieure alimentÃ©e en USB, le tout avec appairage sÃ©curisÃ© et gestion autonome de lâ€™Ã©nergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_mc32_debounce_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Mc32Debounce.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mc32_debounce_8h.html">Aller Ã  la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MC32DEBOUNCE2_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MC32DEBOUNCE2_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Mc32Debounce.h</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// C. HUBER    19/02/2014 Portage sur PIC32MX</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//             Attention int1 transformé en uint8</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// Fonctions pour la gestion de l&#39;anti-rebond d&#39;un switch</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Principe : Il est nécessaire d&#39;appeler cycliquement la fonction DoDebounce</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//            pour chaque switch. Suggestion cycle de 1 ms</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//            Pour la gestion du switch, il y a 3 fonctions à disposition :</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//       DebounceGetInput  fourni l&#39;état du switch aprés anti-rebond</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//       DebounceIsPressed    true indique que l&#39;on vient de presser la touche</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//       DebounceIsReleased   true indique que l&#39;on vient de relacher la touche</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//       DebounceClearPressed    annule indication de pression sur la touche</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//       DebounceClearReleased   annule indication de relachement de la touche</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  Remarques : toute les fonctions utilisent un descripteur de touche</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//              un état 0 indique une touche pressée</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// définitions des types qui seront utilisés dans cette application</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// Etats du système antirebond</span></div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73">   34</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033">   35</a></span>      <a class="code hl_enumvalue" href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033">DebounceWaitChange</a>,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b">   36</a></span>      <a class="code hl_enumvalue" href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b">DebounceWaitStable</a>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <a class="code hl_enumeration" href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</a>;</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// New</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structs__bits.html">   40</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structs__bits.html#a6d394f172726f9e8935c0fd99405af29">   41</a></span>   uint8_t  <a class="code hl_variable" href="structs__bits.html#a6d394f172726f9e8935c0fd99405af29">KeyPressed</a> :1;              <span class="comment">// événement touche pressée</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structs__bits.html#a894fa1132ca6388e4bd6287620ed609f">   42</a></span>   uint8_t  <a class="code hl_variable" href="structs__bits.html#a894fa1132ca6388e4bd6287620ed609f">KeyReleased</a> : 1;             <span class="comment">// événement touche relachée</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structs__bits.html#a17fedf14b5b32671ce3aed719d99b032">   43</a></span>   uint8_t  <a class="code hl_variable" href="structs__bits.html#a17fedf14b5b32671ce3aed719d99b032">KeyPrevInputValue</a> : 1;       <span class="comment">// valeur précédente de la touche</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structs__bits.html#a988f5aa4956218e4bd75412af1149eb3">   44</a></span>   uint8_t  <a class="code hl_variable" href="structs__bits.html#a988f5aa4956218e4bd75412af1149eb3">KeyValue</a> : 1;                <span class="comment">// valeur finale (image) de la touche</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> } <a class="code hl_struct" href="structs__bits.html">s_bits</a>;</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// structure du descripteur</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_s___switch_descriptor.html">   48</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_s___switch_descriptor.html#a4d58e6579e37611a845abd90344216a3">   49</a></span>           <a class="code hl_enumeration" href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</a> <a class="code hl_variable" href="struct_s___switch_descriptor.html#a4d58e6579e37611a845abd90344216a3">DebounceState</a>;    <span class="comment">// état de l&#39;antirebond</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_s___switch_descriptor.html#ac7228601ef3f09fe2200c2538f577684">   50</a></span>           uint8_t     <a class="code hl_variable" href="struct_s___switch_descriptor.html#ac7228601ef3f09fe2200c2538f577684">DebounceCounter</a>;         <span class="comment">// compteur</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_s___switch_descriptor.html#a5bee94d845c2c8fde44422068f2da2b6">   51</a></span>           <a class="code hl_struct" href="structs__bits.html">s_bits</a> <a class="code hl_variable" href="struct_s___switch_descriptor.html#a5bee94d845c2c8fde44422068f2da2b6">bits</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>;</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// POUR CHAQUE SWITCH DONT ON VEUT EFFECTUER L&#39;ANTI-REBOND DANS L&#39;APPLICATION.</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// IL FAUDRA DEFINIR UNE VARIABLE DU  TYPE S_SwitchDescriptor</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">//</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// DoDebounce (S_SwitchDescriptor *Descriptor, boolean InputValue)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">//              Routine effectuant la gestion de l&#39;anti-rebond d&#39;un switch</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//              dont l&#39;adresse de la structure est passée en paramètre.</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//              La valeur du switch lue sur le port est a passer lors de l&#39;appel</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// Entrée: un pointeur sur la structure du switch</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//         la valeur du switch lue sur le port</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">//</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// Sortie: la structure mise à jour</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">//         le bit KeyValue qui donne la valeur du switch après anti-rebond</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//         le bit KeyPressed qui est mis à 1 dès que l&#39;on presse sur le switch</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//           ce bit n&#39;est pas resetté par cette fonction mais doit l&#39;être par l&#39;application</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">//           si elle l&#39;utilise.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">//         le bit KeyReleased qui est mis à 1 dès que l&#39;on relâche sur le switch</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//           ce bit n&#39;est pas resetté par cette fonction mais doit l&#39;être par l&#39;application</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//           si elle l&#39;utilise</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">void</span> <a class="code hl_function" href="_mc32_debounce_8h.html#a25234bd4e5b3764544f4ebed1be6bf74">DoDebounce</a> (<a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> *Descriptor, <span class="keywordtype">bool</span> InputValue);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">/********************************************************************************************/</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// DebounceInit (S_SwitchDescriptor *pDescriptor) :</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//              Routine effectuant l&#39;initialisation de la structure d&#39;un switch</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//              dont l&#39;adresse de la structure est passée en paramètre.</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// Entrée: un pointeur sur la structure du switch</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">void</span> <a class="code hl_function" href="_mc32_debounce_8h.html#abf3dbe0d583132babae2be20ec2cc3a8">DebounceInit</a> (<a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> *pDescriptor);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//  DebounceGetInput  fourni l&#39;état du switch aprés anti-rebond</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_mc32_debounce_8h.html#a6a611324e87fa2d10ac637b17271cb53">DebounceGetInput</a> (<a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> *pDescriptor);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">//  DebounceIsPressed    true indique que l&#39;on vient de presser la touche</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_mc32_debounce_8h.html#a8c5bec15ce951e929781afe093261151">DebounceIsPressed</a> (<a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> *pDescriptor);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">//  DebounceIsReleased   true indique que l&#39;on vient de relacher la touche</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_mc32_debounce_8h.html#af41f451eca1f7dba66b694233d549c54">DebounceIsReleased</a> (<a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> *pDescriptor);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">//  DebounceClearPressed    annule indication de pression sur la touche</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keywordtype">void</span> <a class="code hl_function" href="_mc32_debounce_8h.html#ac643da410acdf6b56285e1917bb55721">DebounceClearPressed</a>  (<a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> *pDescriptor);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">//  DebounceClearReleased   annule indication de relachement de la touche</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keywordtype">void</span> <a class="code hl_function" href="_mc32_debounce_8h.html#aac114092f76e85fa9e6246127b5e1082">DebounceClearReleased</a>  (<a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> *pDescriptor);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_a25234bd4e5b3764544f4ebed1be6bf74"><div class="ttname"><a href="_mc32_debounce_8h.html#a25234bd4e5b3764544f4ebed1be6bf74">DoDebounce</a></div><div class="ttdeci">void DoDebounce(S_SwitchDescriptor *Descriptor, bool InputValue)</div><div class="ttdoc">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</div><div class="ttdef"><b>Definition</b> Mc32Debounce.c:55</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_a51afc992bd0d9e88fdd88f9aea8f8d73"><div class="ttname"><a href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73">E_DebouceStates</a></div><div class="ttdeci">E_DebouceStates</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:34</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b"><div class="ttname"><a href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73a3265dfe92c6fa1c7d1d21608e6ac684b">DebounceWaitStable</a></div><div class="ttdeci">@ DebounceWaitStable</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:36</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033"><div class="ttname"><a href="_mc32_debounce_8h.html#a51afc992bd0d9e88fdd88f9aea8f8d73a44cf61c94aac24c554cbea41975b6033">DebounceWaitChange</a></div><div class="ttdeci">@ DebounceWaitChange</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:35</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_a6a611324e87fa2d10ac637b17271cb53"><div class="ttname"><a href="_mc32_debounce_8h.html#a6a611324e87fa2d10ac637b17271cb53">DebounceGetInput</a></div><div class="ttdeci">bool DebounceGetInput(S_SwitchDescriptor *pDescriptor)</div><div class="ttdef"><b>Definition</b> Mc32Debounce.c:117</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_a8c5bec15ce951e929781afe093261151"><div class="ttname"><a href="_mc32_debounce_8h.html#a8c5bec15ce951e929781afe093261151">DebounceIsPressed</a></div><div class="ttdeci">bool DebounceIsPressed(S_SwitchDescriptor *pDescriptor)</div><div class="ttdef"><b>Definition</b> Mc32Debounce.c:122</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_aac114092f76e85fa9e6246127b5e1082"><div class="ttname"><a href="_mc32_debounce_8h.html#aac114092f76e85fa9e6246127b5e1082">DebounceClearReleased</a></div><div class="ttdeci">void DebounceClearReleased(S_SwitchDescriptor *pDescriptor)</div><div class="ttdef"><b>Definition</b> Mc32Debounce.c:137</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_abf3dbe0d583132babae2be20ec2cc3a8"><div class="ttname"><a href="_mc32_debounce_8h.html#abf3dbe0d583132babae2be20ec2cc3a8">DebounceInit</a></div><div class="ttdeci">void DebounceInit(S_SwitchDescriptor *pDescriptor)</div><div class="ttdef"><b>Definition</b> Mc32Debounce.c:107</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_ac643da410acdf6b56285e1917bb55721"><div class="ttname"><a href="_mc32_debounce_8h.html#ac643da410acdf6b56285e1917bb55721">DebounceClearPressed</a></div><div class="ttdeci">void DebounceClearPressed(S_SwitchDescriptor *pDescriptor)</div><div class="ttdef"><b>Definition</b> Mc32Debounce.c:132</div></div>
+<div class="ttc" id="a_mc32_debounce_8h_html_af41f451eca1f7dba66b694233d549c54"><div class="ttname"><a href="_mc32_debounce_8h.html#af41f451eca1f7dba66b694233d549c54">DebounceIsReleased</a></div><div class="ttdeci">bool DebounceIsReleased(S_SwitchDescriptor *pDescriptor)</div><div class="ttdef"><b>Definition</b> Mc32Debounce.c:127</div></div>
+<div class="ttc" id="astruct_s___switch_descriptor_html"><div class="ttname"><a href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a></div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:48</div></div>
+<div class="ttc" id="astruct_s___switch_descriptor_html_a4d58e6579e37611a845abd90344216a3"><div class="ttname"><a href="struct_s___switch_descriptor.html#a4d58e6579e37611a845abd90344216a3">S_SwitchDescriptor::DebounceState</a></div><div class="ttdeci">E_DebouceStates DebounceState</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:49</div></div>
+<div class="ttc" id="astruct_s___switch_descriptor_html_a5bee94d845c2c8fde44422068f2da2b6"><div class="ttname"><a href="struct_s___switch_descriptor.html#a5bee94d845c2c8fde44422068f2da2b6">S_SwitchDescriptor::bits</a></div><div class="ttdeci">s_bits bits</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:51</div></div>
+<div class="ttc" id="astruct_s___switch_descriptor_html_ac7228601ef3f09fe2200c2538f577684"><div class="ttname"><a href="struct_s___switch_descriptor.html#ac7228601ef3f09fe2200c2538f577684">S_SwitchDescriptor::DebounceCounter</a></div><div class="ttdeci">uint8_t DebounceCounter</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:50</div></div>
+<div class="ttc" id="astructs__bits_html"><div class="ttname"><a href="structs__bits.html">s_bits</a></div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:40</div></div>
+<div class="ttc" id="astructs__bits_html_a17fedf14b5b32671ce3aed719d99b032"><div class="ttname"><a href="structs__bits.html#a17fedf14b5b32671ce3aed719d99b032">s_bits::KeyPrevInputValue</a></div><div class="ttdeci">uint8_t KeyPrevInputValue</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:43</div></div>
+<div class="ttc" id="astructs__bits_html_a6d394f172726f9e8935c0fd99405af29"><div class="ttname"><a href="structs__bits.html#a6d394f172726f9e8935c0fd99405af29">s_bits::KeyPressed</a></div><div class="ttdeci">uint8_t KeyPressed</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:41</div></div>
+<div class="ttc" id="astructs__bits_html_a894fa1132ca6388e4bd6287620ed609f"><div class="ttname"><a href="structs__bits.html#a894fa1132ca6388e4bd6287620ed609f">s_bits::KeyReleased</a></div><div class="ttdeci">uint8_t KeyReleased</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:42</div></div>
+<div class="ttc" id="astructs__bits_html_a988f5aa4956218e4bd75412af1149eb3"><div class="ttname"><a href="structs__bits.html#a988f5aa4956218e4bd75412af1149eb3">s_bits::KeyValue</a></div><div class="ttdeci">uint8_t KeyValue</div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="_mc32_debounce_8h.html">Mc32Debounce.h</a></li>
+    <li class="footer">GÃ©nÃ©rÃ© par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

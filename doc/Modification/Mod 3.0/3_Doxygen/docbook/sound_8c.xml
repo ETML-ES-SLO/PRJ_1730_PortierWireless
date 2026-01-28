@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sound_8c" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/sound.c</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/sound.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;sound.h&quot;<?linebreak?>#include &quot;peripheral/oc/plib_oc.h&quot;<?linebreak?>#include &quot;peripheral/tmr/plib_tmr.h&quot;<?linebreak?></programlisting>Graphe des dépendances par inclusion de sound.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sound_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_sound_8c_1ae192422e145c52ad9c3ba50aa4546edb">DO3</link>&#160;&#160;&#160;262</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1add6e19af198708317303fa1cb7ebaf62">RE3</link>&#160;&#160;&#160;294</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1aa7459759c2a734f1494bd43fbfacab40">MI3</link>&#160;&#160;&#160;330</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1afbbb9cd828ef1c0f7d24f3a6b11bec0d">FA3</link>&#160;&#160;&#160;349</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1a1420dbb3a0f22282d34d99c9fec81222">SOL3</link>&#160;&#160;&#160;392</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1a912e23de669cf2d59c5628e47aca215d">LA3</link>&#160;&#160;&#160;440</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1ac6e6e28e441220e52edbe68c4652291e">SI3</link>&#160;&#160;&#160;494</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1aa2fdd1de792398877ff8d28f396615cb">DO4</link>&#160;&#160;&#160;523</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1a89a555b83efa6eaea26fc24eedaa67c3">RE4</link>&#160;&#160;&#160;587</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1abe53d6d1a18039d7c4f7f0920bbc268f">MI4</link>&#160;&#160;&#160;659</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1adbb9bb9f03bcc1085e00c8b654725208">FA4</link>&#160;&#160;&#160;699</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1aca960f737d35b31e1b488c0ab6bda239">SOL4</link>&#160;&#160;&#160;784</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1a536842785e024661fb1c067b6079562f">LA4</link>&#160;&#160;&#160;880</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1ae0b25758d2e1eccdb31d47f480af068a">SI4</link>&#160;&#160;&#160;988</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1a702e7a225c27d08523d83651cf23528b">DO5</link>&#160;&#160;&#160;1047</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sound_8c_1ae524c4d251d54dbb994fef263cdb1144">F_TMR_CLK</link>&#160;&#160;&#160;10000000</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Énumérations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</link> { <link linkend="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3">SOUND_STATE_INIT</link> =0
+, <link linkend="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77">SOUND_STATE_IDLE</link>
+, <link linkend="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77">SOUND_STATE_PLAYING</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_sound_8c_1abfc1197699ee0f0bb6e808573dbd3442">SetNote</link> (uint16_t freq)</para>
+</listitem>
+            <listitem><para>void <link linkend="_sound_8c_1afb97318712639efcb061a8772beff2b5">Sound_Init</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_sound_8c_1a01f15a7aed20855a98398cbec33dae27">Sound_Start</link> (const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> *sound)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_sound_8c_1a52a8a79e98a4c19d71f2272745362ac8">Sound_IsIdle</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_sound_8c_1a3efe45f40a4f9449a6c98d402c54f126">Sound_Mgmt</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> <link linkend="_sound_8c_1a606108a523194d1e3bf77903712c56c7">RING</link> [10]</para>
+</listitem>
+            <listitem><para>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> <link linkend="_sound_8c_1a08a79331fdb2876e4b5dc2d4a0dd49db">SUCCESS</link> [10]</para>
+</listitem>
+            <listitem><para>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> <link linkend="_sound_8c_1abf2230f82c8c7ad817c4fa5c3eab0581">ERROR</link> [10]</para>
+</listitem>
+            <listitem><para><link linkend="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</link> <link linkend="_sound_8c_1a2e60788a5beb4d2a92185b63ba8a4051">soundState</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_n_o_t_e__t">NOTE_t</link> * <link linkend="_sound_8c_1aa3052067129958082f91b796e5a591af">currentNotes</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_sound_8c_1aae610989795c731a0a2e0517cda845f4">currentNoteIndex</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_sound_8c_1ae455effeb2d73205f481ae3de3b2c629">currentNoteDuration</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="_sound_8c_1ae192422e145c52ad9c3ba50aa4546edb"/><section>
+    <title>DO3</title>
+<indexterm><primary>DO3</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>DO3</secondary></indexterm>
+<para><computeroutput>#define DO3&#160;&#160;&#160;262</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1aa2fdd1de792398877ff8d28f396615cb"/><section>
+    <title>DO4</title>
+<indexterm><primary>DO4</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>DO4</secondary></indexterm>
+<para><computeroutput>#define DO4&#160;&#160;&#160;523</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a702e7a225c27d08523d83651cf23528b"/><section>
+    <title>DO5</title>
+<indexterm><primary>DO5</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>DO5</secondary></indexterm>
+<para><computeroutput>#define DO5&#160;&#160;&#160;1047</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1ae524c4d251d54dbb994fef263cdb1144"/><section>
+    <title>F_TMR_CLK</title>
+<indexterm><primary>F_TMR_CLK</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>F_TMR_CLK</secondary></indexterm>
+<para><computeroutput>#define F_TMR_CLK&#160;&#160;&#160;10000000</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1afbbb9cd828ef1c0f7d24f3a6b11bec0d"/><section>
+    <title>FA3</title>
+<indexterm><primary>FA3</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>FA3</secondary></indexterm>
+<para><computeroutput>#define FA3&#160;&#160;&#160;349</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1adbb9bb9f03bcc1085e00c8b654725208"/><section>
+    <title>FA4</title>
+<indexterm><primary>FA4</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>FA4</secondary></indexterm>
+<para><computeroutput>#define FA4&#160;&#160;&#160;699</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a912e23de669cf2d59c5628e47aca215d"/><section>
+    <title>LA3</title>
+<indexterm><primary>LA3</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>LA3</secondary></indexterm>
+<para><computeroutput>#define LA3&#160;&#160;&#160;440</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a536842785e024661fb1c067b6079562f"/><section>
+    <title>LA4</title>
+<indexterm><primary>LA4</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>LA4</secondary></indexterm>
+<para><computeroutput>#define LA4&#160;&#160;&#160;880</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1aa7459759c2a734f1494bd43fbfacab40"/><section>
+    <title>MI3</title>
+<indexterm><primary>MI3</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>MI3</secondary></indexterm>
+<para><computeroutput>#define MI3&#160;&#160;&#160;330</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1abe53d6d1a18039d7c4f7f0920bbc268f"/><section>
+    <title>MI4</title>
+<indexterm><primary>MI4</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>MI4</secondary></indexterm>
+<para><computeroutput>#define MI4&#160;&#160;&#160;659</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1add6e19af198708317303fa1cb7ebaf62"/><section>
+    <title>RE3</title>
+<indexterm><primary>RE3</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>RE3</secondary></indexterm>
+<para><computeroutput>#define RE3&#160;&#160;&#160;294</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a89a555b83efa6eaea26fc24eedaa67c3"/><section>
+    <title>RE4</title>
+<indexterm><primary>RE4</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>RE4</secondary></indexterm>
+<para><computeroutput>#define RE4&#160;&#160;&#160;587</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1ac6e6e28e441220e52edbe68c4652291e"/><section>
+    <title>SI3</title>
+<indexterm><primary>SI3</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SI3</secondary></indexterm>
+<para><computeroutput>#define SI3&#160;&#160;&#160;494</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1ae0b25758d2e1eccdb31d47f480af068a"/><section>
+    <title>SI4</title>
+<indexterm><primary>SI4</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SI4</secondary></indexterm>
+<para><computeroutput>#define SI4&#160;&#160;&#160;988</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a1420dbb3a0f22282d34d99c9fec81222"/><section>
+    <title>SOL3</title>
+<indexterm><primary>SOL3</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SOL3</secondary></indexterm>
+<para><computeroutput>#define SOL3&#160;&#160;&#160;392</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1aca960f737d35b31e1b488c0ab6bda239"/><section>
+    <title>SOL4</title>
+<indexterm><primary>SOL4</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SOL4</secondary></indexterm>
+<para><computeroutput>#define SOL4&#160;&#160;&#160;784</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation du type de l&apos;énumération</title>
+<anchor xml:id="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230"/><section>
+    <title>SOUND_STATES</title>
+<indexterm><primary>SOUND_STATES</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SOUND_STATES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs énumérées</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SOUND_STATE_INIT</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SOUND_STATE_INIT</secondary></indexterm>
+<anchor xml:id="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3"/>SOUND_STATE_INIT</entry><entry></entry></row><row><entry><indexterm><primary>SOUND_STATE_IDLE</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SOUND_STATE_IDLE</secondary></indexterm>
+<anchor xml:id="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77"/>SOUND_STATE_IDLE</entry><entry></entry></row><row><entry><indexterm><primary>SOUND_STATE_PLAYING</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SOUND_STATE_PLAYING</secondary></indexterm>
+<anchor xml:id="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77"/>SOUND_STATE_PLAYING</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="_sound_8c_1abfc1197699ee0f0bb6e808573dbd3442"/><section>
+    <title>SetNote()</title>
+<indexterm><primary>SetNote</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SetNote</secondary></indexterm>
+<para><computeroutput>void SetNote (uint16_t freq)</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1afb97318712639efcb061a8772beff2b5"/><section>
+    <title>Sound_Init()</title>
+<indexterm><primary>Sound_Init</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>Sound_Init</secondary></indexterm>
+<para><computeroutput>void Sound_Init (void )</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a52a8a79e98a4c19d71f2272745362ac8"/><section>
+    <title>Sound_IsIdle()</title>
+<indexterm><primary>Sound_IsIdle</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>Sound_IsIdle</secondary></indexterm>
+<para><computeroutput>bool Sound_IsIdle (void )</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a3efe45f40a4f9449a6c98d402c54f126"/><section>
+    <title>Sound_Mgmt()</title>
+<indexterm><primary>Sound_Mgmt</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>Sound_Mgmt</secondary></indexterm>
+<para><computeroutput>void Sound_Mgmt (void )</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a01f15a7aed20855a98398cbec33dae27"/><section>
+    <title>Sound_Start()</title>
+<indexterm><primary>Sound_Start</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>Sound_Start</secondary></indexterm>
+<para><computeroutput>void Sound_Start (const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> * sound)</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="_sound_8c_1ae455effeb2d73205f481ae3de3b2c629"/><section>
+    <title>currentNoteDuration</title>
+<indexterm><primary>currentNoteDuration</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>currentNoteDuration</secondary></indexterm>
+<para><computeroutput>uint16_t currentNoteDuration</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1aae610989795c731a0a2e0517cda845f4"/><section>
+    <title>currentNoteIndex</title>
+<indexterm><primary>currentNoteIndex</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>currentNoteIndex</secondary></indexterm>
+<para><computeroutput>uint16_t currentNoteIndex</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1aa3052067129958082f91b796e5a591af"/><section>
+    <title>currentNotes</title>
+<indexterm><primary>currentNotes</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>currentNotes</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_n_o_t_e__t">NOTE_t</link>* currentNotes</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1abf2230f82c8c7ad817c4fa5c3eab0581"/><section>
+    <title>ERROR</title>
+<indexterm><primary>ERROR</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>ERROR</secondary></indexterm>
+<para><computeroutput>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> ERROR[10]</computeroutput></para><emphasis role="strong">Valeur initiale :</emphasis><programlisting linenumbering="unnumbered">=&#32;
+&#32;&#32;&#32;{{.duration=150,.freq=<link linkend="_sound_8c_1ac6e6e28e441220e52edbe68c4652291e">SI3</link>},
+&#32;&#32;&#32;&#32;{.duration=150,.freq=<link linkend="_sound_8c_1a912e23de669cf2d59c5628e47aca215d">LA3</link>},
+&#32;&#32;&#32;&#32;{.duration=150,.freq=<link linkend="_sound_8c_1a1420dbb3a0f22282d34d99c9fec81222">SOL3</link>},
+&#32;&#32;&#32;&#32;{.duration=150,.freq=<link linkend="_sound_8c_1afbbb9cd828ef1c0f7d24f3a6b11bec0d">FA3</link>},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0}}
+</programlisting></section>
+<anchor xml:id="_sound_8c_1a606108a523194d1e3bf77903712c56c7"/><section>
+    <title>RING</title>
+<indexterm><primary>RING</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>RING</secondary></indexterm>
+<para><computeroutput>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> RING[10]</computeroutput></para><emphasis role="strong">Valeur initiale :</emphasis><programlisting linenumbering="unnumbered">=&#32;
+
+
+
+
+&#32;&#32;&#32;&#32;{{.duration=200,.freq=<link linkend="_sound_8c_1aa2fdd1de792398877ff8d28f396615cb">DO4</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=200,.freq=<link linkend="_sound_8c_1a89a555b83efa6eaea26fc24eedaa67c3">RE4</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=200,.freq=<link linkend="_sound_8c_1abe53d6d1a18039d7c4f7f0920bbc268f">MI4</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=200,.freq=<link linkend="_sound_8c_1adbb9bb9f03bcc1085e00c8b654725208">FA4</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=200,.freq=<link linkend="_sound_8c_1aca960f737d35b31e1b488c0ab6bda239">SOL4</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=200,.freq=<link linkend="_sound_8c_1a536842785e024661fb1c067b6079562f">LA4</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=200,.freq=<link linkend="_sound_8c_1ae0b25758d2e1eccdb31d47f480af068a">SI4</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=1000,.freq=<link linkend="_sound_8c_1a702e7a225c27d08523d83651cf23528b">DO5</link>},
+&#32;&#32;&#32;&#32;&#32;{.duration=0,.freq=0},&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;&#32;{.duration=0,.freq=0}}
+</programlisting></section>
+<anchor xml:id="_sound_8c_1a2e60788a5beb4d2a92185b63ba8a4051"/><section>
+    <title>soundState</title>
+<indexterm><primary>soundState</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>soundState</secondary></indexterm>
+<para><computeroutput><link linkend="_sound_8c_1ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</link> soundState</computeroutput></para></section>
+<anchor xml:id="_sound_8c_1a08a79331fdb2876e4b5dc2d4a0dd49db"/><section>
+    <title>SUCCESS</title>
+<indexterm><primary>SUCCESS</primary><secondary>sound.c</secondary></indexterm>
+<indexterm><primary>sound.c</primary><secondary>SUCCESS</secondary></indexterm>
+<para><computeroutput>const <link linkend="_struct_n_o_t_e__t">NOTE_t</link> SUCCESS[10]</computeroutput></para><emphasis role="strong">Valeur initiale :</emphasis><programlisting linenumbering="unnumbered">=&#32;
+&#32;&#32;&#32;{{.duration=150,.freq=<link linkend="_sound_8c_1afbbb9cd828ef1c0f7d24f3a6b11bec0d">FA3</link>},
+&#32;&#32;&#32;&#32;{.duration=150,.freq=<link linkend="_sound_8c_1a1420dbb3a0f22282d34d99c9fec81222">SOL3</link>},
+&#32;&#32;&#32;&#32;{.duration=150,.freq=<link linkend="_sound_8c_1a912e23de669cf2d59c5628e47aca215d">LA3</link>},
+&#32;&#32;&#32;&#32;{.duration=150,.freq=<link linkend="_sound_8c_1ac6e6e28e441220e52edbe68c4652291e">SI3</link>},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0},
+&#32;&#32;&#32;&#32;{.duration=0,.freq=0}}
+</programlisting></section>
+</section>
+</section>

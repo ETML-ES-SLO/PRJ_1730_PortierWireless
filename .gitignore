@@ -1,0 +1,8 @@
+# dossiers à ne pas prendre en compte sur le dépot git 
+/hard
+/mec
+/soft/Portier_17300A_Page_NON_FINI
+/soft/Portier_17300C_DFA_NON_FINI
+/soft/Portier_17300D_LMS_NON_FINI
+
+# fichiers à ne pas prendre en compte dans le dépôt git 

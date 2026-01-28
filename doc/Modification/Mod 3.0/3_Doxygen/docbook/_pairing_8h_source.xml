@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pairing_8h_source" xml:lang="fr">
+<title>Pairing.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Pairing.h</primary></indexterm>
+Aller à la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*</emphasis>
+2 <emphasis role="comment">&#32;*&#32;Pairing.c</emphasis>
+3 <emphasis role="comment">&#32;*&#32;Gestion&#32;de&#32;l&apos;appairage&#32;Door&#32;/&#32;Bell</emphasis>
+4 <emphasis role="comment">&#32;*&#32;-&#32;Envoi&#32;automatique&#32;des&#32;trames&#32;P0&#32;/&#32;P1&#32;/&#32;A0&#32;/&#32;A1&#32;(non&#32;bloquant)</emphasis>
+5 <emphasis role="comment">&#32;*&#32;-&#32;Reset&#32;d&apos;appairage&#32;par&#32;appui&#32;long&#32;(Door&#32;:&#32;swRing,&#32;Bell&#32;:&#32;trois&#32;boutons)</emphasis>
+6 <emphasis role="comment">&#32;*&#32;-&#32;Sauvegarde&#32;/&#32;lecture&#32;du&#32;numéro&#32;appairé&#32;en&#32;Flash&#32;(Harmony&#32;NVM)</emphasis>
+7 <emphasis role="comment">&#32;*</emphasis>
+8 <emphasis role="comment">&#32;*&#32;MCU&#32;&#32;&#32;&#32;&#32;&#32;:&#32;PIC32MX130F064B</emphasis>
+9 <emphasis role="comment">&#32;*&#32;Outils&#32;&#32;&#32;:&#32;XC32&#32;v2.50,&#32;Harmony&#32;v2_06</emphasis>
+10 <emphasis role="comment">&#32;*&#32;Auteurs&#32;&#32;:&#32;Projet&#32;PortierWireless&#32;LMS</emphasis>
+11 <emphasis role="comment">&#32;*&#32;---------------------------------------------------------------------------</emphasis>
+12 <emphasis role="comment"></emphasis>
+13 <emphasis role="comment">#ifndef&#32;PAIRING_H&#32;//&#32;Protection&#32;contre&#32;l&apos;inclusion&#32;multiple&#32;du&#32;fichier&#32;d&apos;en-tête</emphasis>
+14 <emphasis role="comment">#define&#32;PAIRING_H</emphasis>
+15 <emphasis role="comment"></emphasis>
+16 <emphasis role="comment">#include&#32;&lt;stdint.h&gt;&#32;//&#32;Inclusion&#32;des&#32;définitions&#32;de&#32;types&#32;entiers&#32;standard</emphasis>
+17 <emphasis role="comment">#include&#32;&lt;stdbool.h&gt;&#32;//&#32;Inclusion&#32;du&#32;type&#32;booléen&#32;standard</emphasis>
+18 <emphasis role="comment">/*&#32;===&#32;Constantes&#32;&#32;===&#32;*/</emphasis>
+19 <emphasis role="preprocessor">#define&#32;NVM_SERIAL_BLOCK&#32;&#32;&#32;&#32;&#32;0&#32;</emphasis><emphasis role="comment">//&#32;Bloc&#32;mémoire&#32;NVM&#32;utilisé&#32;pour&#32;le&#32;numéro&#32;de&#32;série</emphasis>
+20 <emphasis role="preprocessor">#define&#32;LONG_PRESS_TICKS&#32;&#32;&#32;&#32;&#32;300&#32;</emphasis><emphasis role="comment">//&#32;Nombre&#32;de&#32;ticks&#32;pour&#32;un&#32;appui&#32;long</emphasis>
+21 
+22 <emphasis role="comment">/*&#32;===&#32;Déclarations&#32;externes&#32;===&#32;*/</emphasis>
+23 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1a19358061a4fa8672c2124d5eb6a6337a">swRing</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;Ring</emphasis>
+24 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1aafadd8f2a2aa59c174b5207f21872f1f">swEnter</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;Enter</emphasis>
+25 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1afdc3fbca7ca6fb08b354d67fea915b56">swWait</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;Wait</emphasis>
+26 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link>&#32;<link linkend="_app_8c_1a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Descripteur&#32;du&#32;bouton&#32;Busy</emphasis>
+27 <emphasis role="keyword">extern</emphasis>&#32;uint32_t&#32;<link linkend="_app_8c_1a360395ccaea62faa622a0c0c94178874">appPairedSerial</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Numéro&#32;de&#32;série&#32;appairé&#32;courant</emphasis>
+28 
+29 <emphasis role="comment">/*&#32;===&#32;Fonctions&#32;publiques&#32;===&#32;*/</emphasis>
+30 
+31 <emphasis role="comment">/*&#32;Accès&#32;au&#32;numéro&#32;de&#32;série&#32;appairé&#32;*/</emphasis>
+32 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;&#32;<link linkend="__pairing_8h_1a41a82ea0c8fd930e94ac47e85fe63a9f">LoadPairedSerialAndApply</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;<emphasis role="comment">//&#32;Charge&#32;le&#32;numéro&#32;appairé&#32;depuis&#32;la&#32;Flash&#32;et&#32;l&apos;applique&#32;en&#32;RAM</emphasis>
+33 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;&#32;<link linkend="__pairing_8h_1a999f66920b36328dacb50c938a7489fe">SavePairedSerialToFlash</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Sauvegarde&#32;le&#32;numéro&#32;appairé&#32;courant&#32;en&#32;mémoire&#32;non-volatile</emphasis>
+34 uint32_t&#32;<link linkend="__pairing_8h_1a4506d7314d14b78da5be4337e662a27d">GetActifSerialNbr</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Retourne&#32;le&#32;numéro&#32;de&#32;série&#32;appairé&#32;actif</emphasis>
+35 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;&#32;<link linkend="__pairing_8h_1af3ec5ee15cd5d7a394e5b8ee8c358797">ResetSerialList</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Réinitialise&#32;la&#32;liste&#32;des&#32;numéros&#32;appairés</emphasis>
+36 
+37 <emphasis role="comment">/*&#32;Automate&#32;d&apos;appairage&#32;complet&#32;*/</emphasis>
+38 uint32_t&#32;<link linkend="__pairing_8h_1a1324e704ec1000118ac29e1f3676edd0">PairingManagement</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Gère&#32;l&apos;automate&#32;d&apos;appairage,&#32;retourne&#32;le&#32;numéro&#32;appairé&#32;(0&#32;si&#32;non&#32;appairé)</emphasis>
+39 
+40 <emphasis role="comment">/*&#32;Reset&#32;d&apos;appairage&#32;(appui&#32;long)&#32;*/</emphasis>
+41 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__pairing_8h_1acdd2b67a818667a69d100766998ba78c">PairingReset_DoorTask</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Gestion&#32;du&#32;reset&#32;d&apos;appairage&#32;côté&#32;Door</emphasis>
+42 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__pairing_8h_1a7f19ab10ec9d1026dcdc496df9c61b31">PairingReset_BellTask</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Gestion&#32;du&#32;reset&#32;d&apos;appairage&#32;côté&#32;Bell</emphasis>
+43 
+44 <emphasis role="comment">/*&#32;Statut&#32;global&#32;du&#32;pairing&#32;*/</emphasis>
+45 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__pairing_8h_1af41ae98dc0c40546ed800bd9ac32ae69">Serial_IsPairingRunning</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Retourne&#32;true&#32;si&#32;l&apos;appairage&#32;est&#32;en&#32;cours</emphasis>
+46 
+47 <emphasis role="comment">/*&#32;Filtrage&#32;&amp;&#32;envoi&#32;de&#32;trames&#32;RF&#32;*/</emphasis>
+48 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__pairing_8h_1adfafc1a1fa1c61ab6ff89e7d352d2817">Serial_CheckIfFromPaired</link>(uint8_t&#32;*msg);&#32;<emphasis role="comment">//&#32;Vérifie&#32;si&#32;la&#32;trame&#32;reçue&#32;provient&#32;du&#32;numéro&#32;appairé</emphasis>
+49 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__pairing_8h_1a4739423aec413aa3c7ee30f30e608154">RF_SendWithSerial</link>(uint8_t&#32;*payload);&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Envoie&#32;une&#32;trame&#32;RF&#32;avec&#32;le&#32;numéro&#32;de&#32;série&#32;appairé</emphasis>
+50 
+51 <emphasis role="comment">/*&#32;Visuel&#32;/&#32;sonore&#32;*/</emphasis>
+52 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__pairing_8h_1a6c8ec47b31a7d1f8503627cc7927dfe2">ShowPairingSuccess</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Indique&#32;le&#32;succès&#32;de&#32;l&apos;appairage&#32;(bip&#32;+&#32;LED&#32;verte)</emphasis>
+53 
+54 <emphasis role="comment">/*&#32;Tests&#32;Flash&#32;(optionnel)&#32;*/</emphasis>
+55 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__pairing_8h_1a26a0b7fcaeb752cf3d85b15b186ae444">TestFlashWriteRead</link>(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Teste&#32;l&apos;écriture/lecture&#32;du&#32;numéro&#32;appairé&#32;en&#32;Flash</emphasis>
+56 
+57 <emphasis role="comment">/*&#32;===&#32;Fonctions&#32;internes&#32;(statics,&#32;à&#32;usage&#32;privé)&#32;===&#32;*/</emphasis>
+58 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SaveSerialHarmony(uint32_t&#32;serial);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Sauvegarde&#32;un&#32;numéro&#32;de&#32;série&#32;en&#32;Flash&#32;(interne)</emphasis>
+59 <emphasis role="keyword">static</emphasis>&#32;uint32_t&#32;LoadSerialHarmony(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Charge&#32;un&#32;numéro&#32;de&#32;série&#32;depuis&#32;la&#32;Flash&#32;(interne)</emphasis>
+60 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;PairingReset_DoReset(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Effectue&#32;le&#32;reset&#32;d&apos;appairage&#32;(interne)</emphasis>
+61 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;RF_SendP0(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Envoie&#32;une&#32;trame&#32;P0&#32;(interne)</emphasis>
+62 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;RF_SendP1(<emphasis role="keywordtype">void</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Envoie&#32;une&#32;trame&#32;P1&#32;(interne)</emphasis>
+63 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;RF_SendA0(uint32_t&#32;serial);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Envoie&#32;une&#32;trame&#32;A0&#32;avec&#32;numéro&#32;de&#32;série&#32;(interne)</emphasis>
+64 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;RF_SendA1(uint32_t&#32;serial);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Envoie&#32;une&#32;trame&#32;A1&#32;avec&#32;numéro&#32;de&#32;série&#32;(interne)</emphasis>
+65 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandlePairingMessage(uint8_t*&#32;msg);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Traite&#32;un&#32;message&#32;d&apos;appairage&#32;(interne)</emphasis>
+66 
+67 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;PAIRING_H&#32;*/</emphasis><emphasis role="preprocessor">&#32;</emphasis><emphasis role="comment">//&#32;Fin&#32;de&#32;la&#32;protection&#32;contre&#32;l&apos;inclusion&#32;multiple</emphasis>
+</programlisting></section>

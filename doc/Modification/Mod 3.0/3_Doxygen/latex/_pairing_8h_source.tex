@@ -1,0 +1,73 @@
+\doxysection{Pairing.\+h}
+\hypertarget{_pairing_8h_source}{}\label{_pairing_8h_source}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Pairing.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Pairing.h}}
+\mbox{\hyperlink{_pairing_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Pairing.c}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Gestion\ de\ l'appairage\ Door\ /\ Bell}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ -\/\ Envoi\ automatique\ des\ trames\ P0\ /\ P1\ /\ A0\ /\ A1\ (non\ bloquant)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ -\/\ Reset\ d'appairage\ par\ appui\ long\ (Door\ :\ swRing,\ Bell\ :\ trois\ boutons)}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ -\/\ Sauvegarde\ /\ lecture\ du\ numéro\ appairé\ en\ Flash\ (Harmony\ NVM)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ MCU\ \ \ \ \ \ :\ PIC32MX130F064B}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ Outils\ \ \ :\ XC32\ v2.50,\ Harmony\ v2\_06}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Auteurs\ \ :\ Projet\ PortierWireless\ LMS}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\#ifndef\ PAIRING\_H\ //\ Protection\ contre\ l'inclusion\ multiple\ du\ fichier\ d'en-\/tête}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\#define\ PAIRING\_H}}
+\DoxyCodeLine{00015\ \textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\#include\ <stdint.h>\ //\ Inclusion\ des\ définitions\ de\ types\ entiers\ standard}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\#include\ <stdbool.h>\ //\ Inclusion\ du\ type\ booléen\ standard}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/*\ ===\ Constantes\ \ ===\ */}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ NVM\_SERIAL\_BLOCK\ \ \ \ \ 0\ }\textcolor{comment}{//\ Bloc\ mémoire\ NVM\ utilisé\ pour\ le\ numéro\ de\ série}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ LONG\_PRESS\_TICKS\ \ \ \ \ 300\ }\textcolor{comment}{//\ Nombre\ de\ ticks\ pour\ un\ appui\ long}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*\ ===\ Déclarations\ externes\ ===\ */}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_a19358061a4fa8672c2124d5eb6a6337a}{swRing}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Descripteur\ du\ bouton\ Ring}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_aafadd8f2a2aa59c174b5207f21872f1f}{swEnter}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Descripteur\ du\ bouton\ Enter}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_afdc3fbca7ca6fb08b354d67fea915b56}{swWait}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Descripteur\ du\ bouton\ Wait}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_a2eb3ac5dc73c685e3beefb74af0e1371}{swBusy}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Descripteur\ du\ bouton\ Busy}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{app_8c_a360395ccaea62faa622a0c0c94178874}{appPairedSerial}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Numéro\ de\ série\ appairé\ courant}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ ===\ Fonctions\ publiques\ ===\ */}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/*\ Accès\ au\ numéro\ de\ série\ appairé\ */}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{_pairing_8h_a41a82ea0c8fd930e94ac47e85fe63a9f}{LoadPairedSerialAndApply}}(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//\ Charge\ le\ numéro\ appairé\ depuis\ la\ Flash\ et\ l'applique\ en\ RAM}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{_pairing_8h_a999f66920b36328dacb50c938a7489fe}{SavePairedSerialToFlash}}(\textcolor{keywordtype}{void});\ \ \ \ \textcolor{comment}{//\ Sauvegarde\ le\ numéro\ appairé\ courant\ en\ mémoire\ non-\/volatile}}
+\DoxyCodeLine{00034\ uint32\_t\ \mbox{\hyperlink{_pairing_8h_a4506d7314d14b78da5be4337e662a27d}{GetActifSerialNbr}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Retourne\ le\ numéro\ de\ série\ appairé\ actif}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \ \ \ \ \mbox{\hyperlink{_pairing_8h_af3ec5ee15cd5d7a394e5b8ee8c358797}{ResetSerialList}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Réinitialise\ la\ liste\ des\ numéros\ appairés}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{/*\ Automate\ d'appairage\ complet\ */}}
+\DoxyCodeLine{00038\ uint32\_t\ \mbox{\hyperlink{_pairing_8h_a1324e704ec1000118ac29e1f3676edd0}{PairingManagement}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gère\ l'automate\ d'appairage,\ retourne\ le\ numéro\ appairé\ (0\ si\ non\ appairé)}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/*\ Reset\ d'appairage\ (appui\ long)\ */}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pairing_8h_acdd2b67a818667a69d100766998ba78c}{PairingReset\_DoorTask}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gestion\ du\ reset\ d'appairage\ côté\ Door}}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pairing_8h_a7f19ab10ec9d1026dcdc496df9c61b31}{PairingReset\_BellTask}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gestion\ du\ reset\ d'appairage\ côté\ Bell}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{/*\ Statut\ global\ du\ pairing\ */}}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_pairing_8h_af41ae98dc0c40546ed800bd9ac32ae69}{Serial\_IsPairingRunning}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Retourne\ true\ si\ l'appairage\ est\ en\ cours}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*\ Filtrage\ \&\ envoi\ de\ trames\ RF\ */}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_pairing_8h_adfafc1a1fa1c61ab6ff89e7d352d2817}{Serial\_CheckIfFromPaired}}(uint8\_t\ *msg);\ \textcolor{comment}{//\ Vérifie\ si\ la\ trame\ reçue\ provient\ du\ numéro\ appairé}}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pairing_8h_a4739423aec413aa3c7ee30f30e608154}{RF\_SendWithSerial}}(uint8\_t\ *payload);\ \ \ \ \textcolor{comment}{//\ Envoie\ une\ trame\ RF\ avec\ le\ numéro\ de\ série\ appairé}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ Visuel\ /\ sonore\ */}}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pairing_8h_a6c8ec47b31a7d1f8503627cc7927dfe2}{ShowPairingSuccess}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Indique\ le\ succès\ de\ l'appairage\ (bip\ +\ LED\ verte)}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ Tests\ Flash\ (optionnel)\ */}}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pairing_8h_a26a0b7fcaeb752cf3d85b15b186ae444}{TestFlashWriteRead}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Teste\ l'écriture/lecture\ du\ numéro\ appairé\ en\ Flash}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ ===\ Fonctions\ internes\ (statics,\ à\ usage\ privé)\ ===\ */}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SaveSerialHarmony(uint32\_t\ serial);\ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarde\ un\ numéro\ de\ série\ en\ Flash\ (interne)}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{static}\ uint32\_t\ LoadSerialHarmony(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Charge\ un\ numéro\ de\ série\ depuis\ la\ Flash\ (interne)}}
+\DoxyCodeLine{00060\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ PairingReset\_DoReset(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Effectue\ le\ reset\ d'appairage\ (interne)}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ RF\_SendP0(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Envoie\ une\ trame\ P0\ (interne)}}
+\DoxyCodeLine{00062\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ RF\_SendP1(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Envoie\ une\ trame\ P1\ (interne)}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ RF\_SendA0(uint32\_t\ serial);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Envoie\ une\ trame\ A0\ avec\ numéro\ de\ série\ (interne)}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ RF\_SendA1(uint32\_t\ serial);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Envoie\ une\ trame\ A1\ avec\ numéro\ de\ série\ (interne)}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ HandlePairingMessage(uint8\_t*\ msg);\ \ \ \ \ \ \textcolor{comment}{//\ Traite\ un\ message\ d'appairage\ (interne)}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ PAIRING\_H\ */}\textcolor{preprocessor}{\ }\textcolor{comment}{//\ Fin\ de\ la\ protection\ contre\ l'inclusion\ multiple}}
+
+\end{DoxyCode}

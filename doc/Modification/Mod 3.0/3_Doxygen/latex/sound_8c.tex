@@ -1,0 +1,342 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/sound.c}
+\hypertarget{sound_8c}{}\label{sound_8c}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/sound.c@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/sound.c}}
+{\ttfamily \#include "{}sound.\+h"{}}\newline
+{\ttfamily \#include "{}peripheral/oc/plib\+\_\+oc.\+h"{}}\newline
+{\ttfamily \#include "{}peripheral/tmr/plib\+\_\+tmr.\+h"{}}\newline
+Graphe des dépendances par inclusion de sound.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sound_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sound_8c_ae192422e145c52ad9c3ba50aa4546edb}{DO3}}~262
+\item 
+\#define \mbox{\hyperlink{sound_8c_add6e19af198708317303fa1cb7ebaf62}{RE3}}~294
+\item 
+\#define \mbox{\hyperlink{sound_8c_aa7459759c2a734f1494bd43fbfacab40}{MI3}}~330
+\item 
+\#define \mbox{\hyperlink{sound_8c_afbbb9cd828ef1c0f7d24f3a6b11bec0d}{FA3}}~349
+\item 
+\#define \mbox{\hyperlink{sound_8c_a1420dbb3a0f22282d34d99c9fec81222}{SOL3}}~392
+\item 
+\#define \mbox{\hyperlink{sound_8c_a912e23de669cf2d59c5628e47aca215d}{LA3}}~440
+\item 
+\#define \mbox{\hyperlink{sound_8c_ac6e6e28e441220e52edbe68c4652291e}{SI3}}~494
+\item 
+\#define \mbox{\hyperlink{sound_8c_aa2fdd1de792398877ff8d28f396615cb}{DO4}}~523
+\item 
+\#define \mbox{\hyperlink{sound_8c_a89a555b83efa6eaea26fc24eedaa67c3}{RE4}}~587
+\item 
+\#define \mbox{\hyperlink{sound_8c_abe53d6d1a18039d7c4f7f0920bbc268f}{MI4}}~659
+\item 
+\#define \mbox{\hyperlink{sound_8c_adbb9bb9f03bcc1085e00c8b654725208}{FA4}}~699
+\item 
+\#define \mbox{\hyperlink{sound_8c_aca960f737d35b31e1b488c0ab6bda239}{SOL4}}~784
+\item 
+\#define \mbox{\hyperlink{sound_8c_a536842785e024661fb1c067b6079562f}{LA4}}~880
+\item 
+\#define \mbox{\hyperlink{sound_8c_ae0b25758d2e1eccdb31d47f480af068a}{SI4}}~988
+\item 
+\#define \mbox{\hyperlink{sound_8c_a702e7a225c27d08523d83651cf23528b}{DO5}}~1047
+\item 
+\#define \mbox{\hyperlink{sound_8c_ae524c4d251d54dbb994fef263cdb1144}{F\+\_\+\+TMR\+\_\+\+CLK}}~10000000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sound_8c_ae47985a44d65711ec02fe25dc0f0d230}{SOUND\+\_\+\+STATES}} \{ \mbox{\hyperlink{sound_8c_ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3}{SOUND\+\_\+\+STATE\+\_\+\+INIT}} =0
+, \mbox{\hyperlink{sound_8c_ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77}{SOUND\+\_\+\+STATE\+\_\+\+IDLE}}
+, \mbox{\hyperlink{sound_8c_ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77}{SOUND\+\_\+\+STATE\+\_\+\+PLAYING}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sound_8c_abfc1197699ee0f0bb6e808573dbd3442}{Set\+Note}} (uint16\+\_\+t freq)
+\item 
+void \mbox{\hyperlink{sound_8c_afb97318712639efcb061a8772beff2b5}{Sound\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{sound_8c_a01f15a7aed20855a98398cbec33dae27}{Sound\+\_\+\+Start}} (const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \texorpdfstring{$\ast$}{*}sound)
+\item 
+bool \mbox{\hyperlink{sound_8c_a52a8a79e98a4c19d71f2272745362ac8}{Sound\+\_\+\+Is\+Idle}} (void)
+\item 
+void \mbox{\hyperlink{sound_8c_a3efe45f40a4f9449a6c98d402c54f126}{Sound\+\_\+\+Mgmt}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \mbox{\hyperlink{sound_8c_a606108a523194d1e3bf77903712c56c7}{RING}} \mbox{[}10\mbox{]}
+\item 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \mbox{\hyperlink{sound_8c_a08a79331fdb2876e4b5dc2d4a0dd49db}{SUCCESS}} \mbox{[}10\mbox{]}
+\item 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \mbox{\hyperlink{sound_8c_abf2230f82c8c7ad817c4fa5c3eab0581}{ERROR}} \mbox{[}10\mbox{]}
+\item 
+\mbox{\hyperlink{sound_8c_ae47985a44d65711ec02fe25dc0f0d230}{SOUND\+\_\+\+STATES}} \mbox{\hyperlink{sound_8c_a2e60788a5beb4d2a92185b63ba8a4051}{sound\+State}}
+\item 
+\mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sound_8c_aa3052067129958082f91b796e5a591af}{current\+Notes}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{sound_8c_aae610989795c731a0a2e0517cda845f4}{current\+Note\+Index}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{sound_8c_ae455effeb2d73205f481ae3de3b2c629}{current\+Note\+Duration}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{sound_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{sound_8c_ae192422e145c52ad9c3ba50aa4546edb}\index{sound.c@{sound.c}!DO3@{DO3}}
+\index{DO3@{DO3}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{DO3}{DO3}}
+{\footnotesize\ttfamily \label{sound_8c_ae192422e145c52ad9c3ba50aa4546edb} 
+\#define DO3~262}
+
+\Hypertarget{sound_8c_aa2fdd1de792398877ff8d28f396615cb}\index{sound.c@{sound.c}!DO4@{DO4}}
+\index{DO4@{DO4}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{DO4}{DO4}}
+{\footnotesize\ttfamily \label{sound_8c_aa2fdd1de792398877ff8d28f396615cb} 
+\#define DO4~523}
+
+\Hypertarget{sound_8c_a702e7a225c27d08523d83651cf23528b}\index{sound.c@{sound.c}!DO5@{DO5}}
+\index{DO5@{DO5}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{DO5}{DO5}}
+{\footnotesize\ttfamily \label{sound_8c_a702e7a225c27d08523d83651cf23528b} 
+\#define DO5~1047}
+
+\Hypertarget{sound_8c_ae524c4d251d54dbb994fef263cdb1144}\index{sound.c@{sound.c}!F\_TMR\_CLK@{F\_TMR\_CLK}}
+\index{F\_TMR\_CLK@{F\_TMR\_CLK}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{F\_TMR\_CLK}{F\_TMR\_CLK}}
+{\footnotesize\ttfamily \label{sound_8c_ae524c4d251d54dbb994fef263cdb1144} 
+\#define F\+\_\+\+TMR\+\_\+\+CLK~10000000}
+
+\Hypertarget{sound_8c_afbbb9cd828ef1c0f7d24f3a6b11bec0d}\index{sound.c@{sound.c}!FA3@{FA3}}
+\index{FA3@{FA3}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{FA3}{FA3}}
+{\footnotesize\ttfamily \label{sound_8c_afbbb9cd828ef1c0f7d24f3a6b11bec0d} 
+\#define FA3~349}
+
+\Hypertarget{sound_8c_adbb9bb9f03bcc1085e00c8b654725208}\index{sound.c@{sound.c}!FA4@{FA4}}
+\index{FA4@{FA4}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{FA4}{FA4}}
+{\footnotesize\ttfamily \label{sound_8c_adbb9bb9f03bcc1085e00c8b654725208} 
+\#define FA4~699}
+
+\Hypertarget{sound_8c_a912e23de669cf2d59c5628e47aca215d}\index{sound.c@{sound.c}!LA3@{LA3}}
+\index{LA3@{LA3}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{LA3}{LA3}}
+{\footnotesize\ttfamily \label{sound_8c_a912e23de669cf2d59c5628e47aca215d} 
+\#define LA3~440}
+
+\Hypertarget{sound_8c_a536842785e024661fb1c067b6079562f}\index{sound.c@{sound.c}!LA4@{LA4}}
+\index{LA4@{LA4}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{LA4}{LA4}}
+{\footnotesize\ttfamily \label{sound_8c_a536842785e024661fb1c067b6079562f} 
+\#define LA4~880}
+
+\Hypertarget{sound_8c_aa7459759c2a734f1494bd43fbfacab40}\index{sound.c@{sound.c}!MI3@{MI3}}
+\index{MI3@{MI3}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{MI3}{MI3}}
+{\footnotesize\ttfamily \label{sound_8c_aa7459759c2a734f1494bd43fbfacab40} 
+\#define MI3~330}
+
+\Hypertarget{sound_8c_abe53d6d1a18039d7c4f7f0920bbc268f}\index{sound.c@{sound.c}!MI4@{MI4}}
+\index{MI4@{MI4}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{MI4}{MI4}}
+{\footnotesize\ttfamily \label{sound_8c_abe53d6d1a18039d7c4f7f0920bbc268f} 
+\#define MI4~659}
+
+\Hypertarget{sound_8c_add6e19af198708317303fa1cb7ebaf62}\index{sound.c@{sound.c}!RE3@{RE3}}
+\index{RE3@{RE3}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{RE3}{RE3}}
+{\footnotesize\ttfamily \label{sound_8c_add6e19af198708317303fa1cb7ebaf62} 
+\#define RE3~294}
+
+\Hypertarget{sound_8c_a89a555b83efa6eaea26fc24eedaa67c3}\index{sound.c@{sound.c}!RE4@{RE4}}
+\index{RE4@{RE4}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{RE4}{RE4}}
+{\footnotesize\ttfamily \label{sound_8c_a89a555b83efa6eaea26fc24eedaa67c3} 
+\#define RE4~587}
+
+\Hypertarget{sound_8c_ac6e6e28e441220e52edbe68c4652291e}\index{sound.c@{sound.c}!SI3@{SI3}}
+\index{SI3@{SI3}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{SI3}{SI3}}
+{\footnotesize\ttfamily \label{sound_8c_ac6e6e28e441220e52edbe68c4652291e} 
+\#define SI3~494}
+
+\Hypertarget{sound_8c_ae0b25758d2e1eccdb31d47f480af068a}\index{sound.c@{sound.c}!SI4@{SI4}}
+\index{SI4@{SI4}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{SI4}{SI4}}
+{\footnotesize\ttfamily \label{sound_8c_ae0b25758d2e1eccdb31d47f480af068a} 
+\#define SI4~988}
+
+\Hypertarget{sound_8c_a1420dbb3a0f22282d34d99c9fec81222}\index{sound.c@{sound.c}!SOL3@{SOL3}}
+\index{SOL3@{SOL3}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{SOL3}{SOL3}}
+{\footnotesize\ttfamily \label{sound_8c_a1420dbb3a0f22282d34d99c9fec81222} 
+\#define SOL3~392}
+
+\Hypertarget{sound_8c_aca960f737d35b31e1b488c0ab6bda239}\index{sound.c@{sound.c}!SOL4@{SOL4}}
+\index{SOL4@{SOL4}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{SOL4}{SOL4}}
+{\footnotesize\ttfamily \label{sound_8c_aca960f737d35b31e1b488c0ab6bda239} 
+\#define SOL4~784}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{sound_8c_doc-enum-members}
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{sound_8c_ae47985a44d65711ec02fe25dc0f0d230}\index{sound.c@{sound.c}!SOUND\_STATES@{SOUND\_STATES}}
+\index{SOUND\_STATES@{SOUND\_STATES}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{SOUND\_STATES}{SOUND\_STATES}}
+{\footnotesize\ttfamily \label{sound_8c_ae47985a44d65711ec02fe25dc0f0d230} 
+enum \mbox{\hyperlink{sound_8c_ae47985a44d65711ec02fe25dc0f0d230}{SOUND\+\_\+\+STATES}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_STATE\_INIT@{SOUND\_STATE\_INIT}!sound.c@{sound.c}}\index{sound.c@{sound.c}!SOUND\_STATE\_INIT@{SOUND\_STATE\_INIT}}}\Hypertarget{sound_8c_ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3}\label{sound_8c_ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3} 
+SOUND\+\_\+\+STATE\+\_\+\+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_STATE\_IDLE@{SOUND\_STATE\_IDLE}!sound.c@{sound.c}}\index{sound.c@{sound.c}!SOUND\_STATE\_IDLE@{SOUND\_STATE\_IDLE}}}\Hypertarget{sound_8c_ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77}\label{sound_8c_ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77} 
+SOUND\+\_\+\+STATE\+\_\+\+IDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_STATE\_PLAYING@{SOUND\_STATE\_PLAYING}!sound.c@{sound.c}}\index{sound.c@{sound.c}!SOUND\_STATE\_PLAYING@{SOUND\_STATE\_PLAYING}}}\Hypertarget{sound_8c_ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77}\label{sound_8c_ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77} 
+SOUND\+\_\+\+STATE\+\_\+\+PLAYING&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{sound_8c_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{sound_8c_abfc1197699ee0f0bb6e808573dbd3442}\index{sound.c@{sound.c}!SetNote@{SetNote}}
+\index{SetNote@{SetNote}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{SetNote()}{SetNote()}}
+{\footnotesize\ttfamily \label{sound_8c_abfc1197699ee0f0bb6e808573dbd3442} 
+void Set\+Note (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{freq}{}\end{DoxyParamCaption})}
+
+\Hypertarget{sound_8c_afb97318712639efcb061a8772beff2b5}\index{sound.c@{sound.c}!Sound\_Init@{Sound\_Init}}
+\index{Sound\_Init@{Sound\_Init}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{Sound\_Init()}{Sound\_Init()}}
+{\footnotesize\ttfamily \label{sound_8c_afb97318712639efcb061a8772beff2b5} 
+void Sound\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{sound_8c_a52a8a79e98a4c19d71f2272745362ac8}\index{sound.c@{sound.c}!Sound\_IsIdle@{Sound\_IsIdle}}
+\index{Sound\_IsIdle@{Sound\_IsIdle}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{Sound\_IsIdle()}{Sound\_IsIdle()}}
+{\footnotesize\ttfamily \label{sound_8c_a52a8a79e98a4c19d71f2272745362ac8} 
+bool Sound\+\_\+\+Is\+Idle (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{sound_8c_a3efe45f40a4f9449a6c98d402c54f126}\index{sound.c@{sound.c}!Sound\_Mgmt@{Sound\_Mgmt}}
+\index{Sound\_Mgmt@{Sound\_Mgmt}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{Sound\_Mgmt()}{Sound\_Mgmt()}}
+{\footnotesize\ttfamily \label{sound_8c_a3efe45f40a4f9449a6c98d402c54f126} 
+void Sound\+\_\+\+Mgmt (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{sound_8c_a01f15a7aed20855a98398cbec33dae27}\index{sound.c@{sound.c}!Sound\_Start@{Sound\_Start}}
+\index{Sound\_Start@{Sound\_Start}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{Sound\_Start()}{Sound\_Start()}}
+{\footnotesize\ttfamily \label{sound_8c_a01f15a7aed20855a98398cbec33dae27} 
+void Sound\+\_\+\+Start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{sound}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{sound_8c_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{sound_8c_ae455effeb2d73205f481ae3de3b2c629}\index{sound.c@{sound.c}!currentNoteDuration@{currentNoteDuration}}
+\index{currentNoteDuration@{currentNoteDuration}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{currentNoteDuration}{currentNoteDuration}}
+{\footnotesize\ttfamily \label{sound_8c_ae455effeb2d73205f481ae3de3b2c629} 
+uint16\+\_\+t current\+Note\+Duration}
+
+\Hypertarget{sound_8c_aae610989795c731a0a2e0517cda845f4}\index{sound.c@{sound.c}!currentNoteIndex@{currentNoteIndex}}
+\index{currentNoteIndex@{currentNoteIndex}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{currentNoteIndex}{currentNoteIndex}}
+{\footnotesize\ttfamily \label{sound_8c_aae610989795c731a0a2e0517cda845f4} 
+uint16\+\_\+t current\+Note\+Index}
+
+\Hypertarget{sound_8c_aa3052067129958082f91b796e5a591af}\index{sound.c@{sound.c}!currentNotes@{currentNotes}}
+\index{currentNotes@{currentNotes}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{currentNotes}{currentNotes}}
+{\footnotesize\ttfamily \label{sound_8c_aa3052067129958082f91b796e5a591af} 
+\mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}}\texorpdfstring{$\ast$}{*} current\+Notes}
+
+\Hypertarget{sound_8c_abf2230f82c8c7ad817c4fa5c3eab0581}\index{sound.c@{sound.c}!ERROR@{ERROR}}
+\index{ERROR@{ERROR}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{ERROR}{ERROR}}
+{\footnotesize\ttfamily \label{sound_8c_abf2230f82c8c7ad817c4fa5c3eab0581} 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} ERROR\mbox{[}10\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{\ \ \ \{\{.duration=150,.freq=\mbox{\hyperlink{sound_8c_ac6e6e28e441220e52edbe68c4652291e}{SI3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=150,.freq=\mbox{\hyperlink{sound_8c_a912e23de669cf2d59c5628e47aca215d}{LA3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=150,.freq=\mbox{\hyperlink{sound_8c_a1420dbb3a0f22282d34d99c9fec81222}{SOL3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=150,.freq=\mbox{\hyperlink{sound_8c_afbbb9cd828ef1c0f7d24f3a6b11bec0d}{FA3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\}\}}
+
+\end{DoxyCode}
+\Hypertarget{sound_8c_a606108a523194d1e3bf77903712c56c7}\index{sound.c@{sound.c}!RING@{RING}}
+\index{RING@{RING}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{RING}{RING}}
+{\footnotesize\ttfamily \label{sound_8c_a606108a523194d1e3bf77903712c56c7} 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} RING\mbox{[}10\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \{\{.duration=200,.freq=\mbox{\hyperlink{sound_8c_aa2fdd1de792398877ff8d28f396615cb}{DO4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=200,.freq=\mbox{\hyperlink{sound_8c_a89a555b83efa6eaea26fc24eedaa67c3}{RE4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=200,.freq=\mbox{\hyperlink{sound_8c_abe53d6d1a18039d7c4f7f0920bbc268f}{MI4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=200,.freq=\mbox{\hyperlink{sound_8c_adbb9bb9f03bcc1085e00c8b654725208}{FA4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=200,.freq=\mbox{\hyperlink{sound_8c_aca960f737d35b31e1b488c0ab6bda239}{SOL4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=200,.freq=\mbox{\hyperlink{sound_8c_a536842785e024661fb1c067b6079562f}{LA4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=200,.freq=\mbox{\hyperlink{sound_8c_ae0b25758d2e1eccdb31d47f480af068a}{SI4}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=1000,.freq=\mbox{\hyperlink{sound_8c_a702e7a225c27d08523d83651cf23528b}{DO5}}\},}
+\DoxyCodeLine{\ \ \ \ \ \{.duration=0,.freq=0\},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \{.duration=0,.freq=0\}\}}
+
+\end{DoxyCode}
+\Hypertarget{sound_8c_a2e60788a5beb4d2a92185b63ba8a4051}\index{sound.c@{sound.c}!soundState@{soundState}}
+\index{soundState@{soundState}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{soundState}{soundState}}
+{\footnotesize\ttfamily \label{sound_8c_a2e60788a5beb4d2a92185b63ba8a4051} 
+\mbox{\hyperlink{sound_8c_ae47985a44d65711ec02fe25dc0f0d230}{SOUND\+\_\+\+STATES}} sound\+State}
+
+\Hypertarget{sound_8c_a08a79331fdb2876e4b5dc2d4a0dd49db}\index{sound.c@{sound.c}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!sound.c@{sound.c}}
+\doxysubsubsection{\texorpdfstring{SUCCESS}{SUCCESS}}
+{\footnotesize\ttfamily \label{sound_8c_a08a79331fdb2876e4b5dc2d4a0dd49db} 
+const \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\+\_\+t}} SUCCESS\mbox{[}10\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{\ \ \ \{\{.duration=150,.freq=\mbox{\hyperlink{sound_8c_afbbb9cd828ef1c0f7d24f3a6b11bec0d}{FA3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=150,.freq=\mbox{\hyperlink{sound_8c_a1420dbb3a0f22282d34d99c9fec81222}{SOL3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=150,.freq=\mbox{\hyperlink{sound_8c_a912e23de669cf2d59c5628e47aca215d}{LA3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=150,.freq=\mbox{\hyperlink{sound_8c_ac6e6e28e441220e52edbe68c4652291e}{SI3}}\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\},}
+\DoxyCodeLine{\ \ \ \ \{.duration=0,.freq=0\}\}}
+
+\end{DoxyCode}

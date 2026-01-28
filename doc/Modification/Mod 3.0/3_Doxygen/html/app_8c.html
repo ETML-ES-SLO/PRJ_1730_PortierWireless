@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless: RÃ©fÃ©rence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un systÃ¨me bidirectionnel basÃ© sur un microcontrÃ´leur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant Ã  un visiteur dâ€™envoyer une requÃªte depuis lâ€™extÃ©rieur via un bouton alimentÃ© par piles, et Ã  lâ€™occupant du bureau de rÃ©pondre par des signaux lumineux et sonores grÃ¢ce Ã  une unitÃ© intÃ©rieure alimentÃ©e en USB, le tout avec appairage sÃ©curisÃ© et gestion autonome de lâ€™Ã©nergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('app_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RÃ©fÃ©rence du fichier app.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="app_8h_source.html">app.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;peripheral/adc/plib_adc.h&quot;</code><br />
+<code>#include &quot;peripheral/reset/plib_reset.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="sound_8h_source.html">sound.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_r_f_8h_source.html">RF.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_pairing_8h_source.html">Pairing.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_management_8h_source.html">management.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dÃ©pendances par inclusion de app.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="app_8c__incl.png" border="0" usemap="#a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2app_8c" loading="lazy" alt=""/></div>
+<map name="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2app_8c" id="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2app_8c">
+<area shape="rect" title=" " alt="" coords="493,5,713,64"/>
+<area shape="rect" href="app_8h.html" title=" " alt="" coords="438,203,491,229"/>
+<area shape="poly" title=" " alt="" coords="492,41,393,48,289,60,241,70,200,82,167,96,145,114,135,129,131,143,133,154,141,165,171,182,215,195,268,204,324,209,422,212,422,218,323,214,267,209,214,200,169,187,137,169,128,157,126,143,130,127,141,110,164,92,198,77,240,65,288,55,392,42,492,36"/>
+<area shape="rect" title=" " alt="" coords="155,120,216,147"/>
+<area shape="poly" title=" " alt="" coords="493,54,365,78,229,115,225,116,223,111,227,109,364,73,492,49"/>
+<area shape="rect" title=" " alt="" coords="240,112,366,155"/>
+<area shape="poly" title=" " alt="" coords="515,67,382,110,380,104,513,62"/>
+<area shape="rect" title=" " alt="" coords="390,112,525,155"/>
+<area shape="poly" title=" " alt="" coords="561,67,503,105,500,101,558,62"/>
+<area shape="rect" href="sound_8h.html" title=" " alt="" coords="811,277,878,304"/>
+<area shape="poly" title=" " alt="" coords="714,49,821,73,864,90,892,110,902,129,906,150,906,171,901,192,885,232,865,266,860,263,880,230,896,191,900,170,901,150,897,131,888,114,862,95,819,78,713,54"/>
+<area shape="rect" href="_r_f_8h.html" title=" " alt="" coords="737,277,786,304"/>
+<area shape="poly" title=" " alt="" coords="632,63,670,110,718,192,752,262,748,264,714,194,666,114,628,66"/>
+<area shape="rect" href="led_8h.html" title=" " alt="" coords="732,120,781,147"/>
+<area shape="poly" title=" " alt="" coords="650,62,725,109,722,114,647,67"/>
+<area shape="rect" href="_pairing_8h.html" title=" " alt="" coords="805,120,878,147"/>
+<area shape="poly" title=" " alt="" coords="676,62,795,110,798,111,796,116,793,114,674,67"/>
+<area shape="rect" href="_management_8h.html" title=" " alt="" coords="549,120,657,147"/>
+<area shape="poly" title=" " alt="" coords="606,64,606,104,600,104,600,64"/>
+<area shape="rect" title=" " alt="" coords="812,352,876,379"/>
+<area shape="poly" title=" " alt="" coords="491,214,582,215,703,221,763,229,818,240,862,255,892,276,899,292,895,310,885,327,872,343,868,339,881,324,890,308,893,293,888,279,860,260,817,245,763,234,703,227,582,220,491,219"/>
+<area shape="rect" title=" " alt="" coords="614,352,688,379"/>
+<area shape="poly" title=" " alt="" coords="467,229,473,265,480,285,492,302,515,322,542,337,599,354,598,359,540,342,512,326,488,306,475,287,468,267,462,230"/>
+<area shape="rect" title=" " alt="" coords="358,277,426,304"/>
+<area shape="poly" title=" " alt="" coords="454,232,417,268,413,264,450,228"/>
+<area shape="rect" title=" " alt="" coords="502,277,565,304"/>
+<area shape="poly" title=" " alt="" coords="478,228,513,264,509,268,474,232"/>
+<area shape="rect" title=" " alt="" coords="51,277,168,304"/>
+<area shape="poly" title=" " alt="" coords="438,225,184,277,183,272,436,220"/>
+<area shape="rect" title=" " alt="" coords="192,277,334,304"/>
+<area shape="poly" title=" " alt="" coords="438,230,313,274,311,269,436,225"/>
+<area shape="rect" href="_mc32_debounce_8h.html" title=" " alt="" coords="589,277,713,304"/>
+<area shape="poly" title=" " alt="" coords="492,225,605,269,603,274,490,230"/>
+<area shape="poly" title=" " alt="" coords="686,302,798,344,797,349,684,307"/>
+<area shape="poly" title=" " alt="" coords="654,305,654,336,648,336,648,305"/>
+<area shape="poly" title=" " alt="" coords="847,305,847,336,842,336,842,305"/>
+<area shape="poly" title=" " alt="" coords="812,307,700,349,698,344,810,302"/>
+<area shape="poly" title=" " alt="" coords="778,303,820,340,817,344,774,307"/>
+<area shape="poly" title=" " alt="" coords="744,307,684,346,681,341,741,302"/>
+<area shape="poly" title=" " alt="" coords="583,149,500,197,497,192,580,145"/>
+<area shape="poly" title=" " alt="" coords="657,139,720,154,791,179,826,197,859,219,889,245,913,276,918,295,911,314,897,331,880,345,877,341,894,327,907,311,913,295,909,279,885,249,856,223,824,202,789,184,718,159,656,145"/>
+<area shape="poly" title=" " alt="" coords="563,150,537,157,445,174,343,182,146,191,70,200,42,208,22,219,11,233,9,251,19,273,41,302,69,316,122,327,279,345,456,355,598,360,598,365,456,360,279,350,122,333,67,321,37,306,14,276,4,251,6,231,18,215,40,203,69,195,146,185,343,177,444,169,536,152,561,145"/>
+<area shape="poly" title=" " alt="" coords="609,147,645,262,640,263,604,148"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a7e7c8f4feb14c804000b17e76f7004ec" id="r_a7e7c8f4feb14c804000b17e76f7004ec"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e7c8f4feb14c804000b17e76f7004ec">ReadBatVoltage</a> (void)</td></tr>
+<tr class="memdesc:a7e7c8f4feb14c804000b17e76f7004ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit la tension mesurée sur l'entrée analogique AN1.  <br /></td></tr>
+<tr class="memitem:aa9a79a5cd86df87ce4b73993a082ffd0" id="r_aa9a79a5cd86df87ce4b73993a082ffd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9a79a5cd86df87ce4b73993a082ffd0">SetDoor</a> (void)</td></tr>
+<tr class="memdesc:aa9a79a5cd86df87ce4b73993a082ffd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détermine si le CPU est à la porte (Door) ou à la sonnette intérieure (Bell).  <br /></td></tr>
+<tr class="memitem:acc9cde7d11cdebdf90dc9f45323376d7" id="r_acc9cde7d11cdebdf90dc9f45323376d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc9cde7d11cdebdf90dc9f45323376d7">APP_UpdateState</a> (<a class="el" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</a> newState)</td></tr>
+<tr class="memdesc:acc9cde7d11cdebdf90dc9f45323376d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met à jour l'état de l'application.  <br /></td></tr>
+<tr class="memitem:a2eddd01dc88b9cfb845ab578cd7510b4" id="r_a2eddd01dc88b9cfb845ab578cd7510b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eddd01dc88b9cfb845ab578cd7510b4">APP_GetIsDoor</a> (void)</td></tr>
+<tr class="memdesc:a2eddd01dc88b9cfb845ab578cd7510b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si l'entité courante est une porte.  <br /></td></tr>
+<tr class="memitem:a59b305aa4f4287d45cbe428f533f84b2" id="r_a59b305aa4f4287d45cbe428f533f84b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59b305aa4f4287d45cbe428f533f84b2">APP_Initialize</a> (void)</td></tr>
+<tr class="memdesc:a59b305aa4f4287d45cbe428f533f84b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise l'application.  <br /></td></tr>
+<tr class="memitem:a859aee46b660cfee47cfd45ce08f6862" id="r_a859aee46b660cfee47cfd45ce08f6862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a859aee46b660cfee47cfd45ce08f6862">APP_Tasks</a> (void)</td></tr>
+<tr class="memdesc:a859aee46b660cfee47cfd45ce08f6862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tâche principale de l'application.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4f18a2543252a3f61342104a531a0f3c" id="r_a4f18a2543252a3f61342104a531a0f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_p_p___d_a_t_a.html">APP_DATA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f18a2543252a3f61342104a531a0f3c">appData</a></td></tr>
+<tr class="memitem:aafadd8f2a2aa59c174b5207f21872f1f" id="r_aafadd8f2a2aa59c174b5207f21872f1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafadd8f2a2aa59c174b5207f21872f1f">swEnter</a></td></tr>
+<tr class="memitem:a2eb3ac5dc73c685e3beefb74af0e1371" id="r_a2eb3ac5dc73c685e3beefb74af0e1371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</a></td></tr>
+<tr class="memitem:a19358061a4fa8672c2124d5eb6a6337a" id="r_a19358061a4fa8672c2124d5eb6a6337a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19358061a4fa8672c2124d5eb6a6337a">swRing</a></td></tr>
+<tr class="memitem:afdc3fbca7ca6fb08b354d67fea915b56" id="r_afdc3fbca7ca6fb08b354d67fea915b56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdc3fbca7ca6fb08b354d67fea915b56">swWait</a></td></tr>
+<tr class="memitem:a360395ccaea62faa622a0c0c94178874" id="r_a360395ccaea62faa622a0c0c94178874"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a360395ccaea62faa622a0c0c94178874">appPairedSerial</a> = 0</td></tr>
+<tr class="memitem:abe3db00054c4c928950612bc69f91b5f" id="r_abe3db00054c4c928950612bc69f91b5f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe3db00054c4c928950612bc69f91b5f">mySerial</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a2eddd01dc88b9cfb845ab578cd7510b4" name="a2eddd01dc88b9cfb845ab578cd7510b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eddd01dc88b9cfb845ab578cd7510b4">&#9670;&#160;</a></span>APP_GetIsDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool APP_GetIsDoor </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si l'entité courante est une porte. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si l'entité est une porte, false sinon.</dd></dl>
+<p>Cette fonction retourne la valeur du champ isDoor de la structure appData. </p>
+
+</div>
+</div>
+<a id="a59b305aa4f4287d45cbe428f533f84b2" name="a59b305aa4f4287d45cbe428f533f84b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b305aa4f4287d45cbe428f533f84b2">&#9670;&#160;</a></span>APP_Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void APP_Initialize </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise l'application. </p>
+<p>Cette fonction configure l'état initial de l'application, initialise les broches matérielles, la logique d'antirebond pour les boutons, ainsi que les périphériques tels que les LEDs, le module sonore et la RF.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a859aee46b660cfee47cfd45ce08f6862" name="a859aee46b660cfee47cfd45ce08f6862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859aee46b660cfee47cfd45ce08f6862">&#9670;&#160;</a></span>APP_Tasks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void APP_Tasks </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tâche principale de l'application. </p>
+<p>Cette fonction gère la machine à états principale de l'application. Elle est appelée de manière répétée dans la boucle principale du programme.</p>
+<dl class="section remark"><dt>Remarques</dt><dd>Voir le prototype dans <a class="el" href="app_8h.html">app.h</a>. </dd></dl>
+
+</div>
+</div>
+<a id="acc9cde7d11cdebdf90dc9f45323376d7" name="acc9cde7d11cdebdf90dc9f45323376d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc9cde7d11cdebdf90dc9f45323376d7">&#9670;&#160;</a></span>APP_UpdateState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void APP_UpdateState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</a></td>          <td class="paramname"><span class="paramname"><em>newState</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Met à jour l'état de l'application. </p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newState</td><td>Le nouvel état à appliquer à l'application.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction assigne la valeur de newState à la variable d'état de l'application. </p>
+
+</div>
+</div>
+<a id="a7e7c8f4feb14c804000b17e76f7004ec" name="a7e7c8f4feb14c804000b17e76f7004ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7c8f4feb14c804000b17e76f7004ec">&#9670;&#160;</a></span>ReadBatVoltage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ReadBatVoltage </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lit la tension mesurée sur l'entrée analogique AN1. </p>
+<p>Cette fonction lit la valeur convertie par l'ADC sur AN1.</p><ul>
+<li>Si le montage est un bouton à la porte, elle retourne la tension de la pile (diviseur résistif 2/3).</li>
+<li>Si c'est une sonnerie distante, elle retourne 0 (pull-down).</li>
+</ul>
+<dl class="section return"><dt>Renvoie</dt><dd>uint16_t Valeur brute ADC mesurée sur AN1. </dd></dl>
+
+</div>
+</div>
+<a id="aa9a79a5cd86df87ce4b73993a082ffd0" name="aa9a79a5cd86df87ce4b73993a082ffd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a79a5cd86df87ce4b73993a082ffd0">&#9670;&#160;</a></span>SetDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDoor </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détermine si le CPU est à la porte (Door) ou à la sonnette intérieure (Bell). </p>
+<p>Cette fonction met à jour le champ appData.isDoor selon la position du CPU. Si le CPU est à la porte (isDoor), elle lit la tension de la pile, met à jour appData.batVoltage (tension pile en mV) et appData.isLowBat (indication de batterie faible).</p>
+<dl class="section note"><dt>Note</dt><dd>Utilise l'ADC pour effectuer les mesures nécessaires. </dd>
+<dd>
+Désactive l'ADC à la fin pour économiser la batterie. </dd></dl>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a4f18a2543252a3f61342104a531a0f3c" name="a4f18a2543252a3f61342104a531a0f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f18a2543252a3f61342104a531a0f3c">&#9670;&#160;</a></span>appData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_a_p_p___d_a_t_a.html">APP_DATA</a> appData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a360395ccaea62faa622a0c0c94178874" name="a360395ccaea62faa622a0c0c94178874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360395ccaea62faa622a0c0c94178874">&#9670;&#160;</a></span>appPairedSerial</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t appPairedSerial = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe3db00054c4c928950612bc69f91b5f" name="abe3db00054c4c928950612bc69f91b5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3db00054c4c928950612bc69f91b5f">&#9670;&#160;</a></span>mySerial</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t mySerial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2eb3ac5dc73c685e3beefb74af0e1371" name="a2eb3ac5dc73c685e3beefb74af0e1371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eb3ac5dc73c685e3beefb74af0e1371">&#9670;&#160;</a></span>swBusy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swBusy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafadd8f2a2aa59c174b5207f21872f1f" name="aafadd8f2a2aa59c174b5207f21872f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafadd8f2a2aa59c174b5207f21872f1f">&#9670;&#160;</a></span>swEnter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swEnter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19358061a4fa8672c2124d5eb6a6337a" name="a19358061a4fa8672c2124d5eb6a6337a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19358061a4fa8672c2124d5eb6a6337a">&#9670;&#160;</a></span>swRing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swRing</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdc3fbca7ca6fb08b354d67fea915b56" name="afdc3fbca7ca6fb08b354d67fea915b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc3fbca7ca6fb08b354d67fea915b56">&#9670;&#160;</a></span>swWait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> swWait</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="app_8c.html">app.c</a></li>
+    <li class="footer">GÃ©nÃ©rÃ© par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

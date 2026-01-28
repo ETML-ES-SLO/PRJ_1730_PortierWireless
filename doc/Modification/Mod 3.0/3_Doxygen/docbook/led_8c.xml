@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_led_8c" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/led.c</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/led.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;led.h&quot;<?linebreak?>#include &lt;stdint.h&gt;<?linebreak?>#include &lt;xc.h&gt;<?linebreak?>#include &lt;stdbool.h&gt;<?linebreak?></programlisting>Graphe des dépendances par inclusion de led.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="led_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_led_8c_1a3641b8d2bb3a9ab7cf0ec3763c3d9be7">NUMBER_OF_LEDS</link>&#160;&#160;&#160;3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_led_8c_1afba7dc80bfaebd77c54bf83499fb3339">LED_ON</link>(led_Id)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_led_8c_1a9815ae3bf5da5267ebc9a65c88658e49">LED_OFF</link>(led_Id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Énumérations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</link> { <link linkend="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4">LED_STATE_INIT</link> =0
+, <link linkend="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536">LED_STATE_IDLE</link>
+, <link linkend="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8">LED_STATE_ACTIVE</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_led_8c_1af1aee968a5ceeb7915921aa6d78aca23">Led_Init</link> (void)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_led_8c_1a607253bf00dfaedea959638c19a569db">Led_CheckBlink</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8c_1a872055749870075db47e189ccbd99c8d">Led_SetMode</link> (<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link> led_Id, <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link> led_Mode)</para>
+</listitem>
+            <listitem><para>void <link linkend="_led_8c_1aeafd9e2cc02fe833c950ca8c15f881c8">Led_Mgmt</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</link> <link linkend="_led_8c_1a3046d1ad083ffc50610e0721cde971dd">ledState</link></para>
+</listitem>
+            <listitem><para><link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link> <link linkend="_led_8c_1a729aad414e72b412b98aed5b283db6a3">ledModes</link> [<link linkend="_led_8c_1a3641b8d2bb3a9ab7cf0ec3763c3d9be7">NUMBER_OF_LEDS</link>]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="_led_8c_1a9815ae3bf5da5267ebc9a65c88658e49"/><section>
+    <title>LED_OFF</title>
+<indexterm><primary>LED_OFF</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_OFF</secondary></indexterm>
+<para><computeroutput>#define LED_OFF( led_Id)</computeroutput></para><emphasis role="strong">Valeur :</emphasis><programlisting linenumbering="unnumbered">{LATBCLR&#32;=&#32;1&lt;&lt;(led_Id+4);}
+</programlisting></section>
+<anchor xml:id="_led_8c_1afba7dc80bfaebd77c54bf83499fb3339"/><section>
+    <title>LED_ON</title>
+<indexterm><primary>LED_ON</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_ON</secondary></indexterm>
+<para><computeroutput>#define LED_ON( led_Id)</computeroutput></para><emphasis role="strong">Valeur :</emphasis><programlisting linenumbering="unnumbered">{LATBSET&#32;=&#32;1&lt;&lt;(led_Id+4);}
+</programlisting></section>
+<anchor xml:id="_led_8c_1a3641b8d2bb3a9ab7cf0ec3763c3d9be7"/><section>
+    <title>NUMBER_OF_LEDS</title>
+<indexterm><primary>NUMBER_OF_LEDS</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>NUMBER_OF_LEDS</secondary></indexterm>
+<para><computeroutput>#define NUMBER_OF_LEDS&#160;&#160;&#160;3</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation du type de l&apos;énumération</title>
+<anchor xml:id="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3"/><section>
+    <title>LED_STATES</title>
+<indexterm><primary>LED_STATES</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_STATES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs énumérées</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LED_STATE_INIT</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_STATE_INIT</secondary></indexterm>
+<anchor xml:id="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4"/>LED_STATE_INIT</entry><entry></entry></row><row><entry><indexterm><primary>LED_STATE_IDLE</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_STATE_IDLE</secondary></indexterm>
+<anchor xml:id="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536"/>LED_STATE_IDLE</entry><entry></entry></row><row><entry><indexterm><primary>LED_STATE_ACTIVE</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>LED_STATE_ACTIVE</secondary></indexterm>
+<anchor xml:id="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8"/>LED_STATE_ACTIVE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="_led_8c_1a607253bf00dfaedea959638c19a569db"/><section>
+    <title>Led_CheckBlink()</title>
+<indexterm><primary>Led_CheckBlink</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>Led_CheckBlink</secondary></indexterm>
+<para><computeroutput>bool Led_CheckBlink ( )</computeroutput></para></section>
+<anchor xml:id="_led_8c_1af1aee968a5ceeb7915921aa6d78aca23"/><section>
+    <title>Led_Init()</title>
+<indexterm><primary>Led_Init</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>Led_Init</secondary></indexterm>
+<para><computeroutput>void Led_Init (void )</computeroutput></para></section>
+<anchor xml:id="_led_8c_1aeafd9e2cc02fe833c950ca8c15f881c8"/><section>
+    <title>Led_Mgmt()</title>
+<indexterm><primary>Led_Mgmt</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>Led_Mgmt</secondary></indexterm>
+<para><computeroutput>void Led_Mgmt (void )</computeroutput></para></section>
+<anchor xml:id="_led_8c_1a872055749870075db47e189ccbd99c8d"/><section>
+    <title>Led_SetMode()</title>
+<indexterm><primary>Led_SetMode</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>Led_SetMode</secondary></indexterm>
+<para><computeroutput>void Led_SetMode (<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link> led_Id, <link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link> led_Mode)</computeroutput></para></section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="_led_8c_1a729aad414e72b412b98aed5b283db6a3"/><section>
+    <title>ledModes</title>
+<indexterm><primary>ledModes</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>ledModes</secondary></indexterm>
+<para><computeroutput><link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link> ledModes[<link linkend="_led_8c_1a3641b8d2bb3a9ab7cf0ec3763c3d9be7">NUMBER_OF_LEDS</link>]</computeroutput></para></section>
+<anchor xml:id="_led_8c_1a3046d1ad083ffc50610e0721cde971dd"/><section>
+    <title>ledState</title>
+<indexterm><primary>ledState</primary><secondary>led.c</secondary></indexterm>
+<indexterm><primary>led.c</primary><secondary>ledState</secondary></indexterm>
+<para><computeroutput><link linkend="_led_8c_1ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</link> ledState</computeroutput></para></section>
+</section>
+</section>

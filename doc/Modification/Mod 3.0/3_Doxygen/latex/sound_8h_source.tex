@@ -1,0 +1,50 @@
+\doxysection{sound.\+h}
+\hypertarget{sound_8h_source}{}\label{sound_8h_source}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/sound.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/sound.h}}
+\mbox{\hyperlink{sound_8h}{Aller Ã  la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ sound.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Gestion\ mélodies\ sur\ haut-\/parleur\ portier\ électronique\ (1730)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Description\ :\ HP\ branché sur\ RB15\ (OC1)\ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ Auteur\ \ \ \ \ \ :\ \ \ SCA}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Date\ \ \ \ \ \ \ \ :\ \ \ 26.11.2019}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ Version\ \ \ \ \ :\ \ \ V1.0}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ Compilateur\ :\ \ \ XC32\ V2.15}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ Modifications\ :}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ -\/}}
+\DoxyCodeLine{00013\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ \_SOUND\_H\ \ \ \ }\textcolor{comment}{/*\ Guard\ against\ multiple\ inclusion\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ \_SOUND\_H}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00023\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_n_o_t_e__t_acf02911153e30b51921cf85d64e2834f}{duration}};\ \textcolor{comment}{//duree\ de\ la\ note\ en\ ms}}
+\DoxyCodeLine{00024\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_n_o_t_e__t_a8020b2a52fdcef042fff1bd71fe16dc5}{freq}};\ \ \ \ \ \textcolor{comment}{//freq\ de\ la\ note\ en\ Hz}}
+\DoxyCodeLine{00025\ \}\ \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\_t}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\_t}}\ \mbox{\hyperlink{sound_8c_a606108a523194d1e3bf77903712c56c7}{RING}}[];}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\_t}}\ \mbox{\hyperlink{sound_8c_a08a79331fdb2876e4b5dc2d4a0dd49db}{SUCCESS}}[];}
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\_t}}\ \mbox{\hyperlink{sound_8c_abf2230f82c8c7ad817c4fa5c3eab0581}{ERROR}}[];}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{/*\ **************************************************************************\ */}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sound_8h_afb97318712639efcb061a8772beff2b5}{Sound\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sound_8h_a01f15a7aed20855a98398cbec33dae27}{Sound\_Start}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_n_o_t_e__t}{NOTE\_t}}*\ sound);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sound_8h_a52a8a79e98a4c19d71f2272745362ac8}{Sound\_IsIdle}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sound_8h_a3efe45f40a4f9449a6c98d402c54f126}{Sound\_Mgmt}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SOUND\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/*\ *****************************************************************************}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ End\ of\ File}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ */}}
+
+\end{DoxyCode}

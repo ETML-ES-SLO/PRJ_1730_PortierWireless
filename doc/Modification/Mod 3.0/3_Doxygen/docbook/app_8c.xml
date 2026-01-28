@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_app_8c" xml:lang="fr">
+<title>RÃ©fÃ©rence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.c</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;app.h&quot;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &quot;peripheral/adc/plib_adc.h&quot;<?linebreak?>#include &quot;peripheral/reset/plib_reset.h&quot;<?linebreak?>#include &quot;sound.h&quot;<?linebreak?>#include &quot;RF.h&quot;<?linebreak?>#include &quot;led.h&quot;<?linebreak?>#include &quot;Pairing.h&quot;<?linebreak?>#include &quot;management.h&quot;<?linebreak?></programlisting>Graphe des dÃ©pendances par inclusion de app.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="app_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_app_8c_1a7e7c8f4feb14c804000b17e76f7004ec">ReadBatVoltage</link> (void)</para>
+
+<para>Lit la tension mesurée sur l&apos;entrée analogique AN1. </para>
+</listitem>
+            <listitem><para>void <link linkend="_app_8c_1aa9a79a5cd86df87ce4b73993a082ffd0">SetDoor</link> (void)</para>
+
+<para>Détermine si le CPU est à la porte (Door) ou à la sonnette intérieure (Bell). </para>
+</listitem>
+            <listitem><para>void <link linkend="_app_8c_1acc9cde7d11cdebdf90dc9f45323376d7">APP_UpdateState</link> (<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link> newState)</para>
+
+<para>Met à jour l&apos;état de l&apos;application. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_app_8c_1a2eddd01dc88b9cfb845ab578cd7510b4">APP_GetIsDoor</link> (void)</para>
+
+<para>Vérifie si l&apos;entité courante est une porte. </para>
+</listitem>
+            <listitem><para>void <link linkend="_app_8c_1a59b305aa4f4287d45cbe428f533f84b2">APP_Initialize</link> (void)</para>
+
+<para>Initialise l&apos;application. </para>
+</listitem>
+            <listitem><para>void <link linkend="_app_8c_1a859aee46b660cfee47cfd45ce08f6862">APP_Tasks</link> (void)</para>
+
+<para>Tâche principale de l&apos;application. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link> <link linkend="_app_8c_1a4f18a2543252a3f61342104a531a0f3c">appData</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8c_1aafadd8f2a2aa59c174b5207f21872f1f">swEnter</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8c_1a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8c_1a19358061a4fa8672c2124d5eb6a6337a">swRing</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="_app_8c_1afdc3fbca7ca6fb08b354d67fea915b56">swWait</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_app_8c_1a360395ccaea62faa622a0c0c94178874">appPairedSerial</link> = 0</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_app_8c_1abe3db00054c4c928950612bc69f91b5f">mySerial</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="_app_8c_1a2eddd01dc88b9cfb845ab578cd7510b4"/><section>
+    <title>APP_GetIsDoor()</title>
+<indexterm><primary>APP_GetIsDoor</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>APP_GetIsDoor</secondary></indexterm>
+<para><computeroutput>bool APP_GetIsDoor (void )</computeroutput></para><para>
+
+<para>Vérifie si l&apos;entité courante est une porte. </para>
+</para>
+
+<para><formalpara><title>Renvoie</title>
+
+<para>true si l&apos;entité est une porte, false sinon.</para>
+</formalpara>
+Cette fonction retourne la valeur du champ isDoor de la structure appData. </para>
+</section>
+<anchor xml:id="_app_8c_1a59b305aa4f4287d45cbe428f533f84b2"/><section>
+    <title>APP_Initialize()</title>
+<indexterm><primary>APP_Initialize</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>APP_Initialize</secondary></indexterm>
+<para><computeroutput>void APP_Initialize (void )</computeroutput></para><para>
+
+<para>Initialise l&apos;application. </para>
+</para>
+
+<para>Cette fonction configure l&apos;état initial de l&apos;application, initialise les broches matérielles, la logique d&apos;antirebond pour les boutons, ainsi que les périphériques tels que les LEDs, le module sonore et la RF.</para>
+
+<para><formalpara><title>Renvoie</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_app_8c_1a859aee46b660cfee47cfd45ce08f6862"/><section>
+    <title>APP_Tasks()</title>
+<indexterm><primary>APP_Tasks</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>APP_Tasks</secondary></indexterm>
+<para><computeroutput>void APP_Tasks (void )</computeroutput></para><para>
+
+<para>Tâche principale de l&apos;application. </para>
+</para>
+
+<para>Cette fonction gère la machine à états principale de l&apos;application. Elle est appelée de manière répétée dans la boucle principale du programme.</para>
+
+<para><formalpara><title>Remarques</title>
+
+<para>Voir le prototype dans <link linkend="_app_8h">app.h</link>. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_app_8c_1acc9cde7d11cdebdf90dc9f45323376d7"/><section>
+    <title>APP_UpdateState()</title>
+<indexterm><primary>APP_UpdateState</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>APP_UpdateState</secondary></indexterm>
+<para><computeroutput>void APP_UpdateState (<link linkend="_app_8h_1ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</link> newState)</computeroutput></para><para>
+
+<para>Met à jour l&apos;état de l&apos;application. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+ParamÃ¨tres</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newState</entry><entry>
+<para>Le nouvel état à appliquer à l&apos;application.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Cette fonction assigne la valeur de newState à la variable d&apos;état de l&apos;application. </para>
+</section>
+<anchor xml:id="_app_8c_1a7e7c8f4feb14c804000b17e76f7004ec"/><section>
+    <title>ReadBatVoltage()</title>
+<indexterm><primary>ReadBatVoltage</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>ReadBatVoltage</secondary></indexterm>
+<para><computeroutput>uint16_t ReadBatVoltage (void )</computeroutput></para><para>
+
+<para>Lit la tension mesurée sur l&apos;entrée analogique AN1. </para>
+</para>
+
+<para>Cette fonction lit la valeur convertie par l&apos;ADC sur AN1.<itemizedlist>
+<listitem>
+<para>Si le montage est un bouton à la porte, elle retourne la tension de la pile (diviseur résistif 2/3).</para>
+</listitem><listitem>
+<para>Si c&apos;est une sonnerie distante, elle retourne 0 (pull-down).</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Renvoie</title>
+
+<para>uint16_t Valeur brute ADC mesurée sur AN1. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_app_8c_1aa9a79a5cd86df87ce4b73993a082ffd0"/><section>
+    <title>SetDoor()</title>
+<indexterm><primary>SetDoor</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>SetDoor</secondary></indexterm>
+<para><computeroutput>void SetDoor (void )</computeroutput></para><para>
+
+<para>Détermine si le CPU est à la porte (Door) ou à la sonnette intérieure (Bell). </para>
+</para>
+
+<para>Cette fonction met à jour le champ appData.isDoor selon la position du CPU. Si le CPU est à la porte (isDoor), elle lit la tension de la pile, met à jour appData.batVoltage (tension pile en mV) et appData.isLowBat (indication de batterie faible).</para>
+
+<para><note><title>Note</title>
+
+<para>Utilise l&apos;ADC pour effectuer les mesures nécessaires. </para>
+
+<para>Désactive l&apos;ADC à la fin pour économiser la batterie. </para>
+</note>
+</para>
+</section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="_app_8c_1a4f18a2543252a3f61342104a531a0f3c"/><section>
+    <title>appData</title>
+<indexterm><primary>appData</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>appData</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link> appData</computeroutput></para></section>
+<anchor xml:id="_app_8c_1a360395ccaea62faa622a0c0c94178874"/><section>
+    <title>appPairedSerial</title>
+<indexterm><primary>appPairedSerial</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>appPairedSerial</secondary></indexterm>
+<para><computeroutput>uint32_t appPairedSerial = 0</computeroutput></para></section>
+<anchor xml:id="_app_8c_1abe3db00054c4c928950612bc69f91b5f"/><section>
+    <title>mySerial</title>
+<indexterm><primary>mySerial</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>mySerial</secondary></indexterm>
+<para><computeroutput>uint32_t mySerial<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_app_8c_1a2eb3ac5dc73c685e3beefb74af0e1371"/><section>
+    <title>swBusy</title>
+<indexterm><primary>swBusy</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>swBusy</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swBusy</computeroutput></para></section>
+<anchor xml:id="_app_8c_1aafadd8f2a2aa59c174b5207f21872f1f"/><section>
+    <title>swEnter</title>
+<indexterm><primary>swEnter</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>swEnter</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swEnter</computeroutput></para></section>
+<anchor xml:id="_app_8c_1a19358061a4fa8672c2124d5eb6a6337a"/><section>
+    <title>swRing</title>
+<indexterm><primary>swRing</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>swRing</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swRing</computeroutput></para></section>
+<anchor xml:id="_app_8c_1afdc3fbca7ca6fb08b354d67fea915b56"/><section>
+    <title>swWait</title>
+<indexterm><primary>swWait</primary><secondary>app.c</secondary></indexterm>
+<indexterm><primary>app.c</primary><secondary>swWait</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swWait</computeroutput></para></section>
+</section>
+</section>

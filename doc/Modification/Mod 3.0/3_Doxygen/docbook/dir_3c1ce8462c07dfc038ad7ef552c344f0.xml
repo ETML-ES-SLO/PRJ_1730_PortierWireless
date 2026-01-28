@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_3c1ce8462c07dfc038ad7ef552c344f0" xml:lang="fr">
+<title>Répertoire de référence de C:/microchip/harmony/v2_06</title>
+<indexterm><primary>Répertoire de référence de C:/microchip/harmony/v2_06</primary></indexterm>
+Graphe des dépendances de répertoires pour v2_06:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_3c1ce8462c07dfc038ad7ef552c344f0_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Répertoires    </title>
+        <itemizedlist>
+            <listitem><para>répertoire <link linkend="_dir_580ddd0237585ac315b4ef98a15174fa">apps</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

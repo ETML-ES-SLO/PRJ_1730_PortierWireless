@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless:  Fichier source de C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/app.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un système bidirectionnel basé sur un microcontrôleur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant à un visiteur d’envoyer une requête depuis l’extérieur via un bouton alimenté par piles, et à l’occupant du bureau de répondre par des signaux lumineux et sonores grâce à une unité intérieure alimentée en USB, le tout avec appairage sécurisé et gestion autonome de l’énergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('app_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">app.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="app_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">  MPLAB Harmony Application Header File</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">  Company:</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">    Microchip Technology Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"></span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">  File Name:</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    app.h</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"></span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">  Summary:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">    This header file provides prototypes and definitions for the application.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">  Description:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">    This header file provides function prototypes and data type definitions for</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">    the application.  Some of these are required by the system (such as the</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">    &quot;APP_Initialize&quot; and &quot;APP_Tasks&quot; prototypes) and some of them are only used</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">    internally by the application (such as the &quot;APP_STATES&quot; definition).  Both</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">    are defined here for convenience.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//DOM-IGNORE-BEGIN</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">Copyright (c) 2013-2014 released Microchip Technology Inc.  All rights reserved.</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"></span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">Microchip licenses to you the right to use, modify, copy and distribute</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">Software only when embedded on a Microchip microcontroller or digital signal</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">controller that is integrated into your product or third party product</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">(pursuant to the sublicense terms in the accompanying license agreement).</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"></span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">You should refer to the license agreement accompanying this Software for</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">additional information regarding your rights and obligations.</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">SOFTWARE AND DOCUMENTATION ARE PROVIDED &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND,</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">IN NO EVENT SHALL MICROCHIP OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">CONTRACT, NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">OTHER LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT OF</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">(INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> *******************************************************************************/</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//DOM-IGNORE-END</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#ifndef _APP_H</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define _APP_H</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// Section : Fichiers inclus</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &lt;stdint.h&gt;</span>             <span class="comment">// Types entiers standards</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span>            <span class="comment">// Type booléen</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &lt;stddef.h&gt;</span>             <span class="comment">// Définitions de taille</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span>             <span class="comment">// Fonctions utilitaires générales</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &quot;system_config.h&quot;</span>      <span class="comment">// Configuration système</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &quot;system_definitions.h&quot;</span> <span class="comment">// Définitions système</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &quot;<a class="code" href="_mc32_debounce_8h.html">Mc32Debounce.h</a>&quot;</span>       <span class="comment">// Gestion anti-rebond pour boutons</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// DOM-IGNORE-BEGIN</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#ifdef __cplusplus              </span><span class="comment">// Pour compatibilité C++</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// DOM-IGNORE-END</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// Section : Définitions de types</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// Enumération des états de l&#39;application</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// *****************************************************************************</span></div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="};">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871">   74</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871aee72936f6dda86ada3946d7c937a2297">   76</a></span>  <a class="code hl_enumvalue" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871aee72936f6dda86ada3946d7c937a2297">APP_STATE_INIT</a> = 0,         <span class="comment">// État initial de l&#39;application</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871a4a2d007c2bbd7b136d1a6c587e536c89">   77</a></span>  <a class="code hl_enumvalue" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871a4a2d007c2bbd7b136d1a6c587e536c89">APP_STATE_WAIT</a>,             <span class="comment">// Attente d&#39;un événement</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871a92f04718da45a34c069d899c657d1ac5">   78</a></span>  <a class="code hl_enumvalue" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871a92f04718da45a34c069d899c657d1ac5">APP_STATE_SERVICE_TASKS</a>     <span class="comment">// Exécution des tâches de service</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <a class="code hl_enumeration" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</a>;</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// Structure des données de l&#39;application</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="app_8h.html#a6e6123365d9c53fa6c846def98dd72b9">   84</a></span><span class="preprocessor">#define LOWBAT_THRESHOLD 2400   </span><span class="comment">// Seuil de batterie faible (2.4V)</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="};">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="struct_a_p_p___d_a_t_a.html">   86</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>{</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="struct_a_p_p___d_a_t_a.html#abbc3c9d5e3194848346e986069b88f44">   88</a></span>  <a class="code hl_enumeration" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</a> <a class="code hl_variable" href="struct_a_p_p___d_a_t_a.html#abbc3c9d5e3194848346e986069b88f44">state</a>;           <span class="comment">// État courant de l&#39;application</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="struct_a_p_p___d_a_t_a.html#a94a5120b269e0c87b27dfc08f6f605f1">   89</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_a_p_p___d_a_t_a.html#a94a5120b269e0c87b27dfc08f6f605f1">isDoor</a>;                <span class="comment">// Indique si la porte est détectée</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_a_p_p___d_a_t_a.html#ae27cb41b32b95348d22f6815b7360b15">   90</a></span>  uint16_t <a class="code hl_variable" href="struct_a_p_p___d_a_t_a.html#ae27cb41b32b95348d22f6815b7360b15">batVoltage</a>;        <span class="comment">// Tension de la batterie</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="struct_a_p_p___d_a_t_a.html#a4da832e05e9b553c5b9bb0393b093e91">   91</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_a_p_p___d_a_t_a.html#a4da832e05e9b553c5b9bb0393b093e91">isLowBat</a>;              <span class="comment">// Indique si la batterie est faible</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>} <a class="code hl_struct" href="struct_a_p_p___d_a_t_a.html">APP_DATA</a>;</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">// Déclarations externes des descripteurs de boutons</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#a19358061a4fa8672c2124d5eb6a6337a">swRing</a>;   <span class="comment">// Descripteur du bouton de sonnette</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#aafadd8f2a2aa59c174b5207f21872f1f">swEnter</a>;  <span class="comment">// Descripteur du bouton d&#39;entrée</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#afdc3fbca7ca6fb08b354d67fea915b56">swWait</a>;   <span class="comment">// Descripteur du bouton d&#39;attente</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a> <a class="code hl_variable" href="app_8c.html#a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</a>;   <span class="comment">// Descripteur du bouton d&#39;occupation</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">// Section : Prototypes des fonctions de l&#39;application</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">  Fonction : void APP_Initialize(void)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">  Initialise l&#39;application Harmony, place dans l&#39;état initial.</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">void</span> <a class="code hl_function" href="app_8h.html#a59b305aa4f4287d45cbe428f533f84b2">APP_Initialize</a>(<span class="keywordtype">void</span>);      <span class="comment">// Initialise l&#39;application</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">  Fonction : void APP_Tasks(void)</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">  Machine à états principale de l&#39;application Harmony.</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> <a class="code hl_function" href="app_8h.html#a859aee46b660cfee47cfd45ce08f6862">APP_Tasks</a>(<span class="keywordtype">void</span>);           <span class="comment">// Exécute les tâches de l&#39;application</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">  Fonction : void APP_UpdateState(APP_STATES newState)</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">  Met à jour l&#39;état de l&#39;application.</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> <a class="code hl_function" href="app_8h.html#acc9cde7d11cdebdf90dc9f45323376d7">APP_UpdateState</a>(<a class="code hl_enumeration" href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</a> newState); <span class="comment">// Met à jour l&#39;état</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">  Fonction : bool APP_GetIsDoor(void)</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">  Retourne l&#39;état de détection de la porte.</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">*******************************************************************************/</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keywordtype">bool</span> <a class="code hl_function" href="app_8h.html#a2eddd01dc88b9cfb845ab578cd7510b4">APP_GetIsDoor</a>(<span class="keywordtype">void</span>);       <span class="comment">// Retourne si la porte est détectée</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">// Fin des définitions externes et compatibilité C++</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">// *****************************************************************************</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">  Fin du fichier</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">*******************************************************************************/</span></div>
+<div class="ttc" id="a_mc32_debounce_8h_html"><div class="ttname"><a href="_mc32_debounce_8h.html">Mc32Debounce.h</a></div></div>
+<div class="ttc" id="aapp_8c_html_a19358061a4fa8672c2124d5eb6a6337a"><div class="ttname"><a href="app_8c.html#a19358061a4fa8672c2124d5eb6a6337a">swRing</a></div><div class="ttdeci">S_SwitchDescriptor swRing</div><div class="ttdef"><b>Definition</b> app.c:86</div></div>
+<div class="ttc" id="aapp_8c_html_a2eb3ac5dc73c685e3beefb74af0e1371"><div class="ttname"><a href="app_8c.html#a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</a></div><div class="ttdeci">S_SwitchDescriptor swBusy</div><div class="ttdef"><b>Definition</b> app.c:83</div></div>
+<div class="ttc" id="aapp_8c_html_aafadd8f2a2aa59c174b5207f21872f1f"><div class="ttname"><a href="app_8c.html#aafadd8f2a2aa59c174b5207f21872f1f">swEnter</a></div><div class="ttdeci">S_SwitchDescriptor swEnter</div><div class="ttdef"><b>Definition</b> app.c:80</div></div>
+<div class="ttc" id="aapp_8c_html_afdc3fbca7ca6fb08b354d67fea915b56"><div class="ttname"><a href="app_8c.html#afdc3fbca7ca6fb08b354d67fea915b56">swWait</a></div><div class="ttdeci">S_SwitchDescriptor swWait</div><div class="ttdef"><b>Definition</b> app.c:89</div></div>
+<div class="ttc" id="aapp_8h_html_a2eddd01dc88b9cfb845ab578cd7510b4"><div class="ttname"><a href="app_8h.html#a2eddd01dc88b9cfb845ab578cd7510b4">APP_GetIsDoor</a></div><div class="ttdeci">bool APP_GetIsDoor(void)</div><div class="ttdoc">V�rifie si l&#39;entit� courante est une porte.</div><div class="ttdef"><b>Definition</b> app.c:172</div></div>
+<div class="ttc" id="aapp_8h_html_a59b305aa4f4287d45cbe428f533f84b2"><div class="ttname"><a href="app_8h.html#a59b305aa4f4287d45cbe428f533f84b2">APP_Initialize</a></div><div class="ttdeci">void APP_Initialize(void)</div><div class="ttdoc">Initialise l&#39;application.</div><div class="ttdef"><b>Definition</b> app.c:191</div></div>
+<div class="ttc" id="aapp_8h_html_a859aee46b660cfee47cfd45ce08f6862"><div class="ttname"><a href="app_8h.html#a859aee46b660cfee47cfd45ce08f6862">APP_Tasks</a></div><div class="ttdeci">void APP_Tasks(void)</div><div class="ttdoc">T�che principale de l&#39;application.</div><div class="ttdef"><b>Definition</b> app.c:222</div></div>
+<div class="ttc" id="aapp_8h_html_ac23e091bbd221d57ef9aa15bf099b871"><div class="ttname"><a href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871">APP_STATES</a></div><div class="ttdeci">APP_STATES</div><div class="ttdef"><b>Definition</b> app.h:75</div></div>
+<div class="ttc" id="aapp_8h_html_ac23e091bbd221d57ef9aa15bf099b871a4a2d007c2bbd7b136d1a6c587e536c89"><div class="ttname"><a href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871a4a2d007c2bbd7b136d1a6c587e536c89">APP_STATE_WAIT</a></div><div class="ttdeci">@ APP_STATE_WAIT</div><div class="ttdef"><b>Definition</b> app.h:77</div></div>
+<div class="ttc" id="aapp_8h_html_ac23e091bbd221d57ef9aa15bf099b871a92f04718da45a34c069d899c657d1ac5"><div class="ttname"><a href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871a92f04718da45a34c069d899c657d1ac5">APP_STATE_SERVICE_TASKS</a></div><div class="ttdeci">@ APP_STATE_SERVICE_TASKS</div><div class="ttdef"><b>Definition</b> app.h:78</div></div>
+<div class="ttc" id="aapp_8h_html_ac23e091bbd221d57ef9aa15bf099b871aee72936f6dda86ada3946d7c937a2297"><div class="ttname"><a href="app_8h.html#ac23e091bbd221d57ef9aa15bf099b871aee72936f6dda86ada3946d7c937a2297">APP_STATE_INIT</a></div><div class="ttdeci">@ APP_STATE_INIT</div><div class="ttdef"><b>Definition</b> app.h:76</div></div>
+<div class="ttc" id="aapp_8h_html_acc9cde7d11cdebdf90dc9f45323376d7"><div class="ttname"><a href="app_8h.html#acc9cde7d11cdebdf90dc9f45323376d7">APP_UpdateState</a></div><div class="ttdeci">void APP_UpdateState(APP_STATES newState)</div><div class="ttdoc">Met � jour l&#39;�tat de l&#39;application.</div><div class="ttdef"><b>Definition</b> app.c:162</div></div>
+<div class="ttc" id="astruct_a_p_p___d_a_t_a_html"><div class="ttname"><a href="struct_a_p_p___d_a_t_a.html">APP_DATA</a></div><div class="ttdef"><b>Definition</b> app.h:87</div></div>
+<div class="ttc" id="astruct_a_p_p___d_a_t_a_html_a4da832e05e9b553c5b9bb0393b093e91"><div class="ttname"><a href="struct_a_p_p___d_a_t_a.html#a4da832e05e9b553c5b9bb0393b093e91">APP_DATA::isLowBat</a></div><div class="ttdeci">bool isLowBat</div><div class="ttdef"><b>Definition</b> app.h:91</div></div>
+<div class="ttc" id="astruct_a_p_p___d_a_t_a_html_a94a5120b269e0c87b27dfc08f6f605f1"><div class="ttname"><a href="struct_a_p_p___d_a_t_a.html#a94a5120b269e0c87b27dfc08f6f605f1">APP_DATA::isDoor</a></div><div class="ttdeci">bool isDoor</div><div class="ttdef"><b>Definition</b> app.h:89</div></div>
+<div class="ttc" id="astruct_a_p_p___d_a_t_a_html_abbc3c9d5e3194848346e986069b88f44"><div class="ttname"><a href="struct_a_p_p___d_a_t_a.html#abbc3c9d5e3194848346e986069b88f44">APP_DATA::state</a></div><div class="ttdeci">APP_STATES state</div><div class="ttdef"><b>Definition</b> app.h:88</div></div>
+<div class="ttc" id="astruct_a_p_p___d_a_t_a_html_ae27cb41b32b95348d22f6815b7360b15"><div class="ttname"><a href="struct_a_p_p___d_a_t_a.html#ae27cb41b32b95348d22f6815b7360b15">APP_DATA::batVoltage</a></div><div class="ttdeci">uint16_t batVoltage</div><div class="ttdef"><b>Definition</b> app.h:90</div></div>
+<div class="ttc" id="astruct_s___switch_descriptor_html"><div class="ttname"><a href="struct_s___switch_descriptor.html">S_SwitchDescriptor</a></div><div class="ttdef"><b>Definition</b> Mc32Debounce.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="app_8h.html">app.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

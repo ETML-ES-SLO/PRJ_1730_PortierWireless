@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_f_8h_source" xml:lang="fr">
+<title>RF.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.h</primary></indexterm>
+Aller à la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+2 <emphasis role="comment">//&#32;RF.h</emphasis>
+3 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+4 <emphasis role="comment">//&#32;Gestion&#32;communication&#32;&#32;&#32;&#32;</emphasis>
+5 <emphasis role="comment">//</emphasis>
+6 <emphasis role="comment">//&#32;&#32;Auteur&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SCA</emphasis>
+7 <emphasis role="comment">//&#32;&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;5.12.2019</emphasis>
+8 <emphasis role="comment">//&#32;&#32;Version&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;V1.0</emphasis>
+9 <emphasis role="comment">//&#32;&#32;Compilateur&#32;:&#32;&#32;&#32;XC32&#32;V2.15</emphasis>
+10 <emphasis role="comment">//&#32;&#32;Modifications&#32;:</emphasis>
+11 <emphasis role="comment">//&#32;&#32;&#32;-</emphasis>
+12 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+13 
+14 <emphasis role="preprocessor">#ifndef&#32;_RF_H&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Guard&#32;against&#32;multiple&#32;inclusion&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+15 <emphasis role="preprocessor">#define&#32;_RF_H</emphasis>
+16 
+17 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+18 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+19 
+20 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+21 
+22 
+23 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+24 
+25 
+26 
+27 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+28 
+29 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__r_f_8h_1a5aa69b7fbc66f24c4a0a8b1e1db00407">RF_Init</link>(<emphasis role="keywordtype">void</emphasis>);
+30 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__r_f_8h_1a3289a92773defe54bcc8de3768abd412">RF_SendMessage</link>(uint8_t*&#32;dataToSend,&#32;uint8_t&#32;nbBytesToSend);
+31 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="__r_f_8h_1aaa251989c2b31bdd461a5031e7f8bb26">RF_GetMessage</link>(uint8_t*&#32;msg);
+32 uint32_t&#32;<link linkend="__r_f_8h_1ad40c11645c27556ca685ede5d45fee4e">getSerialRF</link>(<emphasis role="keywordtype">void</emphasis>);
+33 uint32_t&#32;<link linkend="__r_f_8h_1a23095f345f2010caf0f4d825a4ea79d5">RF_GetLastSenderSerial</link>(<emphasis role="keywordtype">void</emphasis>);
+34 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__r_f_8h_1a74b1a00aee1ffe8ef321da984014877d">RF_RecordSenderSerial</link>(uint8_t*&#32;msg);
+35 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;_RF_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+36 
+37 <emphasis role="comment">/*&#32;*****************************************************************************</emphasis>
+38 <emphasis role="comment">&#32;End&#32;of&#32;File</emphasis>
+39 <emphasis role="comment">&#32;*/</emphasis>
+</programlisting></section>

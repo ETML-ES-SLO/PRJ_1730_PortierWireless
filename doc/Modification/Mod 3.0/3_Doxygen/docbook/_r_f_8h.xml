@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_f_8h" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stdbool.h&gt;<?linebreak?></programlisting>Graphe des dépendances par inclusion de RF.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_r_f_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_r_f_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__r_f_8h_1a5aa69b7fbc66f24c4a0a8b1e1db00407">RF_Init</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__r_f_8h_1a3289a92773defe54bcc8de3768abd412">RF_SendMessage</link> (uint8_t *dataToSend, uint8_t nbBytesToSend)</para>
+</listitem>
+            <listitem><para>bool <link linkend="__r_f_8h_1aaa251989c2b31bdd461a5031e7f8bb26">RF_GetMessage</link> (uint8_t *msg)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="__r_f_8h_1ad40c11645c27556ca685ede5d45fee4e">getSerialRF</link> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="__r_f_8h_1a23095f345f2010caf0f4d825a4ea79d5">RF_GetLastSenderSerial</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__r_f_8h_1a74b1a00aee1ffe8ef321da984014877d">RF_RecordSenderSerial</link> (uint8_t *msg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__r_f_8h_1ad40c11645c27556ca685ede5d45fee4e"/><section>
+    <title>getSerialRF()</title>
+<indexterm><primary>getSerialRF</primary><secondary>RF.h</secondary></indexterm>
+<indexterm><primary>RF.h</primary><secondary>getSerialRF</secondary></indexterm>
+<para><computeroutput>uint32_t getSerialRF (void )</computeroutput></para></section>
+<anchor xml:id="__r_f_8h_1a23095f345f2010caf0f4d825a4ea79d5"/><section>
+    <title>RF_GetLastSenderSerial()</title>
+<indexterm><primary>RF_GetLastSenderSerial</primary><secondary>RF.h</secondary></indexterm>
+<indexterm><primary>RF.h</primary><secondary>RF_GetLastSenderSerial</secondary></indexterm>
+<para><computeroutput>uint32_t RF_GetLastSenderSerial (void )</computeroutput></para></section>
+<anchor xml:id="__r_f_8h_1aaa251989c2b31bdd461a5031e7f8bb26"/><section>
+    <title>RF_GetMessage()</title>
+<indexterm><primary>RF_GetMessage</primary><secondary>RF.h</secondary></indexterm>
+<indexterm><primary>RF.h</primary><secondary>RF_GetMessage</secondary></indexterm>
+<para><computeroutput>bool RF_GetMessage (uint8_t * msg)</computeroutput></para></section>
+<anchor xml:id="__r_f_8h_1a5aa69b7fbc66f24c4a0a8b1e1db00407"/><section>
+    <title>RF_Init()</title>
+<indexterm><primary>RF_Init</primary><secondary>RF.h</secondary></indexterm>
+<indexterm><primary>RF.h</primary><secondary>RF_Init</secondary></indexterm>
+<para><computeroutput>void RF_Init (void )</computeroutput></para></section>
+<anchor xml:id="__r_f_8h_1a74b1a00aee1ffe8ef321da984014877d"/><section>
+    <title>RF_RecordSenderSerial()</title>
+<indexterm><primary>RF_RecordSenderSerial</primary><secondary>RF.h</secondary></indexterm>
+<indexterm><primary>RF.h</primary><secondary>RF_RecordSenderSerial</secondary></indexterm>
+<para><computeroutput>void RF_RecordSenderSerial (uint8_t * msg)</computeroutput></para></section>
+<anchor xml:id="__r_f_8h_1a3289a92773defe54bcc8de3768abd412"/><section>
+    <title>RF_SendMessage()</title>
+<indexterm><primary>RF_SendMessage</primary><secondary>RF.h</secondary></indexterm>
+<indexterm><primary>RF.h</primary><secondary>RF_SendMessage</secondary></indexterm>
+<para><computeroutput>void RF_SendMessage (uint8_t * dataToSend, uint8_t nbBytesToSend)</computeroutput></para></section>
+</section>
+</section>

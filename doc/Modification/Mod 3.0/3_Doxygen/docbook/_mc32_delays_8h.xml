@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mc32_delays_8h" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Delays.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Delays.h</primary></indexterm>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_mc32_delays_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__mc32_delays_8h_1a470660ea0a93e6b5905775c50bcc2bb0">delay_cycle</link>()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__mc32_delays_8h_1a090c3f17190589915835405f9b639b4c">delay_msCt</link> (unsigned int NbMs)</para>
+</listitem>
+            <listitem><para>void <link linkend="__mc32_delays_8h_1aabd4e8d81cad7f2cb4a1e33b68db8849">delay_usCt</link> (unsigned int NbUs)</para>
+</listitem>
+            <listitem><para>void <link linkend="__mc32_delays_8h_1a24dcb8608c6593e767605443c18fd275">delay500nsCt</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des macros</title>
+<anchor xml:id="__mc32_delays_8h_1a470660ea0a93e6b5905775c50bcc2bb0"/><section>
+    <title>delay_cycle</title>
+<indexterm><primary>delay_cycle</primary><secondary>Mc32Delays.h</secondary></indexterm>
+<indexterm><primary>Mc32Delays.h</primary><secondary>delay_cycle</secondary></indexterm>
+<para><computeroutput>#define delay_cycle( )</computeroutput></para><emphasis role="strong">Valeur :</emphasis><programlisting linenumbering="unnumbered">__asm__(&#32;<emphasis role="stringliteral">&quot;nop&quot;</emphasis>&#32;)
+</programlisting></section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__mc32_delays_8h_1a24dcb8608c6593e767605443c18fd275"/><section>
+    <title>delay500nsCt()</title>
+<indexterm><primary>delay500nsCt</primary><secondary>Mc32Delays.h</secondary></indexterm>
+<indexterm><primary>Mc32Delays.h</primary><secondary>delay500nsCt</secondary></indexterm>
+<para><computeroutput>void delay500nsCt (void )</computeroutput></para></section>
+<anchor xml:id="__mc32_delays_8h_1a090c3f17190589915835405f9b639b4c"/><section>
+    <title>delay_msCt()</title>
+<indexterm><primary>delay_msCt</primary><secondary>Mc32Delays.h</secondary></indexterm>
+<indexterm><primary>Mc32Delays.h</primary><secondary>delay_msCt</secondary></indexterm>
+<para><computeroutput>void delay_msCt (unsigned int NbMs)</computeroutput></para></section>
+<anchor xml:id="__mc32_delays_8h_1aabd4e8d81cad7f2cb4a1e33b68db8849"/><section>
+    <title>delay_usCt()</title>
+<indexterm><primary>delay_usCt</primary><secondary>Mc32Delays.h</secondary></indexterm>
+<indexterm><primary>Mc32Delays.h</primary><secondary>delay_usCt</secondary></indexterm>
+<para><computeroutput>void delay_usCt (unsigned int NbUs)</computeroutput></para></section>
+</section>
+</section>

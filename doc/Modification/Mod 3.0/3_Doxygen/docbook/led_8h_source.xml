@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_led_8h_source" xml:lang="fr">
+<title>led.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/led.h</primary></indexterm>
+Aller Ã  la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+2 <emphasis role="comment">//&#32;led.h</emphasis>
+3 <emphasis role="comment">//--------------------------------------------------------</emphasis>
+4 <emphasis role="comment">//&#32;Gestion&#32;des&#32;leds&#32;sur&#32;portier&#32;électronique&#32;(1730)</emphasis>
+5 <emphasis role="comment">//</emphasis>
+6 <emphasis role="comment">//&#32;&#32;Auteur&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;SCA</emphasis>
+7 <emphasis role="comment">//&#32;&#32;Date&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;15.01.2020</emphasis>
+8 <emphasis role="comment">//&#32;&#32;Version&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;V1.0</emphasis>
+9 <emphasis role="comment">//&#32;&#32;Compilateur&#32;:&#32;&#32;&#32;XC32&#32;V2.15</emphasis>
+10 <emphasis role="comment">//&#32;&#32;Modifications&#32;:</emphasis>
+11 <emphasis role="comment">//&#32;&#32;&#32;-</emphasis>
+12 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+13 
+14 <emphasis role="preprocessor">#ifndef&#32;_LED_H&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Guard&#32;against&#32;multiple&#32;inclusion&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+15 <emphasis role="preprocessor">#define&#32;_LED_H</emphasis>
+16 
+17 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+18 
+19 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+20 {
+21 &#32;&#32;&#32;&#32;<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299a514ebe28334cfbd3189a113ab7cde845">LED_ID_ENTER</link>=0,
+22 &#32;&#32;&#32;&#32;<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299a1d385e4856fb3c72a79c098544db3757">LED_ID_WAIT</link>,
+23 &#32;&#32;&#32;&#32;<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299a4364a1501a1f55f8990a333879caa061">LED_ID_BUSY</link>,&#32;&#32;&#32;&#32;&#32;&#32;
+24 }&#32;<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link>;
+25 
+26 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+27 {
+28 &#32;&#32;&#32;&#32;<link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a5a472505476f1d9c473bacb9450dd003">LED_MODE_OFF</link>=0,
+29 &#32;&#32;&#32;&#32;<link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a93ba1b43b2933514d8f0172d5fb9ff0a">LED_MODE_ON</link>,
+30 &#32;&#32;&#32;&#32;<link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68ab75f64ddd7144df385f5835895a1cafb">LED_MODE_BLINK_NORMAL</link>,
+31 &#32;&#32;&#32;&#32;<link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68a2672e9c45e3851fe19580fd513777747">LED_MODE_BLINK_2X_FAST</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+32 }&#32;<link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link>;&#32;
+33 
+34 <emphasis role="comment">/*&#32;**************************************************************************&#32;*/</emphasis>
+35 
+36 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_led_8h_1af1aee968a5ceeb7915921aa6d78aca23">Led_Init</link>(<emphasis role="keywordtype">void</emphasis>);
+37 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_led_8h_1a872055749870075db47e189ccbd99c8d">Led_SetMode</link>(<link linkend="_led_8h_1a3393b726762fb88eff08925c79777299">LED_IDS</link>&#32;led_Id,&#32;<link linkend="_led_8h_1abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</link>&#32;led_Mode);
+38 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_led_8h_1aeafd9e2cc02fe833c950ca8c15f881c8">Led_Mgmt</link>(<emphasis role="keywordtype">void</emphasis>);
+39 
+40 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;_LED_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+41 
+42 <emphasis role="comment">/*&#32;*****************************************************************************</emphasis>
+43 <emphasis role="comment">&#32;End&#32;of&#32;File</emphasis>
+44 <emphasis role="comment">&#32;*/</emphasis>
+</programlisting></section>

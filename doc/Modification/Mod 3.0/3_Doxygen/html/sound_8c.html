@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless: Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/sound.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un système bidirectionnel basé sur un microcontrôleur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant à un visiteur d’envoyer une requête depuis l’extérieur via un bouton alimenté par piles, et à l’occupant du bureau de répondre par des signaux lumineux et sonores grâce à une unité intérieure alimentée en USB, le tout avec appairage sécurisé et gestion autonome de l’énergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('sound_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier sound.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="sound_8h_source.html">sound.h</a>&quot;</code><br />
+<code>#include &quot;peripheral/oc/plib_oc.h&quot;</code><br />
+<code>#include &quot;peripheral/tmr/plib_tmr.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de sound.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="sound_8c__incl.png" border="0" usemap="#a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2sound_8c" loading="lazy" alt=""/></div>
+<map name="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2sound_8c" id="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2sound_8c">
+<area shape="rect" title=" " alt="" coords="107,5,328,64"/>
+<area shape="rect" href="sound_8h.html" title=" " alt="" coords="50,120,118,147"/>
+<area shape="poly" title=" " alt="" coords="179,67,115,113,112,109,176,62"/>
+<area shape="rect" title=" " alt="" coords="142,120,293,147"/>
+<area shape="poly" title=" " alt="" coords="220,64,220,104,215,104,215,64"/>
+<area shape="rect" title=" " alt="" coords="317,112,441,155"/>
+<area shape="poly" title=" " alt="" coords="267,62,332,101,330,106,264,67"/>
+<area shape="rect" title=" " alt="" coords="5,203,70,229"/>
+<area shape="poly" title=" " alt="" coords="79,149,54,191,50,188,75,146"/>
+<area shape="rect" title=" " alt="" coords="94,203,168,229"/>
+<area shape="poly" title=" " alt="" coords="94,146,119,188,114,191,89,149"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae192422e145c52ad9c3ba50aa4546edb" id="r_ae192422e145c52ad9c3ba50aa4546edb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae192422e145c52ad9c3ba50aa4546edb">DO3</a>&#160;&#160;&#160;262</td></tr>
+<tr class="memitem:add6e19af198708317303fa1cb7ebaf62" id="r_add6e19af198708317303fa1cb7ebaf62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add6e19af198708317303fa1cb7ebaf62">RE3</a>&#160;&#160;&#160;294</td></tr>
+<tr class="memitem:aa7459759c2a734f1494bd43fbfacab40" id="r_aa7459759c2a734f1494bd43fbfacab40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7459759c2a734f1494bd43fbfacab40">MI3</a>&#160;&#160;&#160;330</td></tr>
+<tr class="memitem:afbbb9cd828ef1c0f7d24f3a6b11bec0d" id="r_afbbb9cd828ef1c0f7d24f3a6b11bec0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbbb9cd828ef1c0f7d24f3a6b11bec0d">FA3</a>&#160;&#160;&#160;349</td></tr>
+<tr class="memitem:a1420dbb3a0f22282d34d99c9fec81222" id="r_a1420dbb3a0f22282d34d99c9fec81222"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1420dbb3a0f22282d34d99c9fec81222">SOL3</a>&#160;&#160;&#160;392</td></tr>
+<tr class="memitem:a912e23de669cf2d59c5628e47aca215d" id="r_a912e23de669cf2d59c5628e47aca215d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a912e23de669cf2d59c5628e47aca215d">LA3</a>&#160;&#160;&#160;440</td></tr>
+<tr class="memitem:ac6e6e28e441220e52edbe68c4652291e" id="r_ac6e6e28e441220e52edbe68c4652291e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6e6e28e441220e52edbe68c4652291e">SI3</a>&#160;&#160;&#160;494</td></tr>
+<tr class="memitem:aa2fdd1de792398877ff8d28f396615cb" id="r_aa2fdd1de792398877ff8d28f396615cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2fdd1de792398877ff8d28f396615cb">DO4</a>&#160;&#160;&#160;523</td></tr>
+<tr class="memitem:a89a555b83efa6eaea26fc24eedaa67c3" id="r_a89a555b83efa6eaea26fc24eedaa67c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89a555b83efa6eaea26fc24eedaa67c3">RE4</a>&#160;&#160;&#160;587</td></tr>
+<tr class="memitem:abe53d6d1a18039d7c4f7f0920bbc268f" id="r_abe53d6d1a18039d7c4f7f0920bbc268f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe53d6d1a18039d7c4f7f0920bbc268f">MI4</a>&#160;&#160;&#160;659</td></tr>
+<tr class="memitem:adbb9bb9f03bcc1085e00c8b654725208" id="r_adbb9bb9f03bcc1085e00c8b654725208"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbb9bb9f03bcc1085e00c8b654725208">FA4</a>&#160;&#160;&#160;699</td></tr>
+<tr class="memitem:aca960f737d35b31e1b488c0ab6bda239" id="r_aca960f737d35b31e1b488c0ab6bda239"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca960f737d35b31e1b488c0ab6bda239">SOL4</a>&#160;&#160;&#160;784</td></tr>
+<tr class="memitem:a536842785e024661fb1c067b6079562f" id="r_a536842785e024661fb1c067b6079562f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a536842785e024661fb1c067b6079562f">LA4</a>&#160;&#160;&#160;880</td></tr>
+<tr class="memitem:ae0b25758d2e1eccdb31d47f480af068a" id="r_ae0b25758d2e1eccdb31d47f480af068a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0b25758d2e1eccdb31d47f480af068a">SI4</a>&#160;&#160;&#160;988</td></tr>
+<tr class="memitem:a702e7a225c27d08523d83651cf23528b" id="r_a702e7a225c27d08523d83651cf23528b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a702e7a225c27d08523d83651cf23528b">DO5</a>&#160;&#160;&#160;1047</td></tr>
+<tr class="memitem:ae524c4d251d54dbb994fef263cdb1144" id="r_ae524c4d251d54dbb994fef263cdb1144"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae524c4d251d54dbb994fef263cdb1144">F_TMR_CLK</a>&#160;&#160;&#160;10000000</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:ae47985a44d65711ec02fe25dc0f0d230" id="r_ae47985a44d65711ec02fe25dc0f0d230"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</a> { <a class="el" href="#ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3">SOUND_STATE_INIT</a> =0
+, <a class="el" href="#ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77">SOUND_STATE_IDLE</a>
+, <a class="el" href="#ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77">SOUND_STATE_PLAYING</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:abfc1197699ee0f0bb6e808573dbd3442" id="r_abfc1197699ee0f0bb6e808573dbd3442"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfc1197699ee0f0bb6e808573dbd3442">SetNote</a> (uint16_t freq)</td></tr>
+<tr class="memitem:afb97318712639efcb061a8772beff2b5" id="r_afb97318712639efcb061a8772beff2b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb97318712639efcb061a8772beff2b5">Sound_Init</a> (void)</td></tr>
+<tr class="memitem:a01f15a7aed20855a98398cbec33dae27" id="r_a01f15a7aed20855a98398cbec33dae27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01f15a7aed20855a98398cbec33dae27">Sound_Start</a> (const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a> *sound)</td></tr>
+<tr class="memitem:a52a8a79e98a4c19d71f2272745362ac8" id="r_a52a8a79e98a4c19d71f2272745362ac8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52a8a79e98a4c19d71f2272745362ac8">Sound_IsIdle</a> (void)</td></tr>
+<tr class="memitem:a3efe45f40a4f9449a6c98d402c54f126" id="r_a3efe45f40a4f9449a6c98d402c54f126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3efe45f40a4f9449a6c98d402c54f126">Sound_Mgmt</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a606108a523194d1e3bf77903712c56c7" id="r_a606108a523194d1e3bf77903712c56c7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a606108a523194d1e3bf77903712c56c7">RING</a> [10]</td></tr>
+<tr class="memitem:a08a79331fdb2876e4b5dc2d4a0dd49db" id="r_a08a79331fdb2876e4b5dc2d4a0dd49db"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08a79331fdb2876e4b5dc2d4a0dd49db">SUCCESS</a> [10]</td></tr>
+<tr class="memitem:abf2230f82c8c7ad817c4fa5c3eab0581" id="r_abf2230f82c8c7ad817c4fa5c3eab0581"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf2230f82c8c7ad817c4fa5c3eab0581">ERROR</a> [10]</td></tr>
+<tr class="memitem:a2e60788a5beb4d2a92185b63ba8a4051" id="r_a2e60788a5beb4d2a92185b63ba8a4051"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e60788a5beb4d2a92185b63ba8a4051">soundState</a></td></tr>
+<tr class="memitem:aa3052067129958082f91b796e5a591af" id="r_aa3052067129958082f91b796e5a591af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3052067129958082f91b796e5a591af">currentNotes</a></td></tr>
+<tr class="memitem:aae610989795c731a0a2e0517cda845f4" id="r_aae610989795c731a0a2e0517cda845f4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae610989795c731a0a2e0517cda845f4">currentNoteIndex</a></td></tr>
+<tr class="memitem:ae455effeb2d73205f481ae3de3b2c629" id="r_ae455effeb2d73205f481ae3de3b2c629"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae455effeb2d73205f481ae3de3b2c629">currentNoteDuration</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ae192422e145c52ad9c3ba50aa4546edb" name="ae192422e145c52ad9c3ba50aa4546edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae192422e145c52ad9c3ba50aa4546edb">&#9670;&#160;</a></span>DO3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO3&#160;&#160;&#160;262</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2fdd1de792398877ff8d28f396615cb" name="aa2fdd1de792398877ff8d28f396615cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2fdd1de792398877ff8d28f396615cb">&#9670;&#160;</a></span>DO4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO4&#160;&#160;&#160;523</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a702e7a225c27d08523d83651cf23528b" name="a702e7a225c27d08523d83651cf23528b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a702e7a225c27d08523d83651cf23528b">&#9670;&#160;</a></span>DO5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DO5&#160;&#160;&#160;1047</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae524c4d251d54dbb994fef263cdb1144" name="ae524c4d251d54dbb994fef263cdb1144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae524c4d251d54dbb994fef263cdb1144">&#9670;&#160;</a></span>F_TMR_CLK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define F_TMR_CLK&#160;&#160;&#160;10000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbbb9cd828ef1c0f7d24f3a6b11bec0d" name="afbbb9cd828ef1c0f7d24f3a6b11bec0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbb9cd828ef1c0f7d24f3a6b11bec0d">&#9670;&#160;</a></span>FA3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FA3&#160;&#160;&#160;349</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbb9bb9f03bcc1085e00c8b654725208" name="adbb9bb9f03bcc1085e00c8b654725208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb9bb9f03bcc1085e00c8b654725208">&#9670;&#160;</a></span>FA4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FA4&#160;&#160;&#160;699</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a912e23de669cf2d59c5628e47aca215d" name="a912e23de669cf2d59c5628e47aca215d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912e23de669cf2d59c5628e47aca215d">&#9670;&#160;</a></span>LA3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LA3&#160;&#160;&#160;440</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a536842785e024661fb1c067b6079562f" name="a536842785e024661fb1c067b6079562f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536842785e024661fb1c067b6079562f">&#9670;&#160;</a></span>LA4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LA4&#160;&#160;&#160;880</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7459759c2a734f1494bd43fbfacab40" name="aa7459759c2a734f1494bd43fbfacab40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7459759c2a734f1494bd43fbfacab40">&#9670;&#160;</a></span>MI3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MI3&#160;&#160;&#160;330</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe53d6d1a18039d7c4f7f0920bbc268f" name="abe53d6d1a18039d7c4f7f0920bbc268f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe53d6d1a18039d7c4f7f0920bbc268f">&#9670;&#160;</a></span>MI4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MI4&#160;&#160;&#160;659</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add6e19af198708317303fa1cb7ebaf62" name="add6e19af198708317303fa1cb7ebaf62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6e19af198708317303fa1cb7ebaf62">&#9670;&#160;</a></span>RE3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RE3&#160;&#160;&#160;294</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89a555b83efa6eaea26fc24eedaa67c3" name="a89a555b83efa6eaea26fc24eedaa67c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a555b83efa6eaea26fc24eedaa67c3">&#9670;&#160;</a></span>RE4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RE4&#160;&#160;&#160;587</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6e6e28e441220e52edbe68c4652291e" name="ac6e6e28e441220e52edbe68c4652291e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e6e28e441220e52edbe68c4652291e">&#9670;&#160;</a></span>SI3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SI3&#160;&#160;&#160;494</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0b25758d2e1eccdb31d47f480af068a" name="ae0b25758d2e1eccdb31d47f480af068a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b25758d2e1eccdb31d47f480af068a">&#9670;&#160;</a></span>SI4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SI4&#160;&#160;&#160;988</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1420dbb3a0f22282d34d99c9fec81222" name="a1420dbb3a0f22282d34d99c9fec81222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1420dbb3a0f22282d34d99c9fec81222">&#9670;&#160;</a></span>SOL3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SOL3&#160;&#160;&#160;392</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca960f737d35b31e1b488c0ab6bda239" name="aca960f737d35b31e1b488c0ab6bda239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca960f737d35b31e1b488c0ab6bda239">&#9670;&#160;</a></span>SOL4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SOL4&#160;&#160;&#160;784</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="ae47985a44d65711ec02fe25dc0f0d230" name="ae47985a44d65711ec02fe25dc0f0d230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae47985a44d65711ec02fe25dc0f0d230">&#9670;&#160;</a></span>SOUND_STATES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3" name="ae47985a44d65711ec02fe25dc0f0d230a2b2714f3ec11fec21a1b6687825f7ca3"></a>SOUND_STATE_INIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77" name="ae47985a44d65711ec02fe25dc0f0d230aa9155866a0b5b8fd81e6821478c45f77"></a>SOUND_STATE_IDLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77" name="ae47985a44d65711ec02fe25dc0f0d230a36a082074d93a22ce31f478bee2a8f77"></a>SOUND_STATE_PLAYING&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="abfc1197699ee0f0bb6e808573dbd3442" name="abfc1197699ee0f0bb6e808573dbd3442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc1197699ee0f0bb6e808573dbd3442">&#9670;&#160;</a></span>SetNote()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetNote </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>freq</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb97318712639efcb061a8772beff2b5" name="afb97318712639efcb061a8772beff2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb97318712639efcb061a8772beff2b5">&#9670;&#160;</a></span>Sound_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sound_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52a8a79e98a4c19d71f2272745362ac8" name="a52a8a79e98a4c19d71f2272745362ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a8a79e98a4c19d71f2272745362ac8">&#9670;&#160;</a></span>Sound_IsIdle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sound_IsIdle </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3efe45f40a4f9449a6c98d402c54f126" name="a3efe45f40a4f9449a6c98d402c54f126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efe45f40a4f9449a6c98d402c54f126">&#9670;&#160;</a></span>Sound_Mgmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sound_Mgmt </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01f15a7aed20855a98398cbec33dae27" name="a01f15a7aed20855a98398cbec33dae27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f15a7aed20855a98398cbec33dae27">&#9670;&#160;</a></span>Sound_Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sound_Start </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a> *</td>          <td class="paramname"><span class="paramname"><em>sound</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ae455effeb2d73205f481ae3de3b2c629" name="ae455effeb2d73205f481ae3de3b2c629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae455effeb2d73205f481ae3de3b2c629">&#9670;&#160;</a></span>currentNoteDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t currentNoteDuration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae610989795c731a0a2e0517cda845f4" name="aae610989795c731a0a2e0517cda845f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae610989795c731a0a2e0517cda845f4">&#9670;&#160;</a></span>currentNoteIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t currentNoteIndex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3052067129958082f91b796e5a591af" name="aa3052067129958082f91b796e5a591af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3052067129958082f91b796e5a591af">&#9670;&#160;</a></span>currentNotes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a>* currentNotes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf2230f82c8c7ad817c4fa5c3eab0581" name="abf2230f82c8c7ad817c4fa5c3eab0581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2230f82c8c7ad817c4fa5c3eab0581">&#9670;&#160;</a></span>ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a> ERROR[10]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= </div>
+<div class="line">   {{.duration=150,.freq=<a class="code hl_define" href="#ac6e6e28e441220e52edbe68c4652291e">SI3</a>},</div>
+<div class="line">    {.duration=150,.freq=<a class="code hl_define" href="#a912e23de669cf2d59c5628e47aca215d">LA3</a>},</div>
+<div class="line">    {.duration=150,.freq=<a class="code hl_define" href="#a1420dbb3a0f22282d34d99c9fec81222">SOL3</a>},</div>
+<div class="line">    {.duration=150,.freq=<a class="code hl_define" href="#afbbb9cd828ef1c0f7d24f3a6b11bec0d">FA3</a>},</div>
+<div class="line">    {.duration=0,.freq=0},</div>
+<div class="line">    {.duration=0,.freq=0},                         </div>
+<div class="line">    {.duration=0,.freq=0},                         </div>
+<div class="line">    {.duration=0,.freq=0},</div>
+<div class="line">    {.duration=0,.freq=0},</div>
+<div class="line">    {.duration=0,.freq=0}}</div>
+<div class="ttc" id="asound_8c_html_a1420dbb3a0f22282d34d99c9fec81222"><div class="ttname"><a href="#a1420dbb3a0f22282d34d99c9fec81222">SOL3</a></div><div class="ttdeci">#define SOL3</div><div class="ttdef"><b>Definition</b> sound.c:35</div></div>
+<div class="ttc" id="asound_8c_html_a912e23de669cf2d59c5628e47aca215d"><div class="ttname"><a href="#a912e23de669cf2d59c5628e47aca215d">LA3</a></div><div class="ttdeci">#define LA3</div><div class="ttdef"><b>Definition</b> sound.c:36</div></div>
+<div class="ttc" id="asound_8c_html_ac6e6e28e441220e52edbe68c4652291e"><div class="ttname"><a href="#ac6e6e28e441220e52edbe68c4652291e">SI3</a></div><div class="ttdeci">#define SI3</div><div class="ttdef"><b>Definition</b> sound.c:37</div></div>
+<div class="ttc" id="asound_8c_html_afbbb9cd828ef1c0f7d24f3a6b11bec0d"><div class="ttname"><a href="#afbbb9cd828ef1c0f7d24f3a6b11bec0d">FA3</a></div><div class="ttdeci">#define FA3</div><div class="ttdef"><b>Definition</b> sound.c:34</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a606108a523194d1e3bf77903712c56c7" name="a606108a523194d1e3bf77903712c56c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606108a523194d1e3bf77903712c56c7">&#9670;&#160;</a></span>RING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a> RING[10]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    {{.duration=200,.freq=<a class="code hl_define" href="#aa2fdd1de792398877ff8d28f396615cb">DO4</a>},</div>
+<div class="line">     {.duration=200,.freq=<a class="code hl_define" href="#a89a555b83efa6eaea26fc24eedaa67c3">RE4</a>},</div>
+<div class="line">     {.duration=200,.freq=<a class="code hl_define" href="#abe53d6d1a18039d7c4f7f0920bbc268f">MI4</a>},</div>
+<div class="line">     {.duration=200,.freq=<a class="code hl_define" href="#adbb9bb9f03bcc1085e00c8b654725208">FA4</a>},</div>
+<div class="line">     {.duration=200,.freq=<a class="code hl_define" href="#aca960f737d35b31e1b488c0ab6bda239">SOL4</a>},</div>
+<div class="line">     {.duration=200,.freq=<a class="code hl_define" href="#a536842785e024661fb1c067b6079562f">LA4</a>},</div>
+<div class="line">     {.duration=200,.freq=<a class="code hl_define" href="#ae0b25758d2e1eccdb31d47f480af068a">SI4</a>},</div>
+<div class="line">     {.duration=1000,.freq=<a class="code hl_define" href="#a702e7a225c27d08523d83651cf23528b">DO5</a>},</div>
+<div class="line">     {.duration=0,.freq=0},                         </div>
+<div class="line">     {.duration=0,.freq=0}}</div>
+<div class="ttc" id="asound_8c_html_a536842785e024661fb1c067b6079562f"><div class="ttname"><a href="#a536842785e024661fb1c067b6079562f">LA4</a></div><div class="ttdeci">#define LA4</div><div class="ttdef"><b>Definition</b> sound.c:43</div></div>
+<div class="ttc" id="asound_8c_html_a702e7a225c27d08523d83651cf23528b"><div class="ttname"><a href="#a702e7a225c27d08523d83651cf23528b">DO5</a></div><div class="ttdeci">#define DO5</div><div class="ttdef"><b>Definition</b> sound.c:45</div></div>
+<div class="ttc" id="asound_8c_html_a89a555b83efa6eaea26fc24eedaa67c3"><div class="ttname"><a href="#a89a555b83efa6eaea26fc24eedaa67c3">RE4</a></div><div class="ttdeci">#define RE4</div><div class="ttdef"><b>Definition</b> sound.c:39</div></div>
+<div class="ttc" id="asound_8c_html_aa2fdd1de792398877ff8d28f396615cb"><div class="ttname"><a href="#aa2fdd1de792398877ff8d28f396615cb">DO4</a></div><div class="ttdeci">#define DO4</div><div class="ttdef"><b>Definition</b> sound.c:38</div></div>
+<div class="ttc" id="asound_8c_html_abe53d6d1a18039d7c4f7f0920bbc268f"><div class="ttname"><a href="#abe53d6d1a18039d7c4f7f0920bbc268f">MI4</a></div><div class="ttdeci">#define MI4</div><div class="ttdef"><b>Definition</b> sound.c:40</div></div>
+<div class="ttc" id="asound_8c_html_aca960f737d35b31e1b488c0ab6bda239"><div class="ttname"><a href="#aca960f737d35b31e1b488c0ab6bda239">SOL4</a></div><div class="ttdeci">#define SOL4</div><div class="ttdef"><b>Definition</b> sound.c:42</div></div>
+<div class="ttc" id="asound_8c_html_adbb9bb9f03bcc1085e00c8b654725208"><div class="ttname"><a href="#adbb9bb9f03bcc1085e00c8b654725208">FA4</a></div><div class="ttdeci">#define FA4</div><div class="ttdef"><b>Definition</b> sound.c:41</div></div>
+<div class="ttc" id="asound_8c_html_ae0b25758d2e1eccdb31d47f480af068a"><div class="ttname"><a href="#ae0b25758d2e1eccdb31d47f480af068a">SI4</a></div><div class="ttdeci">#define SI4</div><div class="ttdef"><b>Definition</b> sound.c:44</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2e60788a5beb4d2a92185b63ba8a4051" name="a2e60788a5beb4d2a92185b63ba8a4051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e60788a5beb4d2a92185b63ba8a4051">&#9670;&#160;</a></span>soundState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae47985a44d65711ec02fe25dc0f0d230">SOUND_STATES</a> soundState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08a79331fdb2876e4b5dc2d4a0dd49db" name="a08a79331fdb2876e4b5dc2d4a0dd49db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a79331fdb2876e4b5dc2d4a0dd49db">&#9670;&#160;</a></span>SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_n_o_t_e__t.html">NOTE_t</a> SUCCESS[10]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= </div>
+<div class="line">   {{.duration=150,.freq=<a class="code hl_define" href="#afbbb9cd828ef1c0f7d24f3a6b11bec0d">FA3</a>},</div>
+<div class="line">    {.duration=150,.freq=<a class="code hl_define" href="#a1420dbb3a0f22282d34d99c9fec81222">SOL3</a>},</div>
+<div class="line">    {.duration=150,.freq=<a class="code hl_define" href="#a912e23de669cf2d59c5628e47aca215d">LA3</a>},</div>
+<div class="line">    {.duration=150,.freq=<a class="code hl_define" href="#ac6e6e28e441220e52edbe68c4652291e">SI3</a>},</div>
+<div class="line">    {.duration=0,.freq=0},</div>
+<div class="line">    {.duration=0,.freq=0},                         </div>
+<div class="line">    {.duration=0,.freq=0},                         </div>
+<div class="line">    {.duration=0,.freq=0},</div>
+<div class="line">    {.duration=0,.freq=0},</div>
+<div class="line">    {.duration=0,.freq=0}}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="sound_8c.html">sound.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

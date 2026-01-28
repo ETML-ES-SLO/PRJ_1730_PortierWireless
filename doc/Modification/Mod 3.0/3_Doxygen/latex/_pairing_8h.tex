@@ -1,0 +1,215 @@
+\doxysection{Référence du fichier C\+:/microchip/harmony/v2\+\_\+06/apps/1730\+\_\+\+Portier\+Wireless\+\_\+\+In\+Out\+\_\+04/firmware/src/\+Pairing.h}
+\hypertarget{_pairing_8h}{}\label{_pairing_8h}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Pairing.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Pairing.h}}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pairing_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_pairing_8h_a3909acdfed0a9cab71108e60f6558608}{NVM\+\_\+\+SERIAL\+\_\+\+BLOCK}}~0
+\item 
+\#define \mbox{\hyperlink{_pairing_8h_aecdf6b72c8038f8169cfb9dd67e5cfba}{LONG\+\_\+\+PRESS\+\_\+\+TICKS}}~300
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_pairing_8h_a41a82ea0c8fd930e94ac47e85fe63a9f}{Load\+Paired\+Serial\+And\+Apply}} (void)
+\item 
+void \mbox{\hyperlink{_pairing_8h_a999f66920b36328dacb50c938a7489fe}{Save\+Paired\+Serial\+To\+Flash}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_pairing_8h_a4506d7314d14b78da5be4337e662a27d}{Get\+Actif\+Serial\+Nbr}} (void)
+\item 
+void \mbox{\hyperlink{_pairing_8h_af3ec5ee15cd5d7a394e5b8ee8c358797}{Reset\+Serial\+List}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_pairing_8h_a1324e704ec1000118ac29e1f3676edd0}{Pairing\+Management}} (void)
+\begin{DoxyCompactList}\small\item\em Gère la procédure complète d\textquotesingle{}appairage côté Door ou Bell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pairing_8h_acdd2b67a818667a69d100766998ba78c}{Pairing\+Reset\+\_\+\+Door\+Task}} (void)
+\item 
+void \mbox{\hyperlink{_pairing_8h_a7f19ab10ec9d1026dcdc496df9c61b31}{Pairing\+Reset\+\_\+\+Bell\+Task}} (void)
+\item 
+bool \mbox{\hyperlink{_pairing_8h_af41ae98dc0c40546ed800bd9ac32ae69}{Serial\+\_\+\+Is\+Pairing\+Running}} (void)
+\item 
+bool \mbox{\hyperlink{_pairing_8h_adfafc1a1fa1c61ab6ff89e7d352d2817}{Serial\+\_\+\+Check\+If\+From\+Paired}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Vérifie si le message RF reçu provient du périphérique appairé. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pairing_8h_a4739423aec413aa3c7ee30f30e608154}{RF\+\_\+\+Send\+With\+Serial}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}payload)
+\begin{DoxyCompactList}\small\item\em Envoie une trame RF avec le numéro de série, en utilisant P0 et P1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pairing_8h_a6c8ec47b31a7d1f8503627cc7927dfe2}{Show\+Pairing\+Success}} (void)
+\item 
+void \mbox{\hyperlink{_pairing_8h_a26a0b7fcaeb752cf3d85b15b186ae444}{Test\+Flash\+Write\+Read}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_pairing_8h_a19358061a4fa8672c2124d5eb6a6337a}{sw\+Ring}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_pairing_8h_aafadd8f2a2aa59c174b5207f21872f1f}{sw\+Enter}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_pairing_8h_afdc3fbca7ca6fb08b354d67fea915b56}{sw\+Wait}}
+\item 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} \mbox{\hyperlink{_pairing_8h_a2eb3ac5dc73c685e3beefb74af0e1371}{sw\+Busy}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_pairing_8h_a360395ccaea62faa622a0c0c94178874}{app\+Paired\+Serial}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_pairing_8h_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{_pairing_8h_aecdf6b72c8038f8169cfb9dd67e5cfba}\index{Pairing.h@{Pairing.h}!LONG\_PRESS\_TICKS@{LONG\_PRESS\_TICKS}}
+\index{LONG\_PRESS\_TICKS@{LONG\_PRESS\_TICKS}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{LONG\_PRESS\_TICKS}{LONG\_PRESS\_TICKS}}
+{\footnotesize\ttfamily \label{_pairing_8h_aecdf6b72c8038f8169cfb9dd67e5cfba} 
+\#define LONG\+\_\+\+PRESS\+\_\+\+TICKS~300}
+
+\Hypertarget{_pairing_8h_a3909acdfed0a9cab71108e60f6558608}\index{Pairing.h@{Pairing.h}!NVM\_SERIAL\_BLOCK@{NVM\_SERIAL\_BLOCK}}
+\index{NVM\_SERIAL\_BLOCK@{NVM\_SERIAL\_BLOCK}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{NVM\_SERIAL\_BLOCK}{NVM\_SERIAL\_BLOCK}}
+{\footnotesize\ttfamily \label{_pairing_8h_a3909acdfed0a9cab71108e60f6558608} 
+\#define NVM\+\_\+\+SERIAL\+\_\+\+BLOCK~0}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_pairing_8h_doc-func-members}
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_pairing_8h_a4506d7314d14b78da5be4337e662a27d}\index{Pairing.h@{Pairing.h}!GetActifSerialNbr@{GetActifSerialNbr}}
+\index{GetActifSerialNbr@{GetActifSerialNbr}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{GetActifSerialNbr()}{GetActifSerialNbr()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a4506d7314d14b78da5be4337e662a27d} 
+uint32\+\_\+t Get\+Actif\+Serial\+Nbr (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_a41a82ea0c8fd930e94ac47e85fe63a9f}\index{Pairing.h@{Pairing.h}!LoadPairedSerialAndApply@{LoadPairedSerialAndApply}}
+\index{LoadPairedSerialAndApply@{LoadPairedSerialAndApply}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{LoadPairedSerialAndApply()}{LoadPairedSerialAndApply()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a41a82ea0c8fd930e94ac47e85fe63a9f} 
+void Load\+Paired\+Serial\+And\+Apply (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_a1324e704ec1000118ac29e1f3676edd0}\index{Pairing.h@{Pairing.h}!PairingManagement@{PairingManagement}}
+\index{PairingManagement@{PairingManagement}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{PairingManagement()}{PairingManagement()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a1324e704ec1000118ac29e1f3676edd0} 
+uint32\+\_\+t Pairing\+Management (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Gère la procédure complète d\textquotesingle{}appairage côté Door ou Bell. 
+
+Cette fonction implémente la machine d\textquotesingle{}état d\textquotesingle{}appairage pour les deux rôles (Door/\+Bell). Elle pilote l\textquotesingle{}envoi/réception des trames, la sauvegarde du numéro de série appairé, l\textquotesingle{}affichage du succès, et la sortie de la procédure.
+
+\begin{DoxyReturn}{Renvoie}
+Le numéro de série appairé si l\textquotesingle{}appairage est terminé, 0 sinon. 
+\end{DoxyReturn}
+\Hypertarget{_pairing_8h_a7f19ab10ec9d1026dcdc496df9c61b31}\index{Pairing.h@{Pairing.h}!PairingReset\_BellTask@{PairingReset\_BellTask}}
+\index{PairingReset\_BellTask@{PairingReset\_BellTask}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{PairingReset\_BellTask()}{PairingReset\_BellTask()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a7f19ab10ec9d1026dcdc496df9c61b31} 
+void Pairing\+Reset\+\_\+\+Bell\+Task (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_acdd2b67a818667a69d100766998ba78c}\index{Pairing.h@{Pairing.h}!PairingReset\_DoorTask@{PairingReset\_DoorTask}}
+\index{PairingReset\_DoorTask@{PairingReset\_DoorTask}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{PairingReset\_DoorTask()}{PairingReset\_DoorTask()}}
+{\footnotesize\ttfamily \label{_pairing_8h_acdd2b67a818667a69d100766998ba78c} 
+void Pairing\+Reset\+\_\+\+Door\+Task (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_af3ec5ee15cd5d7a394e5b8ee8c358797}\index{Pairing.h@{Pairing.h}!ResetSerialList@{ResetSerialList}}
+\index{ResetSerialList@{ResetSerialList}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{ResetSerialList()}{ResetSerialList()}}
+{\footnotesize\ttfamily \label{_pairing_8h_af3ec5ee15cd5d7a394e5b8ee8c358797} 
+void Reset\+Serial\+List (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_a4739423aec413aa3c7ee30f30e608154}\index{Pairing.h@{Pairing.h}!RF\_SendWithSerial@{RF\_SendWithSerial}}
+\index{RF\_SendWithSerial@{RF\_SendWithSerial}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{RF\_SendWithSerial()}{RF\_SendWithSerial()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a4739423aec413aa3c7ee30f30e608154} 
+void RF\+\_\+\+Send\+With\+Serial (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{payload}{}\end{DoxyParamCaption})}
+
+
+
+Envoie une trame RF avec le numéro de série, en utilisant P0 et P1. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em payload} & Pointeur vers la charge utile à envoyer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_pairing_8h_a999f66920b36328dacb50c938a7489fe}\index{Pairing.h@{Pairing.h}!SavePairedSerialToFlash@{SavePairedSerialToFlash}}
+\index{SavePairedSerialToFlash@{SavePairedSerialToFlash}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{SavePairedSerialToFlash()}{SavePairedSerialToFlash()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a999f66920b36328dacb50c938a7489fe} 
+void Save\+Paired\+Serial\+To\+Flash (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_adfafc1a1fa1c61ab6ff89e7d352d2817}\index{Pairing.h@{Pairing.h}!Serial\_CheckIfFromPaired@{Serial\_CheckIfFromPaired}}
+\index{Serial\_CheckIfFromPaired@{Serial\_CheckIfFromPaired}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_CheckIfFromPaired()}{Serial\_CheckIfFromPaired()}}
+{\footnotesize\ttfamily \label{_pairing_8h_adfafc1a1fa1c61ab6ff89e7d352d2817} 
+bool Serial\+\_\+\+Check\+If\+From\+Paired (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si le message RF reçu provient du périphérique appairé. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em msg} & Pointeur vers le message RF reçu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le message provient du périphérique appairé, false sinon. 
+\end{DoxyReturn}
+\Hypertarget{_pairing_8h_af41ae98dc0c40546ed800bd9ac32ae69}\index{Pairing.h@{Pairing.h}!Serial\_IsPairingRunning@{Serial\_IsPairingRunning}}
+\index{Serial\_IsPairingRunning@{Serial\_IsPairingRunning}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_IsPairingRunning()}{Serial\_IsPairingRunning()}}
+{\footnotesize\ttfamily \label{_pairing_8h_af41ae98dc0c40546ed800bd9ac32ae69} 
+bool Serial\+\_\+\+Is\+Pairing\+Running (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_a6c8ec47b31a7d1f8503627cc7927dfe2}\index{Pairing.h@{Pairing.h}!ShowPairingSuccess@{ShowPairingSuccess}}
+\index{ShowPairingSuccess@{ShowPairingSuccess}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{ShowPairingSuccess()}{ShowPairingSuccess()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a6c8ec47b31a7d1f8503627cc7927dfe2} 
+void Show\+Pairing\+Success (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_pairing_8h_a26a0b7fcaeb752cf3d85b15b186ae444}\index{Pairing.h@{Pairing.h}!TestFlashWriteRead@{TestFlashWriteRead}}
+\index{TestFlashWriteRead@{TestFlashWriteRead}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{TestFlashWriteRead()}{TestFlashWriteRead()}}
+{\footnotesize\ttfamily \label{_pairing_8h_a26a0b7fcaeb752cf3d85b15b186ae444} 
+void Test\+Flash\+Write\+Read (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{_pairing_8h_doc-var-members}
+\doxysubsection{Documentation des variables}
+\Hypertarget{_pairing_8h_a360395ccaea62faa622a0c0c94178874}\index{Pairing.h@{Pairing.h}!appPairedSerial@{appPairedSerial}}
+\index{appPairedSerial@{appPairedSerial}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{appPairedSerial}{appPairedSerial}}
+{\footnotesize\ttfamily \label{_pairing_8h_a360395ccaea62faa622a0c0c94178874} 
+uint32\+\_\+t app\+Paired\+Serial\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_pairing_8h_a2eb3ac5dc73c685e3beefb74af0e1371}\index{Pairing.h@{Pairing.h}!swBusy@{swBusy}}
+\index{swBusy@{swBusy}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{swBusy}{swBusy}}
+{\footnotesize\ttfamily \label{_pairing_8h_a2eb3ac5dc73c685e3beefb74af0e1371} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Busy\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_pairing_8h_aafadd8f2a2aa59c174b5207f21872f1f}\index{Pairing.h@{Pairing.h}!swEnter@{swEnter}}
+\index{swEnter@{swEnter}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{swEnter}{swEnter}}
+{\footnotesize\ttfamily \label{_pairing_8h_aafadd8f2a2aa59c174b5207f21872f1f} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Enter\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_pairing_8h_a19358061a4fa8672c2124d5eb6a6337a}\index{Pairing.h@{Pairing.h}!swRing@{swRing}}
+\index{swRing@{swRing}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{swRing}{swRing}}
+{\footnotesize\ttfamily \label{_pairing_8h_a19358061a4fa8672c2124d5eb6a6337a} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Ring\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_pairing_8h_afdc3fbca7ca6fb08b354d67fea915b56}\index{Pairing.h@{Pairing.h}!swWait@{swWait}}
+\index{swWait@{swWait}!Pairing.h@{Pairing.h}}
+\doxysubsubsection{\texorpdfstring{swWait}{swWait}}
+{\footnotesize\ttfamily \label{_pairing_8h_afdc3fbca7ca6fb08b354d67fea915b56} 
+\mbox{\hyperlink{struct_s___switch_descriptor}{S\+\_\+\+Switch\+Descriptor}} sw\+Wait\hspace{0.3cm}{\ttfamily [extern]}}
+

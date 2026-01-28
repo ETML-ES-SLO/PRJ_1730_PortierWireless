@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mc32_delays_8h_source" xml:lang="fr">
+<title>Mc32Delays.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Mc32Delays.h</primary></indexterm>
+Aller Ã  la documentation de ce fichier.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;__MC32DELAYS_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;__MC32DELAYS_H</emphasis>
+3 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+4 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;Mc32Delays.h</emphasis>
+5 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+6 <emphasis role="comment">//&#32;&#32;Description&#32;:&#32;&#32;&#32;Adaptation&#32;des&#32;fonctions&#32;de&#32;delay&#32;afin</emphasis>
+7 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;de&#32;pouvoir&#32;utiliser&#32;la&#32;même&#32;syntaxe</emphasis>
+8 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;que&#32;sous&#32;CCS.</emphasis>
+9 <emphasis role="comment">//</emphasis>
+10 <emphasis role="comment">//&#32;&#32;Auteur&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;F.&#32;Dominé</emphasis>
+11 <emphasis role="comment">//</emphasis>
+12 <emphasis role="comment">//&#32;&#32;Version&#32;&#32;&#32;&#32;&#32;:&#32;&#32;&#32;V1.0</emphasis>
+13 <emphasis role="comment">//&#32;&#32;Compilateur&#32;:&#32;&#32;&#32;C32&#32;V2.01</emphasis>
+14 <emphasis role="comment">//</emphasis>
+15 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+16 
+17 
+18 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+19 <emphasis role="comment">//&#32;Définition&#32;des&#32;fonctions&#32;prototypes</emphasis>
+20 <emphasis role="comment">/*--------------------------------------------------------*/</emphasis>
+21 <emphasis role="comment">//&#32;Quelques&#32;commentaires:</emphasis>
+22 <emphasis role="comment">//&#32;Avec&#32;notre&#32;configuration,&#32;le&#32;temps&#32;nécessire&#32;pour&#32;passer</emphasis>
+23 <emphasis role="comment">//&#32;une&#32;sortie&#32;à&#32;0&#32;puis&#32;à&#32;1&#32;est&#32;denviron&#32;65ns</emphasis>
+24 <emphasis role="comment">//&#32;En&#32;ajoutant&#32;un&#32;nop,&#32;on&#32;obtient&#32;environ&#32;100ns</emphasis>
+25 <emphasis role="comment">//&#32;On&#32;peut&#32;en&#32;conclure&#32;que&#32;le&#32;temps&#32;de&#32;cycle&#32;est&#32;de&#32;33ns</emphasis>
+26 <emphasis role="preprocessor">#define&#32;delay_cycle()&#32;__asm__(&#32;&quot;nop&quot;&#32;)</emphasis>
+27 <emphasis role="comment">//void&#32;delay500ns();&#32;//&#32;nécessaire&#32;pour&#32;lcd</emphasis>
+28 <emphasis role="comment">//void&#32;delay_us(unsigned&#32;int);&#32;//&#32;32&#32;bits</emphasis>
+29 <emphasis role="comment">//void&#32;delay_ms(unsigned&#32;int);&#32;//&#32;32&#32;bits</emphasis>
+30 
+31 <emphasis role="comment">//Fonctions&#32;basées&#32;sur&#32;Core&#32;Timer</emphasis>
+32 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__mc32_delays_8h_1a090c3f17190589915835405f9b639b4c">delay_msCt</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;NbMs);
+33 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__mc32_delays_8h_1aabd4e8d81cad7f2cb4a1e33b68db8849">delay_usCt</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;NbUs);
+34 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__mc32_delays_8h_1a24dcb8608c6593e767605443c18fd275">delay500nsCt</link>(<emphasis role="keywordtype">void</emphasis>);
+35 
+36 
+37 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

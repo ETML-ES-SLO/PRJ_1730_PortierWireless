@@ -1,0 +1,43 @@
+\doxysection{Mc32\+Delays.\+h}
+\hypertarget{_mc32_delays_8h_source}{}\label{_mc32_delays_8h_source}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Delays.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Mc32Delays.h}}
+\mbox{\hyperlink{_mc32_delays_8h}{Aller Ã  la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_MC32DELAYS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_MC32DELAYS\_H}}
+\DoxyCodeLine{00003\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ \ \ Mc32Delays.h}}
+\DoxyCodeLine{00005\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ Description\ :\ \ \ Adaptation\ des\ fonctions\ de\ delay\ afin}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ de\ pouvoir\ utiliser\ la\ même\ syntaxe}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ que\ sous\ CCS.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ Auteur\ \ \ \ \ \ :\ \ \ F.\ Dominé}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ Version\ \ \ \ \ :\ \ \ V1.0}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ Compilateur\ :\ \ \ C32\ V2.01}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Définition\ des\ fonctions\ prototypes}}
+\DoxyCodeLine{00020\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Quelques\ commentaires:}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ Avec\ notre\ configuration,\ le\ temps\ nécessire\ pour\ passer}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ une\ sortie\ à 0\ puis\ à 1\ est\ denviron\ 65ns}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ En\ ajoutant\ un\ nop,\ on\ obtient\ environ\ 100ns}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ On\ peut\ en\ conclure\ que\ le\ temps\ de\ cycle\ est\ de\ 33ns}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ delay\_cycle()\ \_\_asm\_\_(\ "{}nop"{}\ )}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//void\ delay500ns();\ //\ nécessaire\ pour\ lcd}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//void\ delay\_us(unsigned\ int);\ //\ 32\ bits}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//void\ delay\_ms(unsigned\ int);\ //\ 32\ bits}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//Fonctions\ basées\ sur\ Core\ Timer}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mc32_delays_8h_a090c3f17190589915835405f9b639b4c}{delay\_msCt}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ NbMs);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mc32_delays_8h_aabd4e8d81cad7f2cb4a1e33b68db8849}{delay\_usCt}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ NbUs);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_mc32_delays_8h_a24dcb8608c6593e767605443c18fd275}{delay500nsCt}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

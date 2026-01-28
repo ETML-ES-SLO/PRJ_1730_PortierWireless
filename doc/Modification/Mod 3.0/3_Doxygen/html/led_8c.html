@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless: Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/led.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un système bidirectionnel basé sur un microcontrôleur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant à un visiteur d’envoyer une requête depuis l’extérieur via un bouton alimenté par piles, et à l’occupant du bureau de répondre par des signaux lumineux et sonores grâce à une unité intérieure alimentée en USB, le tout avec appairage sécurisé et gestion autonome de l’énergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('led_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier led.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;xc.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de led.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="led_8c__incl.png" border="0" usemap="#a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2led_8c" loading="lazy" alt=""/></div>
+<map name="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2led_8c" id="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2led_8c">
+<area shape="rect" title=" " alt="" coords="41,5,262,64"/>
+<area shape="rect" href="led_8h.html" title=" " alt="" coords="5,112,55,139"/>
+<area shape="poly" title=" " alt="" coords="114,67,61,105,58,101,110,62"/>
+<area shape="rect" title=" " alt="" coords="79,112,144,139"/>
+<area shape="poly" title=" " alt="" coords="141,65,126,99,121,96,136,63"/>
+<area shape="rect" title=" " alt="" coords="168,112,214,139"/>
+<area shape="poly" title=" " alt="" coords="167,63,182,96,177,99,162,65"/>
+<area shape="rect" title=" " alt="" coords="238,112,312,139"/>
+<area shape="poly" title=" " alt="" coords="193,62,247,100,244,105,190,67"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3641b8d2bb3a9ab7cf0ec3763c3d9be7" id="r_a3641b8d2bb3a9ab7cf0ec3763c3d9be7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3641b8d2bb3a9ab7cf0ec3763c3d9be7">NUMBER_OF_LEDS</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memitem:afba7dc80bfaebd77c54bf83499fb3339" id="r_afba7dc80bfaebd77c54bf83499fb3339"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afba7dc80bfaebd77c54bf83499fb3339">LED_ON</a>(led_Id)</td></tr>
+<tr class="memitem:a9815ae3bf5da5267ebc9a65c88658e49" id="r_a9815ae3bf5da5267ebc9a65c88658e49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9815ae3bf5da5267ebc9a65c88658e49">LED_OFF</a>(led_Id)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:ad2bf14153ae4f2eb3be1ca9d90eb2ff3" id="r_ad2bf14153ae4f2eb3be1ca9d90eb2ff3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</a> { <a class="el" href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4">LED_STATE_INIT</a> =0
+, <a class="el" href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536">LED_STATE_IDLE</a>
+, <a class="el" href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8">LED_STATE_ACTIVE</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af1aee968a5ceeb7915921aa6d78aca23" id="r_af1aee968a5ceeb7915921aa6d78aca23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1aee968a5ceeb7915921aa6d78aca23">Led_Init</a> (void)</td></tr>
+<tr class="memitem:a607253bf00dfaedea959638c19a569db" id="r_a607253bf00dfaedea959638c19a569db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a607253bf00dfaedea959638c19a569db">Led_CheckBlink</a> ()</td></tr>
+<tr class="memitem:a872055749870075db47e189ccbd99c8d" id="r_a872055749870075db47e189ccbd99c8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a872055749870075db47e189ccbd99c8d">Led_SetMode</a> (<a class="el" href="led_8h.html#a3393b726762fb88eff08925c79777299">LED_IDS</a> led_Id, <a class="el" href="led_8h.html#abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</a> led_Mode)</td></tr>
+<tr class="memitem:aeafd9e2cc02fe833c950ca8c15f881c8" id="r_aeafd9e2cc02fe833c950ca8c15f881c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeafd9e2cc02fe833c950ca8c15f881c8">Led_Mgmt</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3046d1ad083ffc50610e0721cde971dd" id="r_a3046d1ad083ffc50610e0721cde971dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3046d1ad083ffc50610e0721cde971dd">ledState</a></td></tr>
+<tr class="memitem:a729aad414e72b412b98aed5b283db6a3" id="r_a729aad414e72b412b98aed5b283db6a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="led_8h.html#abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a729aad414e72b412b98aed5b283db6a3">ledModes</a> [<a class="el" href="#a3641b8d2bb3a9ab7cf0ec3763c3d9be7">NUMBER_OF_LEDS</a>]</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a9815ae3bf5da5267ebc9a65c88658e49" name="a9815ae3bf5da5267ebc9a65c88658e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9815ae3bf5da5267ebc9a65c88658e49">&#9670;&#160;</a></span>LED_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_OFF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>led_Id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">{LATBCLR = 1&lt;&lt;(led_Id+4);}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afba7dc80bfaebd77c54bf83499fb3339" name="afba7dc80bfaebd77c54bf83499fb3339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba7dc80bfaebd77c54bf83499fb3339">&#9670;&#160;</a></span>LED_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_ON</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>led_Id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">{LATBSET = 1&lt;&lt;(led_Id+4);}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3641b8d2bb3a9ab7cf0ec3763c3d9be7" name="a3641b8d2bb3a9ab7cf0ec3763c3d9be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3641b8d2bb3a9ab7cf0ec3763c3d9be7">&#9670;&#160;</a></span>NUMBER_OF_LEDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUMBER_OF_LEDS&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentation du type de l'énumération</h2>
+<a id="ad2bf14153ae4f2eb3be1ca9d90eb2ff3" name="ad2bf14153ae4f2eb3be1ca9d90eb2ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3">&#9670;&#160;</a></span>LED_STATES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4" name="ad2bf14153ae4f2eb3be1ca9d90eb2ff3a493a1a9dec4f011dbc3e0c2dd42ef1e4"></a>LED_STATE_INIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536" name="ad2bf14153ae4f2eb3be1ca9d90eb2ff3ae6467ee3a9ea46e1bc5c724f30503536"></a>LED_STATE_IDLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8" name="ad2bf14153ae4f2eb3be1ca9d90eb2ff3a193abda18cccf0f6779010ba4c8a57e8"></a>LED_STATE_ACTIVE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a607253bf00dfaedea959638c19a569db" name="a607253bf00dfaedea959638c19a569db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607253bf00dfaedea959638c19a569db">&#9670;&#160;</a></span>Led_CheckBlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Led_CheckBlink </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1aee968a5ceeb7915921aa6d78aca23" name="af1aee968a5ceeb7915921aa6d78aca23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1aee968a5ceeb7915921aa6d78aca23">&#9670;&#160;</a></span>Led_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Led_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeafd9e2cc02fe833c950ca8c15f881c8" name="aeafd9e2cc02fe833c950ca8c15f881c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeafd9e2cc02fe833c950ca8c15f881c8">&#9670;&#160;</a></span>Led_Mgmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Led_Mgmt </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a872055749870075db47e189ccbd99c8d" name="a872055749870075db47e189ccbd99c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872055749870075db47e189ccbd99c8d">&#9670;&#160;</a></span>Led_SetMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Led_SetMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="led_8h.html#a3393b726762fb88eff08925c79777299">LED_IDS</a></td>          <td class="paramname"><span class="paramname"><em>led_Id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="led_8h.html#abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</a></td>          <td class="paramname"><span class="paramname"><em>led_Mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a729aad414e72b412b98aed5b283db6a3" name="a729aad414e72b412b98aed5b283db6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729aad414e72b412b98aed5b283db6a3">&#9670;&#160;</a></span>ledModes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="led_8h.html#abc050ab2cd8f7833db1fe743e099ed68">LED_MODES</a> ledModes[<a class="el" href="#a3641b8d2bb3a9ab7cf0ec3763c3d9be7">NUMBER_OF_LEDS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3046d1ad083ffc50610e0721cde971dd" name="a3046d1ad083ffc50610e0721cde971dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3046d1ad083ffc50610e0721cde971dd">&#9670;&#160;</a></span>ledState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad2bf14153ae4f2eb3be1ca9d90eb2ff3">LED_STATES</a> ledState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="led_8c.html">led.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

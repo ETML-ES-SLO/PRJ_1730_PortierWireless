@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Portier Wireless: Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/RF.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Portier Wireless<span id="projectnumber">&#160;Le portier sans fil est un système bidirectionnel basé sur un microcontrôleur PIC32MX130F064B-I/SS et un module radio 868 MHz, permettant à un visiteur d’envoyer une requête depuis l’extérieur via un bouton alimenté par piles, et à l’occupant du bureau de répondre par des signaux lumineux et sonores grâce à une unité intérieure alimentée en USB, le tout avec appairage sécurisé et gestion autonome de l’énergie.</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_r_f_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence du fichier RF.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_r_f_8h_source.html">RF.h</a>&quot;</code><br />
+<code>#include &lt;xc.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_mc32_delays_8h_source.html">Mc32Delays.h</a>&quot;</code><br />
+<code>#include &quot;peripheral/usart/plib_usart.h&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;system_definitions.h&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de RF.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_r_f_8c__incl.png" border="0" usemap="#a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2_r_f_8c" loading="lazy" alt=""/></div>
+<map name="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2_r_f_8c" id="a_c_1_2microchip_2harmony_2v2__06_2apps_21730___portier_wireless___in_out__04_2firmware_2src_2_r_f_8c">
+<area shape="rect" title=" " alt="" coords="290,5,510,64"/>
+<area shape="rect" href="_r_f_8h.html" title=" " alt="" coords="60,120,109,147"/>
+<area shape="poly" title=" " alt="" coords="290,63,207,85,122,114,120,115,118,111,121,110,205,80,289,58"/>
+<area shape="rect" title=" " alt="" coords="133,120,179,147"/>
+<area shape="poly" title=" " alt="" coords="313,67,193,114,192,115,190,110,191,110,311,62"/>
+<area shape="rect" href="_mc32_delays_8h.html" title=" " alt="" coords="204,120,309,147"/>
+<area shape="poly" title=" " alt="" coords="359,67,289,113,286,109,356,62"/>
+<area shape="rect" title=" " alt="" coords="333,112,467,155"/>
+<area shape="poly" title=" " alt="" coords="403,64,403,97,398,97,398,64"/>
+<area shape="rect" title=" " alt="" coords="492,120,556,147"/>
+<area shape="poly" title=" " alt="" coords="439,62,498,108,495,113,435,67"/>
+<area shape="rect" title=" " alt="" coords="580,120,722,147"/>
+<area shape="poly" title=" " alt="" coords="476,62,605,112,603,116,474,67"/>
+<area shape="rect" title=" " alt="" coords="746,120,806,147"/>
+<area shape="poly" title=" " alt="" coords="511,52,620,76,734,109,739,111,737,116,733,115,619,82,510,58"/>
+<area shape="rect" title=" " alt="" coords="5,203,70,229"/>
+<area shape="poly" title=" " alt="" coords="79,149,54,191,50,188,75,146"/>
+<area shape="rect" title=" " alt="" coords="94,203,168,229"/>
+<area shape="poly" title=" " alt="" coords="94,146,119,188,114,191,89,149"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a6e31d0ed0d32a0655e13233ddf82bf43" id="r_a6e31d0ed0d32a0655e13233ddf82bf43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e31d0ed0d32a0655e13233ddf82bf43">MAXMSG</a>&#160;&#160;&#160;64</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a23095f345f2010caf0f4d825a4ea79d5" id="r_a23095f345f2010caf0f4d825a4ea79d5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23095f345f2010caf0f4d825a4ea79d5">RF_GetLastSenderSerial</a> (void)</td></tr>
+<tr class="memitem:a74b1a00aee1ffe8ef321da984014877d" id="r_a74b1a00aee1ffe8ef321da984014877d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74b1a00aee1ffe8ef321da984014877d">RF_RecordSenderSerial</a> (uint8_t *msg)</td></tr>
+<tr class="memitem:ad970d7f14c83abec6cbd85be3eecc52d" id="r_ad970d7f14c83abec6cbd85be3eecc52d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad970d7f14c83abec6cbd85be3eecc52d">ReadSerialNbr</a> (uint32_t *serialInput)</td></tr>
+<tr class="memitem:a5aa69b7fbc66f24c4a0a8b1e1db00407" id="r_a5aa69b7fbc66f24c4a0a8b1e1db00407"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aa69b7fbc66f24c4a0a8b1e1db00407">RF_Init</a> (void)</td></tr>
+<tr class="memitem:a3289a92773defe54bcc8de3768abd412" id="r_a3289a92773defe54bcc8de3768abd412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3289a92773defe54bcc8de3768abd412">RF_SendMessage</a> (uint8_t *dataToSend, uint8_t nbBytesToSend)</td></tr>
+<tr class="memitem:a27835339bea244ed8efcc38a13870e0d" id="r_a27835339bea244ed8efcc38a13870e0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27835339bea244ed8efcc38a13870e0d">isNewFrame</a> (uint8_t *<a class="el" href="#a54184d134e98092290edd64bd5612217">rcvdMsg</a>)</td></tr>
+<tr class="memitem:aaa251989c2b31bdd461a5031e7f8bb26" id="r_aaa251989c2b31bdd461a5031e7f8bb26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa251989c2b31bdd461a5031e7f8bb26">RF_GetMessage</a> (uint8_t *msg)</td></tr>
+<tr class="memitem:a85199c80e4155e25d02523ebc07528ff" id="r_a85199c80e4155e25d02523ebc07528ff"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85199c80e4155e25d02523ebc07528ff">getSerialRF</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab27d7ebb8da2f345a80401793816de20" id="r_ab27d7ebb8da2f345a80401793816de20"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab27d7ebb8da2f345a80401793816de20">flagGetAdress</a> = 0</td></tr>
+<tr class="memitem:a033c15787d84463eb4ec13411ddfeb07" id="r_a033c15787d84463eb4ec13411ddfeb07"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a033c15787d84463eb4ec13411ddfeb07">flagErrorAdress</a> = 0</td></tr>
+<tr class="memitem:a7c8ebfb594c5670994abda30402864b5" id="r_a7c8ebfb594c5670994abda30402864b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c8ebfb594c5670994abda30402864b5">nbrSerialRF</a> = 0</td></tr>
+<tr class="memitem:a54184d134e98092290edd64bd5612217" id="r_a54184d134e98092290edd64bd5612217"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54184d134e98092290edd64bd5612217">rcvdMsg</a> [64]</td></tr>
+<tr class="memitem:a00a705508c3fd2f5adb40958d14bebe6" id="r_a00a705508c3fd2f5adb40958d14bebe6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00a705508c3fd2f5adb40958d14bebe6">rcdvCharCntr</a> = 0</td></tr>
+<tr class="memitem:aa133dbe80ba7c7dfa6ab4cbf9d940266" id="r_aa133dbe80ba7c7dfa6ab4cbf9d940266"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa133dbe80ba7c7dfa6ab4cbf9d940266">flagGetMsgUart</a> = false</td></tr>
+<tr class="memitem:a785dea3a2a197b7e4e86a09f652430ff" id="r_a785dea3a2a197b7e4e86a09f652430ff"><td class="memItemLeft" align="right" valign="top">DRV_HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a785dea3a2a197b7e4e86a09f652430ff">handleUSART</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a6e31d0ed0d32a0655e13233ddf82bf43" name="a6e31d0ed0d32a0655e13233ddf82bf43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e31d0ed0d32a0655e13233ddf82bf43">&#9670;&#160;</a></span>MAXMSG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXMSG&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="a85199c80e4155e25d02523ebc07528ff" name="a85199c80e4155e25d02523ebc07528ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85199c80e4155e25d02523ebc07528ff">&#9670;&#160;</a></span>getSerialRF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t getSerialRF </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27835339bea244ed8efcc38a13870e0d" name="a27835339bea244ed8efcc38a13870e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27835339bea244ed8efcc38a13870e0d">&#9670;&#160;</a></span>isNewFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isNewFrame </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>rcvdMsg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad970d7f14c83abec6cbd85be3eecc52d" name="ad970d7f14c83abec6cbd85be3eecc52d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad970d7f14c83abec6cbd85be3eecc52d">&#9670;&#160;</a></span>ReadSerialNbr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ReadSerialNbr </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>serialInput</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23095f345f2010caf0f4d825a4ea79d5" name="a23095f345f2010caf0f4d825a4ea79d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23095f345f2010caf0f4d825a4ea79d5">&#9670;&#160;</a></span>RF_GetLastSenderSerial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t RF_GetLastSenderSerial </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa251989c2b31bdd461a5031e7f8bb26" name="aaa251989c2b31bdd461a5031e7f8bb26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa251989c2b31bdd461a5031e7f8bb26">&#9670;&#160;</a></span>RF_GetMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RF_GetMessage </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aa69b7fbc66f24c4a0a8b1e1db00407" name="a5aa69b7fbc66f24c4a0a8b1e1db00407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa69b7fbc66f24c4a0a8b1e1db00407">&#9670;&#160;</a></span>RF_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74b1a00aee1ffe8ef321da984014877d" name="a74b1a00aee1ffe8ef321da984014877d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b1a00aee1ffe8ef321da984014877d">&#9670;&#160;</a></span>RF_RecordSenderSerial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF_RecordSenderSerial </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3289a92773defe54bcc8de3768abd412" name="a3289a92773defe54bcc8de3768abd412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3289a92773defe54bcc8de3768abd412">&#9670;&#160;</a></span>RF_SendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RF_SendMessage </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dataToSend</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>nbBytesToSend</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="a033c15787d84463eb4ec13411ddfeb07" name="a033c15787d84463eb4ec13411ddfeb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033c15787d84463eb4ec13411ddfeb07">&#9670;&#160;</a></span>flagErrorAdress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t flagErrorAdress = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab27d7ebb8da2f345a80401793816de20" name="ab27d7ebb8da2f345a80401793816de20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27d7ebb8da2f345a80401793816de20">&#9670;&#160;</a></span>flagGetAdress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t flagGetAdress = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa133dbe80ba7c7dfa6ab4cbf9d940266" name="aa133dbe80ba7c7dfa6ab4cbf9d940266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa133dbe80ba7c7dfa6ab4cbf9d940266">&#9670;&#160;</a></span>flagGetMsgUart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool flagGetMsgUart = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a785dea3a2a197b7e4e86a09f652430ff" name="a785dea3a2a197b7e4e86a09f652430ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785dea3a2a197b7e4e86a09f652430ff">&#9670;&#160;</a></span>handleUSART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DRV_HANDLE handleUSART</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c8ebfb594c5670994abda30402864b5" name="a7c8ebfb594c5670994abda30402864b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c8ebfb594c5670994abda30402864b5">&#9670;&#160;</a></span>nbrSerialRF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t nbrSerialRF = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00a705508c3fd2f5adb40958d14bebe6" name="a00a705508c3fd2f5adb40958d14bebe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a705508c3fd2f5adb40958d14bebe6">&#9670;&#160;</a></span>rcdvCharCntr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t rcdvCharCntr = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54184d134e98092290edd64bd5612217" name="a54184d134e98092290edd64bd5612217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54184d134e98092290edd64bd5612217">&#9670;&#160;</a></span>rcvdMsg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t rcvdMsg[64]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_60864ceb768185ac6327ae001cbbf6bb.html">microchip</a></li><li class="navelem"><a href="dir_6b443360973a53f0750ab0dc163001d0.html">harmony</a></li><li class="navelem"><a href="dir_3c1ce8462c07dfc038ad7ef552c344f0.html">v2_06</a></li><li class="navelem"><a href="dir_580ddd0237585ac315b4ef98a15174fa.html">apps</a></li><li class="navelem"><a href="dir_8e86079d32e24360c681a957ed9a9585.html">1730_PortierWireless_InOut_04</a></li><li class="navelem"><a href="dir_7729169af531c636b6b5252162dc6bbe.html">firmware</a></li><li class="navelem"><a href="dir_1914f9ae7ad7a126c86f640c04ac95e9.html">src</a></li><li class="navelem"><a href="_r_f_8c.html">RF.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

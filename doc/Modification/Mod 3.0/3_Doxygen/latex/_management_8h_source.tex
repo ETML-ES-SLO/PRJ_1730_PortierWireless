@@ -1,0 +1,75 @@
+\doxysection{Management.\+h}
+\hypertarget{_management_8h_source}{}\label{_management_8h_source}\index{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Management.h@{C:/microchip/harmony/v2\_06/apps/1730\_PortierWireless\_InOut\_04/firmware/src/Management.h}}
+\mbox{\hyperlink{_management_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ DoorBellMgmt.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Header\ pour\ gestion\ Door\ et\ Bell\ du\ système\ PortierWireless}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Auteurs\ \ \ \ \ :\ Projet\ ETML\ /\ adaptation\ LMS}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Date\ \ \ \ \ \ \ \ :\ 2025}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Version\ \ \ \ \ :\ V3.0}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Compilateur\ :\ XC32}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ DOORBELLMGMT\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DOORBELLMGMT\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Inclusions}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Types\ entiers\ standard}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdbool.h>}\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Types\ booléens\ standard}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mc32_debounce_8h}{Mc32Debounce.h}}"{}}\ \ \ \textcolor{comment}{//\ Gestion\ anti-\/rebond\ des\ boutons}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{app_8h}{app.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Définition\ de\ APP\_DATA}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Définitions\ d'états}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ États\ internes\ pour\ la\ gestion\ de\ la\ porte\ (Door)}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a5e0a209e464ad82238a897ecdc11d782}{DOOR\_STATE\_INIT}}\ =\ 0,\ \ \ \ \ \ \textcolor{comment}{//\ Initialisation}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a778d54fc6c1a3216199e0209f58bc976}{DOOR\_STATE\_PRESSED}},\ \ \ \ \ \ \ \textcolor{comment}{//\ Bouton\ pressé}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6eda29b5a26c3a4281e90457463f94ce}{DOOR\_STATE\_WAITING}},\ \ \ \ \ \ \ \textcolor{comment}{//\ En\ attente\ de\ réponse}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a3b398ea91a396af6db4873014070353a}{DOOR\_STATE\_ANSWER}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Réponse\ reçue}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7ade4a83ffbf8c1931689f51473b1df4ba}{DOOR\_STATE\_NOANSWER}},\ \ \ \ \ \ \textcolor{comment}{//\ Pas\ de\ réponse}}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7a6a83ce34de57271504ca36f2998c4a50}{DOOR\_STATE\_SHUTDOWN}}\ \ \ \ \ \ \ \textcolor{comment}{//\ Arrêt\ du\ système}}
+\DoxyCodeLine{00036\ \}\ \mbox{\hyperlink{_management_8h_a9fbebaadc2edc5ea11038e1aecbb69f7}{DOOR\_STATES}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ États\ internes\ pour\ la\ gestion\ de\ la\ sonnette\ (Bell)}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738aaaab52d161fbccd9da2b803359014a65}{BELL\_STATE\_INIT}}\ =\ 0,\ \ \ \ \ \ \textcolor{comment}{//\ Initialisation}}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738a1b6ae4981d5df3b271e33d6a54f4f8b6}{BELL\_STATE\_IDLE}},\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Attente\ (repos)}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738a781f14c405e0590c228e7c5301c5013b}{BELL\_STATE\_RING}}\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sonnerie\ active}}
+\DoxyCodeLine{00044\ \}\ \mbox{\hyperlink{_management_8h_a0cbf3fc68a915efeaa5397b737414738}{BELL\_STATES}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ Prototypes\ de\ fonctions}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ Gestion\ de\ la\ porte}}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_management_8h_af116b7589b9df3fef08b92eb12e28a01}{Door\_Mgmt}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ Gestion\ de\ la\ sonnette}}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_management_8h_aa24b1b961c8209aad164f5916742d192}{Bell\_Mgmt}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ Variables\ externes}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Descripteurs\ pour\ l'anti-\/rebond\ des\ boutons}}
+\DoxyCodeLine{00061\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_a19358061a4fa8672c2124d5eb6a6337a}{swRing}};\ \ \ \textcolor{comment}{//\ Bouton\ de\ sonnerie}}
+\DoxyCodeLine{00062\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_aafadd8f2a2aa59c174b5207f21872f1f}{swEnter}};\ \ \textcolor{comment}{//\ Bouton\ d'entrée}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_afdc3fbca7ca6fb08b354d67fea915b56}{swWait}};\ \ \ \textcolor{comment}{//\ Bouton\ d'attente}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_s___switch_descriptor}{S\_SwitchDescriptor}}\ \mbox{\hyperlink{app_8c_a2eb3ac5dc73c685e3beefb74af0e1371}{swBusy}};\ \ \ \textcolor{comment}{//\ Bouton\ d'occupation}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ Données\ globales\ de\ l'application}}
+\DoxyCodeLine{00067\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_a_p_p___d_a_t_a}{APP\_DATA}}\ \mbox{\hyperlink{app_8c_a4f18a2543252a3f61342104a531a0f3c}{appData}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOORBELLMGMT\_H}}
+
+\end{DoxyCode}

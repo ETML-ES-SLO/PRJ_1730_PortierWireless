@@ -1,0 +1,6 @@
+--> information pour le git : 
+
+https://github.com/ETML-ES-SLO/PRJ_1730_PortierWireless
+
+-> branch sur le K -> PRJ_SLO
+-> branch main -> corrompue !!!

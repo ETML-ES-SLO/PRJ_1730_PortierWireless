@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__management_8h" xml:lang="fr">
+<title>Référence du fichier C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Management.h</title>
+<indexterm><primary>C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/Management.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stdbool.h&gt;<?linebreak?>#include &quot;Mc32Debounce.h&quot;<?linebreak?>#include &quot;app.h&quot;<?linebreak?></programlisting>Graphe des dépendances par inclusion de Management.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_management_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_management_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Énumérations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7">DOOR_STATES</link> { <?linebreak?><link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a5e0a209e464ad82238a897ecdc11d782">DOOR_STATE_INIT</link> = 0
+, <link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a778d54fc6c1a3216199e0209f58bc976">DOOR_STATE_PRESSED</link>
+, <link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a6eda29b5a26c3a4281e90457463f94ce">DOOR_STATE_WAITING</link>
+, <link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a3b398ea91a396af6db4873014070353a">DOOR_STATE_ANSWER</link>
+, <?linebreak?><link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7ade4a83ffbf8c1931689f51473b1df4ba">DOOR_STATE_NOANSWER</link>
+, <link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a6a83ce34de57271504ca36f2998c4a50">DOOR_STATE_SHUTDOWN</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738">BELL_STATES</link> { <link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738aaaab52d161fbccd9da2b803359014a65">BELL_STATE_INIT</link> = 0
+, <link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738a1b6ae4981d5df3b271e33d6a54f4f8b6">BELL_STATE_IDLE</link>
+, <link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738a781f14c405e0590c228e7c5301c5013b">BELL_STATE_RING</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Fonctions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__management_8h_1af116b7589b9df3fef08b92eb12e28a01">Door_Mgmt</link> (void)</para>
+
+<para>Gestion du bouton-poussoir de la porte avec filtre de pairing intégré. </para>
+</listitem>
+            <listitem><para>void <link linkend="__management_8h_1aa24b1b961c8209aad164f5916742d192">Bell_Mgmt</link> (void)</para>
+
+<para>Gestion de la carte de sonnerie (Bell_Mgmt). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__management_8h_1a19358061a4fa8672c2124d5eb6a6337a">swRing</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__management_8h_1aafadd8f2a2aa59c174b5207f21872f1f">swEnter</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__management_8h_1afdc3fbca7ca6fb08b354d67fea915b56">swWait</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> <link linkend="__management_8h_1a2eb3ac5dc73c685e3beefb74af0e1371">swBusy</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link> <link linkend="__management_8h_1a4f18a2543252a3f61342104a531a0f3c">appData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation du type de l&apos;énumération</title>
+<anchor xml:id="__management_8h_1a0cbf3fc68a915efeaa5397b737414738"/><section>
+    <title>BELL_STATES</title>
+<indexterm><primary>BELL_STATES</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>BELL_STATES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__management_8h_1a0cbf3fc68a915efeaa5397b737414738">BELL_STATES</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs énumérées</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BELL_STATE_INIT</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>BELL_STATE_INIT</secondary></indexterm>
+<anchor xml:id="__management_8h_1a0cbf3fc68a915efeaa5397b737414738aaaab52d161fbccd9da2b803359014a65"/>BELL_STATE_INIT</entry><entry></entry></row><row><entry><indexterm><primary>BELL_STATE_IDLE</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>BELL_STATE_IDLE</secondary></indexterm>
+<anchor xml:id="__management_8h_1a0cbf3fc68a915efeaa5397b737414738a1b6ae4981d5df3b271e33d6a54f4f8b6"/>BELL_STATE_IDLE</entry><entry></entry></row><row><entry><indexterm><primary>BELL_STATE_RING</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>BELL_STATE_RING</secondary></indexterm>
+<anchor xml:id="__management_8h_1a0cbf3fc68a915efeaa5397b737414738a781f14c405e0590c228e7c5301c5013b"/>BELL_STATE_RING</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7"/><section>
+    <title>DOOR_STATES</title>
+<indexterm><primary>DOOR_STATES</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>DOOR_STATES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7">DOOR_STATES</link></computeroutput></para><informaltable frame="all">
+<title>Valeurs énumérées</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>DOOR_STATE_INIT</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>DOOR_STATE_INIT</secondary></indexterm>
+<anchor xml:id="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a5e0a209e464ad82238a897ecdc11d782"/>DOOR_STATE_INIT</entry><entry></entry></row><row><entry><indexterm><primary>DOOR_STATE_PRESSED</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>DOOR_STATE_PRESSED</secondary></indexterm>
+<anchor xml:id="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a778d54fc6c1a3216199e0209f58bc976"/>DOOR_STATE_PRESSED</entry><entry></entry></row><row><entry><indexterm><primary>DOOR_STATE_WAITING</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>DOOR_STATE_WAITING</secondary></indexterm>
+<anchor xml:id="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a6eda29b5a26c3a4281e90457463f94ce"/>DOOR_STATE_WAITING</entry><entry></entry></row><row><entry><indexterm><primary>DOOR_STATE_ANSWER</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>DOOR_STATE_ANSWER</secondary></indexterm>
+<anchor xml:id="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a3b398ea91a396af6db4873014070353a"/>DOOR_STATE_ANSWER</entry><entry></entry></row><row><entry><indexterm><primary>DOOR_STATE_NOANSWER</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>DOOR_STATE_NOANSWER</secondary></indexterm>
+<anchor xml:id="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7ade4a83ffbf8c1931689f51473b1df4ba"/>DOOR_STATE_NOANSWER</entry><entry></entry></row><row><entry><indexterm><primary>DOOR_STATE_SHUTDOWN</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>DOOR_STATE_SHUTDOWN</secondary></indexterm>
+<anchor xml:id="__management_8h_1a9fbebaadc2edc5ea11038e1aecbb69f7a6a83ce34de57271504ca36f2998c4a50"/>DOOR_STATE_SHUTDOWN</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Documentation des fonctions</title>
+<anchor xml:id="__management_8h_1aa24b1b961c8209aad164f5916742d192"/><section>
+    <title>Bell_Mgmt()</title>
+<indexterm><primary>Bell_Mgmt</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>Bell_Mgmt</secondary></indexterm>
+<para><computeroutput>void Bell_Mgmt (void )</computeroutput></para><para>
+
+<para>Gestion de la carte de sonnerie (Bell_Mgmt). </para>
+</para>
+
+<para>Cette fonction gère la logique de la carte de sonnerie, y compris la réception des messages, la gestion des boutons de réponse, l&apos;envoi des réponses, et la gestion des états associés.</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Surveille les messages RF entrants pour déclencher la sonnerie ou répondre à une demande.</para>
+</listitem><listitem>
+<para>Gère les boutons physiques pour envoyer les réponses appropriées (entrez, attendez, occupé).</para>
+</listitem><listitem>
+<para>Gère les délais et le clignotement des LEDs selon l&apos;état de la batterie et les réponses.</para>
+</listitem><listitem>
+<para>Assure la synchronisation avec d&apos;autres cartes de sonnerie si nécessaire.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Cette fonction fait partie du module de gestion de la sonnerie (Bell_Mgmt). </para>
+</note>
+</para>
+</section>
+<anchor xml:id="__management_8h_1af116b7589b9df3fef08b92eb12e28a01"/><section>
+    <title>Door_Mgmt()</title>
+<indexterm><primary>Door_Mgmt</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>Door_Mgmt</secondary></indexterm>
+<para><computeroutput>void Door_Mgmt (void )</computeroutput></para><para>
+
+<para>Gestion du bouton-poussoir de la porte avec filtre de pairing intégré. </para>
+</para>
+
+<para>Cette fonction gère la logique associée au bouton-poussoir situé à la porte, incluant un filtre pour le processus de jumelage (pairing).</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Surveille l&apos;état du bouton-poussoir.</para>
+</listitem><listitem>
+<para>Applique un filtre logiciel pour éviter les rebonds et les appuis involontaires.</para>
+</listitem><listitem>
+<para>Intègre la gestion du pairing pour l&apos;association des dispositifs sans fil.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Cette fonction fait partie du module de gestion de la porte (Door_Mgmt). </para>
+</note>
+</para>
+</section>
+</section>
+<section>
+<title>Documentation des variables</title>
+<anchor xml:id="__management_8h_1a4f18a2543252a3f61342104a531a0f3c"/><section>
+    <title>appData</title>
+<indexterm><primary>appData</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>appData</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_a_p_p___d_a_t_a">APP_DATA</link> appData<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__management_8h_1a2eb3ac5dc73c685e3beefb74af0e1371"/><section>
+    <title>swBusy</title>
+<indexterm><primary>swBusy</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>swBusy</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swBusy<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__management_8h_1aafadd8f2a2aa59c174b5207f21872f1f"/><section>
+    <title>swEnter</title>
+<indexterm><primary>swEnter</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>swEnter</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swEnter<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__management_8h_1a19358061a4fa8672c2124d5eb6a6337a"/><section>
+    <title>swRing</title>
+<indexterm><primary>swRing</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>swRing</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swRing<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="__management_8h_1afdc3fbca7ca6fb08b354d67fea915b56"/><section>
+    <title>swWait</title>
+<indexterm><primary>swWait</primary><secondary>Management.h</secondary></indexterm>
+<indexterm><primary>Management.h</primary><secondary>swWait</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s___switch_descriptor">S_SwitchDescriptor</link> swWait<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+</section>
+</section>

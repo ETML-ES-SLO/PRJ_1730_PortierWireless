@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_n_o_t_e__t" xml:lang="fr">
+<title>Référence de la structure NOTE_t</title>
+<indexterm><primary>NOTE_t</primary></indexterm>
+<para>
+<computeroutput>#include &lt;sound.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Attributs publics    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_struct_n_o_t_e__t_1acf02911153e30b51921cf85d64e2834f">duration</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_n_o_t_e__t_1a8020b2a52fdcef042fff1bd71fe16dc5">freq</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Documentation des données membres</title>
+<anchor xml:id="_struct_n_o_t_e__t_1acf02911153e30b51921cf85d64e2834f"/><section>
+    <title>duration</title>
+<indexterm><primary>duration</primary><secondary>NOTE_t</secondary></indexterm>
+<indexterm><primary>NOTE_t</primary><secondary>duration</secondary></indexterm>
+<para><computeroutput>uint16_t NOTE_t::duration</computeroutput></para></section>
+<anchor xml:id="_struct_n_o_t_e__t_1a8020b2a52fdcef042fff1bd71fe16dc5"/><section>
+    <title>freq</title>
+<indexterm><primary>freq</primary><secondary>NOTE_t</secondary></indexterm>
+<indexterm><primary>NOTE_t</primary><secondary>freq</secondary></indexterm>
+<para><computeroutput>uint16_t NOTE_t::freq</computeroutput></para></section>
+<para>
+La documentation de cette structure a été générée à partir du fichier suivant :</para>
+C:/microchip/harmony/v2_06/apps/1730_PortierWireless_InOut_04/firmware/src/<link linkend="_sound_8h">sound.h</link></section>
+</section>
